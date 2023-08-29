@@ -39,9 +39,9 @@ window.navigator.serviceWorker.register(
   }
 ).then((registration) => {
   // 返回一个 ServiceWorkerRegistration 实例
-  console.log('registration success', registration);
+  console.log('client | registration success', registration);
 }).catch((error) => {
-  console.log('registration fail', error);
+  console.log('client | registration fail', error);
 })
 ```
 
@@ -65,12 +65,12 @@ Service Worker 生命周期依次是安装、激活和运行
 /* in worker */
 self.addEventListener('install', (e) => {
   // 返回一个 `ExtendableEvent` 实例
-  console.log('install', e)
+  console.log('worker | install', e)
 })
 
 self.addEventListener('activate', (e) => {
   // 返回一个 `ExtendableEvent` 实例
-  console.log('activate', e)
+  console.log('worker | activate', e)
 })
 ```
 
@@ -84,38 +84,41 @@ self.addEventListener('activate', (e) => {
 >   * 在 `install` 事件中，waitUntil 方法将 Service Worker 保持在安装阶段，直到任务完成；若 Promise 被拒绝，则安装被视为失败，并且正在安装的 Service Worker 将被丢弃。
 >   * 在 `activate` 事件中，waitUntil 方法用来缓冲功能事件，从而可以更新数据库架构并删除过时的缓存，保证正式运行时使用的是最新的架构。
 
-### 常规属性、方法和事件
+### 全局属性方法和事件
 
 ServiceWorkerGlobalScope 接口从 WorkerGlobalScope 接口继承了一些属性、方法和事件（一些全局属性、方法和事件与 Window 接口的类似）。
+
+* `ServiceWorkerGlobalScope` 接口的 `error` 事件在 Worker 内中发生脚本错误时触发。
 
 ```js
 /* in worker */
 self.addEventListener('error', (e) => {
   // 返回一个 `Event` 实例
-  console.log('error', e)
-})
-
-// to cause a js error
-eval('d = 10')
-
-self.addEventListener('languagechange', (e) => {
-  // 返回一个 `Event` 实例
-  console.log('languagechange', e)
+  console.log('worker | error', e)
 })
 ```
 
-> * `ServiceWorkerGlobalScope` 接口的 `error` 事件在 Worker 内中发生脚本错误时触发。
-> * `ServiceWorkerGlobalScope` 接口的 `languagechange` 事件在用户的首选语言更改时触发。
+* `ServiceWorkerGlobalScope` 接口的 `languagechange` 事件在用户的首选语言更改时触发。
+
+```js
+/* in worker */
+self.addEventListener('languagechange', (e) => {
+  // 返回一个 `Event` 实例
+  console.log('worker | languagechange', e)
+})
+```
 
 ### 消息传递
 
 #### Client 至 Worker
 
 ```js
+/* in client */
 window.navigator.serviceWorker.ready.then((registration) => {
   registration.active.postMessage('message from client')
 })
 
+/* in worker */
 self.addEventListener('message', (e) => {
   console.log('worker | message', e)
 
@@ -130,12 +133,14 @@ self.addEventListener('messageerror', (e) => {
 #### Worker 至 Client
 
 ```js
+/* in worker */
 global.clients.matchAll().then((clients) => {
   clients.forEach((client) => {
     client.postMessage('message from client')
   })
 })
 
+/* in client */
 window.navigator.serviceWorker.addEventListener('message', (e) => {
   console.log('client | message', e)
 })
@@ -153,33 +158,37 @@ window.navigator.serviceWorker.addEventListener('messageerror', (e) => {
 
 当主应用程序线程发出网络请求时，会在 Service Worker 的全局范围内触发 `fetch` 事件。
 
-请求类型包括来自主线程的显式调用，还包括浏览器在页面导航后发出的加载页面和子资源（例如 JavaScript、CSS 和图像等）的隐式网络请求。
+* `ServiceWorkerGlobalScope` 接口的 `fetch` 事件返回一个 `FetchEvent` 实例（继承自 `ExtendableEvent`），在主应用程序线程发生网络请求时触发。
 
-示例如下
+请求类型包括来自主线程的显式调用，还包括浏览器在页面导航后发出的加载页面和子资源（例如 JavaScript、CSS 和图像等）的隐式网络请求，甚至包括来自浏览器安装的插件产生的网络请求。
+
+> * `FetchEvent` 接口的 `request` 属性返回一个 `Request` 实例，代表将触发事件处理程序的对象
+> * `FetchEvent` 接口的 `respondWith()` 方法阻止浏览器的默认请求处理，并允许使用自定义的 `Response` 替代，其接收一个 `Response` 实例或者 `Promise<Response>` 实例的实例。
+
+`respondWith()` 方法对于给定的请求只能调用该方法一次。如果 `fetch` 添加了多个事件监听器，它们将按照注册的顺序被调用，直到其中一个事件监听器调用 `respondWith()`。
+
+`respondWith()` 方法必须同步调用：也就是说，不能在then处理程序中调用该方法。
 
 ```js
-// in worker
+/* in worker */
 self.addEventListener('fetch', (e) => {
-  console.log('fetch', e)
+  console.log('client | fetch', e)
 
-  if (e.request.url.includes('success')) {
+  if (e.request.url.includes('/success')) {
     e.respondWith(Response.json({
       data: 'data',
     }))
   }
-  if (e.request.url.includes('error')) {
+  if (e.request.url.includes('/error')) {
     e.respondWith(Response.error())
   }
-  if (e.request.url.includes('redirect')) {
+  if (e.request.url.includes('/redirect')) {
     e.respondWith(Response.redirect('/override/success'))
   }
 })
 
-// in client
+/* in client */
 fetch('/override/success').then(console.log).catch(console.warn)
 fetch('/override/error').then(console.log).catch(console.warn)
 fetch('/override/redirect').then(console.log).catch(console.warn)
 ```
-
-> `ServiceWorkerGlobalScope` 接口的 `fetch` 事件返回一个 `FetchEvent` 实例（继承自 `ExtendableEvent`）。
-> `FetchEvent` 接口的 `respondWith` 方法阻止浏览器的默认请求处理，并允许使用自定义的 Response 替代，其接收一个 Response 实例或者 Promise 化的 Response 实例。
