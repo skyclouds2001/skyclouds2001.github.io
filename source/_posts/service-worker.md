@@ -86,9 +86,9 @@ self.addEventListener('activate', (e) => {
 
 ### 全局属性方法和事件
 
-ServiceWorkerGlobalScope 接口从 WorkerGlobalScope 接口继承了一些属性、方法和事件（一些全局属性、方法和事件与 Window 接口的类似）。
+ServiceWorkerGlobalScope 接口从 WorkerGlobalScope 接口继承了一些属性、方法和事件。
 
-* `ServiceWorkerGlobalScope` 接口的 `error` 事件在 Worker 内中发生脚本错误时触发。
+* `ServiceWorkerGlobalScope` 接口的 `error` 事件在 Service Worker 内发生脚本错误时触发。
 
 ```js
 /* in worker */
@@ -108,6 +108,46 @@ self.addEventListener('languagechange', (e) => {
 })
 ```
 
+* `ServiceWorkerGlobalScope` 接口的 `online` 事件在浏览器获得网络访问权限并且 `navigator.onLine` 值切换到 `true` 时触发。
+
+```js
+/* in worker */
+self.addEventListener('online', (e) => {
+  // 返回一个 `Event` 实例
+  console.log('worker | online', e)
+})
+```
+
+* `ServiceWorkerGlobalScope` 接口的 `offline` 事件在浏览器获得网络访问权限并且 `navigator.onLine` 值切换到 `false` 时触发。
+
+```js
+/* in worker */
+self.addEventListener('offline', (e) => {
+  // 返回一个 `Event` 实例
+  console.log('worker | offline', e)
+})
+```
+
+* `ServiceWorkerGlobalScope` 接口的 `rejectionhandled` 事件在 Service Worker 内处理的 Promise 拒绝事件时触发。
+
+```js
+/* in worker */
+self.addEventListener('rejectionhandled', (e) => {
+  // 返回一个 `Event` 实例
+  console.log('worker | rejectionhandled', e)
+})
+```
+
+* `ServiceWorkerGlobalScope` 接口的 `unhandledrejection` 事件在Service Worker 内未处理的 Promise 拒绝事件时触发。
+
+```js
+/* in worker */
+self.addEventListener('unhandledrejection', (e) => {
+  // 返回一个 `Event` 实例
+  console.log('worker | unhandledrejection', e)
+})
+```
+
 ### 消息传递
 
 #### Client 至 Worker
@@ -121,8 +161,6 @@ window.navigator.serviceWorker.ready.then((registration) => {
 /* in worker */
 self.addEventListener('message', (e) => {
   console.log('worker | message', e)
-
-  e.source?.postMessage('message from worker: hi client')
 })
 
 self.addEventListener('messageerror', (e) => {
@@ -162,12 +200,17 @@ window.navigator.serviceWorker.addEventListener('messageerror', (e) => {
 
 请求类型包括来自主线程的显式调用，还包括浏览器在页面导航后发出的加载页面和子资源（例如 JavaScript、CSS 和图像等）的隐式网络请求，甚至包括来自浏览器安装的插件产生的网络请求。
 
-> * `FetchEvent` 接口的 `request` 属性返回一个 `Request` 实例，代表将触发事件处理程序的对象
+> * `FetchEvent` 接口的 `request` 属性返回一个 `Request` 实例，代表将触发事件处理程序的对象。
+
+通常使用 `request` 属性获取到请求的相关信息，如其 `url` 参数获取到请求的目标 URL。
+
 > * `FetchEvent` 接口的 `respondWith()` 方法阻止浏览器的默认请求处理，并允许使用自定义的 `Response` 替代，其接收一个 `Response` 实例或者 `Promise<Response>` 实例的实例。
 
-`respondWith()` 方法对于给定的请求只能调用该方法一次。如果 `fetch` 添加了多个事件监听器，它们将按照注册的顺序被调用，直到其中一个事件监听器调用 `respondWith()`。
+`respondWith()` 方法对于给定的请求只能调用该方法一次。如果 `fetch` 添加了多个事件监听器，它们将按照注册的顺序被调用，直到其中一个事件监听器调用该方法。
 
-`respondWith()` 方法必须同步调用：也就是说，不能在then处理程序中调用该方法。
+`respondWith()` 方法必须同步调用：也就是说，不能在 then 处理方法回调中调用该方法。
+
+如果 `respondWith()` 未在处理程序中调用，则用户代理会自动发出原始网络请求。
 
 ```js
 /* in worker */
