@@ -84,7 +84,7 @@ self.addEventListener('activate', (e) => {
 >   * 在 `install` 事件中，waitUntil 方法将 Service Worker 保持在安装阶段，直到任务完成；若 Promise 被拒绝，则安装被视为失败，并且正在安装的 Service Worker 将被丢弃。
 >   * 在 `activate` 事件中，waitUntil 方法用来缓冲功能事件，从而可以更新数据库架构并删除过时的缓存，保证正式运行时使用的是最新的架构。
 
-### 全局属性方法和事件
+### 全局属性、方法和事件
 
 ServiceWorkerGlobalScope 接口从 WorkerGlobalScope 接口继承了一些属性、方法和事件。
 
@@ -152,6 +152,8 @@ self.addEventListener('unhandledrejection', (e) => {
 
 #### Client 至 Worker
 
+从 Client 向 Worker 发送消息：
+
 ```js
 /* in client */
 window.navigator.serviceWorker.ready.then((registration) => {
@@ -169,6 +171,8 @@ self.addEventListener('messageerror', (e) => {
 ```
 
 #### Worker 至 Client
+
+从 Client 向 Worker 发送消息：
 
 ```js
 /* in worker */
@@ -188,9 +192,9 @@ window.navigator.serviceWorker.addEventListener('messageerror', (e) => {
 })
 ```
 
-> `ServiceWorkerGlobalScope` 接口与 `ServiceWorkerContainer` 接口的 `message` 事件返回一个 `ExtendableMessageEvent` 实例（继承自 `ExtendableEvent`），在接收到传入消息时触发。
-> `ServiceWorkerGlobalScope` 接口与 `ServiceWorkerContainer` 接口的 `messageerror` 事件返回一个 `MessageEvent` 实例（继承自 `Event`），在接收到传入消息解析失败时触发。
-> `ExtendableMessageEvent` 接口同时实现了 `MessageEvent` 接口与 `ExtendableEvent` 接口。
+> * `ServiceWorkerGlobalScope` 接口与 `ServiceWorkerContainer` 接口的 `message` 事件返回一个 `ExtendableMessageEvent` 实例（继承自 `ExtendableEvent`），在接收到传入消息时触发。
+> * `ServiceWorkerGlobalScope` 接口与 `ServiceWorkerContainer` 接口的 `messageerror` 事件返回一个 `MessageEvent` 实例（继承自 `Event`），在接收到传入消息解析失败时触发。
+> * `ExtendableMessageEvent` 接口同时实现了 `MessageEvent` 接口与 `ExtendableEvent` 接口。
 
 ### 请求拦截
 
