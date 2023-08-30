@@ -239,3 +239,47 @@ fetch('/override/success').then(console.log).catch(console.warn)
 fetch('/override/error').then(console.log).catch(console.warn)
 fetch('/override/redirect').then(console.log).catch(console.warn)
 ```
+
+### 缓存
+
+Service Worker 的缓存策略是基于 CacheStorage 实现的。
+
+可以通过 `self.caches` 访问全局的 CacheStorage 实例。
+
+CacheStorage 中存在着多个 Cache 实例，代表不同的缓存桶。
+
+#### 缓存存储
+
+* CacheStorage 接口的 `open()` 方法根据指定的 STORE_NAME 返回对应的 Cache 实例，返回一个 `Promise<Cache>`，表示对应的 Cache 实例。
+
+若对应的 Cache 实例不存在，则会创建新的 Cache 实例。
+
+```js
+const STORE_NAME = 'key'
+
+self.caches.open(STORE_NAME).then((cache) => {
+  // 返回一个 Cache 实例
+})
+```
+
+* CacheStorage 接口的 `has()` 方法根据指定的 STORE_NAME 检测是否存在对应的 Cache 实例，返回一个 `Promise<boolean>`，表示是否存在对应的 Cache 实例。
+
+```js
+const STORE_NAME = 'key'
+
+self.caches.has(STORE_NAME).then((has) => {
+ // 返回一个 boolean
+})
+```
+
+* CacheStorage 接口的 `delete()` 方法根据指定的 STORE_NAME 移除对应的 Cache 实例，返回一个 `Promise<boolean>`，表示是否存在对应的 Cache 实例并且已完成删除操作。
+
+```js
+const STORE_NAME = 'key'
+
+self.caches.delete(STORE_NAME).then((deleted) => {
+  // 返回一个 boolean
+})
+```
+
+#### 缓存桶
