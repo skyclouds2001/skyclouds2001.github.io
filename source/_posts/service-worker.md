@@ -196,7 +196,7 @@ window.navigator.serviceWorker.addEventListener('messageerror', (e) => {
 > * `ServiceWorkerGlobalScope` 接口与 `ServiceWorkerContainer` 接口的 `messageerror` 事件返回一个 `MessageEvent` 实例（继承自 `Event`），在接收到传入消息解析失败时触发。
 > * `ExtendableMessageEvent` 接口同时实现了 `MessageEvent` 接口与 `ExtendableEvent` 接口。
 
-### 请求拦截
+### 请求代理
 
 当主应用程序线程发出网络请求时，会在 Service Worker 的全局范围内触发 `fetch` 事件。
 
@@ -219,6 +219,7 @@ window.navigator.serviceWorker.addEventListener('messageerror', (e) => {
 ```js
 /* in worker */
 self.addEventListener('fetch', (e) => {
+  // 返回一个 FetchEvent
   console.log('client | fetch', e)
 
   if (e.request.url.includes('/success')) {
@@ -244,42 +245,76 @@ fetch('/override/redirect').then(console.log).catch(console.warn)
 
 Service Worker 的缓存策略是基于 CacheStorage 实现的。
 
+#### CacheStorage
+
+CacheStorage 提供可由 ServiceWorker 或其他类型的 Worker 或 window 范围访问的所有命名缓存的主目录，同时负责维护字符串名称到相应 Cache 实例的映射。
+
 可以通过 `self.caches` 访问全局的 CacheStorage 实例。
 
-CacheStorage 中存在着多个 Cache 实例，代表不同的缓存桶。
-
-#### 缓存存储
-
-* CacheStorage 接口的 `open()` 方法根据指定的 STORE_NAME 返回对应的 Cache 实例，返回一个 `Promise<Cache>`，表示对应的 Cache 实例。
-
-若对应的 Cache 实例不存在，则会创建新的 Cache 实例。
+* CacheStorage 接口的 `open()` 方法根据指定的 cacheName 返回对应的 Cache 实例，返回一个 `Promise<Cache>`，表示对应的 Cache 实例。若对应的 Cache 实例不存在，则会创建新的 Cache 实例。
 
 ```js
 const STORE_NAME = 'key'
 
 self.caches.open(STORE_NAME).then((cache) => {
   // 返回一个 Cache 实例
+  console.log('worker | cache', cache)
 })
 ```
 
-* CacheStorage 接口的 `has()` 方法根据指定的 STORE_NAME 检测是否存在对应的 Cache 实例，返回一个 `Promise<boolean>`，表示是否存在对应的 Cache 实例。
+* CacheStorage 接口的 `has()` 方法根据指定的 cacheName 检测是否存在对应的 Cache 实例，返回一个 `Promise<boolean>`，表示是否存在对应的 Cache 实例。
 
 ```js
 const STORE_NAME = 'key'
 
 self.caches.has(STORE_NAME).then((has) => {
  // 返回一个 boolean
+  console.log('worker | has cache', has)
 })
 ```
 
-* CacheStorage 接口的 `delete()` 方法根据指定的 STORE_NAME 移除对应的 Cache 实例，返回一个 `Promise<boolean>`，表示是否存在对应的 Cache 实例并且已完成删除操作。
+* CacheStorage 接口的 `delete()` 方法根据指定的 cacheName 移除对应的 Cache 实例，返回一个 `Promise<boolean>`，表示是否存在对应的 Cache 实例并且已删除。
 
 ```js
 const STORE_NAME = 'key'
 
 self.caches.delete(STORE_NAME).then((deleted) => {
   // 返回一个 boolean
+  console.log('worker | has deleted cache', deleted)
 })
 ```
 
-#### 缓存桶
+* CacheStorage 接口的 `keys()` 方法获取所有 Cache 实例的索引的列表，返回一个 `Promise<string[]>`。
+
+```js
+self.caches.keys().then((keys) => {
+  // 返回一个 string[]
+  console.log('worker | all caches keys', keys)
+})
+```
+
+* CacheStorage 接口的 `match()` 方法根据给定的 Request 实例或 URL 实例或 URL 字符串确定存储中是否存在对应的 Response，返回一个 `Promise<Response>` （存在）或是 `Promise<undefined>` （不存在）。该方法同样支持传入一组配置项，cacheName 参数指定搜索目标 Cache 实例的索引，ignoreSearch 参数指定是否考虑 URL 中的查询字符串，ignoreMethod 参数指定是否匹配请求方法，ignoreVary 指定是否匹配 Vary 头。
+
+```js
+self.caches.match(
+  '/cache',
+  {
+    ignoreSearch: false,
+    ignoreMethod: false,
+    ignoreVary: false,
+  }
+).then((data) => {
+  // 返回一个 Response | undefined
+  if (data) {
+    console.log('worker | have resource', data)
+  } else {
+    console.log('worker | not have resource', data)
+  }
+})
+
+self.caches.match(new URL('/cache'))
+
+self.caches.match(new Request('/cache'))
+```
+
+#### Cache
