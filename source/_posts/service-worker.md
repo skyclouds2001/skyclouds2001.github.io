@@ -293,7 +293,7 @@ self.caches.keys().then((keys) => {
 })
 ```
 
-* CacheStorage 接口的 `match()` 方法根据给定的 Request 实例或 URL 实例或 URL 字符串确定存储中是否存在对应的 Response，返回一个 `Promise<Response>` （存在）或是 `Promise<undefined>` （不存在）。该方法同样支持传入一组配置项，cacheName 参数指定搜索目标 Cache 实例的索引，ignoreSearch 参数指定是否考虑 URL 中的查询字符串，ignoreMethod 参数指定是否匹配请求方法，ignoreVary 指定是否匹配 Vary 头。
+* CacheStorage 接口的 `match()` 方法根据给定的 Request 实例或 URL 实例或 URL 字符串确定存储中是否存在对应的 Response，返回一个 `Promise<Response>` （存在）或是 `Promise<undefined>` （不存在）。该方法支持传入一组配置项，cacheName 参数指定搜索目标 Cache 实例的索引，ignoreSearch 参数指定是否考虑 URL 中的查询字符串，ignoreMethod 参数指定是否匹配请求方法，ignoreVary 指定是否匹配 Vary 头。
 
 ```js
 self.caches.match(
@@ -318,3 +318,195 @@ self.caches.match(new Request('/cache'))
 ```
 
 #### Cache
+
+* Cache 接口的 `put()` 方法将键/值对存储到当前 Cache 实例中，键可以是一个代表 URL 的字符串、一个 URL 实例、一个 Request 实例，值是一个 Response 实例。该方法会覆盖与之匹配的键/值对。
+
+```js
+self.caches.open('key').then((cache) => {
+  cache.put('/cache', new Response('cache'))
+  cache.put(new URL('/cache'), new Response('cache'))
+  cache.put(new Request('/cache'), new Response('cache'))
+})
+```
+
+* Cache 接口的 `add()` 方法根据给定的 URL 获取响应并存储到当前 Cache 实例中。该方法会覆盖与之匹配的键/值对。
+* Cache 接口的 `addAll()` 方法根据给定的 URL 列表获取响应并存储到当前 Cache 实例中。该方法会覆盖与之匹配的键/值对。
+
+```js
+self.caches.open('key').then((cache) => {
+  cache.add('/cache')
+  cache.add(new URL('/cache'))
+  cache.add(new Request('/cache'))
+
+  cache.addAll(['/cache', new Request('/cache')])
+})
+```
+
+> 该方法可以视为 `put()` 方法的简化用法。
+> 
+> `add()` 方法和 `addAll()` 方法会忽略非 200 状态码的响应，此情况下若仍然期望存储响应，应当采用 `put()` 方法。
+> 
+> `put()` 方法、`add()` 方法和 `addAll()` 方法的 URL 参数必须是 HTTP 或 HTTPS，否则会抛出 TypeError 错误。
+
+* Cache 接口的 `match()` 方法根据给定的 URL 在当前 Cache 实例中检索首个关联的响应，支持传入一组配置项，返回一个，返回一个 `Promise<Response>` （存在）或是 `Promise<undefined>` （不存在）。
+* Cache 接口的 `matchAll()` 方法根据给定的 URL 在当前 Cache 实例中检索所有关联的响应，支持传入一组配置项，返回一个 `Promise<Response[]>`。
+
+```js
+self.caches.open('key').then((cache) => {
+  cache.match(
+  '/cache',
+  {
+    ignoreSearch: false,
+    ignoreMethod: false,
+    ignoreVary: false,
+  }
+).then((response) => {
+    console.log('worker | cache match', response)
+  })
+  cache.match(new URL('/cache')).then((response) => {
+    console.log('worker | cache match', response)
+  })
+  cache.match(new Request('/cache')).then((response) => {
+    console.log('worker | cache match', response)
+  })
+
+  cache.matchAll(
+  '/cache',
+  {
+    ignoreSearch: false,
+    ignoreMethod: false,
+    ignoreVary: false,
+  }
+).then((responses) => {
+    console.log('worker | caches match', responses)
+  })
+  cache.matchAll(new URL('/cache')).then((responses) => {
+    console.log('worker | caches match', responses)
+  })
+  cache.matchAll(new Request('/cache')).then((responses) => {
+    console.log('worker | caches match', responses)
+  })
+})
+```
+
+* Cache 接口的 `delete()` 方法从当前 Cache 实例中移除对应的响应，参数可以是一个代表 URL 的字符串、一个 URL 实例、一个 Request 实例，同时支持传入一组配置项，返回一个 `Promise<boolean>`，表示是否存在对应的响应并且已删除。
+
+```js
+self.caches.open('key').then((cache) => {
+  cache.delete('/cache').then((success) => {
+    console.log('worker | cache delete', success)
+  })
+  cache.delete(new URL('/cache')).then((success) => {
+    console.log('worker | cache delete', success)
+  })
+  cache.delete(new Request('/cache')).then((success) => {
+    console.log('worker | cache delete', success)
+  })
+})
+```
+
+* Cache 接口的 `keys()` 方法获取当前 Cache 实例的响应索引的列表，参数可以是一个代表 URL 的字符串、一个 URL 实例、一个 Request 实例，同时支持传入一组配置项，返回一个 `Promise<string[]>`。
+
+```js
+self.caches.open('key').then((cache) => {
+  cache.keys().then((keys) => {
+    console.log('worker | all keys in cache', keys)
+  })
+})
+```
+
+> `keys()` 方法的返回值按照插入的顺序返回。
+
+#### 缓存机制
+
+拦截请求并从缓存检索响应，若响应存在则直接返回缓存的响应，反之则发起请求获取响应，缓存获取到的响应再返回响应。
+
+```js
+self.addEventListener('fetch', (e) => {
+  e.respondWith(
+    self.caches
+      .match(e.request)
+      .then((response) => {
+        if (response != null) {
+          return response
+        } else {
+          return fetch(e.request.clone())
+            .then((response) => {
+              const res = response.clone()
+
+              self.caches.open('v2').then((cache) => {
+                cache.put(e.request, res)
+              })
+
+              return response
+            })
+            .catch(() => caches.match('/404'))
+        }
+      })
+  )
+})
+```
+
+```js
+self.addEventListener('fetch', (e) => {
+  e.respondWith(
+    self.caches
+      .open('v2')
+      .then((cache) => cache
+        .match(e.request)
+        .then((response) => {
+          if (response != null) {
+            return response
+          } else {
+            return fetch(e.request.clone())
+              .then((response) => {
+                cache.put(e.request, response.clone())
+
+                return response
+              })
+              .catch(() => caches.match('/404'))
+          }
+        })
+      )
+  )
+})
+```
+
+在安装阶段预先获取资源并进行缓存。
+
+```js
+self.addEventListener('install', (e) => {
+  e.waitUntil(
+    self.caches
+      .open('v2')
+      .then((cache) => 
+        cache.addAll([
+          '/',
+          '/index.html',
+          "/style.css",
+          "/app.js",
+        ])
+      )
+  )
+})
+```
+
+在激活阶段移除失效的 Cache 实例。
+
+```js
+self.addEventListener('activate', (e) => {
+  const CACHES_NEED_MOVE = ['v1']
+
+  e.waitUntil(
+    self.caches.keys().then((keys) => 
+      Promise.all(
+        keys.map((key) => {
+          if (CACHES_NEED_MOVE.includes(key)) {
+            return self.caches.delete(key)
+          }
+        })
+      )
+    )
+  )
+})
+```
