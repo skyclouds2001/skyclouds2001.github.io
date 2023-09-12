@@ -10,7 +10,7 @@ categories:
 thumbnail:
 ---
 
-## ServiceWorker 使用 - 推送消息
+## ServiceWorker 使用 - 消息推送
 
 {% asset_img 推送消息.png %}
 
@@ -30,21 +30,21 @@ const { publicKey, privateKey } = vapidKeys
 
 其中私钥放在服务器保存，公钥用于注册推送订阅。
 
-### 创建推送消息服务
+### 创建消息推送服务
 
 可以利用 ServiceWorkerRegistration 接口的 pushManager 属性获取到当前 ServiceWorker 对应的 PushManager 接口实例。
 
-PushManager 接口的 `subscribe()` 方法用于订阅一个推送消息服务。
+PushManager 接口的 `subscribe()` 方法用于订阅一个消息推送服务。
 
 其接收一组可选的配置项，`userVisibleOnly` 可选参数指定返回的推送是否只用于创建对用户可见的通知（不指定 true 会在一些浏览器中报错），`applicationServerKey` 可选参数指定服务的公钥（某些浏览器中是必须的参数）。
 
 返回一个 Promise 的 PushSubscription 接口实例，代表当前推送消息。
 
-在当前 ServiceWorker 没有创建推送消息时，新的推送消息会被创建。
+在当前 ServiceWorker 没有创建消息推送服务时，新的消息推送会被创建。
 
 ```js
 window.navigator.serviceWorker.ready.then((registration) => {
-  // 订阅推送消息
+  // 订阅消息推送
   registration.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey: '',
@@ -65,13 +65,13 @@ self.registration.pushManager.subscribe({
 
 ### 获取推送消息服务
 
-PushManager 接口的 `getSubscription()` 方法用于获取已经订阅的推送消息服务。
+PushManager 接口的 `getSubscription()` 方法用于获取已经订阅的消息推送服务。
 
-返回一个 Promise 的 PushSubscription 接口实例，代表当前已订阅的推送消息，否则返回一个 Promise 的 null。
+返回一个 Promise 的 PushSubscription 接口实例，代表当前已订阅的消息推送服务，否则返回一个 Promise 的 null。
 
 ```js
 window.navigator.serviceWorker.ready.then((registration) => {
-  // 获取已订阅的推送消息
+  // 获取已订阅的消息推送
   registration.pushManager.getSubscription().then((subscription) => {
     if (subscription != null) {
       console.log(subscription)
@@ -150,7 +150,7 @@ app.listen(1701, () => {
 
 若使用 firebase 架构可使用 firebase 来实现消息推送。
 
-### 监听推送消息
+### 监听消息推送
 
 ServiceWorkerGlobalScope 接口的 `push` 事件在每次收到一条推送消息时触发。
 
@@ -200,4 +200,4 @@ self.registration.pushManager.permissionState({
 
 PushManager 接口的 `supportedContentEncodings` 静态属性返回一组消息推送支持的加密方式。
 
-ServiceWorkerGlobalScope 接口的 `pushsubscriptionchange` 事件在更新订阅的推送消息时触发（可能原因包括推送消息服务刷新、推送消息服务失效等）。
+ServiceWorkerGlobalScope 接口的 `pushsubscriptionchange` 事件在更新订阅的消息推送时触发（可能原因包括消息推送服务刷新、消息推送服务失效等）。
