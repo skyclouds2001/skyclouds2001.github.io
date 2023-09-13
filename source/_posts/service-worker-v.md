@@ -201,3 +201,86 @@ self.registration.pushManager.permissionState({
 PushManager 接口的 `supportedContentEncodings` 静态属性返回一组消息推送支持的加密方式。
 
 ServiceWorkerGlobalScope 接口的 `pushsubscriptionchange` 事件在更新订阅的消息推送时触发（可能原因包括消息推送服务刷新、消息推送服务失效等）。
+
+### 相关接口
+
+```ts
+type PushEncryptionKeyName = "auth" | "p256dh";
+type PushMessageDataInit = BufferSource | string;
+
+interface PushEventInit extends ExtendableEventInit {
+    data?: PushMessageDataInit;
+}
+
+interface PushSubscriptionJSON {
+    endpoint?: string;
+    expirationTime?: EpochTimeStamp | null;
+    keys?: Record<string, string>;
+}
+
+interface PushSubscriptionOptionsInit {
+    applicationServerKey?: BufferSource | string | null;
+    userVisibleOnly?: boolean;
+}
+
+interface PushEvent extends ExtendableEvent {
+    readonly data: PushMessageData | null;
+}
+
+declare var PushEvent: {
+    prototype: PushEvent;
+    new(type: string, eventInitDict?: PushEventInit): PushEvent;
+};
+
+interface PushManager {
+    getSubscription(): Promise<PushSubscription | null>;
+    permissionState(options?: PushSubscriptionOptionsInit): Promise<PermissionState>;
+    subscribe(options?: PushSubscriptionOptionsInit): Promise<PushSubscription>;
+}
+
+declare var PushManager: {
+    prototype: PushManager;
+    new(): PushManager;
+    readonly supportedContentEncodings: ReadonlyArray<string>;
+};
+
+interface PushMessageData {
+    arrayBuffer(): ArrayBuffer;
+    blob(): Blob;
+    json(): any;
+    text(): string;
+}
+
+declare var PushMessageData: {
+    prototype: PushMessageData;
+    new(): PushMessageData;
+};
+
+interface PushSubscription {
+    readonly endpoint: string;
+    readonly expirationTime: EpochTimeStamp | null;
+    readonly options: PushSubscriptionOptions;
+    getKey(name: PushEncryptionKeyName): ArrayBuffer | null;
+    toJSON(): PushSubscriptionJSON;
+    unsubscribe(): Promise<boolean>;
+}
+
+declare var PushSubscription: {
+    prototype: PushSubscription;
+    new(): PushSubscription;
+};
+
+interface PushSubscriptionOptions {
+    readonly applicationServerKey: ArrayBuffer | null;
+    readonly userVisibleOnly: boolean;
+}
+
+declare var PushSubscriptionOptions: {
+    prototype: PushSubscriptionOptions;
+    new(): PushSubscriptionOptions;
+};
+
+interface ServiceWorkerRegistration extends EventTarget {
+    readonly pushManager: PushManager;
+}
+```

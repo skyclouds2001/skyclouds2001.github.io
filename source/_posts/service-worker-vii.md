@@ -177,7 +177,7 @@ interface BackgroundFetchEvent extends ExtendableEvent {
 declare var BackgroundFetchEvent: {
     prototype: BackgroundFetchEvent;
     new(type: "backgroundfetchabort" | "backgroundfetchclick", options: BackgroundFetchEventInit): BackgroundFetchEvent;
-}
+};
 
 interface BackgroundFetchEventInit extends ExtendableEventInit {
     registration: BackgroundFetchRegistration;
@@ -194,7 +194,7 @@ interface BackgroundFetchManager {
 declare var BackgroundFetchManager: {
     prototype: BackgroundFetchManager;
     new(): BackgroundFetchManager;
-}
+};
 
 interface BackgroundFetchOptions extends BackgroundFetchUIOptions {
     downloadTotal: number;
@@ -208,7 +208,7 @@ interface BackgroundFetchRecord {
 declare var BackgroundFetchRecord: {
     prototype: BackgroundFetchRecord;
     new(): BackgroundFetchRecord;
-}
+};
 
 interface BackgroundFetchRegistrationEventMap {
     "progress": Event;
@@ -236,7 +236,7 @@ interface BackgroundFetchRegistration extends EventTarget {
 declare var BackgroundFetchRegistration: {
     prototype: BackgroundFetchRegistration;
     new(): BackgroundFetchRegistration;
-}
+};
 
 type BackgroundFetchResult = "" | "success" | "failure";
 
@@ -252,7 +252,7 @@ interface BackgroundFetchUpdateUIEvent extends BackgroundFetchEvent {
 declare var BackgroundFetchUpdateUIEvent: {
     prototype: BackgroundFetchUpdateUIEvent;
     new(type: "backgroundfetchsuccess" | "backgroundfetchfail", options: BackgroundFetchEventInit): BackgroundFetchUpdateUIEvent;
-}
+};
 
 interface ImageResource {
     src: string;
