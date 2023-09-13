@@ -254,8 +254,8 @@ self.addEventListener('install', (e) => {
         cache.addAll([
           '/',
           '/index.html',
-          "/style.css",
-          "/main.js",
+          '/style.css',
+          '/main.js',
         ])
       )
   )

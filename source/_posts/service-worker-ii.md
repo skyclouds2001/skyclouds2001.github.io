@@ -14,51 +14,75 @@ thumbnail:
 
 ### 消息传递
 
-#### Client 至 Worker
+#### Client 向 Worker 发送消息
 
-从 Client 向 Worker 发送消息：
+* Client 端发送消息
+
+通过调用 ServiceWorker 实例上的 `postMessage()` 方法实现从 Client 端向对应的 ServiceWorker 发送消息。
 
 ```js
-/* in client */
+window.navigator.serviceWorker.controller?.postMessage('message from client')
+
 window.navigator.serviceWorker.ready.then((registration) => {
-  registration.active.postMessage('message from client')
+  registration.active?.postMessage('message from client')
 })
 
-/* in worker */
-self.addEventListener('message', (e) => {
-  console.log('worker | message', e)
+window.navigator.serviceWorker.getRegistration().then((registration) => {
+  registration?.active?.postMessage('message from client')
 })
 
-self.addEventListener('messageerror', (e) => {
-  console.log('worker | messageerror', e)
+window.navigator.serviceWorker.getRegistrations().then((registrations) => {
+  registrations.forEach((registration) => {
+    registration?.active?.postMessage('message from client')
+  })
 })
 ```
 
-#### Worker 至 Client
+* Worker 端接收消息
 
-从 Client 向 Worker 发送消息：
+通过监听 ServiceWorkerGlobalScope 环境的 `message` 事件接收消息。
 
 ```js
-/* in worker */
-global.clients.matchAll().then((clients) => {
+self.addEventListener('message', (e) => {
+  console.log('message', e)
+})
+
+self.addEventListener('messageerror', (e) => {
+  console.log('messageerror', e)
+})
+```
+
+#### Worker 向 Client 发送消息
+
+* Worker 端发送消息
+
+通过调用 Client 实例上的 `postMessage()` 方法实现从 ServiceWorker 向对应的 Client 发送消息。
+
+```js
+self.clients.get('<id>').then((client) => {
+  client.postMessage('message from client')
+})
+
+self.clients.matchAll().then((clients) => {
   clients.forEach((client) => {
     client.postMessage('message from client')
   })
 })
+```
 
-/* in client */
+* Client 端接收消息
+
+通过监听 ServiceWorkerContainer 的 `message` 事件接收消息。
+
+```js
 window.navigator.serviceWorker.addEventListener('message', (e) => {
-  console.log('client | message', e)
+  console.log('message', e)
 })
 
 window.navigator.serviceWorker.addEventListener('messageerror', (e) => {
-  console.log('client | messageerror', e)
+  console.log('messageerror', e)
 })
 ```
-
-> * `ServiceWorkerGlobalScope` 接口与 `ServiceWorkerContainer` 接口的 `message` 事件返回一个 `ExtendableMessageEvent` 实例（继承自 `ExtendableEvent`），在接收到传入消息时触发。
-> * `ServiceWorkerGlobalScope` 接口与 `ServiceWorkerContainer` 接口的 `messageerror` 事件返回一个 `MessageEvent` 实例（继承自 `Event`），在接收到传入消息解析失败时触发。
-> * `ExtendableMessageEvent` 接口同时实现了 `MessageEvent` 接口与 `ExtendableEvent` 接口。
 
 ### 请求代理
 
