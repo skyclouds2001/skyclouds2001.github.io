@@ -145,13 +145,39 @@ self.addEventListener('backgroundfetchsuccess', (e) => {
 })
 
 self.addEventListener('backgroundfetchfail', (e) => {
-  e.updateUI({
-    title: 'Download Fail',
-  })
+  e.waitUntil(() =>
+    self.caches.open('movies').then((cache) =>
+      e.registration.recordsAvailable && e.registration.matchAll().then((records) =>
+        Promise.all(
+          records.map((record) =>
+            record.responseReady.then((response) =>
+              cache.put(record.request, response)
+            )
+          )
+        )
+      )
+    ).then(() =>
+      e.updateUI({
+        title: 'Download Fail',
+      })
+    )
+  )
 })
 
 self.addEventListener('backgroundfetchabort', (e) => {
-  //
+  e.waitUntil(() =>
+    self.caches.open('movies').then((cache) =>
+      e.registration.recordsAvailable && e.registration.matchAll().then((records) =>
+        Promise.all(
+          records.map((record) =>
+            record.responseReady.then((response) =>
+              cache.put(record.request, response)
+            )
+          )
+        )
+      )
+    )
+  )
 })
 
 self.addEventListener('backgroundfetchclick', (e) => {
