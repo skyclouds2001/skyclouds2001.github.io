@@ -107,9 +107,9 @@ window.navigator.serviceWorker.ready.then((registration) => {
 const ID = 'fetch'
 
 window.navigator.serviceWorker.ready.then((registration) => {
-    registration.backgroundFetch.get(ID).then((registration) => {
-        registration.abort()
-    })
+  registration.backgroundFetch.get(ID).then((registration) => {
+    registration.abort()
+  })
 })
 ```
 
@@ -126,40 +126,40 @@ window.navigator.serviceWorker.ready.then((registration) => {
 ```js
 self.addEventListener('backgroundfetchsuccess', (e) => {
   e.waitUntil(() => 
-      self.caches.open('movies').then((cache) =>
-          e.registration.matchAll().then((records) =>
-              Promise.all(
-                  records.map((record) =>
-                      record.responseReady.then((response) =>
-                          cache.put(record.request, response)
-                      )
-                  )
-              )
+    self.caches.open('movies').then((cache) =>
+      e.registration.matchAll().then((records) =>
+        Promise.all(
+          records.map((record) =>
+            record.responseReady.then((response) =>
+              cache.put(record.request, response)
+            )
           )
-      ).then(() =>
-          e.updateUI({
-              title: 'Move download complete',
-          })
+        )
       )
+    ).then(() =>
+      e.updateUI({
+          title: 'Move download complete',
+      })
+    )
   )
 })
 
 self.addEventListener('backgroundfetchfail', (e) => {
-    e.updateUI({
-        title: 'Download Fail',
-    })
+  e.updateUI({
+    title: 'Download Fail',
+  })
 })
 
 self.addEventListener('backgroundfetchabort', (e) => {
-    //
+  //
 })
 
 self.addEventListener('backgroundfetchclick', (e) => {
-    if (e.registration.result === 'success') {
-        self.clients.openWindow('/play-movie');
-    } else {
-        self.clients.openWindow('/movie-download-progress');
-    }
+  if (e.registration.result === 'success') {
+    self.clients.openWindow('/play-movie');
+  } else {
+    self.clients.openWindow('/movie-download-progress');
+  }
 })
 ```
 
@@ -260,21 +260,21 @@ interface ImageResource {
     label: string;
 }
 
-interface ServiceWorkerGlobalScopeEventMap {
+interface ServiceWorkerRegistration extends EventTarget {
+    readonly backgroundFetch: BackgroundFetchManager;
+}
+
+interface ServiceWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
     "backgroundfetchabort": BackgroundFetchEvent;
     "backgroundfetchclick": BackgroundFetchEvent;
     "backgroundfetchfail": BackgroundFetchUpdateUIEvent;
     "backgroundfetchsuccess": BackgroundFetchUpdateUIEvent;
 }
 
-interface ServiceWorkerGlobalScope {
+interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
     onbackgroundfetchabort: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
     onbackgroundfetchclic: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
     onbackgroundfetchfail: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
     onbackgroundfetchsuccess: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
-}
-
-interface ServiceWorkerRegistration {
-    readonly backgroundFetch: BackgroundFetchManager;
 }
 ```

@@ -280,7 +280,7 @@ declare var PushSubscriptionOptions: {
     new(): PushSubscriptionOptions;
 };
 
-interface ServiceWorkerRegistration {
+interface ServiceWorkerRegistration extends EventTarget {
     readonly pushManager: PushManager;
 }
 
@@ -289,7 +289,7 @@ interface ServiceWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
     "pushsubscriptionchange": Event;
 }
 
-interface ServiceWorkerGlobalScope {
+interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
     onpush: ((this: ServiceWorkerGlobalScope, ev: PushEvent) => any) | null;
     onpushsubscriptionchange: ((this: ServiceWorkerGlobalScope, ev: Event) => any) | null;
 }
