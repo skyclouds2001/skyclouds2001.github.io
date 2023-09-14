@@ -59,7 +59,7 @@ self.registration.sync.register(TAG)
 
 > 若当前网络连接处于非正常状态，注册同步事件后，`sync` 事件不会马上触发，直至网络连接变为正常状态，才会触发 `sync` 事件。
 >
-> 换言之触发 `sync` 事件时，网络连接一定处于正常状态。
+> 换言之，触发 `sync` 事件时，网络连接一定处于正常状态。
 
 ```js
 const TAG = 'sync'
@@ -89,3 +89,44 @@ function sync() {
 可以利用该方法判断是否已注册相关的同步事件。
 
 `SyncEvent` 事件继承自 `ExtendableEvent` 事件，其 `tag` 属性给出定义的同步事件标识符，其 `lastChance` 属性标识当前同步事件后是否有新的同步事件。
+
+### 相关接口
+
+```ts
+interface SyncEventInit {
+    tag: string;
+    lastChance?: boolean;
+}
+
+interface SyncEvent extends ExtendableEvent {
+    readonly tag: string;
+    readonly lastChance: boolean;
+}
+
+declare var SyncEvent: {
+    prototype: SyncEvent;
+    new(type: string, eventInitDict?: SyncEventInit): SyncEvent;
+};
+
+interface SyncManager {
+    getTags(): Promise<ReadonlyArray<string>>;
+    register(tag: string): Promise<void>;
+}
+
+declare var SyncManager: {
+    prototype: SyncManager;
+    new(): SyncManager;
+};
+
+interface ServiceWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
+    "sync": SyncEvent;
+}
+
+interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
+    onsync: ((this: ServiceWorkerGlobalScope, ev: SyncEvent) => any) | null;
+}
+
+interface ServiceWorkerRegistration extends EventTarget {
+    readonly sync: SyncManager;
+}
+```
