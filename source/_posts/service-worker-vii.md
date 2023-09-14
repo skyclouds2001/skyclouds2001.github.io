@@ -170,25 +170,35 @@ self.addEventListener('backgroundfetchclick', (e) => {
 ### 相关接口
 
 ```ts
+type BackgroundFetchFailureReason = "" | "aborted" | "bad-status" | "fetch-error" | "quota-exceeded" | "download-total-exceeded";
+type BackgroundFetchResult = "" | "success" | "failure";
+
+interface BackgroundFetchEventInit extends ExtendableEventInit {
+    registration: BackgroundFetchRegistration;
+}
+
 interface BackgroundFetchEvent extends ExtendableEvent {
     readonly registration: BackgroundFetchRegistration;
 }
 
 declare var BackgroundFetchEvent: {
     prototype: BackgroundFetchEvent;
-    new(type: "backgroundfetchabort" | "backgroundfetchclick", options: BackgroundFetchEventInit): BackgroundFetchEvent;
+    new(type: string, options: BackgroundFetchEventInit): BackgroundFetchEvent;
 };
 
-interface BackgroundFetchEventInit extends ExtendableEventInit {
-    registration: BackgroundFetchRegistration;
+interface BackgroundFetchUpdateUIEvent extends BackgroundFetchEvent {
+    updateUI(options?: BackgroundFetchUIOptions);
 }
 
-type BackgroundFetchFailureReason = "" | "aborted" | "bad-status" | "fetch-error" | "quota-exceeded" | "download-total-exceeded";
+declare var BackgroundFetchUpdateUIEvent: {
+    prototype: BackgroundFetchUpdateUIEvent;
+    new(type: string, options: BackgroundFetchEventInit): BackgroundFetchUpdateUIEvent;
+};
 
 interface BackgroundFetchManager {
     fetch(id: string, requests: RequestInfo | RequestInfo[], options?: BackgroundFetchOptions): Promise<BackgroundFetchRegistration>;
     get(id: string): Promise<BackgroundFetchRegistration | undefined>;
-    getIds(): Promise<string[]>;
+    getIds(): Promise<ReadonlyArray<string>>;
 }
 
 declare var BackgroundFetchManager: {
@@ -238,21 +248,10 @@ declare var BackgroundFetchRegistration: {
     new(): BackgroundFetchRegistration;
 };
 
-type BackgroundFetchResult = "" | "success" | "failure";
-
 interface BackgroundFetchUIOptions {
-    icons: ImageResource[];
+    icons: ReadonlyArray<ImageResource>;
     title: string;
 }
-
-interface BackgroundFetchUpdateUIEvent extends BackgroundFetchEvent {
-    updateUI(options?: BackgroundFetchUIOptions);
-}
-
-declare var BackgroundFetchUpdateUIEvent: {
-    prototype: BackgroundFetchUpdateUIEvent;
-    new(type: "backgroundfetchsuccess" | "backgroundfetchfail", options: BackgroundFetchEventInit): BackgroundFetchUpdateUIEvent;
-};
 
 interface ImageResource {
     src: string;
