@@ -22,7 +22,7 @@ Service Worker **无法动态导入** JavaScript 模块，如果在 Service Work
 
 出于安全原因，Service Worker 只能在**安全上下文**中运行（可以通过全局变量 isSecureContext 来判断）。
 
-## Service Worker 使用
+## Service Worker 使用 - 基本
 
 ### 注册
 

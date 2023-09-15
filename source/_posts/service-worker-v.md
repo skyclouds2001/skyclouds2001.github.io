@@ -10,7 +10,7 @@ categories:
 thumbnail:
 ---
 
-## ServiceWorker 使用 - 消息推送
+## ServiceWorker 使用 - 消息推送 Push
 
 {% asset_img 推送消息.png %}
 

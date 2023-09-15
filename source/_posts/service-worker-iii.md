@@ -10,7 +10,7 @@ categories:
 thumbnail:
 ---
 
-## Service Worker 使用 - 缓存
+## Service Worker 使用 - 缓存 Cache Storage
 
 Service Worker 的缓存策略是基于 CacheStorage 实现的。
 

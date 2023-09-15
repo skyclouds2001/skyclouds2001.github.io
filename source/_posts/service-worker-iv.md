@@ -10,7 +10,7 @@ categories:
 thumbnail:
 ---
 
-## Service Worker 使用 - 通知
+## Service Worker 使用 - 通知 Notification
 
 ### 创建通知
 

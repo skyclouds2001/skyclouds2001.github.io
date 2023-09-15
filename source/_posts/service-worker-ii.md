@@ -10,7 +10,7 @@ categories:
 thumbnail:
 ---
 
-## Service Worker 使用
+## Service Worker 使用 - 消息及请求代理
 
 ### 消息传递
 
