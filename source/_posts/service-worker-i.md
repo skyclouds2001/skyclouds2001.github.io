@@ -26,7 +26,7 @@ Service Worker **无法动态导入** JavaScript 模块，如果在 Service Work
 
 ### 注册
 
-Service Worker 的注册通过调用 `window.navigator.serviceWorker.register` 方法实现。
+Service Worker 的注册通过调用 `window.navigator.serviceWorker.register()` 方法实现。
 
 ```js
 /* in client */
@@ -79,6 +79,30 @@ self.addEventListener('activate', (e) => {
 > * `ExtendableEvent` 接口的 `waitUntil` 方法，可以用于表示事件调度程序工作正在进行中并延迟生命周期的完成直至传递的 Promise 被解决。
 >   * 在 `install` 事件中，waitUntil 方法将 Service Worker 保持在安装阶段，直到任务完成；若 Promise 被拒绝，则安装被视为失败，并且正在安装的 Service Worker 将被丢弃。
 >   * 在 `activate` 事件中，waitUntil 方法用来缓冲功能事件，从而可以更新数据库架构并删除过时的缓存，保证正式运行时使用的是最新的架构。
+
+### 更新
+
+Service Worker 的更新通过调用对应的 `ServiceWorkerRegistration` 的 `update()` 实现。方法返回一个 Promise 的 `ServiceWorkerRegistration`。
+
+```js
+navigator.serviceWorker.ready.then((registration) => {
+  registration.addEventListener('updatefound', () => {
+    registration.update()
+  })
+})
+```
+
+### 卸载
+
+Service Worker 的卸载通过调用对应的 `ServiceWorkerRegistration` 的 `unregister()` 实现。方法返回一个 Promise 的布尔值，表示是否卸载成功。
+
+```js
+navigator.serviceWorker.ready.then((registration) => {
+  window.addEventListener('beforeunload', () => {
+    registration.unregister()
+  })
+})
+```
 
 ### 全局上下文
 
