@@ -294,3 +294,8 @@ interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
     onpushsubscriptionchange: ((this: ServiceWorkerGlobalScope, ev: Event) => any) | null;
 }
 ```
+
+### 源码链接
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.js)

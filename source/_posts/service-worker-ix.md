@@ -244,3 +244,8 @@ declare var ServiceWorkerRegistration: {
     new(): ServiceWorkerRegistration;
 };
 ```
+
+### 源码链接
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js)

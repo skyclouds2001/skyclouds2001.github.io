@@ -127,3 +127,8 @@ self.addEventListener('notificationclose', (e) => {
 > * `notification` 属性代表触发事件的 Notification 实例
 >
 > * `action` 顺序代表触发事件的 action 的 ID
+
+### 源码链接
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.js)

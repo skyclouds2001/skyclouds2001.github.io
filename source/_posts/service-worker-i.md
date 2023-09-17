@@ -244,3 +244,8 @@ self.structuredClone()
 如果这是首次使 Service Worker 可用，则会尝试安装，然后在成功安装后将其激活。
 
 但如果存在可用的现有 Service Worker，则新版本会在后台安装，但尚未激活 - 此时它称为等待中的 Worker。仅当不再加载任何仍在使用旧 Service Worker 的页面时，它才会被激活。一旦没有更多页面需要加载，新的 Service Worker 就会激活（成为活动 Worker）。不过可以手动提前终止当前 Service Worker 并启用新的 Service Worker。
+
+### 源码链接
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js)

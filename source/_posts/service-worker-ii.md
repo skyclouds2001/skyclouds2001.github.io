@@ -128,3 +128,8 @@ fetch('/override/success').then(console.log).catch(console.warn)
 fetch('/override/error').then(console.log).catch(console.warn)
 fetch('/override/redirect').then(console.log).catch(console.warn)
 ```
+
+### 源码链接
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/message.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/message.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/message.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/message.js)

@@ -130,3 +130,8 @@ interface ServiceWorkerRegistration extends EventTarget {
     readonly sync: SyncManager;
 }
 ```
+
+### 源码链接
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.js)
