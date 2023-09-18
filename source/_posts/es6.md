@@ -653,12 +653,12 @@ searchValue 可以为字符串或带**g**修饰符的正则表达式
 
 - Number.isFinite()
   检测数值是否为有限的
-    - 数值为 ±Infinity 或 NaN 返回 false，其他返回 true
-    - 非数值一律返回 false
+  - 数值为 ±Infinity 或 NaN 返回 false，其他返回 true
+  - 非数值一律返回 false
 - Number.isNaN()
   检测数值是否为 NaN
 
-    - 仅 NaN 返回 true，其他均为 false
+  - 仅 NaN 返回 true，其他均为 false
 
   与传统的全局方法 isFinite()和 isNaN()的区别，对于非数值类型，全局方法会调用 Number()方法转换再比较，而 Number 对象方法一律直接返回 false
 
@@ -695,11 +695,11 @@ searchValue 可以为字符串或带**g**修饰符的正则表达式
   空值或无法转为整数的值返回 NaN
 - Math.sign()
   判断数值的符号
-    - 正数返回 +1
-    - 负数返回 -1
-    - 0 返回 0
-    - -0 返回-0
-    - 其他返回 NaN
+  - 正数返回 +1
+  - 负数返回 -1
+  - 0 返回 0
+  - -0 返回-0
+  - 其他返回 NaN
 - Math.cbrt()
   计算数值的立方根
 - Math.clz32()
@@ -798,8 +798,8 @@ searchValue 可以为字符串或带**g**修饰符的正则表达式
   属性)及可遍历对象(具有 Iterator 接口)转为数组
   允许接受第二个参数即回调函数，作用类似 map 方法，对元素进行处理并放入返回的数组
 
-    - 转换各种值为数组
-    - 将字符串转为数组以判断字符串正确的长度
+  - 转换各种值为数组
+  - 将字符串转为数组以判断字符串正确的长度
 
   ```js
   let arr2 = Array.from({
@@ -820,9 +820,9 @@ searchValue 可以为字符串或带**g**修饰符的正则表达式
   将当前数组内部指定位置成员复制至其他位置并返回当前数组
   `Array.prototype.copyWithin(target, start = 0, end = this.length)`
 
-    - target 开始替换数据位置
-    - start 开始读取数据位置
-    - end 结束读取数据位置
+  - target 开始替换数据位置
+  - start 开始读取数据位置
+  - end 结束读取数据位置
       `[1, 2, 3, 4, 5].copyWithin(0, 3, 4)`
 
 - Array.prototype.find()
@@ -2487,4 +2487,3 @@ No.24
 ## Reflect
 
 Reflect 对象是 Object 对象的更新
-

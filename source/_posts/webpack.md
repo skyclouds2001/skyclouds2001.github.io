@@ -12,21 +12,21 @@ thumbnail: http://webmobtuts.com/wp-content/uploads/2018/04/tutorial-webpack-4-f
 # 前端工程化
 
 * 模块化
-    * js模块化
-    * css模块化
-    * 资源模块化
+  * js模块化
+  * css模块化
+  * 资源模块化
 * 组件化
-    * 复用UI结构、样式、行为
+  * 复用UI结构、样式、行为
 * 规范化
-    * 目录结构划分
-    * 编码规范化
-    * 接口规范化
-    * 文档规范化
-    * git分支管理
+  * 目录结构划分
+  * 编码规范化
+  * 接口规范化
+  * 文档规范化
+  * git分支管理
 * 自动化
-    * 自动化构建
-    * 自动部署
-    * 自动化测试
+  * 自动化构建
+  * 自动部署
+  * 自动化测试
 
 标准化企业级项目开发过程：工具、技术、流程、经验
 
@@ -369,4 +369,3 @@ webpack.config.js 添加 `devTools: 'eval-source-map'` 选项
 
 * 使用
   `import msg from '@/msg.js';`
-

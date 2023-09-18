@@ -16,9 +16,7 @@ Web API 是 Web 的应用程序编程接口
 
 内置的 Web API 来支持复杂的操作，并帮助访问数据
 
-
-
-###  Web Storage
+### Web Storage
 
 存储
 
@@ -38,8 +36,6 @@ Web API 是 Web 的应用程序编程接口
 * clear()  清空存储
 * length  存储数据项数
 * key(*index*)   获取第n项数据项的键名
-
-
 
 ### Geolocation
 
@@ -96,8 +92,6 @@ coords.accuracy  位置精度
     }
 ```
 
-
-
 ### Cookies
 
 cookie 长期存储信息
@@ -124,7 +118,7 @@ path：cookie所属路径
 `document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";`
 
 ```js
-	function getCookie(cname) {
+ function getCookie(cname) {
       var name = cname + "=";
       var ca = document.cookie.split(';');
       for(var i=0; i<ca.length; i++) {
@@ -152,10 +146,8 @@ path：cookie所属路径
           setCookie("username",username,365);
         }
       }
-	}
+ }
 ```
-
-
 
 ### fetch
 
@@ -177,8 +169,6 @@ fetch(req).then(function(response) {
 ```
 
 > 当接收至HTTP错误码时不会报错，而是正常resolve
-
-
 
 ### Web Worker
 
@@ -209,12 +199,10 @@ fetch(req).then(function(response) {
 
 * 终止 `w.terminate();`
 
-
-
 ### Battery
 
 ```js
-	navigator.getBattery().then((res) => {
+ navigator.getBattery().then((res) => {
         console.log(res);   // res: BatteryManager对象
     });
 ```

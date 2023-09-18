@@ -62,8 +62,8 @@ $是一个函数，传一个匿名函数即入口函数；传一个字符串即�
 
 ##### jQuery对象获取DOM对象
 
-- [*index*]
-- .get(*index*)
+* [*index*]
+* .get(*index*)
 
 ##### jQuery对象获取DOM对象
 
@@ -84,8 +84,6 @@ $是一个函数，传一个匿名函数即入口函数；传一个字符串即�
 * 鼠标移出事件     .mouseleave  .mouseout
 
 特别的，out在移出其本身及其子元素都会触发，leave仅移出其本身才触发
-
-
 
 ##### 事件添加
 
@@ -134,13 +132,11 @@ jQuery事件对象是对原生js事件对象的封装，已处理了兼容性
 
 * keyCode   获取按下键盘的键码
 
-
-
 ### jQuery选择器
 
 ##### 简单选择器
 
-* id选择器			$('#*id*')
+* id选择器   $('#*id*')
 * 类名选择器        $('.*class*')
 * 元素选择器        $('*tag'*)
 * 通配选择器        $('*')
@@ -178,15 +174,15 @@ jQuery事件对象是对原生js事件对象的封装，已处理了兼容性
 
 ##### 获取及设置元素内容属性
 
-* 设置元素内文本			        `.text(*String*)`  `.text(function(i, origText) {return *string*})`
+* 设置元素内文本           `.text(*String*)`  `.text(function(i, origText) {return *string*})`
 
-  ​	会覆盖内部所有内容包括子元素内容
+  ​ 会覆盖内部所有内容包括子元素内容
 
-  ​	不会解析字符串中的HTML部分
+  ​ 不会解析字符串中的HTML部分
 
-  ​	存在隐式迭代现象
+  ​ 存在隐式迭代现象
 
-  ​	回调函数形式：回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值，然后以函数新值返回您希望使用的字符串
+  ​ 回调函数形式：回调函数由两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值，然后以函数新值返回您希望使用的字符串
 
 ```js
       $("#test1").text(function(i,origText){
@@ -195,7 +191,7 @@ jQuery事件对象是对原生js事件对象的封装，已处理了兼容性
       });
 ```
 
-* 获取元素内**所有**文本			.text()
+* 获取元素内**所有**文本   .text()
 
 * 获取及设置元素内容                  .html()
 
@@ -213,15 +209,15 @@ jQuery事件对象是对原生js事件对象的封装，已处理了兼容性
 
 ##### 获取及设置元素样式属性
 
-* 设置元素CSS属性			.css('*property*', *value*)
+* 设置元素CSS属性   .css('*property*', *value*)
 
-  ​	.css('*property1*': *value1*)
+  ​ .css('*property1*': *value1*)
 
-  ​	.css({'*property1*': *value1*, '*property2*': *value2*})
+  ​ .css({'*property1*': *value1*, '*property2*': *value2*})
 
   修改与添加
 
-* 获取元素 CSS属性内容			.css('*property*')
+* 获取元素 CSS属性内容   .css('*property*')
 
 ```js
 $('#box1').css('width', '300px')
@@ -260,11 +256,11 @@ $('#box1').css({
 
 ##### 插入元素
 
-* 在元素**开头结尾**插入内容		.prepend(*string1*, ...)  .append(*string1*, ...)
+* 在元素**开头结尾**插入内容  .prepend(*string1*, ...)  .append(*string1*, ...)
 
   `$("p").append("Some appended text.");`
 
-​	.appendTo()  .prependTo()
+​ .appendTo()  .prependTo()
 
   `$(content).appendTo(selector)`
 
@@ -320,13 +316,11 @@ $('#box1').css({
 
   参数true表示克隆事件，否则不克隆事件，默认不克隆
 
-
-
 ### jQuery效果与方法
 
 ##### 元素隐藏及显示
 
-* 隐藏元素			.hide()
+* 隐藏元素   .hide()
 * 显示元素            .show()
 * 隐藏及显示元素      .toggle()
 

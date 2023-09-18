@@ -17,22 +17,16 @@ thumbnail: https://www.bleepstatic.com/content/posts/2018/07/12/npm.png
 
 [中文文档](https://www.npmjs.com.cn/)
 
-
-
 包：node.js 中的第三方模块
 
 由第三方个人或团队开发的开源代码集
 
-
-
 包类型：
 
-*   项目包
-    *   开发依赖包    被记录到devDependencies节点的包，仅开发中使用
-    *   核心依赖包    被记录到dependencies节点的包，开发发布后均使用
-*   全局包
-
-
+* 项目包
+  * 开发依赖包    被记录到devDependencies节点的包，仅开发中使用
+  * 核心依赖包    被记录到dependencies节点的包，开发发布后均使用
+* 全局包
 
 命令：
 
@@ -85,8 +79,6 @@ npm outdated -g --depth=0
 检测npm包是否为最新
 ```
 
-
-
 包管理配置文件：package.json项目根目录
 
 项目名称、版本号、描述等‘
@@ -95,49 +87,45 @@ npm outdated -g --depth=0
 
 安装的包会自动更新至package.json文件
 
-*   **name**   项目名称：字符串
-*   **version**   项目版本号：字符串
-*   **description**   包内容描述：字符串
-*   **keywords**  项目的关键词：字符串数组
-*   homePage 项目主页：字符串
-*   bugs 项目报告错误的网址：字符串数组
-*   **license** 项目的许可证：字符串
-*   **author**  作者：字符串        可使用name、email、url替代
-*   **contributors**  贡献者：字符串数组
-*   funding  贡献方式：字符串or字符串数组or对象（type & url）
-*   files  包作为依赖项需包含的条目
-*   **main**   标记包的根目录模块
-*   **browser**   同上，特别指明为浏览器环境
-*   bin    命令名称到本地文件的映射|
-*   man    指定为man程序查找的文件名|
-*   directories    指定包结构|
-*   repository    指定代码所在位置，常为各种git仓库
-*   scripts    指定在包生命周期运行的代码|
-*   config   设置持续使用配置参数
-*   **dependencies**    项目开发与发布均使用的包
-*   **devDependencies**    项目开发内使用的包
-*   peerDependencies    项目使用的插件|
-*   peerDependenciesMeta    标记插件是否为必需|
+* **name**   项目名称：字符串
+* **version**   项目版本号：字符串
+* **description**   包内容描述：字符串
+* **keywords**  项目的关键词：字符串数组
+* homePage 项目主页：字符串
+* bugs 项目报告错误的网址：字符串数组
+* **license** 项目的许可证：字符串
+* **author**  作者：字符串        可使用name、email、url替代
+* **contributors**  贡献者：字符串数组
+* funding  贡献方式：字符串or字符串数组or对象（type & url）
+* files  包作为依赖项需包含的条目
+* **main**   标记包的根目录模块
+* **browser**   同上，特别指明为浏览器环境
+* bin    命令名称到本地文件的映射|
+* man    指定为man程序查找的文件名|
+* directories    指定包结构|
+* repository    指定代码所在位置，常为各种git仓库
+* scripts    指定在包生命周期运行的代码|
+* config   设置持续使用配置参数
+* **dependencies**    项目开发与发布均使用的包
+* **devDependencies**    项目开发内使用的包
+* peerDependencies    项目使用的插件|
+* peerDependenciesMeta    标记插件是否为必需|
 
-*   bundledDependencies/bundleDependencies    发布包时将捆绑的包名称|
-*   optionalDependencies    可以使用依赖项|
-*   overrides    规定依赖项版本|
-*   engines    规定适用的node版本
-*   os    规定使用的操作系统版本
-*   cpu    规定适用的cpu版本
-*   **private**    规定能否发布私有存储库
-*   publishConfig    规定发布配置
-*   workspaces    描述用作工作空间的文件夹的直接路径
-
-
+* bundledDependencies/bundleDependencies    发布包时将捆绑的包名称|
+* optionalDependencies    可以使用依赖项|
+* overrides    规定依赖项版本|
+* engines    规定适用的node版本
+* os    规定使用的操作系统版本
+* cpu    规定适用的cpu版本
+* **private**    规定能否发布私有存储库
+* publishConfig    规定发布配置
+* workspaces    描述用作工作空间的文件夹的直接路径
 
 版本号：
 
-*   第一位数字：大版本
-*   第二位数字：功能版本
-*   第三位数字：bug修复版本
-
-
+* 第一位数字：大版本
+* 第二位数字：功能版本
+* 第三位数字：bug修复版本
 
 其他：
 

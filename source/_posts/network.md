@@ -11,15 +11,11 @@ thumbnail: https://pic2.zhimg.com/v2-e4eaab2af21f10ec3efb1e3f7de22b8a_r.jpg
 
 # 计算机网络
 
-
-
 通信：互联网
 
 * 主体：服务器、客户端浏览器
 * 内容：内容
 * 方式：响应方式
-
-
 
 通信协议：通信遵循的规则约定|通信格式
 
@@ -27,14 +23,9 @@ thumbnail: https://pic2.zhimg.com/v2-e4eaab2af21f10ec3efb1e3f7de22b8a_r.jpg
 
 超文本传输协议：网页内容传输协议 HTTP协议客户端与服务器间进行网页内容传输时需遵守的传输格式 提交&响应
 
-
-
 ## HTTP 请求
 
-
 HTTP协议模型：请求/响应 交互模型
-
-
 
 ### HTTP 请求消息
 
@@ -42,22 +33,22 @@ HTTP 请求报文
 
 * 请求行：以空格分隔
 
-    * 请求方式：GET、POST等
-    * URL：域名之后的url部分
-    * 协议版本
+  * 请求方式：GET、POST等
+  * URL：域名之后的url部分
+  * 协议版本
 
 * 请求头部：以回车符&换行符分隔，以键值对组成，键值对以冒号分隔
 
-    * Host：服务器域名
-    * User-Agent：说明客户端的浏览器类型
-    * Connection：客户端与服务器的连接方式
-    * Content-Type：发送到服务器的数据格式
+  * Host：服务器域名
+  * User-Agent：说明客户端的浏览器类型
+  * Connection：客户端与服务器的连接方式
+  * Content-Type：发送到服务器的数据格式
 
-    * Content-Length：请求体大小
+  * Content-Length：请求体大小
 
-    * Accept：客户端可接受的返回数据类型
-    * Accept-Language：客户端可接收的语言文本类型
-    * Accept-Encoding：客户端可接受的内容压缩编码形式
+  * Accept：客户端可接受的返回数据类型
+  * Accept-Language：客户端可接收的语言文本类型
+  * Accept-Encoding：客户端可接受的内容压缩编码形式
 
 * 空行：回车符or换行符
 
@@ -84,14 +75,12 @@ Accept-Language: zh-CN,zh;q=0.9
 Cookie: BIDUPSID=028E86627DA4BB24A78F13047AE65439; PSTM=1628179856; BD_UPN=12314753; __yjs_duid=1_0275df3f717d1e5149c8d0bc2305f82d1628213742697; BAIDUID=D5D732CC5CBECD9277FA4AF82CF82B37:FG=1; BDUSS=JzeWVqZmpKdC1kRmFDN2VKRDl4R3d5YUR5WnJzVjV6dWRsdE5tSlotUXdNZGxoRVFBQUFBJCQAAAAAAQAAAAEAAACSPpQhzOy~1bXE1MYxMDAwMDEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADCksWEwpLFhQ3; BDUSS_BFESS=JzeWVqZmpKdC1kRmFDN2VKRDl4R3d5YUR5WnJzVjV6dWRsdE5tSlotUXdNZGxoRVFBQUFBJCQAAAAAAQAAAAEAAACSPpQhzOy~1bXE1MYxMDAwMDEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADCksWEwpLFhQ3; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BAIDUID_BFESS=D5D732CC5CBECD9277FA4AF82CF82B37:FG=1; BD_HOME=1; H_PS_PSSID=35834_35106_31253_35765_35489_34584_35491_35871_35246_35905_35796_35316_26350_35884_35724_35879_35746; sug=3; sugstore=0; ORIGIN=0; bdime=0; BA_HECTOR=8004al2520258h0lb41h0s1c90q
 ```
 
-
-
 HTTP 响应消息：HTTP 响应报文
 
 * 状态行
-    * 协议版本
-    * 状态码：200等
-    * 状态码描述
+  * 协议版本
+  * 状态码：200等
+  * 状态码描述
 * 响应头部
 * 空行
 * 响应体
@@ -117,8 +106,6 @@ X-Ua-Compatible: IE=Edge,chrome=1
 Transfer-Encoding: chunked
 ```
 
-
-
 ### 请求方法
 
 * GET     查询 - 获取服务器资源
@@ -134,8 +121,6 @@ Transfer-Encoding: chunked
 
 请求删除指定的资源
 
-
-
 ### 响应状态码
 
 用于标识响应状态
@@ -144,24 +129,22 @@ Transfer-Encoding: chunked
 
 * 1**  信息：收到请并需继续操作（少见）
 * 2** 成功：请求成功接收并处理
-    * 200 OK  请求成功
-    * 201 Created  已创建
+  * 200 OK  请求成功
+  * 201 Created  已创建
 * 3** 重定向：需进一步操作以完成请求
-    * 301 Moved Permanently  永久移动       使用新URL
-    * 302 Found  临时移动    仍使用原有URL
-    * 304 Not Modified  未修改    会直接访问缓存内资源
+  * 301 Moved Permanently  永久移动       使用新URL
+  * 302 Found  临时移动    仍使用原有URL
+  * 304 Not Modified  未修改    会直接访问缓存内资源
 * 4** 客户端错误：请求包含语法错误或无法完成请求
-    * 400 Bad Request   语义有误or请求参数有误
-    * 401 Unauthorized  需用户验证
-    * 403 Forbidden  拒绝执行请求
-    * 404 Not Found  无法找到资源
-    * 408 Request Timeout  请求超时
+  * 400 Bad Request   语义有误or请求参数有误
+  * 401 Unauthorized  需用户验证
+  * 403 Forbidden  拒绝执行请求
+  * 404 Not Found  无法找到资源
+  * 408 Request Timeout  请求超时
 * 5** 服务器错误：服务器处理请求出错
-    * 500 Internal Server Error  服务器内部错误，无法完成请求
-    * 501 Not Implemented 不支持请求方法
-    * 503 Service Unavailable 服务器暂时无法处理：超载or系统维护
-
-
+  * 500 Internal Server Error  服务器内部错误，无法完成请求
+  * 501 Not Implemented 不支持请求方法
+  * 503 Service Unavailable 服务器暂时无法处理：超载or系统维护
 
 ## 跨域与 JSONP
 
@@ -173,9 +156,9 @@ Transfer-Encoding: chunked
 
 同源策略：浏览器安全功能-限制来源同一个加载文档脚本与其他源资源的交互
 
-- 阻止读取非同源网页的 cookie、localstorage 与 indexedDB
-- 阻止接触非同源网页的 DOM
-- 阻止向非同源地址发送 Ajax 请求
+* 阻止读取非同源网页的 cookie、localstorage 与 indexedDB
+* 阻止接触非同源网页的 DOM
+* 阻止向非同源地址发送 Ajax 请求
 
 跨域：非同源
 
@@ -266,8 +249,8 @@ jQuery 实现用户端
 
 减少事件触发频率
 
-- 使得鼠标事件仅在单位时间内触发一次
-- 降低监测滚动条位置的频率
+* 使得鼠标事件仅在单位时间内触发一次
+* 降低监测滚动条位置的频率
 
 ```js
 // 时间戳
@@ -331,4 +314,3 @@ function debounce(func, delay) {
   };
 }
 ```
-

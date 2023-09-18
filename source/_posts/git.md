@@ -68,9 +68,9 @@ thumbnail: https://git-scm.com/images/logo@2x.png
 
 `git status` 检测文件所处状态
 
-* git status -s
+- git status -s
 
-* git status --short
+- git status --short
 
 标记 A 表示新建的文件
 
@@ -231,4 +231,3 @@ SSH key
 ###### 删除[远程仓库]分支
 
 `git push <remote-repository> --delete <remote-branch>`
-

@@ -541,13 +541,13 @@ ref 引用
 
 - is 属性指定预期渲染的组件的名称，可以绑定变量实现动态切换使用的组件
 - 可以用`<keep-alive>`包裹组件，使之能在失活时缓存，从而可以高效重复使用组件
-    - mount:
-        - activated() 钩子 组件被激活
-        - deactivated() 钩子 组件被缓存
-    - props:
-        - include 仅名称匹配的组件被缓存
-        - exclude 任意名称匹配的组件不被缓存
-        - _注意 include 与 exclude 不应同时使用_
+  - mount:
+    - activated() 钩子 组件被激活
+    - deactivated() 钩子 组件被缓存
+  - props:
+    - include 仅名称匹配的组件被缓存
+    - exclude 任意名称匹配的组件不被缓存
+    - _注意 include 与 exclude 不应同时使用_
 
 ## 插槽
 
@@ -673,15 +673,15 @@ ref 引用
 
 - 钩子函数
 
-    - bind 指令绑定到元素时调用
-    - inserted 被绑定元素被插入父节点时调用
-    - update 组件的 VNode 更新时调用
-    - componentUpdated 组件的 VNode 及其子 VNode 全部更新时调用
-    - unbind 指令自元素解绑时调用
+  - bind 指令绑定到元素时调用
+  - inserted 被绑定元素被插入父节点时调用
+  - update 组件的 VNode 更新时调用
+  - componentUpdated 组件的 VNode 及其子 VNode 全部更新时调用
+  - unbind 指令自元素解绑时调用
 
 - 钩子函数参数
-    - el 指令绑定的元素
-    - binding 指令的一些属性
+  - el 指令绑定的元素
+  - binding 指令的一些属性
 
 ## 路由
 
@@ -810,14 +810,14 @@ path：仅路径部分 & fullPath：完全参数
 ### 声明式导航 & 编程式导航
 
 - 声明式：点击链接
-    - `<a>` `<route-link>`
+  - `<a>` `<route-link>`
 - 编程式：调用 API 跳转
-    - `location`
-    - `this.$route.push(${url})` 跳转至指定的地址，并增加一条历史记录
-    - `this.$route.replace(${url})` 跳转至指定的地址，并替换当前的历史记录
-    - `this.$route.go(${number})` 在浏览器记录中进行前进 or 后退
-    - `this.$route.push()`
-    - `this.$route.back()`
+  - `location`
+  - `this.$route.push(${url})` 跳转至指定的地址，并增加一条历史记录
+  - `this.$route.replace(${url})` 跳转至指定的地址，并替换当前的历史记录
+  - `this.$route.go(${number})` 在浏览器记录中进行前进 or 后退
+  - `this.$route.push()`
+  - `this.$route.back()`
 
 ### 导航守卫
 
@@ -857,4 +857,3 @@ router.beforeEach((to, from, next) => {});
 - space-before-function-paren
 
 ## Vue3
-

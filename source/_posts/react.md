@@ -222,14 +222,14 @@ shape
 仅类组件有生命周期
 
 * 创建时
-    * constructor 初始化state 绑定this
-    * render 渲染UI
-    * componentDidMount 发送网络请求 DOM操作
+  * constructor 初始化state 绑定this
+  * render 渲染UI
+  * componentDidMount 发送网络请求 DOM操作
 * 更新时
-    * render
-    * componentDidUpdate
+  * render
+  * componentDidUpdate
 * 卸载时
-    * componentWillUnmount
+  * componentWillUnmount
 
 ### 组件复用
 
@@ -273,4 +273,3 @@ path为 / 的路由
 
 默认 route 遵从模糊匹配
 设置 extra 遵从精确匹配
-
