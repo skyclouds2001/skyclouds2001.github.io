@@ -2,10 +2,9 @@
 title: network
 date: 2022-12-14 21:06:37
 tags:
-- Frontend
-- Network
+- Other
 categories:
-- [Frontend, Other]
+- [Other]
 thumbnail: https://pic2.zhimg.com/v2-e4eaab2af21f10ec3efb1e3f7de22b8a_r.jpg
 ---
 

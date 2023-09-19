@@ -3,8 +3,7 @@ title: ajax
 date: 2022-12-14 20:46:23
 tags:
 - Frontend
-- JavaScript
-- Network
+- Other
 categories:
 - [Frontend, Other]
 thumbnail: https://th.bing.com/th/id/OIP.v3b022s2UAyhVAFLUtzhJgHaDj

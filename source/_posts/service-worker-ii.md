@@ -3,10 +3,9 @@ title: ServiceWorker II
 date: 2023-08-31 23:46:02
 tags:
 - Frontend
-- JavaScript
-- Browser
+- Web API
 categories:
-- [Frontend, Other]
+- [Frontend, Web API]
 thumbnail:
 ---
 

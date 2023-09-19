@@ -3,6 +3,7 @@ title: regex
 date: 2022-12-14 20:28:35
 tags:
 - Frontend
+- Other
 categories:
 - [Frontend, Other]
 thumbnail: https://picx.zhimg.com/v2-3b8c20cb2c106a15b6f83a148bc52bba_1440w.jpg

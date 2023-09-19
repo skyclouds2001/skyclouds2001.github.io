@@ -3,10 +3,9 @@ title: web api
 date: 2022-12-14 22:55:58
 tags:
 - Frontend
-- JavaScript
-- Browser
+- Web API
 categories:
-- [Frontend, Other]
+- [Frontend, Web API]
 thumbnail:
 ---
 

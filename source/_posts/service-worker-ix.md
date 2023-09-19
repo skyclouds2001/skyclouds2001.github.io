@@ -3,10 +3,9 @@ title: service-worker-ix
 date: 2023-09-16 00:35:28
 tags:
 - Frontend
-- JavaScript
-- Browser
+- Web API
 categories:
-- [Frontend, Other]
+- [Frontend, Web API]
 thumbnail:
 ---
 

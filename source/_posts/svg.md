@@ -3,7 +3,7 @@ title: svg
 date: 2022-12-14 22:11:59
 tags:
 - Frontend
-- HTML
+- Other
 categories:
 - [Frontend, Other]
 thumbnail: 

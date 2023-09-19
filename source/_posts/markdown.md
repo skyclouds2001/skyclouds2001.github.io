@@ -2,9 +2,9 @@
 title: markdown
 date: 2022-12-14 21:20:59
 tags:
-- Frontend
+- Other
 categories:
-- [Frontend, Other]
+- [Other]
 thumbnail: https://tse3-mm.cn.bing.net/th/id/OIP-C.dX0BoWdOGYkaSunaRkTXTgHaEj
 ---
 

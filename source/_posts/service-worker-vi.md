@@ -3,10 +3,9 @@ title: service-worker-vi
 date: 2023-09-12 08:45:37
 tags:
 - Frontend
-- JavaScript
-- Browser
+- Web API
 categories:
-- [Frontend, Other]
+- [Frontend, Web API]
 thumbnail:
 ---
 

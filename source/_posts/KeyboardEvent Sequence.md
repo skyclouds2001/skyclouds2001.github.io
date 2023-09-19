@@ -3,11 +3,10 @@ title: KeyboardEvent Sequence
 date: 2023-08-22 20:39:55
 tags:
 - Frontend
-- Keyboard
-- WebAPI
+- Web API
 categories:
-- [Frontend, WebAPI]
-thumbnail: https://th.bing.com/th/id/OIP.M0y0xeyNHd8xtsH17q6TEgHaF6
+- [Frontend, Web API]
+thumbnail:
 ---
 
 ## KeyboardEvent 事件链路
