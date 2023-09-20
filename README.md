@@ -1,5 +1,5 @@
-# skyclouds 的个人主页
+# skyclouds2001's Blog
 
-基于 hexo 博客框架
+基于 [Hexo Blog Framework](https://hexo.io/)
 
-基于 miccall 主题
+基于 [Amazing 主题](https://github.com/removeif/hexo-theme-amazing)
