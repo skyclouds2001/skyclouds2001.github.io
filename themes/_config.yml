@@ -1,7 +1,9 @@
 # Version of the configuration file
 version: 5.0.1
+
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
+
 # Path or URL to the website's logo
 logo: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png #/img/logo.svg
 # Page metadata configurations
@@ -230,6 +232,7 @@ sidebar:
     right:
         # Whether the sidebar sticks to the top when page scrolls
         sticky: false
+
 # Sidebar widget configurations
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
@@ -239,40 +242,37 @@ widgets:
         position: left
         type: toc
         # Select show index
-        index: false
+        index: true
     # Profile widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: profile
         # Author name
-        author: 辣椒の酱
+        author: skyclouds2001
         # Author title
-        author_title: 尚未执佩剑，转眼即江湖
+        author_title: 总有奋不顾身的相信，总要坚韧恒久的勇气
         # Author's current location
-        location: 阿尔及利亚
+        location: China
         # URL or path to the avatar image
-        avatar: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png
+        avatar: https://avatars.githubusercontent.com/u/95597335
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/ppoffice'
+        follow_link: 'https://github.com/skyclouds2001'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/removeif'
-            Weibo:
-                icon: fab fa-weibo
-                url: 'https://weibo.com/removeif'
+                url: 'https://github.com/skyclouds2001'
             Email:
                 icon: fa fa-envelope
-                url: 'mailto:removeif@163.com'
-            Next:
+                url: 'mailto:skyclouds2001@163.com'
+            Blog:
                 icon: fab fa-dribbble
-                url: 'https://removeif.github.io/remove.io'
+                url: 'https://skyclouds2001.github.io/'
             RSS:
                 icon: fas fa-rss
                 url: /atom.xml
@@ -285,7 +285,8 @@ widgets:
         # Names and URLs of the sites
         links:
             Hexo: 'https://hexo.io'
-            Bulma: 'https://bulma.io'
+            Icarus: 'https://github.com/ppoffice/hexo-theme-icarus'
+            Amazing: 'https://github.com/removeif/hexo-theme-amazing'
     # Latest comment widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -311,6 +312,12 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: tags
+        # Order by tag name or length. Prefix with `-` to sort in descending order.
+        order_by: name
+        # The maximum number of tags to show. Leave empty to show all.
+        amount: 20
+        # Whether to show post count right to tag name.
+        show_count: true
     # Google FeedBurner email subscription widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -325,6 +332,16 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: adsense
+        client_id: 
+        slot_id: 
+    # Follow.it email subscription configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: left
+        type: followit
+        description: 
+        action_url: 
+        verification_code: 
 
 # AdSense client ID
 adsense_client_id: #'ca-pub-6343805421927634'
