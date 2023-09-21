@@ -7,7 +7,8 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "preinstall": "npx only-allow yarn"
   },
   "hexo": {
     "version": "5.4.2"
