@@ -1,5 +1,5 @@
 ---
-title: service-worker-V
+title: ServiceWorker V
 date: 2023-09-10 23:58:21
 tags:
 - Frontend
@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-09-10 23:58:21/ServiceWorker V.html'
+mathJax: false
 ---
 
 ## ServiceWorker 使用 - 消息推送 Push

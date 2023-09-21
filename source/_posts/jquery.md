@@ -1,5 +1,5 @@
 ---
-title: jQuery
+title: jquery
 date: 2022-08-14 22:55:26
 tags:
 - Frontend
@@ -9,6 +9,11 @@ categories:
 - Frontend
 - Library
 thumbnail: https://logos-download.com/wp-content/uploads/2016/09/jQuery_logo.png
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2022-08-14 22:55:26/jquery.html'
+mathJax: false
 ---
 
 # jQuery

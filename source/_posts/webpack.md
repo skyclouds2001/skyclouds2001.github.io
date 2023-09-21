@@ -8,6 +8,11 @@ categories:
 - Frontend
 - Tool
 thumbnail: http://webmobtuts.com/wp-content/uploads/2018/04/tutorial-webpack-4-featured.png
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2022-12-14 22:06:02/webpack.html'
+mathJax: false
 ---
 
 # 前端工程化

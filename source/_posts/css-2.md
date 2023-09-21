@@ -1,5 +1,5 @@
 ---
-title: CSS-2
+title: css-2
 date: 2022-08-05 21:50:38
 tags:
 - Frontend
@@ -8,6 +8,11 @@ categories:
 - Frontend
 - CSS
 thumbnail: https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2022-08-05 21:50:38/css-2.html'
+mathJax: false
 ---
 
 # 选择器

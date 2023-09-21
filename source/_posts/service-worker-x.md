@@ -1,5 +1,5 @@
 ---
-title: service-worker-x
+title: ServiceWorker X
 date: 2023-09-20 15:04:36
 tags:
 - Frontend
@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-09-20 15:04:36/ServiceWorker X.html'
+mathJax: false
 ---
 
 ## Service Worker 使用 - 全局上下文

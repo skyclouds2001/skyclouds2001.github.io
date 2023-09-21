@@ -1,5 +1,5 @@
 ---
-title: CSS-3
+title: css-3
 date: 2022-08-06 22:06:41
 tags:
 - Frontend
@@ -8,6 +8,11 @@ categories:
 - Frontend
 - CSS
 thumbnail: https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2022-08-06 22:06:41/css-3.html'
+mathJax: false
 ---
 
 # 1. 样式继承&样式覆盖

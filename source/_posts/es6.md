@@ -8,6 +8,11 @@ categories:
 - Frontend
 - JavaScript
 thumbnail: https://paulmiller3000.com/wp-content/uploads/JavaScript-ES6-Logo.jpeg
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2022-12-14 22:21:39/es6.html'
+mathJax: false
 ---
 
 # ES6 标准入门

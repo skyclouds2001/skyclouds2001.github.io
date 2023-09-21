@@ -1,5 +1,5 @@
 ---
-title: service-worker-ix
+title: ServiceWorker IX
 date: 2023-09-16 00:35:28
 tags:
 - Frontend
@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-09-16 00:35:28/ServiceWorker IX.html'
+mathJax: false
 ---
 
 ## ServiceWorker 使用 - Client 与 Worker 的交互

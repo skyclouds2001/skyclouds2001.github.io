@@ -1,5 +1,5 @@
 ---
-title: service-worker-vii
+title: ServiceWorker VII
 date: 2023-09-13 15:43:44
 tags:
 - Frontend
@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-09-13 15:43:44/ServiceWorker VII.html'
+mathJax: false
 ---
 
 ## ServiceWorker 使用 - 后台获取 Background Fetch

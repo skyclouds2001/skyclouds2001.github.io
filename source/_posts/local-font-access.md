@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-09-20 12:38:21/local-font-access.html'
+mathJax: false
 ---
 
 Local Font Access API 向开发者提供了获取用户本地安装的字体的信息，包括字体名称、字体样式及字体族等等。

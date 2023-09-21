@@ -9,6 +9,11 @@ categories:
 - Frontend
 - FrameWork
 thumbnail: https://blog.amio.io/content/images/2019/06/vue-3.png
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2022-12-14 21:47:47/vue.html'
+mathJax: false
 ---
 
 # vue

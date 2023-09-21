@@ -1,5 +1,5 @@
 ---
-title: service-worker-IV
+title: ServiceWorker IV
 date: 2023-09-10 21:26:07
 tags:
 - Frontend
@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-09-10 21:26:07/ServiceWorker IV.html'
+mathJax: false
 ---
 
 ## Service Worker 使用 - 通知 Notification

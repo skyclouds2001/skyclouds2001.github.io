@@ -8,6 +8,11 @@ categories:
 - Frontend
 - Other
 thumbnail: https://th.bing.com/th/id/OIP.v3b022s2UAyhVAFLUtzhJgHaDj
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2022-12-14 20:46:23/ajax.html'
+mathJax: false
 ---
 
 # AJAX

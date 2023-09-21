@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-08-31 23:46:02/ServiceWorker II.html'
+mathJax: false
 ---
 
 ## Service Worker 使用 - 消息及请求代理

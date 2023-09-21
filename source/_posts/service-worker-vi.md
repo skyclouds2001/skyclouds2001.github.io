@@ -1,5 +1,5 @@
 ---
-title: service-worker-vi
+title: ServiceWorker VI
 date: 2023-09-12 08:45:37
 tags:
 - Frontend
@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-09-12 08:45:37/ServiceWorker VI.html'
+mathJax: false
 ---
 
 ## ServiceWorker 使用 - 消息同步 Background Sync

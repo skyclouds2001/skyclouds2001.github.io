@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2022-12-14 22:55:58/web api.html'
+mathJax: false
 ---
 
 # Web API

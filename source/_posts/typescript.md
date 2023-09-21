@@ -8,6 +8,11 @@ categories:
 - Frontend
 - Other
 thumbnail: https://tse2-mm.cn.bing.net/th/id/OIP-C.X6S_XCoE1pfm6fKK2zpQNwHaD4
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2022-12-14 21:36:44/typescript.html'
+mathJax: false
 ---
 
 ```typescript

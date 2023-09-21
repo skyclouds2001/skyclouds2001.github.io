@@ -1,5 +1,5 @@
 ---
-title: service-worker-viii
+title: ServiceWorker VIII
 date: 2023-09-14 23:42:48
 tags:
 - Frontend
@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-09-14 23:42:48/ServiceWorker VIII.html'
+mathJax: false
 ---
 
 ## ServiceWorker 使用 - 周期后台同步 Periodic Background Synchronization

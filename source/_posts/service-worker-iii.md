@@ -7,7 +7,12 @@ tags:
 categories:
 - Frontend
 - Web API
-thumbnail:
+thumbnail: 
+toc: true
+recommend: 1
+keywords: 
+uniqueId: '2023-08-31 23:47:47/ServiceWorker III.html'
+mathJax: false
 ---
 
 ## Service Worker 使用 - 缓存 Cache Storage
