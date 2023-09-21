@@ -4,7 +4,7 @@ date: 2022-12-14 21:20:59
 tags:
 - Other
 categories:
-- [Other]
+- Other
 thumbnail: https://tse3-mm.cn.bing.net/th/id/OIP-C.dX0BoWdOGYkaSunaRkTXTgHaEj
 ---
 

@@ -5,7 +5,8 @@ tags:
 - Frontend
 - Tool
 categories:
-- [Frontend, Tool]
+- Frontend
+- Tool
 thumbnail: http://webmobtuts.com/wp-content/uploads/2018/04/tutorial-webpack-4-featured.png
 ---
 

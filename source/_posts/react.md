@@ -6,7 +6,8 @@ tags:
 - JavaScript
 - FrameWork
 categories:
-- [Frontend, FrameWork]
+- Frontend
+- FrameWork
 thumbnail: https://tse4-mm.cn.bing.net/th/id/OIP-C.33CwBYkmnMfpA9Djup22JwHaHa
 ---
 

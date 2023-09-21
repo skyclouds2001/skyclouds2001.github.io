@@ -6,7 +6,8 @@ tags:
 - JavaScript
 - FrameWork
 categories:
-- [Frontend, FrameWork]
+- Frontend
+- FrameWork
 thumbnail: https://blog.amio.io/content/images/2019/06/vue-3.png
 ---
 

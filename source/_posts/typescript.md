@@ -3,8 +3,10 @@ title: typescript
 date: 2022-12-14 21:36:44
 tags:
 - Frontend
+- Other
 categories:
-- [Frontend]
+- Frontend
+- Other
 thumbnail: https://tse2-mm.cn.bing.net/th/id/OIP-C.X6S_XCoE1pfm6fKK2zpQNwHaD4
 ---
 

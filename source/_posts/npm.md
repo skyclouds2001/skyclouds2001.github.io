@@ -5,7 +5,8 @@ tags:
 - Frontend
 - Tool
 categories:
-- [Frontend, Tool]
+- Frontend
+- Tool
 thumbnail: https://www.bleepstatic.com/content/posts/2018/07/12/npm.png
 ---
 

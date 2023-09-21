@@ -5,7 +5,8 @@ tags:
 - Frontend
 - Tool
 categories:
-- [Frontend, Tool]
+- Frontend
+- Tool
 thumbnail: https://cdn-media-1.freecodecamp.org/images/1*DF0g7bNW5e2z9XS9N2lAiw.jpeg
 ---
 

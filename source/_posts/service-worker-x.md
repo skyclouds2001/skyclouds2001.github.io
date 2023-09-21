@@ -5,7 +5,8 @@ tags:
 - Frontend
 - Web API
 categories:
-- [Frontend, Web API]
+- Frontend
+- Web API
 thumbnail:
 ---
 

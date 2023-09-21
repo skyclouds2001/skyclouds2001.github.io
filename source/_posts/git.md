@@ -5,7 +5,8 @@ tags:
 - Frontend
 - Tool
 categories:
-- [Frontend, Tool]
+- Frontend
+- Tool
 thumbnail: https://git-scm.com/images/logo@2x.png
 ---
 

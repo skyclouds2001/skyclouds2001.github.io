@@ -5,7 +5,8 @@ tags:
 - Frontend
 - CSS
 categories:
-- [Frontend, CSS]
+- Frontend
+- CSS
 thumbnail: https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png
 ---
 

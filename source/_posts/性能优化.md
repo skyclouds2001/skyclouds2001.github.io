@@ -5,7 +5,8 @@ tags:
 - Frontend
 - Other
 categories:
-- [Frontend, Other]
+- Frontend
+- Other
 thumbnail: 
 ---
 

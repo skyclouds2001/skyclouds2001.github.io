@@ -5,7 +5,8 @@ tags:
 - Frontend
 - JavaScript
 categories:
-- [Frontend, JavaScript]
+- Frontend
+- JavaScript
 thumbnail: https://paulmiller3000.com/wp-content/uploads/JavaScript-ES6-Logo.jpeg
 ---
 
