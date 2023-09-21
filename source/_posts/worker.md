@@ -15,7 +15,9 @@ uniqueId: '2023-09-21 04:36:10/worker.html'
 mathJax: false
 ---
 
-Web Worker 是 Web API 的一种，可以在后台运行一个耗时的任务，避免阻塞用户界面
+Web Worker 是 HTML 标准定义的 Web API 的一部分，可以在后台运行一个耗时的任务，避免因长期执行 JS 任务而阻塞用户界面渲染与交互
+
+Web Worker 可以被 Window 环境创建，也可以被其他的 Worker 创建
 
 Web Worker 是独立于主线程的一个线程，具有独立的作用域，其中运行的任务不会阻塞主线程
 
@@ -136,7 +138,9 @@ self.close()
 
 ## 补充
 
-Worker 对象或者 Worker 全局环境的 messageerror 事件会在传递的消息无法解析时触发，可用用于监听发送失败的消息
+Worker 对象或者 Worker 全局环境的 `messageerror` 事件会在传递的消息无法解析时触发，可用用于监听发送失败的消息
+
+Worker 全局环境的 `importScripts()` 方法可以导入一组同源的脚本文件，并在 Worker 全局环境下执行
 
 ## 源码链接
 
