@@ -25,11 +25,11 @@ Web Worker 中的全局作用域 `DedicatedWorkerGlobalScope` 与 Window 的全�
 
 Web Worker 线程与主线程之间的通信通过 message 机制实现，传递的数据通过结构化拷贝算法传递，因此通常不存在处理线程安全的需要
 
-Web Worker 接口的定义如下
+Web Worker 相关接口的定义如下
 
 ```ts
-class Worker extends EventTarget {
-  constructor(scriptURL: string | URL, options?: WorkerOptions): Worker;
+class Worker extends EventTarget, AbstractWorker {
+  constructor(scriptURL: string | URL, options?: WorkerOptions);
   postMessage(message: any, transfer: Transferable[]): void;
   postMessage(message: any, options?: StructuredSerializeOptions): void;
   terminate(): void;
@@ -38,6 +38,8 @@ class Worker extends EventTarget {
 interface DedicatedWorkerGlobalScope extends WorkerGlobalScope {
   readonly name: string;
   close(): void;
+  onmessage: ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null;
+  onmessageerror: ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null;
   postMessage(message: any, transfer: Transferable[]): void;
   postMessage(message: any, options?: StructuredSerializeOptions): void;
 }
