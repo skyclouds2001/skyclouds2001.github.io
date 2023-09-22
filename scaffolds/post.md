@@ -7,10 +7,10 @@ tags:
 categories: 
   - test3
   - test4
-thumbnail:
+thumbnail: 
 toc: true
 recommend: 1
-keywords: categories-java
+keywords: 
 uniqueId: {{ date }}/{{ title }}.html
 mathJax: false
 ---
