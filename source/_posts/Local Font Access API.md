@@ -1,5 +1,5 @@
 ---
-title: local-font-access
+title: Local Font Access API
 date: 2023-09-20 12:38:21
 tags:
 - Frontend
@@ -11,15 +11,23 @@ thumbnail:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-09-20 12:38:21/local-font-access.html'
+uniqueId: '2023-09-20 12:38:21/Local Font Access API.html'
 mathJax: false
 ---
 
-Local Font Access API 向开发者提供了获取用户本地安装的字体的信息，包括字体名称、字体样式及字体族等等。
+Local Font Access API 向开发者提供了获取用户本地安装的字体的信息的方式，包括字体名称、字体样式及字体族等等。
 
 ## 获取本地字体
 
-通过调用 `window.queryLocalFonts()` 方法来获取本地安装的字体。
+调用 `window.queryLocalFonts()` 方法来获取本地安装的字体。
+
+方法定义如下：
+
+```js
+interface Window {
+  queryLocalFonts: (options: { postscriptNames: string[] }) => Promise<FontData[]>
+}
+```
 
 方法允许传入一组配置项，其 postscriptNames 参数允许传入一组字符串数组，代表希望筛选的 postscriptName 名称。
 
