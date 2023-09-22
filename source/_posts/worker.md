@@ -1,5 +1,5 @@
 ---
-title: worker
+title: Worker
 date: 2023-09-21 12:36:10
 tags:
   - Frontend
@@ -11,7 +11,7 @@ thumbnail:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-09-21 04:36:10/worker.html'
+uniqueId: '2023-09-21 04:36:10/Worker.html'
 mathJax: false
 ---
 
@@ -21,9 +21,27 @@ Web Worker 可以被 Window 环境创建，也可以被其他的 Worker 创建
 
 Web Worker 是独立于主线程的一个线程，具有独立的作用域，其中运行的任务不会阻塞主线程
 
-Web Worker 中的全局作用域与 Window 的全局作用域不同，其中部分 API 在 Worker 中不可用或为限制版本
+Web Worker 中的全局作用域 `DedicatedWorkerGlobalScope` 与 Window 的全局作用域不同，Window 环境中部分 API 在 Worker 环境中不可用或受到一定的限制
 
 Web Worker 线程与主线程之间的通信通过 message 机制实现，传递的数据通过结构化拷贝算法传递，因此通常不存在处理线程安全的需要
+
+Web Worker 接口的定义如下
+
+```ts
+class Worker extends EventTarget {
+  constructor(scriptURL: string | URL, options?: WorkerOptions): Worker;
+  postMessage(message: any, transfer: Transferable[]): void;
+  postMessage(message: any, options?: StructuredSerializeOptions): void;
+  terminate(): void;
+}
+
+interface DedicatedWorkerGlobalScope extends WorkerGlobalScope {
+  readonly name: string;
+  close(): void;
+  postMessage(message: any, transfer: Transferable[]): void;
+  postMessage(message: any, options?: StructuredSerializeOptions): void;
+}
+```
 
 ## 创建 Worker
 
@@ -35,10 +53,13 @@ const worker = new Worker('./worker.js')
 
 Worker 脚本需要与 Client 同域
 
-> Worker 构造函数支持传入一组可选的配置项
+> `Worker()` 构造函数支持传入一组可选的配置项
 > 其 `type` 参数指定脚本的类型，值可以是 `classic` 或 `module`，默认值是 `classic`
-> 其 `name` 参数指定 Worker 的名称，在 debug 时候有一定作用
-> 其 credentials 参数指定 Worker 的 credentials 选项，允许的值可以是 `omit`、`same-origin` 或 `include`
+> 其 `name` 参数指定 Worker 的名称，在 debug 时候有一定作用，在 Worker 内可以通过 `name` 只读属性访问
+> 其 `credentials` 参数指定 Worker 的 credentials 选项，允许的值可以是 `omit`、`same-origin` 或 `include`
+> 若传入的 URL 解析失败，会抛出一个 `SyntaxError` 错误
+> 若接收到的脚本文件并非 JavaScript 格式，会抛出 `NetworkError` 错误
+> 若当前文档环境不支持创建 Worker，如未遵守同源策略，会抛出 `SecurityError` 错误
 
 ## Worker 消息传递
 
@@ -94,7 +115,7 @@ self.addEventListener('message', (e) => {
 * TypedArray
 * 等等
 
-此外，可以选择传入一组数组或包含 transfer 参数的配置项，定义需要转移所有权的对象
+此外，可以选择传入一组数组或包含 `transfer` 参数的配置项，定义需要转移所有权的对象
 
 所有权被转移后，对应对象在原环境内不再可用，而是仅在新环境内可用
 
@@ -116,9 +137,9 @@ self.addEventListener('message', (e) => {
 
 ### 可共享对象
 
-SharedArrayBuffer 可以用于多个线程之间的共享数据，并利用 Atomics 实现线程同步与线程锁功能。
+`SharedArrayBuffer` 可以用于多个线程之间的共享数据，并利用 `Atomics` 实现线程同步与线程锁功能。
 
-启用该 API 需要 secure context，并且需要 cross-origin isolate，可以通过检测 isSecureContext 和 crossOriginIsolated 属性来确定是否可以使用 SharedArrayBuffer
+启用该 API 需要 secure context，并且需要 cross-origin isolate，可以通过检测 `isSecureContext` 全局变量和 `crossOriginIsolated` 全局变量来确定是否可以使用 SharedArrayBuffer
 
 ## 卸载 Worker
 
