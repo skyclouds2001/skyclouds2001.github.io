@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>css-3 - skyclouds2001&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="skyclouds2001&#039;s Blog"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="skyclouds2001&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="1. 样式继承&amp;amp;样式覆盖CSS 为一个元素设置的某个样式，如果这个样式是允许继承的，那么这个样式也会应用到它的后代元素上 注意：不是所有样式都会被继承，只有可继承的样式才会从祖先元素基础样式的继承性建议查阅相应元素的参考手册 当一个元素同时被应用上多个相同的样式属性时，浏览器必须从中选择一个属性值，这个过程就是样式覆盖 样式继承有如下的规则：  当元素继承的样式发生冲突时，从最近祖先继承的"><meta property="og:type" content="blog"><meta property="og:title" content="辣椒の酱"><meta property="og:url" content="https://removeif.github.io/"><meta property="og:site_name" content="辣椒の酱"><meta property="og:description" content="1. 样式继承&amp;amp;样式覆盖CSS 为一个元素设置的某个样式，如果这个样式是允许继承的，那么这个样式也会应用到它的后代元素上 注意：不是所有样式都会被继承，只有可继承的样式才会从祖先元素基础样式的继承性建议查阅相应元素的参考手册 当一个元素同时被应用上多个相同的样式属性时，浏览器必须从中选择一个属性值，这个过程就是样式覆盖 样式继承有如下的规则：  当元素继承的样式发生冲突时，从最近祖先继承的"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:published_time" content="2022-08-06T14:06:41.000Z"><meta property="article:modified_time" content="2023-09-21T18:18:59.014Z"><meta property="article:author" content="removeif"><meta property="article:tag" content="Frontend"><meta property="article:tag" content="CSS"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://skyclouds2001.github.io/2022/08/06/css-3/"},"headline":"skyclouds2001's Blog","image":["https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png"],"datePublished":"2022-08-06T14:06:41.000Z","dateModified":"2023-09-21T18:18:59.014Z","author":{"@type":"Person","name":"skyclouds2001"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject"}},"description":"1. 样式继承&amp;样式覆盖CSS 为一个元素设置的某个样式，如果这个样式是允许继承的，那么这个样式也会应用到它的后代元素上 注意：不是所有样式都会被继承，只有可继承的样式才会从祖先元素基础样式的继承性建议查阅相应元素的参考手册 当一个元素同时被应用上多个相同的样式属性时，浏览器必须从中选择一个属性值，这个过程就是样式覆盖 样式继承有如下的规则：  当元素继承的样式发生冲突时，从最近祖先继承的"}</script><link rel="canonical" href="https://skyclouds2001.github.io/2022/08/06/css-3/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="skyclouds2001&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/album">Album</a><a class="navbar-item" href="/friend">Friend</a><a class="navbar-item" href="/message">Message</a><a class="navbar-item" href="/self-talking">Self-talking</a><a class="navbar-item" href="/music">Music</a><a class="navbar-item" href="/media">Media</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png" alt="css-3"></span></div><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-08-06  <a class="commentCountImg" href="/2022/08/06/css-3/#comment-container"><span class="display-none-class">112c6edc8b05dfb75b5bb5bfdb94c076</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="112c6edc8b05dfb75b5bb5bfdb94c076">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>20 分钟  <i class="fas fa-pencil-alt"> </i>3.0 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">css-3</h1><div class="content"><h1 id="1-样式继承-样式覆盖"><a href="#1-样式继承-样式覆盖" class="headerlink" title="1. 样式继承&amp;样式覆盖"></a>1. 样式继承&amp;样式覆盖</h1><p>CSS 为一个元素设置的某个样式，如果这个样式是允许继承的，那么这个样式也会应用到它的后代元素上</p>
+<p>注意：<em>不是<strong>所有样式</strong>都会被继承，只有可继承的样式才会从祖先元素基础</em><br>样式的继承性建议查阅相应元素的参考手册</p>
+<p>当一个元素同时被应用上多个相同的样式属性时，浏览器必须从中选择一个属性值，这个过程就是<strong>样式覆盖</strong></p>
+<p>样式继承有如下的规则：</p>
+<ul>
+<li>当元素继承的样式发生冲突时，从最近祖先继承的样式有效</li>
+<li>继承的样式和元素自身设置的样式冲突时，自身设置的样式有效</li>
+<li>元素自身设置的样式发生冲突时，样式权值高的有效</li>
+</ul>
+<p>样式权值按如下的列表相加确定</p>
+<ul>
+<li>内联样式：   1,0,0,0</li>
+<li>id 选择器：   0,1,0,0</li>
+<li>类及伪类选择器：  0,0,1,0</li>
+<li>标签及伪元素选择器： 0,0,0,1</li>
+<li>通配选择器：     0,0,0,0</li>
+</ul>
+<p>即：内联样式&gt;&gt;id选择器&gt;&gt;类及伪类选择器&gt;&gt;标签及伪元素选择器&gt;&gt;通配选择器</p>
+<ul>
+<li>样式权值相同时，后设置的有效</li>
+<li>!important的样式属性不被覆盖（除非同样为 !important 时，后设置的起效）</li>
+</ul>
+<p>可以使用!important来阻止样式被覆盖</p>
+<p><em>注意：除非不得已，尽量避免使用!important</em></p>
+<h1 id="2-文档流模型"><a href="#2-文档流模型" class="headerlink" title="2. 文档流模型"></a>2. 文档流模型</h1><h3 id="（1）概念"><a href="#（1）概念" class="headerlink" title="（1）概念"></a>（1）概念</h3><p>网页是一个多层结构，通过 CSS 可以给每层设置样式，上层会覆盖下层的内容，覆盖的内容不会被用户看到</p>
+<p>这些多层结构中，最底下的一层即为文档流，默认情况下元素都在文档流中排列</p>
+<h3 id="（2）元素在文档流中特点"><a href="#（2）元素在文档流中特点" class="headerlink" title="（2）元素在文档流中特点"></a>（2）元素在文档流中特点</h3><ul>
+<li><strong>块元素</strong></li>
+</ul>
+<p>在页面中独占一行</p>
+<p>默认情况下，宽度会把父元素撑满，即宽度由父元素宽度决定</p>
+<p>默认情况下，高度会被内容撑开，即高度由内容的高度决定</p>
+<ul>
+<li><strong>行内元素</strong></li>
+</ul>
+<p>不会在页面中独占一行，只占自身大小</p>
+<p>行内元素在页面中从左至右排列，如果一行不能容下，则换到第二行继续自左往右排列，即会自动换行</p>
+<p>默认情况下，宽度和高度都被内容撑开，即宽高均由内容决定</p>
+<h3 id="（3）元素脱离文档流特点"><a href="#（3）元素脱离文档流特点" class="headerlink" title="（3）元素脱离文档流特点"></a>（3）元素脱离文档流特点</h3><p>元素从文档流中脱离，不占据文档流中位置</p>
+<p>元素脱离文档流后，无论块元素和行内元素，均会表现为块元素，有以下特点：</p>
+<ul>
+<li>不会在页面中独占一行</li>
+<li>宽高默认被内容撑开</li>
+</ul>
+<p>设置 float、position、flex 等属性可使元素脱离文档流</p>
+<h1 id="3-盒模型"><a href="#3-盒模型" class="headerlink" title="3. 盒模型"></a>3. 盒模型</h1><h3 id="（1）盒模型概念"><a href="#（1）盒模型概念" class="headerlink" title="（1）盒模型概念"></a>（1）盒模型概念</h3><p>所有 HTML 元素都可以视为一个盒子，在盒子模型中对页面的布局实际上就变成将不同的盒子摆放到不同位置</p>
+<p>盒子模型包括：<strong>外边距</strong>、<strong>边框</strong>、<strong>内边距</strong>以及<strong>内容</strong></p>
+<img src="/2022/08/06/css-3/boxmodel.jpg" class="" title="CSS structure">
+
+<ul>
+<li><strong>内容</strong> content 框的内容，其中显示子元素的内容</li>
+<li><strong>内边距</strong> padding 内容周围的区域，内边距是透明的</li>
+<li><strong>边框</strong> border 围绕内边距和内容的边框</li>
+<li><strong>外边距</strong> margin 边界外与其他元素不覆盖的区域，外边距是透明的</li>
+</ul>
+<h3 id="（2）可见框概念"><a href="#（2）可见框概念" class="headerlink" title="（2）可见框概念"></a>（2）可见框概念</h3><p>可见框即元素可以看到的区域，由<strong>内容区</strong>、<strong>边框</strong>、<strong>内边距</strong>组成，不包括<strong>外边距</strong></p>
+<h1 id="4-内容区-content"><a href="#4-内容区-content" class="headerlink" title="4. 内容区-content"></a>4. 内容区-content</h1><h3 id="（1）width-属性及-height-属性"><a href="#（1）width-属性及-height-属性" class="headerlink" title="（1）width 属性及 height 属性"></a>（1）<code>width</code> 属性及 <code>height</code> 属性</h3><p>分别设置内容区的宽度与高度</p>
+<p>可以取以下值：</p>
+<ul>
+<li><strong>auto</strong>      让浏览器计算高度和宽度【默认】</li>
+<li><strong>length</strong>   以 px 等单位定义高度或宽度</li>
+<li><strong>%</strong>       以包含块的百分比定义高度或宽度</li>
+<li><strong>initial</strong>  将高度或宽度设置为默认值</li>
+<li><strong>inherit</strong>  从其父值继承高度或宽度</li>
+</ul>
+<p>这也是大多数与长度<code>&lt;length&gt;</code>有关的属性的合法取值</p>
+<h3 id="（2）min-width-属性-min-height-属性及max-width-属性-max-height-属性"><a href="#（2）min-width-属性-min-height-属性及max-width-属性-max-height-属性" class="headerlink" title="（2）min-width 属性 min-height 属性及max-width 属性 max-height 属性"></a>（2）<code>min-width</code> 属性 <code>min-height</code> 属性及<code>max-width</code> 属性 <code>max-height</code> 属性</h3><p>设置元素的最大&#x2F;最小的宽度&#x2F;高度</p>
+<p>默认值为none，即表示忽略该属性</p>
+<h1 id="5-内边距-padding"><a href="#5-内边距-padding" class="headerlink" title="5. 内边距-padding"></a>5. 内边距-padding</h1><h3 id="（1）padding-属性"><a href="#（1）padding-属性" class="headerlink" title="（1）padding 属性"></a>（1）<code>padding</code> 属性</h3><p>设置四个方向内边距</p>
+<h5 id="（i）取值"><a href="#（i）取值" class="headerlink" title="（i）取值"></a>（i）取值</h5><p>长度单位，要求为<strong>正值</strong></p>
+<p>或取值为auto</p>
+<h5 id="（ii）值个数"><a href="#（ii）值个数" class="headerlink" title="（ii）值个数"></a>（ii）值个数</h5><p>可为1~4，不同数量下取值按如下情况所示</p>
+<p>按顺时针顺序依次指定值</p>
+<ul>
+<li>四个值：上 右 下 左        按顺序分别设置上边距，右边距，下边距，左边距</li>
+<li>三个值：上 左右 下        按顺序分别设置上边距，左右边距，下边距</li>
+<li>两个值：上下 左右        按顺序分别设置上下边距，左右边距</li>
+<li>一个值：上下左右        同时设置上下左右边距</li>
+</ul>
+<h3 id="（2）padding-top、padding-right、padding-bottom、padding-left属性"><a href="#（2）padding-top、padding-right、padding-bottom、padding-left属性" class="headerlink" title="（2）padding-top、padding-right、padding-bottom、padding-left属性"></a>（2）<code>padding-top</code>、<code>padding-right</code>、<code>padding-bottom</code>、<code>padding-left</code>属性</h3><p>单独设置某方向内边距</p>
+<h1 id="6-边框-border"><a href="#6-边框-border" class="headerlink" title="6. 边框-border"></a>6. 边框-border</h1><h3 id="（1）border-style-属性"><a href="#（1）border-style-属性" class="headerlink" title="（1）border-style 属性"></a>（1）<code>border-style</code> 属性</h3><p>指定边框类型，<strong>必需</strong>，简写属性</p>
+<h5 id="（i）取值-1"><a href="#（i）取值-1" class="headerlink" title="（i）取值"></a>（i）取值</h5><ul>
+<li><strong>dotted</strong>     定义点线边框</li>
+<li><strong>dashed</strong>    定义虚线边框</li>
+<li><strong>solid</strong>     定义实线边框</li>
+<li><strong>double</strong>     定义双边框</li>
+<li><strong>none</strong>     定义无边框【默认】</li>
+<li>hidden     定义隐藏边框</li>
+<li>groove     定义 3D 坡口边框，效果取决于 border-color 值</li>
+<li>ridge     定义 3D 脊线边框，效果取决于 border-color 值</li>
+<li>inset     定义 3D inset 边框，效果取决于 border-color 值</li>
+<li>outset     定义 3D outset 边框，效果取决于 border-color 值</li>
+</ul>
+<h5 id="（ii）border-top-style、border-right-style、border-bottom-style、border-left-style属性"><a href="#（ii）border-top-style、border-right-style、border-bottom-style、border-left-style属性" class="headerlink" title="（ii）border-top-style、border-right-style、border-bottom-style、border-left-style属性"></a>（ii）<code>border-top-style</code>、<code>border-right-style</code>、<code>border-bottom-style</code>、<code>border-left-style</code>属性</h5><p>指定一个方向的边的边框类型</p>
+<h3 id="（2）border-width-属性"><a href="#（2）border-width-属性" class="headerlink" title="（2）border-width 属性"></a>（2）<code>border-width</code> 属性</h3><p>指定边框的宽度，简写属性</p>
+<h5 id="（i）取值-2"><a href="#（i）取值-2" class="headerlink" title="（i）取值"></a>（i）取值</h5><p>长度<length>，只能为<strong>正值</strong></p>
+<p>亦可取预设值thin、medium【默认】、strong</p>
+<h5 id="（ii）border-top-width、border-right-width、border-bottom-width、border-left-width属性"><a href="#（ii）border-top-width、border-right-width、border-bottom-width、border-left-width属性" class="headerlink" title="（ii）border-top-width、border-right-width、border-bottom-width、border-left-width属性"></a>（ii）<code>border-top-width</code>、<code>border-right-width</code>、<code>border-bottom-width</code>、<code>border-left-width</code>属性</h5><p>指定一个方向的边的边框宽度</p>
+<h3 id="（3）border-color-属性"><a href="#（3）border-color-属性" class="headerlink" title="（3）border-color 属性"></a>（3）<code>border-color</code> 属性</h3><p>指定边框的颜色，简写属性</p>
+<h5 id="（i）取值-3"><a href="#（i）取值-3" class="headerlink" title="（i）取值"></a>（i）取值</h5><p>允许所有颜色模式，如rgb()等<br>亦可取<strong>transparent</strong>表示透明色</p>
+<h5 id="（ii）border-top-color、border-right-color、border-bottom-color、border-left-color属性"><a href="#（ii）border-top-color、border-right-color、border-bottom-color、border-left-color属性" class="headerlink" title="（ii）border-top-color、border-right-color、border-bottom-color、border-left-color属性"></a>（ii）<code>border-top-color</code>、<code>border-right-color</code>、<code>border-bottom-color</code>、<code>border-left-color</code>属性</h5><p>指定一个方向的边的边框颜色</p>
+<h3 id="（4）border属性"><a href="#（4）border属性" class="headerlink" title="（4）border属性"></a>（4）<code>border</code>属性</h3><p>同时设置四条边框宽度、颜色、样式，是border-width、border-style 以及 border-color 的简写属性</p>
+<h5 id="（i）取值-4"><a href="#（i）取值-4" class="headerlink" title="（i）取值"></a>（i）取值</h5><p><em>border: width color style</em></p>
+<p>如果不设置其中的某个值也是允许的</p>
+<h5 id="（ii）值个数-1"><a href="#（ii）值个数-1" class="headerlink" title="（ii）值个数"></a>（ii）值个数</h5><ul>
+<li>四个值：上 右 下 左        按顺序分别设置上边框，右边框，下边框，左边框</li>
+<li>三个值：上 左右 下        按顺序分别设置上边框，左右边框，下边框</li>
+<li>两个值：上下 左右        按顺序分别设置上下边框，左右边框</li>
+<li>一个值：上下左右        同时设置上下左右边框</li>
+</ul>
+<h3 id="（5）border-top、border-right、border-bottom、border-left属性"><a href="#（5）border-top、border-right、border-bottom、border-left属性" class="headerlink" title="（5）border-top、border-right、border-bottom、border-left属性"></a>（5）<code>border-top</code>、<code>border-right</code>、<code>border-bottom</code>、<code>border-left</code>属性</h3><p>同时设置一个方向的一条边框宽度、颜色、样式，简写属性</p>
+<h1 id="7-外边距-margin"><a href="#7-外边距-margin" class="headerlink" title="7. 外边距-margin"></a>7. 外边距-margin</h1><h3 id="（1）margin属性"><a href="#（1）margin属性" class="headerlink" title="（1）margin属性"></a>（1）<code>margin</code>属性</h3><p>为元素的四周指定外边距的属性</p>
+<p>（i）取值</p>
+<p>长度单位，允许负值的使用<br>允许取值为<em>auto</em></p>
+<p>（ii）值个数</p>
+<ul>
+<li>四个值：上 右 下 左        按顺序分别设置上边距，右边距，下边距，左边距</li>
+<li>三个值：上 左右 下        按顺序分别设置上边距，左右边距，下边距</li>
+<li>两个值：上下 左右        按顺序分别设置上下边距，左右边距</li>
+<li>一个值：上下左右        同时设置上下左右边距</li>
+</ul>
+<h3 id="（2）margin-top、margin-right、margin-bottom、margin-left属性"><a href="#（2）margin-top、margin-right、margin-bottom、margin-left属性" class="headerlink" title="（2）margin-top、margin-right、margin-bottom、margin-left属性"></a>（2）<code>margin-top</code>、<code>margin-right</code>、<code>margin-bottom</code>、<code>margin-left</code>属性</h3><p>为元素的四周分别指定外边距的属性</p>
+<h1 id="8-块元素盒模型"><a href="#8-块元素盒模型" class="headerlink" title="8. 块元素盒模型"></a>8. 块元素盒模型</h1><p>拥有margin、border、padding、content等结构</p>
+<h3 id="（1）水平方向布局"><a href="#（1）水平方向布局" class="headerlink" title="（1）水平方向布局"></a>（1）水平方向布局</h3><p>一般而言，子元素在父元素内的元素总宽度应满足公式：</p>
+<blockquote>
+<p><strong>元素总宽度 &#x3D; 宽度 + 左内边距 + 右内边距 + 左边框 + 右边框 + 左外边距 + 右外边距</strong></p>
+</blockquote>
+<p>若不成立，称为<strong>过度约束</strong>，此时遵循如下规则确定元素的实际宽度</p>
+<ul>
+<li>如果七个值中没有 auto，则会调整 <strong>margin-right</strong> 的值使等式成立</li>
+</ul>
+<p>比如子元素 width 超过父元素内容区大小，margin-right 会调整为负值，使子元素溢出父元素</p>
+<ul>
+<li>如果 <strong>width</strong>、<strong>margin-left</strong>、<strong>margin-right</strong>中有一个设置为 auto，则会调整被设置为 auto 的那个值，使等式成立</li>
+</ul>
+<p>比如 width 默认值为 auto，所以块元素默认宽会充满整个父元素</p>
+<ul>
+<li>如果 <strong>width</strong>、<strong>margin-left</strong>、<strong>margin-right</strong> 中有两个及以上设置为 auto</li>
+</ul>
+<p>如果 width 设置为固定值，margin-left 和 margin-right 设置为 auto，则同时调整 margin-left 与 margin-right 使等式成立，此时子元素居中<br>如果 width 设为 auto，则子元素 width 调为最大，其余被设置为 auto 的属性取值为 0</p>
+<blockquote>
+<p>设置 <strong>margin: auto</strong> 是设置子元素在父元素内水平居中的一种常用方法</p>
+</blockquote>
+<h3 id="（2）垂直方向布局"><a href="#（2）垂直方向布局" class="headerlink" title="（2）垂直方向布局"></a>（2）垂直方向布局</h3><p>一般而言，默认情况下父元素高度被内容撑开，子元素在父元素内的元素总高度应满足公式</p>
+<blockquote>
+<p>元素总高度 &#x3D; 高度 + 上内边距 + 下内边距 + 上边框 + 下边框 + 上外边距 + 下外边距</p>
+</blockquote>
+<p>若父元素设置了高度，且子元素高度大于父元素，此时公式不成立，称为<strong>溢出</strong>，此时子元素会从父元素溢出：</p>
+<p>此时可设置<code>overflow</code>属性来处理溢出问题</p>
+<h3 id="（3）overflow属性"><a href="#（3）overflow属性" class="headerlink" title="（3）overflow属性"></a>（3）<code>overflow</code>属性</h3><p>定义溢出元素内容区的内容的处理方式<br>是 overflow-x 与 overflow-y 的简写属性</p>
+<h5 id="（i）取值-5"><a href="#（i）取值-5" class="headerlink" title="（i）取值"></a>（i）取值</h5><ul>
+<li>visible【默认】 内容不会被修剪，会呈现在元素框之外</li>
+<li>hidden   内容会被修剪，并且其余内容是不可见的</li>
+<li>scroll   内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容（无论有无溢出都会产生滚动条）</li>
+<li>auto    如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容（有溢出才会产生滚动条）</li>
+</ul>
+<h5 id="（ii）overflow-x-与overflow-y属性"><a href="#（ii）overflow-x-与overflow-y属性" class="headerlink" title="（ii）overflow-x 与overflow-y属性"></a>（ii）<code>overflow-x</code> 与<code>overflow-y</code>属性</h5><p>指定元素在x轴上或者y轴上对溢出元素内容区的内容的处理方式</p>
+<h1 id="9-行内元素盒模型"><a href="#9-行内元素盒模型" class="headerlink" title="9. 行内元素盒模型"></a>9. 行内元素盒模型</h1><p>行内元素盒模型的结构和块元素基本相同</p>
+<p>但亦存在以下几点区别：</p>
+<ul>
+<li>行内元素不支持设置 width 和 height，内容区宽高只由其内容决定</li>
+<li>可以设置 border，但是垂直方向 border 不会影响布局</li>
+<li>可以设置 padding，但是垂直方向 padding 不会影响布局</li>
+<li>可以设置 margin，但是垂直方向 margin 不会影响布局</li>
+</ul>
+<h1 id="10-盒子大小-box-sizing属性"><a href="#10-盒子大小-box-sizing属性" class="headerlink" title="10. 盒子大小-box-sizing属性"></a>10. 盒子大小-box-sizing属性</h1><p>默认情况下<code>width</code>属性及<code>height</code>属性指的是<strong>内容区的大小</strong></p>
+<p><code>box-sizing</code>属性可以改变盒子尺寸计算方式</p>
+<p>取值有</p>
+<ul>
+<li>content-box【默认值】  宽高用来设置内容区大小  <code>width = content</code></li>
+<li>border-box    宽高用来设置盒子可见框的大小 <code>width = content + padding + border</code></li>
+</ul>
+<blockquote>
+<p><strong>box-sizing: border-box</strong> 在前端开发中应用非常广泛，可以用于 <strong>控制盒子的可见区域大小</strong></p>
+</blockquote>
+</div><div class="article-licensing box"><div class="licensing-title"><p>css-3</p><p><a href="https://skyclouds2001.github.io/2022/08/06/css-3/">https://skyclouds2001.github.io/2022/08/06/css-3/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://skyclouds2001.github.io"><p>skyclouds2001</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2022-08-06</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-09-22</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/2022/08/05/css-2/" target="_blank">css-2</a><br></span><span>  2.<a class="is-size-6" href="/2022/08/05/css-1/" target="_blank">css-1</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2023/08/22/KeyboardEvent%20Sequence/" target="_blank">KeyboardEvent Sequence</a><br></span><span>  2.<a class="is-size-6" href="/2023/09/20/Local%20Font%20Access%20API/" target="_blank">Local Font Access API</a><br></span><span>  3.<a class="is-size-6" href="/2023/09/22/SharedWorker/" target="_blank">SharedWorker</a><br></span><span>  4.<a class="is-size-6" href="/2022/12/14/ajax/" target="_blank">ajax</a><br></span><span>  5.<a class="is-size-6" href="/2023/09/21/Worker/" target="_blank">Worker</a><br></span><span>  6.<a class="is-size-6" href="/2022/08/05/css-1/" target="_blank">css-1</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/08/09/git/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">git</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/08/05/css-2/"><span class="level-item">css-2</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-CN',
+            id: '112c6edc8b05dfb75b5bb5bfdb94c076',
+            repo: 'blog_comment',
+            owner: 'removeif',
+            clientID: '46a9f3481b46ea0129d8',
+            clientSecret: '79c7c9cb847e141757d7864453bcbf89f0655b24',
+            admin: ["removeif"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#1-样式继承-样式覆盖"><span class="mr-2">1</span><span>1. 样式继承&amp;样式覆盖</span></a></li><li><a class="is-flex is-mobile" href="#2-文档流模型"><span class="mr-2">2</span><span>2. 文档流模型</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex is-mobile" href="#（1）概念"><span class="mr-2">2.1.1</span><span>（1）概念</span></a></li><li><a class="is-flex is-mobile" href="#（2）元素在文档流中特点"><span class="mr-2">2.1.2</span><span>（2）元素在文档流中特点</span></a></li><li><a class="is-flex is-mobile" href="#（3）元素脱离文档流特点"><span class="mr-2">2.1.3</span><span>（3）元素脱离文档流特点</span></a></li></ul></ul></li><li><a class="is-flex is-mobile" href="#3-盒模型"><span class="mr-2">3</span><span>3. 盒模型</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex is-mobile" href="#（1）盒模型概念"><span class="mr-2">3.1.1</span><span>（1）盒模型概念</span></a></li><li><a class="is-flex is-mobile" href="#（2）可见框概念"><span class="mr-2">3.1.2</span><span>（2）可见框概念</span></a></li></ul></ul></li><li><a class="is-flex is-mobile" href="#4-内容区-content"><span class="mr-2">4</span><span>4. 内容区-content</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex is-mobile" href="#（1）width-属性及-height-属性"><span class="mr-2">4.1.1</span><span>（1）width 属性及 height 属性</span></a></li><li><a class="is-flex is-mobile" href="#（2）min-width-属性-min-height-属性及max-width-属性-max-height-属性"><span class="mr-2">4.1.2</span><span>（2）min-width 属性 min-height 属性及max-width 属性 max-height 属性</span></a></li></ul></ul></li><li><a class="is-flex is-mobile" href="#5-内边距-padding"><span class="mr-2">5</span><span>5. 内边距-padding</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex is-mobile" href="#（ii）值个数"><span class="mr-2">5.1.1</span><span>（ii）值个数</span></a></li><li><a class="is-flex is-mobile" href="#（2）padding-top、padding-right、padding-bottom、padding-left属性"><span class="mr-2">5.1.2</span><span>（2）padding-top、padding-right、padding-bottom、padding-left属性</span></a></li></ul></ul></li><li><a class="is-flex is-mobile" href="#6-边框-border"><span class="mr-2">6</span><span>6. 边框-border</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex is-mobile" href="#（ii）border-top-style、border-right-style、border-bottom-style、border-left-style属性"><span class="mr-2">6.1.1</span><span>（ii）border-top-style、border-right-style、border-bottom-style、border-left-style属性</span></a></li><li><a class="is-flex is-mobile" href="#（ii）border-top-width、border-right-width、border-bottom-width、border-left-width属性"><span class="mr-2">6.1.2</span><span>（ii）border-top-width、border-right-width、border-bottom-width、border-left-width属性</span></a></li><li><a class="is-flex is-mobile" href="#（ii）border-top-color、border-right-color、border-bottom-color、border-left-color属性"><span class="mr-2">6.1.3</span><span>（ii）border-top-color、border-right-color、border-bottom-color、border-left-color属性</span></a></li><li><a class="is-flex is-mobile" href="#（ii）值个数-1"><span class="mr-2">6.1.4</span><span>（ii）值个数</span></a></li><li><a class="is-flex is-mobile" href="#（5）border-top、border-right、border-bottom、border-left属性"><span class="mr-2">6.1.5</span><span>（5）border-top、border-right、border-bottom、border-left属性</span></a></li></ul></ul></li><li><a class="is-flex is-mobile" href="#7-外边距-margin"><span class="mr-2">7</span><span>7. 外边距-margin</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex is-mobile" href="#（1）margin属性"><span class="mr-2">7.1.1</span><span>（1）margin属性</span></a></li><li><a class="is-flex is-mobile" href="#（2）margin-top、margin-right、margin-bottom、margin-left属性"><span class="mr-2">7.1.2</span><span>（2）margin-top、margin-right、margin-bottom、margin-left属性</span></a></li></ul></ul></li><li><a class="is-flex is-mobile" href="#8-块元素盒模型"><span class="mr-2">8</span><span>8. 块元素盒模型</span></a><ul class="menu-list"><ul class="menu-list"><li><a class="is-flex is-mobile" href="#（1）水平方向布局"><span class="mr-2">8.1.1</span><span>（1）水平方向布局</span></a></li><li><a class="is-flex is-mobile" href="#（2）垂直方向布局"><span class="mr-2">8.1.2</span><span>（2）垂直方向布局</span></a></li><li><a class="is-flex is-mobile" href="#（ii）overflow-x-与overflow-y属性"><span class="mr-2">8.1.3</span><span>（ii）overflow-x 与overflow-y属性</span></a></li></ul></ul></li><li><a class="is-flex is-mobile" href="#9-行内元素盒模型"><span class="mr-2">9</span><span>9. 行内元素盒模型</span></a></li><li><a class="is-flex is-mobile" href="#10-盒子大小-box-sizing属性"><span class="mr-2">10</span><span>10. 盒子大小-box-sizing属性</span></a></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/95597335" alt="skyclouds2001"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">skyclouds2001</p><p class="is-size-6 is-block">总有奋不顾身的相信，总要坚韧恒久的勇气</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">38</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">14</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/skyclouds2001" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/skyclouds2001"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:skyclouds2001@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Blog" href="https://skyclouds2001.github.io/"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Icarus</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li><li><a class="level is-mobile" href="https://github.com/removeif/hexo-theme-amazing" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Amazing</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-21T18:31:34.000Z">2023-09-22</time></p><p class="title"><a href="/2023/09/22/SharedWorker/">SharedWorker</a></p><p class="categories"><a href="/categories/test3/">test3</a> / <a href="/categories/test3/test4/">test4</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-21T04:36:10.000Z">2023-09-21</time></p><p class="title"><a href="/2023/09/21/Worker/">Worker</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-20T07:04:36.000Z">2023-09-20</time></p><p class="title"><a href="/2023/09/20/service-worker-x/">ServiceWorker X</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-20T04:38:21.000Z">2023-09-20</time></p><p class="title"><a href="/2023/09/20/Local%20Font%20Access%20API/">Local Font Access API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-18T04:36:26.000Z">2023-09-18</time></p><p class="title"><a href="/2023/09/18/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">性能优化</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Other/">Other</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Backend/"><span class="level-start"><span class="level-item">Backend</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Backend/FrameWork/"><span class="level-start"><span class="level-item">FrameWork</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/"><span class="level-start"><span class="level-item">Frontend</span></span><span class="level-end"><span class="level-item tag">33</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Frontend/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/FrameWork/"><span class="level-start"><span class="level-item">FrameWork</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Library/"><span class="level-start"><span class="level-item">Library</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Other/"><span class="level-start"><span class="level-item">Other</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Tool/"><span class="level-start"><span class="level-item">Tool</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2023/09/"><span class="level-start"><span class="level-item">九月 2023</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/08/"><span class="level-start"><span class="level-item">八月 2023</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/06/"><span class="level-start"><span class="level-item">六月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/12/"><span class="level-start"><span class="level-item">十二月 2022</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/08/"><span class="level-start"><span class="level-item">八月 2022</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Frontend/"><span class="tag">Frontend</span><span class="tag is-grey-lightest">33</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web-API/"><span class="tag">Web API</span><span class="tag is-grey-lightest">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Other/"><span class="tag">Other</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tool/"><span class="tag">Tool</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FrameWork/"><span class="tag">FrameWork</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Backend/"><span class="tag">Backend</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Library/"><span class="tag">Library</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/test1/"><span class="tag">test1</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/test2/"><span class="tag">test2</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">widget.followit</h3><form method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="skyclouds2001&#039;s Blog" height="28"></a><p class="size-small"><span>&copy; 2023 skyclouds2001</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备88888888号-8</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2022/06/20 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('46a9f3481b46ea0129d8','79c7c9cb847e141757d7864453bcbf89f0655b24','removeif','blog_comment',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('46a9f3481b46ea0129d8','79c7c9cb847e141757d7864453bcbf89f0655b24','removeif','blog_comment',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>

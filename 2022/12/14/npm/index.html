@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>npm - skyclouds2001&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="skyclouds2001&#039;s Blog"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="skyclouds2001&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="npmnpm官网 官方英文文档 中文文档 包：node.js 中的第三方模块 由第三方个人或团队开发的开源代码集 包类型：  项目包 开发依赖包    被记录到devDependencies节点的包，仅开发中使用 核心依赖包    被记录到dependencies节点的包，开发发布后均使用   全局包  命令： 1234567891011121314151617181920212223242526"><meta property="og:type" content="blog"><meta property="og:title" content="辣椒の酱"><meta property="og:url" content="https://removeif.github.io/"><meta property="og:site_name" content="辣椒の酱"><meta property="og:description" content="npmnpm官网 官方英文文档 中文文档 包：node.js 中的第三方模块 由第三方个人或团队开发的开源代码集 包类型：  项目包 开发依赖包    被记录到devDependencies节点的包，仅开发中使用 核心依赖包    被记录到dependencies节点的包，开发发布后均使用   全局包  命令： 1234567891011121314151617181920212223242526"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><meta property="article:published_time" content="2022-12-14T14:49:10.000Z"><meta property="article:modified_time" content="2023-09-21T18:07:51.793Z"><meta property="article:author" content="removeif"><meta property="article:tag" content="Frontend"><meta property="article:tag" content="Tool"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/avatar.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://skyclouds2001.github.io/2022/12/14/npm/"},"headline":"skyclouds2001's Blog","image":["https://www.bleepstatic.com/content/posts/2018/07/12/npm.png"],"datePublished":"2022-12-14T14:49:10.000Z","dateModified":"2023-09-21T18:07:51.793Z","author":{"@type":"Person","name":"skyclouds2001"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject"}},"description":"npmnpm官网 官方英文文档 中文文档 包：node.js 中的第三方模块 由第三方个人或团队开发的开源代码集 包类型：  项目包 开发依赖包    被记录到devDependencies节点的包，仅开发中使用 核心依赖包    被记录到dependencies节点的包，开发发布后均使用   全局包  命令： 1234567891011121314151617181920212223242526"}</script><link rel="canonical" href="https://skyclouds2001.github.io/2022/12/14/npm/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/favicon.png"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="skyclouds2001&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/album">Album</a><a class="navbar-item" href="/friend">Friend</a><a class="navbar-item" href="/message">Message</a><a class="navbar-item" href="/self-talking">Self-talking</a><a class="navbar-item" href="/music">Music</a><a class="navbar-item" href="/media">Media</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Join Gitter" href="https://gitter.im/hexo-theme-amazing/community"><i class="fab fa-gitter"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><!--!--><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://www.bleepstatic.com/content/posts/2018/07/12/npm.png" alt="npm"></span></div><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2022-12-14  <a class="commentCountImg" href="/2022/12/14/npm/#comment-container"><span class="display-none-class">dc477843ea082a3e2b0dd8d91dff71a6</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="dc477843ea082a3e2b0dd8d91dff71a6">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>6 分钟  <i class="fas fa-pencil-alt"> </i>0.9 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">npm</h1><div class="content"><h3 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h3><p><a target="_blank" rel="noopener" href="https://www.npmjs.com/">npm官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.npmjs.com/">官方英文文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.npmjs.com.cn/">中文文档</a></p>
+<p>包：node.js 中的第三方模块</p>
+<p>由第三方个人或团队开发的开源代码集</p>
+<p>包类型：</p>
+<ul>
+<li>项目包<ul>
+<li>开发依赖包    被记录到devDependencies节点的包，仅开发中使用</li>
+<li>核心依赖包    被记录到dependencies节点的包，开发发布后均使用</li>
+</ul>
+</li>
+<li>全局包</li>
+</ul>
+<p>命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br><span class="line">查看npm版本</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">npm help</span><br><span class="line">查看npm帮助</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">npm init</span><br><span class="line">初始化包环境</span><br><span class="line">创建package.json包配置文件</span><br><span class="line">* -yes -y 使用默认设置初始化包环境</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">npm install &lt;package_name&gt;</span><br><span class="line">npm i &lt;package_name&gt;</span><br><span class="line">下载npm包</span><br><span class="line">在当前目录中创建node_modules目录（如果尚不存在）并将包下载到该目录</span><br><span class="line">同时在该目录下添加package-lock.json文件，记录下载的包的信息，如包的版本号、下载url等</span><br><span class="line">&lt;package_name&gt;@&lt;tag&gt; &lt;package_name&gt;@&lt;edition&gt; 方式下载指定版本和标签的包</span><br><span class="line">未指定package_name参数时会根据package.json的dependencies属性下载包</span><br><span class="line">* -global -g 全局安装包</span><br><span class="line">* --save-dev -D 把包配置到devDependencies内</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">npm list</span><br><span class="line">npm ls</span><br><span class="line">列出所有已安装的包</span><br><span class="line">* -global -g 显示全局安装的包</span><br><span class="line">* -all -a 显示所有包及其所有的依赖项</span><br><span class="line">* -depth=&lt;number&gt; 显示包及其给定深度的依赖项</span><br><span class="line"></span><br><span class="line">npm uninstall &lt;package_name&gt;</span><br><span class="line">卸载npm包</span><br><span class="line">* --save 从package-lock.json文件dependencies属性中移除包</span><br><span class="line">* --save-dev 从package-lock.json文件devDependencies属性中移除包</span><br><span class="line">* -g 删除全局包</span><br><span class="line"></span><br><span class="line">npm update</span><br><span class="line">npm update -g</span><br><span class="line">npm update -g &lt;package_name&gt;</span><br><span class="line">升级npm包</span><br><span class="line"></span><br><span class="line">npm outdated</span><br><span class="line">npm outdated -g --depth=0</span><br><span class="line">检测npm包是否为最新</span><br></pre></td></tr></table></figure>
+
+<p>包管理配置文件：package.json项目根目录</p>
+<p>项目名称、版本号、描述等‘</p>
+<p>项目中使用的包：区分仅开发使用与开发及部署均使用</p>
+<p>安装的包会自动更新至package.json文件</p>
+<ul>
+<li><p><strong>name</strong>   项目名称：字符串</p>
+</li>
+<li><p><strong>version</strong>   项目版本号：字符串</p>
+</li>
+<li><p><strong>description</strong>   包内容描述：字符串</p>
+</li>
+<li><p><strong>keywords</strong>  项目的关键词：字符串数组</p>
+</li>
+<li><p>homePage 项目主页：字符串</p>
+</li>
+<li><p>bugs 项目报告错误的网址：字符串数组</p>
+</li>
+<li><p><strong>license</strong> 项目的许可证：字符串</p>
+</li>
+<li><p><strong>author</strong>  作者：字符串        可使用name、email、url替代</p>
+</li>
+<li><p><strong>contributors</strong>  贡献者：字符串数组</p>
+</li>
+<li><p>funding  贡献方式：字符串or字符串数组or对象（type &amp; url）</p>
+</li>
+<li><p>files  包作为依赖项需包含的条目</p>
+</li>
+<li><p><strong>main</strong>   标记包的根目录模块</p>
+</li>
+<li><p><strong>browser</strong>   同上，特别指明为浏览器环境</p>
+</li>
+<li><p>bin    命令名称到本地文件的映射|</p>
+</li>
+<li><p>man    指定为man程序查找的文件名|</p>
+</li>
+<li><p>directories    指定包结构|</p>
+</li>
+<li><p>repository    指定代码所在位置，常为各种git仓库</p>
+</li>
+<li><p>scripts    指定在包生命周期运行的代码|</p>
+</li>
+<li><p>config   设置持续使用配置参数</p>
+</li>
+<li><p><strong>dependencies</strong>    项目开发与发布均使用的包</p>
+</li>
+<li><p><strong>devDependencies</strong>    项目开发内使用的包</p>
+</li>
+<li><p>peerDependencies    项目使用的插件|</p>
+</li>
+<li><p>peerDependenciesMeta    标记插件是否为必需|</p>
+</li>
+<li><p>bundledDependencies&#x2F;bundleDependencies    发布包时将捆绑的包名称|</p>
+</li>
+<li><p>optionalDependencies    可以使用依赖项|</p>
+</li>
+<li><p>overrides    规定依赖项版本|</p>
+</li>
+<li><p>engines    规定适用的node版本</p>
+</li>
+<li><p>os    规定使用的操作系统版本</p>
+</li>
+<li><p>cpu    规定适用的cpu版本</p>
+</li>
+<li><p><strong>private</strong>    规定能否发布私有存储库</p>
+</li>
+<li><p>publishConfig    规定发布配置</p>
+</li>
+<li><p>workspaces    描述用作工作空间的文件夹的直接路径</p>
+</li>
+</ul>
+<p>版本号：</p>
+<ul>
+<li>第一位数字：大版本</li>
+<li>第二位数字：功能版本</li>
+<li>第三位数字：bug修复版本</li>
+</ul>
+<p>其他：</p>
+<p>将node_modules文件夹添加到.gitignore文件内，以使git上传时剔除npm包</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>npm</p><p><a href="https://skyclouds2001.github.io/2022/12/14/npm/">https://skyclouds2001.github.io/2022/12/14/npm/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://skyclouds2001.github.io"><p>skyclouds2001</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2022-12-14</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-09-22</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/2022/12/14/node/" target="_blank">node</a><br></span><span>  2.<a class="is-size-6" href="/2022/12/14/webpack/" target="_blank">webpack</a><br></span><span>  3.<a class="is-size-6" href="/2022/08/09/git/" target="_blank">git</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2023/08/22/KeyboardEvent%20Sequence/" target="_blank">KeyboardEvent Sequence</a><br></span><span>  2.<a class="is-size-6" href="/2023/09/20/Local%20Font%20Access%20API/" target="_blank">Local Font Access API</a><br></span><span>  3.<a class="is-size-6" href="/2023/09/22/SharedWorker/" target="_blank">SharedWorker</a><br></span><span>  4.<a class="is-size-6" href="/2022/12/14/ajax/" target="_blank">ajax</a><br></span><span>  5.<a class="is-size-6" href="/2023/09/21/Worker/" target="_blank">Worker</a><br></span><span>  6.<a class="is-size-6" href="/2022/08/05/css-1/" target="_blank">css-1</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/12/14/web-api/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">web api</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2022/12/14/node/"><span class="level-item">node</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-CN',
+            id: 'dc477843ea082a3e2b0dd8d91dff71a6',
+            repo: 'blog_comment',
+            owner: 'removeif',
+            clientID: '46a9f3481b46ea0129d8',
+            clientSecret: '79c7c9cb847e141757d7864453bcbf89f0655b24',
+            admin: ["removeif"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#npm"><span class="mr-2">1</span><span>npm</span></a></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/95597335" alt="skyclouds2001"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">skyclouds2001</p><p class="is-size-6 is-block">总有奋不顾身的相信，总要坚韧恒久的勇气</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">38</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">14</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/skyclouds2001" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/skyclouds2001"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:skyclouds2001@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Blog" href="https://skyclouds2001.github.io/"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Icarus</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li><li><a class="level is-mobile" href="https://github.com/removeif/hexo-theme-amazing" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Amazing</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-21T18:31:34.000Z">2023-09-22</time></p><p class="title"><a href="/2023/09/22/SharedWorker/">SharedWorker</a></p><p class="categories"><a href="/categories/test3/">test3</a> / <a href="/categories/test3/test4/">test4</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-21T04:36:10.000Z">2023-09-21</time></p><p class="title"><a href="/2023/09/21/Worker/">Worker</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-20T07:04:36.000Z">2023-09-20</time></p><p class="title"><a href="/2023/09/20/service-worker-x/">ServiceWorker X</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-20T04:38:21.000Z">2023-09-20</time></p><p class="title"><a href="/2023/09/20/Local%20Font%20Access%20API/">Local Font Access API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-18T04:36:26.000Z">2023-09-18</time></p><p class="title"><a href="/2023/09/18/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">性能优化</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Other/">Other</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Backend/"><span class="level-start"><span class="level-item">Backend</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Backend/FrameWork/"><span class="level-start"><span class="level-item">FrameWork</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/"><span class="level-start"><span class="level-item">Frontend</span></span><span class="level-end"><span class="level-item tag">33</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Frontend/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/FrameWork/"><span class="level-start"><span class="level-item">FrameWork</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Library/"><span class="level-start"><span class="level-item">Library</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Other/"><span class="level-start"><span class="level-item">Other</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Tool/"><span class="level-start"><span class="level-item">Tool</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2023/09/"><span class="level-start"><span class="level-item">九月 2023</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/08/"><span class="level-start"><span class="level-item">八月 2023</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/06/"><span class="level-start"><span class="level-item">六月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/12/"><span class="level-start"><span class="level-item">十二月 2022</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/08/"><span class="level-start"><span class="level-item">八月 2022</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Frontend/"><span class="tag">Frontend</span><span class="tag is-grey-lightest">33</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web-API/"><span class="tag">Web API</span><span class="tag is-grey-lightest">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Other/"><span class="tag">Other</span><span class="tag is-grey-lightest">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tool/"><span class="tag">Tool</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FrameWork/"><span class="tag">FrameWork</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Backend/"><span class="tag">Backend</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Library/"><span class="tag">Library</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/test1/"><span class="tag">test1</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/test2/"><span class="tag">test2</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">widget.followit</h3><form method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://cdn.jsdelivr.net/gh/removeif/removeif-demo@latest/img/logo.png" alt="skyclouds2001&#039;s Blog" height="28"></a><p class="size-small"><span>&copy; 2023 skyclouds2001</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备88888888号-8</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2022/06/20 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/removeif/hexo-theme-amazing"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('46a9f3481b46ea0129d8','79c7c9cb847e141757d7864453bcbf89f0655b24','removeif','blog_comment',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('46a9f3481b46ea0129d8','79c7c9cb847e141757d7864453bcbf89f0655b24','removeif','blog_comment',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>
