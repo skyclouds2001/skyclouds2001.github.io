@@ -95,7 +95,11 @@ self.addEventListener('message', (e) => {
 })
 ```
 
-### 可传递消息
+此外，可以选择传入一组数组或包含 `transfer` 参数的配置项，定义需要转移所有权的对象
+
+所有权被转移后，对应对象在原环境内不再可用，而是仅在新环境内可用
+
+### 普通消息
 
 当然，传递的消息可以不仅仅是 string 类型，可以是其他任何可以被结构化拷贝算法执行的数据，包括：
 
@@ -117,9 +121,7 @@ self.addEventListener('message', (e) => {
 * TypedArray
 * 等等
 
-此外，可以选择传入一组数组或包含 `transfer` 参数的配置项，定义需要转移所有权的对象
-
-所有权被转移后，对应对象在原环境内不再可用，而是仅在新环境内可用
+结构化拷贝算法，严格来说，与 `JSON.stringfy()` 及 `JSON.parse()` 行为上不同。在结构化拷贝算法中，试图复制 Function 参数会抛出异常；但结构化拷贝算法支持复制包含循环对象的对象
 
 ### 可转移对象
 
@@ -159,9 +161,11 @@ self.close()
 
 卸载是立即执行的，不会等待 worker 内部任务的完成
 
-## 补充
+## Worker 全局环境
 
-Worker 对象或者 Worker 全局环境的 `messageerror` 事件会在传递的消息无法解析时触发，可用用于监听发送失败的消息
+Worker 全局环境通过 `DedicatedWorkerGlobalScope` 表示，该接口继承自 `WorkerGlobalScope`。
+
+Worker 全局环境的 `messageerror` 事件会在传递的消息无法解析时触发，可用用于监听发送失败的消息（Worker 对象上同样存在）
 
 Worker 全局环境的 `importScripts()` 方法可以导入一组同源的脚本文件，并在 Worker 全局环境下执行
 

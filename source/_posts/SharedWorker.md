@@ -119,6 +119,10 @@ self.close()
 
 SharedWorker 生命周期与 Client 端的生命周期独立，当任一页面创建 SharedWorker 时其生命周期开始，在没有页面使用 SharedWorker 时其生命周期结束
 
+## SharedWorker 全局环境
+
+SharedWorker 全局环境通过 `SharedWorkerGlobalScope` 表示，该接口继承自 `WorkerGlobalScope`，它与 Worker 全局环境差别不大
+
 ## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.html)
