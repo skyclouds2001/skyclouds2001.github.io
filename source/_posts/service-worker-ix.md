@@ -21,7 +21,7 @@ mathJax: false
 
 #### `Clients`
 
-在 Service Worker 中，`Clients` 接口提供对 `Client` 接口的访问
+在 ServiceWorker 中，`Clients` 接口提供对 `Client` 接口的访问
 
 * `Clients` 接口的 `get()` 方法根据给定的 id 获取对应的 `Client` 实例
 
@@ -39,13 +39,13 @@ mathJax: false
 
   返回一个 Promise 的 Client 数组
 
-* `Clients` 接口的 `claim()` 方法将所有匹配的 `Client` 实例置于当前 Service Worker 的控制之下
+* `Clients` 接口的 `claim()` 方法将所有匹配的 `Client` 实例置于当前 ServiceWorker 的控制之下
 
   返回一个 Promise
 
 * `Clients` 接口的 `openWindow()` 方法创建新的顶层上下文并加载给定的 URL
 
-  要求该 URL 需与 Service Worker 同源，并且要求调用前一段时间用户需发生交互行为
+  要求该 URL 需与 ServiceWorker 同源，并且要求调用前一段时间用户需发生交互行为
 
   Firefox 中要求该方法必须在通知点击回调方法中调用
 
@@ -53,11 +53,11 @@ mathJax: false
 
 #### `Client`
 
-在 Service Worker 中，`Client` 接口表示受 Service Worker 控制的执行上下文
+在 ServiceWorker 中，`Client` 接口表示受 ServiceWorker 控制的执行上下文
 
-其中 `WindowClient` 接口继承自 `Client` 接口，表示受 Service Worker 控制的 Window 执行上下文
+其中 `WindowClient` 接口继承自 `Client` 接口，表示受 ServiceWorker 控制的 Window 执行上下文
 
-受 Service Worker 控制的各执行上下文可以是 Worker、Shared Worker 以及 Window
+受 ServiceWorker 控制的各执行上下文可以是 Worker、Shared Worker 以及 Window
 
 * `Client` 接口的 `id` 属性返回一个字符串，代表对应的执行上下文的 ID
 
@@ -79,17 +79,17 @@ mathJax: false
 
   方法接收一个字符串或 URL 实例，代表 URL
 
-  若 Service Worker 执行上下文与 URL 同源，返回 Promise 的 `WindowClient`；否则返回 Promise 的 `null`
+  若 ServiceWorker 执行上下文与 URL 同源，返回 Promise 的 `WindowClient`；否则返回 Promise 的 `null`
 
 ### 在 Client 中获取 Worker
 
 #### `ServiceWorkerContainer`
 
-在 Service Worker 中，`ServiceWorkerContainer` 接口包含 Service Worker 的相关状态与相关控制方法，用于实现对 Service Worker 的管理
+在 ServiceWorker 中，`ServiceWorkerContainer` 接口包含 ServiceWorker 的相关状态与相关控制方法，用于实现对 ServiceWorker 的管理
 
-* `ServiceWorkerContainer` 接口的 `ready` 属性返回一个 Promise 的 `ServiceWorkerRegistration`，表示与当前页面匹配的 Service Worker 的注册对象；该属性与 `ServiceWorkerGlobalScope` 接口的 `registration` 属性类似
+* `ServiceWorkerContainer` 接口的 `ready` 属性返回一个 Promise 的 `ServiceWorkerRegistration`，表示与当前页面匹配的 ServiceWorker 的注册对象；该属性与 `ServiceWorkerGlobalScope` 接口的 `registration` 属性类似
 
-* `ServiceWorkerContainer` 接口的 `controller` 属性返回一个 `ServiceWorker` 或 `null`，表示是否存在与当前页面匹配的 Service Worker 的对象；该属性与 `ServiceWorkerGlobalScope` 接口的 `serviceWorker` 属性类似
+* `ServiceWorkerContainer` 接口的 `controller` 属性返回一个 `ServiceWorker` 或 `null`，表示是否存在与当前页面匹配的 ServiceWorker 的对象；该属性与 `ServiceWorkerGlobalScope` 接口的 `serviceWorker` 属性类似
 
 * `ServiceWorkerContainer` 接口的 `getRegistration()` 方法根据给定的 URL （或使用当前 Client 的 URL）返回与之匹配的 `ServiceWorkerRegistration` 对象
 
@@ -101,13 +101,13 @@ mathJax: false
 
   返回一个  `ServiceWorkerRegistration` 的数组
 
-* `ServiceWorkerContainer` 接口的 `startMessages()` 方法强制当前上下文提前开始接收发送自 Service Worker 的消息
+* `ServiceWorkerContainer` 接口的 `startMessages()` 方法强制当前上下文提前开始接收发送自 ServiceWorker 的消息
 
-* `ServiceWorkerContainer` 接口的 `controllerchange` 事件在控制当前 Client 的 Service Worker 变化时触发，返回一个 `Event` 事件
+* `ServiceWorkerContainer` 接口的 `controllerchange` 事件在控制当前 Client 的 ServiceWorker 变化时触发，返回一个 `Event` 事件
 
 #### `ServiceWorkerRegistration`
 
-在 Service Worker 中，`ServiceWorkerRegistration` 接口表示 Service Worker 的注册对象
+在 ServiceWorker 中，`ServiceWorkerRegistration` 接口表示 ServiceWorker 的注册对象
 
 * `ServiceWorkerRegistration` 接口的 `active` 属性返回一个 `ServiceWorker` 或者 `null`，代表最新注册的 `state` 属性为 `activating` 或 `activated` 的 ServiceWorker
 
@@ -115,28 +115,32 @@ mathJax: false
 
 * `ServiceWorkerRegistration` 接口的 `waiting` 属性返回一个 `ServiceWorker` 或者 `null`，代表最新注册的 `state` 属性为 `installed` 的 ServiceWorker
 
-* `ServiceWorkerRegistration` 接口的 `scope` 属性返回一个字符串，该属性值由 Service Worker 注册时指定的值决定
+通常而言，`active` 属性、`installing` 属性、`waiting` 属性三个中最多只有一个是非 null 值。
 
-* `ServiceWorkerRegistration` 接口的 `updateViaCache` 属性返回一个字符串枚举，可能的值为 `'all'`、`'imports'`、`'none'`，该属性值由 Service Worker 注册时指定的值决定
+* `ServiceWorkerRegistration` 接口的 `scope` 属性返回一个字符串，代表 ServiceWorker 的注册域
 
-* `ServiceWorkerRegistration` 接口的 `updatefound` 事件在新的 Service Worker 开始下载时触发，返回一个 `Event` 事件
+* `ServiceWorkerRegistration` 接口的 `updateViaCache` 属性返回一个字符串枚举，可能的值为 `'all'`、`'imports'`、`'none'`，指定 HTTP 缓存的脚本如何应用于 ServiceWorker
+
+以上两个属性的值在注册 ServiceWorker 时指定
+
+* `ServiceWorkerRegistration` 接口的 `updatefound` 事件在新的 ServiceWorker 开始下载时触发，返回一个 `Event` 事件
 
 #### `ServiceWorker`
 
-在 Service Worker 中，`ServiceWorker` 接口表示 Service Worker 对象
+在 ServiceWorker 中，`ServiceWorker` 接口表示 ServiceWorker 对象
 
-* `ServiceWorker` 接口的 `scriptURL` 属性返回一个字符串，表示 Service Worker 的注册脚本 URL
+* `ServiceWorker` 接口的 `scriptURL` 属性返回一个字符串，表示 ServiceWorker 的注册脚本 URL
 
-* `ServiceWorker` 接口的 `state` 属性返回一个字符串枚举，可能的值包括 `"parsed"`、`"installing"`、`"installed"`、`"activating"`、`"activated"`、`"redundant"`，表示 Service Worker 的状态
+* `ServiceWorker` 接口的 `state` 属性返回一个字符串枚举，可能的值包括 `"parsed"`、`"installing"`、`"installed"`、`"activating"`、`"activated"`、`"redundant"`，表示 ServiceWorker 的状态
 
-  * `"parsed"` Service Worker 在下载完成并且验证可运行后的初始值
-  * `"installing"` Service Worker 在安装中
-  * `"installed"` Service Worker 安装完成
-  * `"activating"` Service Worker 在激活中
-  * `"activated"` Service Worker 激活完成
-  * `"redundant"` Service Worker 被替代或安装失败
+  * `"parsed"` ServiceWorker 在下载完成并且验证可运行后的初始值
+  * `"installing"` ServiceWorker 在安装中
+  * `"installed"` ServiceWorker 安装完成
+  * `"activating"` ServiceWorker 在激活中
+  * `"activated"` ServiceWorker 激活完成
+  * `"redundant"` ServiceWorker 被替代或安装失败
 
-* `ServiceWorker` 接口的 `statechange` 事件在 Service Worker 的状态更新时触发，返回一个 `Event` 事件
+* `ServiceWorker` 接口的 `statechange` 事件在 ServiceWorker 的状态更新时触发，返回一个 `Event` 事件
 
 ### 相关接口
 
