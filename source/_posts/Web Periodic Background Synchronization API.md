@@ -1,5 +1,5 @@
 ---
-title: ServiceWorker VIII
+title: Web Periodic Background Synchronization API
 date: 2023-09-14 23:42:48
 tags:
 - Frontend
@@ -11,11 +11,9 @@ thumbnail:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-09-14 23:42:48/ServiceWorker VIII.html'
+uniqueId: '2023-09-14 23:42:48/Web Periodic Background Synchronization API.html'
 mathJax: false
 ---
-
-## ServiceWorker 使用 - 周期后台同步 Periodic Background Synchronization
 
 后台周期同步 API 提供了一种注册在网络状态允许下周期性执行任务的方法，这些任务被称为周期后台同步请求。
 
@@ -25,7 +23,7 @@ API 用途包括在设备连接到网络时获取最新内容，或允许对应�
 
 后台获取 API 通过 `PeriodicSyncManager` 接口提供，并基于 `ServiceWorkerRegistration` 接口的 `periodicSync` 属性向开发者暴露。
 
-### 注册周期后台同步任务
+## 注册周期后台同步任务
 
 `PeriodicSyncManager` 接口的 `register()` 方法用于注册周期后台同步任务。
 
@@ -43,7 +41,7 @@ window.navigator.serviceWorker.ready.then((registration) => {
 })
 ```
 
-### 查看周期后台同步任务
+## 查看周期后台同步任务
 
 `PeriodicSyncManager` 接口的 `getTags()` 方法用于获取周期后台同步任务。
 
@@ -61,7 +59,7 @@ window.navigator.serviceWorker.ready.then((registration) => {
 })
 ```
 
-### 卸载周期后台同步任务
+## 卸载周期后台同步任务
 
 `PeriodicSyncManager` 接口的 `unregister()` 方法用于卸载周期后台同步任务。
 
@@ -77,7 +75,7 @@ window.navigator.serviceWorker.ready.then((registration) => {
 })
 ```
 
-### 执行周期后台同步任务
+## 执行周期后台同步任务
 
 `ServiceWorkerGlobalScope` 接口的 `periodicsync` 事件在触发周期后台同步任务时触发。返回一个 `PeriodicSyncEvent` 事件。
 
@@ -95,7 +93,7 @@ self.addEventListener('periodicsync', (e) => {
 
 `PeriodicSyncEvent` 事件继承自 `ExtendableEvent` 事件。其 `tag` 属性返回事件对应的周期后台同步任务的唯一标识符。
 
-### 相关接口
+## 相关接口
 
 ```ts
 interface PeriodicSyncEventInit {

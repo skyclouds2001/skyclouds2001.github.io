@@ -1,5 +1,5 @@
 ---
-title: ServiceWorker VI
+title: Background Synchronization API
 date: 2023-09-12 08:45:37
 tags:
 - Frontend
@@ -11,11 +11,9 @@ thumbnail:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-09-12 08:45:37/ServiceWorker VI.html'
+uniqueId: '2023-09-12 08:45:37/Background Synchronization API.html'
 mathJax: false
 ---
-
-## ServiceWorker 使用 - 消息同步 Background Sync
 
 消息同步 API 用于同步创建任务，直至用户获取到稳定的网络连接时才开始按序执行。
 
@@ -28,7 +26,7 @@ mathJax: false
 
 消息同步服务通过 `SyncManager` 接口提供，并基于 `ServiceWorkerRegistration` 接口的 `sync` 属性向开发者暴露。
 
-### 注册消息同步
+## 注册消息同步
 
 `SyncManager` 接口的 `register()` 方法用于注册一个消息同步事件，网络连接变为正常状态后在对应的 ServiceWorker 中触发 `sync` 事件。
 
@@ -58,7 +56,7 @@ const TAG = 'sync'
 self.registration.sync.register(TAG)
 ```
 
-### 监听消息同步
+## 监听消息同步
 
 `ServiceWorkerGlobalScope` 接口上的 `sync` 事件在 Page 或 Worker 调用 `SyncManager` 接口上的方法注册一个同步事件并且自注册后起网络连接处于正常状态时触发。返回一个 `SyncEvent` 事件。
 
@@ -87,7 +85,7 @@ function sync() {
 }
 ```
 
-### 其他
+## 其他
 
 `SyncManager` 接口的 `getTags()` 方法用于获取用户定义的同步事件标识符，返回一个 Promise 的字符串数组。
 
@@ -95,7 +93,7 @@ function sync() {
 
 `SyncEvent` 事件继承自 `ExtendableEvent` 事件，其 `tag` 属性给出定义的同步事件标识符，其 `lastChance` 属性标识当前同步事件后是否有新的同步事件。
 
-### 相关接口
+## 相关接口
 
 ```ts
 interface SyncEventInit {
@@ -136,7 +134,7 @@ interface ServiceWorkerRegistration extends EventTarget {
 }
 ```
 
-### 源码链接
+## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html)
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.js)

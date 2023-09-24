@@ -1,5 +1,5 @@
 ---
-title: ServiceWorker IV
+title: Notifications API
 date: 2023-09-10 21:26:07
 tags:
 - Frontend
@@ -11,13 +11,11 @@ thumbnail:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-09-10 21:26:07/ServiceWorker IV.html'
+uniqueId: '2023-09-10 21:26:07/Notifications API.html'
 mathJax: false
 ---
 
-## Service Worker 使用 - 通知 Notification
-
-### 创建通知
+## 创建通知
 
 ServiceWorkerRegistration 接口的 `showNotification()` 方法用于在对应的 Service Worker 上创建一条（系统）通知，该通知的相关操作会在对应的 Service Worker 全局上下文上触发相应的事件。
 
@@ -65,7 +63,7 @@ self.registration.showNotification('Hello', {
 
 *需要注意的是，ServiceWorker 内无法调用 Notification 构造函数来创建通知。*
 
-### 请求通知权限
+## 请求通知权限
 
 需要注意的是，创建一条 Notification 需要用户授予通知权限，可以使用 `Notification.permission` 属性检测用户是否授予了通知权限，并使用 `Notification.requestPermission()` 静态方法向用户请求通知权限。
 
@@ -81,7 +79,7 @@ if (Notification.permission === 'granted') {
 }
 ```
 
-### 获取通知
+## 获取通知
 
 ServiceWorkerRegistration 接口的 `getNotifications()` 方法用于获取在对应的 Service Worker 上创建的（系统）通知。
 
@@ -107,7 +105,7 @@ self.registration.getNotifications({
 })
 ```
 
-### 通知处理
+## 通知处理
 
 当与当前 Service Worker 对应的通知被点击时，在 Service Worker 全局触发 notificationclick 事件。
 
@@ -133,7 +131,7 @@ self.addEventListener('notificationclose', (e) => {
 >
 > * `action` 顺序代表触发事件的 action 的 ID
 
-### 源码链接
+## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html)
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.js)

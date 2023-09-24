@@ -1,5 +1,5 @@
 ---
-title: ServiceWorker V
+title: Push API
 date: 2023-09-10 23:58:21
 tags:
 - Frontend
@@ -11,17 +11,15 @@ thumbnail:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-09-10 23:58:21/ServiceWorker V.html'
+uniqueId: '2023-09-10 23:58:21/Push API.html'
 mathJax: false
 ---
-
-## ServiceWorker 使用 - 消息推送 Push
 
 {% asset_img 推送消息.png %}
 
 网页或者浏览器不在线的时候，推送消息无法被推送到客户端浏览器，此时推送消息就会被 FCM 服务器保存起来，等到网页或者浏览器上线的时候，FCM 服务器才会推送消息到网页或者浏览器
 
-### 生成服务器公秘钥对
+## 生成服务器公秘钥对
 
 可以使用 web-push 来生成服务器公秘钥对。
 
@@ -35,7 +33,7 @@ const { publicKey, privateKey } = vapidKeys
 
 其中私钥放在服务器保存，公钥用于注册推送订阅。
 
-### 创建消息推送服务
+## 创建消息推送服务
 
 可以利用 ServiceWorkerRegistration 接口的 pushManager 属性获取到当前 ServiceWorker 对应的 PushManager 接口实例。
 
@@ -68,7 +66,7 @@ self.registration.pushManager.subscribe({
 })
 ```
 
-### 获取推送消息服务
+## 获取推送消息服务
 
 PushManager 接口的 `getSubscription()` 方法用于获取已经订阅的消息推送服务。
 
@@ -107,7 +105,7 @@ self.registration.pushManager.getSubscription().then((subscription) => {
 >
 > `unsubscribe()` 方法取消消息推送的订阅，返回一个 Promise 的布尔值，代表是否成功取消了消息订阅。
 
-### 发送推送消息
+## 发送推送消息
 
 可以使用 web-push 在服务端来发送推送消息。
 
@@ -155,7 +153,7 @@ app.listen(1701, () => {
 
 若使用 firebase 架构可使用 firebase 来实现消息推送。
 
-### 监听消息推送
+## 监听消息推送
 
 ServiceWorkerGlobalScope 接口的 `push` 事件在每次收到一条推送消息时触发。
 
@@ -177,7 +175,7 @@ self.addEventListener('push', (e) => {
 > 其 `arrayBuffer()` 方法、`blob()` 方法、`json()` 方法、`text()` 方法分别将结果转换成 ArrayBuffer、Blob、JSON 解析结果、字符串。
 > 推送的消息能够自动被加解密，无需做额外的处理。
 
-### 消息推送权限
+## 消息推送权限
 
 PushManager 接口的 `permissionState()` 方法用于获取当前的请求消息推送权限。
 
@@ -201,13 +199,13 @@ self.registration.pushManager.permissionState({
 })
 ```
 
-### 其他
+## 其他
 
 PushManager 接口的 `supportedContentEncodings` 静态属性返回一组消息推送支持的加密方式。
 
 ServiceWorkerGlobalScope 接口的 `pushsubscriptionchange` 事件在更新订阅的消息推送时触发（可能原因包括消息推送服务刷新、消息推送服务失效等）。
 
-### 相关接口
+## 相关接口
 
 ```ts
 type PushEncryptionKeyName = "auth" | "p256dh";
@@ -300,7 +298,7 @@ interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
 }
 ```
 
-### 源码链接
+## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.html)
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.js)

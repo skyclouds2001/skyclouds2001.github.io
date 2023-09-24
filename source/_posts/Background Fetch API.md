@@ -1,5 +1,5 @@
 ---
-title: ServiceWorker VII
+title: Background Fetch API
 date: 2023-09-13 15:43:44
 tags:
 - Frontend
@@ -11,11 +11,9 @@ thumbnail:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-09-13 15:43:44/ServiceWorker VII.html'
+uniqueId: '2023-09-13 15:43:44/Background Fetch API.html'
 mathJax: false
 ---
-
-## ServiceWorker 使用 - 后台获取 Background Fetch
 
 后台获取 API 提供了一种管理可能需要大量时间的下载的方法，例如电影、音频文件和软件等。
 
@@ -25,7 +23,7 @@ mathJax: false
 
 后台获取 API 通过 `BackgroundFetchManager` 接口提供，并基于 `ServiceWorkerRegistration` 接口的 `backgroundFetch` 属性向开发者暴露。
 
-### 发起 Background Fetch
+## 发起 Background Fetch
 
 `BackgroundFetchManager` 接口的 `fetch()` 方法用于注册一条后台获取。
 
@@ -66,7 +64,7 @@ window.navigator.serviceWorker.ready.then((registration) => {
 })
 ```
 
-### Background Fetch 信息
+## Background Fetch 信息
 
 可以使用 `BackgroundFetchManager` 接口的 `get()` 方法根据给定的 ID 获取对应的 Background Fetch。 若存在，方法返回一个 Promise 的 `BackgroundFetchRegistration` 接口实例，否则返回一个 Promise 的 `undefined`。
 
@@ -104,7 +102,7 @@ window.navigator.serviceWorker.ready.then((registration) => {
 
 `BackgroundFetchRegistration` 接口的 `progress` 事件在当前后台获取的信息更新时触发，包括 `downloaded` 属性、`uploaded` 属性、 `result` 属性、`failureReason` 属性，事件只抛出一个普通的 `Event` 事件。
 
-### 注销 Background Fetch
+## 注销 Background Fetch
 
 `BackgroundFetchRegistration` 接口的 `abort()` 方法用于终止当前后台获取。返回一个 Promise 的 boolean，表示是否终止成功。
 
@@ -118,7 +116,7 @@ window.navigator.serviceWorker.ready.then((registration) => {
 })
 ```
 
-### Background Fetch 结束处理
+## Background Fetch 结束处理
 
 `ServiceWorkerGlobalScope` 接口的 `backgroundfetchclick` 事件在用户点击浏览器提供的下载进度条弹出框时触发。返回一个 `BackgroundFetchEvent` 事件。
 
@@ -198,7 +196,7 @@ self.addEventListener('backgroundfetchclick', (e) => {
 
 `BackgroundFetchUpdateUIEvent` 接口继承自 `BackgroundFetchEvent` 接口，其 `updateUI()` 方法用于更新浏览器提供的下载进度条弹出框的信息。接收一组参数，包括 `icons` 及 `title` 参数，与 `BackgroundFetchManager` 接口的 `fetch()` 方法中的相应参数相同。返回一个 Promise。
 
-### 相关接口
+## 相关接口
 
 ```ts
 type BackgroundFetchFailureReason = "" | "aborted" | "bad-status" | "fetch-error" | "quota-exceeded" | "download-total-exceeded";
@@ -310,7 +308,7 @@ interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
 }
 ```
 
-### 源码链接
+## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.html)
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.js)
