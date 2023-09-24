@@ -51,7 +51,6 @@ highlight:
   line_threshold: 0
   tab_replace: '  '
   exclude_languages:
-    - example
   wrap: true
   hljs: false
 prismjs:
@@ -111,3 +110,17 @@ meta_generator: true
 include:
 exclude:
 ignore:
+
+# hexo-generator-feed plugin
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+  hub: 
+  content: false
+  content_limit: 100
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:

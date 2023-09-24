@@ -7,8 +7,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server",
-    "preinstall": "npx only-allow yarn"
+    "server": "hexo server"
   },
   "hexo": {
     "version": "5.4.2"
@@ -19,6 +18,7 @@
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
+    "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^2.0.0",
     "hexo-generator-tag": "^2.0.0",
     "hexo-log": "^2.0.0",
