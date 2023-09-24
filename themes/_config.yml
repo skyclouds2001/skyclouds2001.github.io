@@ -276,6 +276,7 @@ widgets:
             RSS:
                 icon: fas fa-rss
                 url: /atom.xml
+        # todo - unknown setting
         has_hitokoto: true
     # Recommendation links widget configurations
     -
@@ -318,15 +319,16 @@ widgets:
         amount: 20
         # Whether to show post count right to tag name.
         show_count: true
-    # Google FeedBurner email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: subscribe_email
-        # Hint text under the email input
-        description: 
-        # Feedburner ID
-        feedburner_id: ''
+    # # Google FeedBurner email subscription widget configurations
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: right
+    #     type: subscribe_email
+    #     # Hint text under the email input
+    #     description: 
+    #     # Feedburner ID
+    #     feedburner_id: ''
+    # todo - ads
     # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -334,19 +336,21 @@ widgets:
         type: adsense
         client_id: 
         slot_id: 
+    # todo - finish
     # Follow.it email subscription configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: followit
         description: 
-        action_url: 
-        verification_code: 
+        action_url: https://api.follow.it/subscription-form/VUJhY1Y3Q05Ha3pvS3RzZDYrcWlRc1JTNGZQTEx5QXh4Z1llTmRtbHFDcy85allmd3hzWHkxcTc4dUFyNEhmQTkxQlZpL2JXdVQyeFVkY1pGaWNJY0ZLM0h4eGtyc0NnNlB3N2FvRnBxN1F1YVBLMkxmVHMweFlnZm1tWUorUXJ8UFBRMzljRXAyT3Nkd2NwK1VIei9RajZieHppdUVudEYzOGpIazh0bnBVZz0=/8
+        verification_code: savxwnjFRLRWr4EYrhLa
 
+# todo - verify ad configs
 # AdSense client ID
 adsense_client_id: #'ca-pub-6343805421927634'
 # AdSense AD unit ID
-adsense_slot_id: '5134765588'
+adsense_slot_id: #'5134765588'
 # article head ad
 article_head_has_ad: true
 # comment head ad
@@ -354,6 +358,7 @@ comment_head_has_ad: true
 # other ad
 index_zero_position_ad: true
 index_ad_positions: 2,5,9 #首页adsense放置广告的位置，尽量少配置些，多了有可能不显示。一位的时候，加个逗号，如1,或者1,5,9
+
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
