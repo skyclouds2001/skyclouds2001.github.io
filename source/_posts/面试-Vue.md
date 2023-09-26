@@ -51,4 +51,18 @@ mathJax: false
 > LRU 缓存策略 - 找出最久未使用的数据并置换新的数据
 > 通常基于链表实现，将新数据插至链表头部，若命中已有数据则将老数据移至链表头部，链表满后则丢弃链表尾部的数据
 
-此时组件会增加 deactivated 与 activated 生命周期
+此时组件会增加 deactivated 与 activated 生命周期钩子，而替代 mounted 和 unmounted 生命周期钩子
+
+## `nextTick()` 理解
+
+作为 Vue 内部的异步队列的调用方法同时提供给开发者使用，核心是利用了如 Promise 、MutationObserver、setImmediate、setTimeout 等原生 JavaScript 方法来模拟对应的微/宏任务的实现，本质是对 JavaScript 执行原理 EventLoop 的一种应用
+
+通常在数据变化后执行的某个操作需要使用随数据变化而变化的 DOM 结构的时候或需在 created 生命周期内修改 DOM 结构时使用
+
+## MVVM 概念
+
+Model - 数据模型，定义数据和业务逻辑
+
+View - UI 视图，负责数据展示
+
+ViewModel - 负责监听 Model 数据改变并控制视图更新，同时处理用户交互操作
