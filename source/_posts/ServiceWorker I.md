@@ -65,7 +65,7 @@ ServiceWorker 的注册通过调用 `ServiceWorkerContainer` 接口的 `register
 
 ```js
 window.navigator.serviceWorker.register(
-  './service-worker.js', // ServiceWorker 脚本的 URL | 相对当前页面的范围
+  './service-worker.js',
   {
     scope: '/',
     type: 'module',

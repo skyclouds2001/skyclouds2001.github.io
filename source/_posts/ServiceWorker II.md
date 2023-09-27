@@ -82,7 +82,63 @@ self.setTimeout()
 self.structuredClone()
 ```
 
-### 源码链接
+## 相关接口
+
+```ts
+interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
+  readonly clients: Clients;
+  readonly registration: ServiceWorkerRegistration;
+  readonly serviceWorker: ServiceWorker;
+  onactivate: ((this: ServiceWorkerGlobalScope, ev: ExtendableEvent) => any) | null;
+  onfetch: ((this: ServiceWorkerGlobalScope, ev: FetchEvent) => any) | null;
+  oninstall: ((this: ServiceWorkerGlobalScope, ev: ExtendableEvent) => any) | null;
+  onmessage: ((this: ServiceWorkerGlobalScope, ev: ExtendableMessageEvent) => any) | null;
+  onmessageerror: ((this: ServiceWorkerGlobalScope, ev: MessageEvent) => any) | null;
+  onnotificationclick: ((this: ServiceWorkerGlobalScope, ev: NotificationEvent) => any) | null;
+  onnotificationclose: ((this: ServiceWorkerGlobalScope, ev: NotificationEvent) => any) | null;
+  onpush: ((this: ServiceWorkerGlobalScope, ev: PushEvent) => any) | null;
+  onpushsubscriptionchange: ((this: ServiceWorkerGlobalScope, ev: Event) => any) | null;
+  skipWaiting(): Promise<void>;
+}
+
+interface WorkerGlobalScope extends EventTarget, FontFaceSource, WindowOrWorkerGlobalScope {
+  readonly location: WorkerLocation;
+  readonly navigator: WorkerNavigator;
+  readonly self: WorkerGlobalScope & typeof globalThis;
+  onerror: ((this: WorkerGlobalScope, ev: ErrorEvent) => any) | null;
+  onlanguagechange: ((this: WorkerGlobalScope, ev: Event) => any) | null;
+  onoffline: ((this: WorkerGlobalScope, ev: Event) => any) | null;
+  ononline: ((this: WorkerGlobalScope, ev: Event) => any) | null;
+  onrejectionhandled: ((this: WorkerGlobalScope, ev: PromiseRejectionEvent) => any) | null;
+  onunhandledrejection: ((this: WorkerGlobalScope, ev: PromiseRejectionEvent) => any) | null;
+  importScripts(...urls: (string | URL)[]): void;
+}
+
+interface WindowOrWorkerGlobalScope {
+  readonly caches: CacheStorage;
+  readonly crossOriginIsolated: boolean;
+  readonly crypto: Crypto;
+  readonly fonts: FontFaceSet;
+  readonly indexedDB: IDBFactory;
+  readonly isSecureContext: boolean;
+  readonly origin: string;
+  readonly performance: Performance;
+  atob(data: string): string;
+  btoa(data: string): string;
+  clearInterval(id: number | undefined): void;
+  clearTimeout(id: number | undefined): void;
+  createImageBitmap(image: ImageBitmapSource, options?: ImageBitmapOptions): Promise<ImageBitmap>;
+  createImageBitmap(image: ImageBitmapSource, sx: number, sy: number, sw: number, sh: number, options?: ImageBitmapOptions): Promise<ImageBitmap>;
+  fetch(input: RequestInfo | URL, init?: RequestInit): Promise<Response>;
+  queueMicrotask(callback: VoidFunction): void;
+  reportError(e: any): void;
+  setInterval(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
+  setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
+  structuredClone<T = any>(value: T, options?: StructuredSerializeOptions): T;
+}
+```
+
+## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html)
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js)
