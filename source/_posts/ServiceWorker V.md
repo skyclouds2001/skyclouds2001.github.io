@@ -1,5 +1,5 @@
 ---
-title: ServiceWorker III
+title: ServiceWorker V
 date: 2023-08-31 23:47:47
 tags:
 - Frontend
@@ -11,15 +11,13 @@ thumbnail:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-08-31 23:47:47/ServiceWorker III.html'
+uniqueId: '2023-08-31 23:47:47/ServiceWorker V.html'
 mathJax: false
 ---
 
-## Service Worker 使用 - 缓存 Cache Storage
+ServiceWorker 的缓存策略是基于 CacheStorage 实现的。
 
-Service Worker 的缓存策略是基于 CacheStorage 实现的。
-
-### CacheStorage
+## CacheStorage
 
 CacheStorage 提供了可由 ServiceWorker 或其他类型的 Worker 或 window 范围访问的所有命名缓存的主目录，同时负责维护字符串名称到相应 Cache 实例的映射。
 
@@ -91,7 +89,7 @@ self.caches.match(new URL('/cache'))
 self.caches.match(new Request('/cache'))
 ```
 
-### Cache
+## Cache
 
 * Cache 接口的 `put()` 方法将键/值对存储到当前 Cache 实例中，键可以是一个代表 URL 的字符串、一个 URL 实例或一个 Request 实例，值是一个 Response 实例。该方法会覆盖与之匹配的键/值对。
 
@@ -133,8 +131,7 @@ self.caches.open('key').then((cache) => {
     ignoreSearch: false,
     ignoreMethod: false,
     ignoreVary: false,
-  }
-).then((response) => {
+  }).then((response) => {
     console.log('worker | cache match', response)
   })
   cache.match(new URL('/cache')).then((response) => {
@@ -145,13 +142,13 @@ self.caches.open('key').then((cache) => {
   })
 
   cache.matchAll(
-  '/cache',
-  {
-    ignoreSearch: false,
-    ignoreMethod: false,
-    ignoreVary: false,
-  }
-).then((responses) => {
+    '/cache',
+    {
+      ignoreSearch: false,
+      ignoreMethod: false,
+      ignoreVary: false,
+    }
+  ).then((responses) => {
     console.log('worker | caches match', responses)
   })
   cache.matchAll(new URL('/cache')).then((responses) => {
@@ -191,7 +188,7 @@ self.caches.open('key').then((cache) => {
 
 > `keys()` 方法的返回值按照插入的顺序返回。
 
-### 缓存机制
+## 缓存机制
 
 ServiceWorker 的缓存策略是基于 ServiceWorker 环境全局 fetch 事件的，可以在 fetch 事件中监听请求，然后对请求进行拦截，最后返回自定义的响应
 
@@ -287,7 +284,7 @@ self.addEventListener('activate', (e) => {
 })
 ```
 
-### 源码链接
+## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.html)
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.js)
