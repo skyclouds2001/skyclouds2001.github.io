@@ -1,5 +1,5 @@
 ---
-title: ServiceWorker IX
+title: ServiceWorker III
 date: 2023-09-16 00:35:28
 tags:
 - Frontend
@@ -11,13 +11,17 @@ thumbnail:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-09-16 00:35:28/ServiceWorker IX.html'
+uniqueId: '2023-09-16 00:35:28/ServiceWorker III.html'
 mathJax: false
 ---
 
-## ServiceWorker 使用 - Client 与 Worker 的交互
+## ServiceWorker 的 Client 与 Worker
 
 ### 在 Worker 中获取 Client
+
+在 ServiceWorker 中，会对应着多个 `Client` 实例，代表着受 ServiceWorker 控制的上下文，可以是网页、Worker 乃至 SharedWorker 等，而 Client 实例的访问与控制通过 `Clients` 实例实现，通过 `clients` 属性获取
+
+同时，在 ServiceWorker 中，通过 `registration` 属性暴露 `ServiceWorkerRegistration` 实例，即当前 ServiceWorker 注册；通过 `serviceWorker` 属性暴露 `ServiceWorker` 实例，即当前 ServiceWorker 实例
 
 #### `Clients`
 
@@ -83,15 +87,17 @@ mathJax: false
 
 ### 在 Client 中获取 Worker
 
+在 Client 端中，通过 `ready` 属性暴露控制当前页面的 `ServiceWorkerRegistration` 实例，通过 `controller` 属性暴露控制当前页面的 `ServiceWorker` 实例
+
 #### `ServiceWorkerContainer`
 
 在 ServiceWorker 中，`ServiceWorkerContainer` 接口包含 ServiceWorker 的相关状态与相关控制方法，用于实现对 ServiceWorker 的管理
 
-* `ServiceWorkerContainer` 接口的 `ready` 属性返回一个 Promise 的 `ServiceWorkerRegistration`，表示与当前页面匹配的 ServiceWorker 的注册对象；该属性与 `ServiceWorkerGlobalScope` 接口的 `registration` 属性类似
+* `ServiceWorkerContainer` 接口的 `ready` 属性返回一个 Promise 的 `ServiceWorkerRegistration`，表示控制当前页面的 ServiceWorker 的注册；该属性与 `ServiceWorkerGlobalScope` 接口的 `registration` 属性类似
 
-* `ServiceWorkerContainer` 接口的 `controller` 属性返回一个 `ServiceWorker` 或 `null`，表示是否存在与当前页面匹配的 ServiceWorker 的对象；该属性与 `ServiceWorkerGlobalScope` 接口的 `serviceWorker` 属性类似
+* `ServiceWorkerContainer` 接口的 `controller` 属性返回一个 `ServiceWorker` 或 `null`，表示是否存在控制当前页面的 ServiceWorker 的实例；该属性与 `ServiceWorkerGlobalScope` 接口的 `serviceWorker` 属性类似
 
-* `ServiceWorkerContainer` 接口的 `getRegistration()` 方法根据给定的 URL （或使用当前 Client 的 URL）返回与之匹配的 `ServiceWorkerRegistration` 对象
+* `ServiceWorkerContainer` 接口的 `getRegistration()` 方法根据给定的 URL （默认使用当前 Client 的 URL）返回与之匹配的 `ServiceWorkerRegistration` 对象
 
   方法可以接受一个参数
 
@@ -154,22 +160,12 @@ interface Client {
   postMessage(message: any, options?: StructuredSerializeOptions): void;
 }
 
-declare var Client: {
-  prototype: Client;
-  new(): Client;
-};
-
 interface Clients {
   claim(): Promise<void>;
   get(id: string): Promise<Client | undefined>;
   matchAll<T extends ClientQueryOptions>(options?: T): Promise<ReadonlyArray<T["type"] extends "window" ? WindowClient : Client>>;
   openWindow(url: string | URL): Promise<WindowClient | null>;
 }
-
-declare var Clients: {
-  prototype: Clients;
-  new(): Clients;
-};
 
 interface WindowClient extends Client {
   readonly focused: boolean;
@@ -178,80 +174,40 @@ interface WindowClient extends Client {
   navigate(url: string | URL): Promise<WindowClient | null>;
 }
 
-declare var WindowClient: {
-  prototype: WindowClient;
-  new(): WindowClient;
-};
-
-interface ServiceWorkerEventMap extends AbstractWorkerEventMap {
-    "statechange": Event;
-}
-
 interface ServiceWorker extends EventTarget, AbstractWorker {
-    readonly scriptURL: string;
-    readonly state: ServiceWorkerState;
-    postMessage(message: any, transfer: Transferable[]): void;
-    postMessage(message: any, options?: StructuredSerializeOptions): void;
-    onstatechange: ((this: ServiceWorker, ev: Event) => any) | null;
-    addEventListener<K extends keyof ServiceWorkerEventMap>(type: K, listener: (this: ServiceWorker, ev: ServiceWorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-    addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-    removeEventListener<K extends keyof ServiceWorkerEventMap>(type: K, listener: (this: ServiceWorker, ev: ServiceWorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-    removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+  readonly scriptURL: string;
+  readonly state: ServiceWorkerState;
+  postMessage(message: any, transfer: Transferable[]): void;
+  postMessage(message: any, options?: StructuredSerializeOptions): void;
+  onstatechange: ((this: ServiceWorker, ev: Event) => any) | null;
 }
-
-declare var ServiceWorker: {
-    prototype: ServiceWorker;
-    new(): ServiceWorker;
-};
 
 interface ServiceWorkerContainer extends EventTarget {
-    readonly controller: ServiceWorker | null;
-    readonly ready: Promise<ServiceWorkerRegistration>;
-    getRegistration(clientURL?: string | URL): Promise<ServiceWorkerRegistration | undefined>;
-    getRegistrations(): Promise<ReadonlyArray<ServiceWorkerRegistration>>;
-    register(scriptURL: string | URL, options?: RegistrationOptions): Promise<ServiceWorkerRegistration>;
-    startMessages(): void;
-    oncontrollerchange: ((this: ServiceWorkerContainer, ev: Event) => any) | null;
-    onmessage: ((this: ServiceWorkerContainer, ev: MessageEvent) => any) | null;
-    onmessageerror: ((this: ServiceWorkerContainer, ev: MessageEvent) => any) | null;
-    addEventListener<K extends keyof ServiceWorkerContainerEventMap>(type: K, listener: (this: ServiceWorkerContainer, ev: ServiceWorkerContainerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-    addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-    removeEventListener<K extends keyof ServiceWorkerContainerEventMap>(type: K, listener: (this: ServiceWorkerContainer, ev: ServiceWorkerContainerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-    removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
-}
-
-declare var ServiceWorkerContainer: {
-    prototype: ServiceWorkerContainer;
-    new(): ServiceWorkerContainer;
-};
-
-interface ServiceWorkerRegistrationEventMap {
-    "updatefound": Event;
+  readonly controller: ServiceWorker | null;
+  readonly ready: Promise<ServiceWorkerRegistration>;
+  getRegistration(clientURL?: string | URL): Promise<ServiceWorkerRegistration | undefined>;
+  getRegistrations(): Promise<ReadonlyArray<ServiceWorkerRegistration>>;
+  register(scriptURL: string | URL, options?: RegistrationOptions): Promise<ServiceWorkerRegistration>;
+  startMessages(): void;
+  oncontrollerchange: ((this: ServiceWorkerContainer, ev: Event) => any) | null;
+  onmessage: ((this: ServiceWorkerContainer, ev: MessageEvent) => any) | null;
+  onmessageerror: ((this: ServiceWorkerContainer, ev: MessageEvent) => any) | null;
 }
 
 interface ServiceWorkerRegistration extends EventTarget {
-    readonly active: ServiceWorker | null;
-    readonly installing: ServiceWorker | null;
-    readonly navigationPreload: NavigationPreloadManager;
-    readonly pushManager: PushManager;
-    readonly scope: string;
-    readonly updateViaCache: ServiceWorkerUpdateViaCache;
-    readonly waiting: ServiceWorker | null;
-    getNotifications(filter?: GetNotificationOptions): Promise<Notification[]>;
-    showNotification(title: string, options?: NotificationOptions): Promise<void>;
-    unregister(): Promise<boolean>;
-    update(): Promise<void>;
-    onupdatefound: ((this: ServiceWorkerRegistration, ev: Event) => any) | null;
-    addEventListener<K extends keyof ServiceWorkerRegistrationEventMap>(type: K, listener: (this: ServiceWorkerRegistration, ev: ServiceWorkerRegistrationEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-    addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-    removeEventListener<K extends keyof ServiceWorkerRegistrationEventMap>(type: K, listener: (this: ServiceWorkerRegistration, ev: ServiceWorkerRegistrationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-    removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+  readonly active: ServiceWorker | null;
+  readonly installing: ServiceWorker | null;
+  readonly navigationPreload: NavigationPreloadManager;
+  readonly pushManager: PushManager;
+  readonly scope: string;
+  readonly updateViaCache: ServiceWorkerUpdateViaCache;
+  readonly waiting: ServiceWorker | null;
+  getNotifications(filter?: GetNotificationOptions): Promise<Notification[]>;
+  showNotification(title: string, options?: NotificationOptions): Promise<void>;
+  unregister(): Promise<boolean>;
+  update(): Promise<void>;
+  onupdatefound: ((this: ServiceWorkerRegistration, ev: Event) => any) | null;
 }
-
-declare var ServiceWorkerRegistration: {
-    prototype: ServiceWorkerRegistration;
-    new(): ServiceWorkerRegistration;
-};
 ```
 
 ### 源码链接
