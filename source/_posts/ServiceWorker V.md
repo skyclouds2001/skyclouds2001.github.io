@@ -284,6 +284,34 @@ self.addEventListener('activate', (e) => {
 })
 ```
 
+## 相关接口
+
+```ts
+interface Cache {
+  add(request: RequestInfo | URL): Promise<void>;
+  addAll(requests: RequestInfo[]): Promise<void>;
+  delete(request: RequestInfo | URL, options?: CacheQueryOptions): Promise<boolean>;
+  keys(request?: RequestInfo | URL, options?: CacheQueryOptions): Promise<ReadonlyArray<Request>>;
+  match(request: RequestInfo | URL, options?: CacheQueryOptions): Promise<Response | undefined>;
+  matchAll(request?: RequestInfo | URL, options?: CacheQueryOptions): Promise<ReadonlyArray<Response>>;
+  put(request: RequestInfo | URL, response: Response): Promise<void>;
+}
+
+interface CacheStorage {
+  delete(cacheName: string): Promise<boolean>;
+  has(cacheName: string): Promise<boolean>;
+  keys(): Promise<string[]>;
+  match(request: RequestInfo | URL, options?: MultiCacheQueryOptions): Promise<Response | undefined>;
+  open(cacheName: string): Promise<Cache>;
+}
+
+interface WindowOrWorkerGlobalScope {
+  readonly caches: CacheStorage;
+}
+
+declare var caches: CacheStorage;
+```
+
 ## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.html)

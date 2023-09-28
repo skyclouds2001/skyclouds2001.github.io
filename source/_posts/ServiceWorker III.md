@@ -15,7 +15,7 @@ uniqueId: '2023-09-16 00:35:28/ServiceWorker III.html'
 mathJax: false
 ---
 
-## ServiceWorker 的 Client 与 Worker
+## ServiceWorker 中 Client 与 Worker
 
 ### 在 Worker 中获取 Client
 
@@ -148,7 +148,7 @@ mathJax: false
 
 * `ServiceWorker` 接口的 `statechange` 事件在 ServiceWorker 的状态更新时触发，返回一个 `Event` 事件
 
-### 相关接口
+## 相关接口
 
 ```ts
 interface Client {
@@ -210,7 +210,7 @@ interface ServiceWorkerRegistration extends EventTarget {
 }
 ```
 
-### 源码链接
+## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html)
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js)
