@@ -55,11 +55,11 @@ ServiceWorker 的注册通过调用 `ServiceWorkerContainer` 接口的 `register
 
 方法亦可接收一个配置项参数：
 
-可选的 scope 参数定义 ServiceWorker 的注册范围。
+可选的 scope 参数定义 ServiceWorker 的注册范围，值默认设置为 ServiceWorker 脚本所在的目录。
 
-可选的 type 参数指定要创建的 ServiceWorker 的类型，值可以是 `'classic'` 或 `'module'`。
+可选的 type 参数指定要创建的 ServiceWorker 的类型，值可以是 `'classic'` 或 `'module'`。`'classic'` 代表 Worker 内部使用标准脚本模式；`'module'` 代表 Worker 内部使用模块脚本模式。
 
-可选的 updateViaCache 参数指示在更新期间如何将 HTTP 缓存用于 ServiceWorker 脚本资源，值可以是 `'all'` 或 `'imports'` 或 `'none'`。
+可选的 updateViaCache 参数指示在更新期间如何将 HTTP 缓存用于 ServiceWorker 脚本资源，值可以是 `'all'` 或 `'imports'` 或 `'none'`。`'all'` 代表 ServiceWorker 脚本资源和其导入的脚本资源均使用 HTTP 缓存，`'imports'` 代表仅 ServiceWorker 脚本资源不使用 HTTP 缓存，其导入的脚本资源使用 HTTP 缓存，`'none'` 代表 ServiceWorker 脚本资源和其导入的脚本资源均不使用 HTTP 缓存。
 
 返回一个 `ServiceWorkerRegistration` 接口实例，代表注册的 ServiceWorker 对象。
 
@@ -74,13 +74,13 @@ window.navigator.serviceWorker.register(
 )
 ```
 
-> 关于 scope 参数：
+> 关于 scope 参数的举例
 >
-> * 页面 / 与 ServiceWorker 脚本路径 /sw.js 允许控制 / 以下的页面
+> * 页面 `/` 与 ServiceWorker 脚本路径 `/sw.js` 允许控制 `/` 以下的页面
 >
-> * 页面 /product 与 ServiceWorker 脚本路径 /product/sw.js 与 scope ./ 允许控制 /product 以下的页面
+> * 页面 `/product` 与 ServiceWorker 脚本路径 `/product/sw.js` 与 scope `./` 允许控制 `/product` 以下的页面
 >
-> * 页面 / 与 ServiceWorker 脚本路径 /sw.js 与 scope /product/ 允许控制 /product 以下的页面
+> * 页面 `/` 与 ServiceWorker 脚本路径 `/sw.js` 与 scope `/product/`允许控制 `/product` 以下的页面
 
 ### 更新
 
