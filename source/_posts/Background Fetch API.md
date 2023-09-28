@@ -202,109 +202,65 @@ self.addEventListener('backgroundfetchclick', (e) => {
 type BackgroundFetchFailureReason = "" | "aborted" | "bad-status" | "fetch-error" | "quota-exceeded" | "download-total-exceeded";
 type BackgroundFetchResult = "" | "success" | "failure";
 
-interface BackgroundFetchEventInit extends ExtendableEventInit {
-    registration: BackgroundFetchRegistration;
-}
-
 interface BackgroundFetchEvent extends ExtendableEvent {
-    readonly registration: BackgroundFetchRegistration;
+  readonly registration: BackgroundFetchRegistration;
 }
-
-declare var BackgroundFetchEvent: {
-    prototype: BackgroundFetchEvent;
-    new(type: string, options: BackgroundFetchEventInit): BackgroundFetchEvent;
-};
 
 interface BackgroundFetchUpdateUIEvent extends BackgroundFetchEvent {
-    updateUI(options?: BackgroundFetchUIOptions);
+  updateUI(options?: BackgroundFetchUIOptions);
 }
-
-declare var BackgroundFetchUpdateUIEvent: {
-    prototype: BackgroundFetchUpdateUIEvent;
-    new(type: string, options: BackgroundFetchEventInit): BackgroundFetchUpdateUIEvent;
-};
 
 interface BackgroundFetchManager {
-    fetch(id: string, requests: RequestInfo | RequestInfo[], options?: BackgroundFetchOptions): Promise<BackgroundFetchRegistration>;
-    get(id: string): Promise<BackgroundFetchRegistration | undefined>;
-    getIds(): Promise<ReadonlyArray<string>>;
+  fetch(id: string, requests: RequestInfo | RequestInfo[], options?: BackgroundFetchOptions): Promise<BackgroundFetchRegistration>;
+  get(id: string): Promise<BackgroundFetchRegistration | undefined>;
+  getIds(): Promise<ReadonlyArray<string>>;
 }
 
-declare var BackgroundFetchManager: {
-    prototype: BackgroundFetchManager;
-    new(): BackgroundFetchManager;
-};
-
 interface BackgroundFetchOptions extends BackgroundFetchUIOptions {
-    downloadTotal: number;
+  downloadTotal: number;
 }
 
 interface BackgroundFetchRecord {
-    readonly request: Request;
-    readonly responseReady: Promise<Response>;
-}
-
-declare var BackgroundFetchRecord: {
-    prototype: BackgroundFetchRecord;
-    new(): BackgroundFetchRecord;
-};
-
-interface BackgroundFetchRegistrationEventMap {
-    "progress": Event;
+  readonly request: Request;
+  readonly responseReady: Promise<Response>;
 }
 
 interface BackgroundFetchRegistration extends EventTarget {
-    abort(): Promise<boolean>;
-    readonly downloaded: number;
-    readonly downloadTotal: number;
-    readonly failureReason: BackgroundFetchFailureReason;
-    readonly id: string;
-    match(request: RequestInfo, options?: CacheQueryOptions): Promise<BackgroundFetchRecord | undefined>;
-    matchAll(request?: RequestInfo, options?: CacheQueryOptions): Promise<BackgroundFetchRecord[]>;
-    readonly recordsAvailable: boolean;
-    readonly result: BackgroundFetchResult;
-    readonly uploaded: number;
-    readonly uploadTotal: number;
-    onprogress: ((this: BackgroundFetchRegistration, ev: Event) => any) | null;
-    addEventListener<K extends keyof BackgroundFetchRegistrationEventMap>(type: K, listener: (this: BackgroundFetchRegistration, ev: BackgroundFetchRegistrationEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-    addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-    removeEventListener<K extends keyof BackgroundFetchRegistrationEventMap>(type: K, listener: (this: BackgroundFetchRegistration, ev: BackgroundFetchRegistrationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-    removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+  abort(): Promise<boolean>;
+  readonly downloaded: number;
+  readonly downloadTotal: number;
+  readonly failureReason: BackgroundFetchFailureReason;
+  readonly id: string;
+  match(request: RequestInfo, options?: CacheQueryOptions): Promise<BackgroundFetchRecord | undefined>;
+  matchAll(request?: RequestInfo, options?: CacheQueryOptions): Promise<BackgroundFetchRecord[]>;
+  readonly recordsAvailable: boolean;
+  readonly result: BackgroundFetchResult;
+  readonly uploaded: number;
+  readonly uploadTotal: number;
+  onprogress: ((this: BackgroundFetchRegistration, ev: Event) => any) | null;
 }
 
-declare var BackgroundFetchRegistration: {
-    prototype: BackgroundFetchRegistration;
-    new(): BackgroundFetchRegistration;
-};
-
 interface BackgroundFetchUIOptions {
-    icons: ReadonlyArray<ImageResource>;
-    title: string;
+  icons: ReadonlyArray<ImageResource>;
+  title: string;
 }
 
 interface ImageResource {
-    src: string;
-    sizes: string;
-    type: string;
-    label: string;
+  src: string;
+  sizes: string;
+  type: string;
+  label: string;
 }
 
 interface ServiceWorkerRegistration extends EventTarget {
-    readonly backgroundFetch: BackgroundFetchManager;
-}
-
-interface ServiceWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
-    "backgroundfetchabort": BackgroundFetchEvent;
-    "backgroundfetchclick": BackgroundFetchEvent;
-    "backgroundfetchfail": BackgroundFetchUpdateUIEvent;
-    "backgroundfetchsuccess": BackgroundFetchUpdateUIEvent;
+  readonly backgroundFetch: BackgroundFetchManager;
 }
 
 interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
-    onbackgroundfetchabort: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
-    onbackgroundfetchclic: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
-    onbackgroundfetchfail: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
-    onbackgroundfetchsuccess: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
+  onbackgroundfetchabort: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
+  onbackgroundfetchclic: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
+  onbackgroundfetchfail: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
+  onbackgroundfetchsuccess: ((this: ServiceWorkerGlobalScope, ev: BackgroundFetchUpdateUIEvent) => any) | null;
 }
 ```
 

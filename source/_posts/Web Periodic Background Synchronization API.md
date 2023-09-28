@@ -96,44 +96,26 @@ self.addEventListener('periodicsync', (e) => {
 ## 相关接口
 
 ```ts
-interface PeriodicSyncEventInit {
-    tag: string;
-}
-
 interface PeriodicSyncEvent extends ExtendableEvent {
-    readonly tag: string;
+  readonly tag: string;
 }
-
-declare var PeriodicSyncEvent: {
-    prototype: PeriodicSyncEvent;
-    new(type: string, eventInitDict?: PeriodicSyncEventInit): PeriodicSyncEvent;
-};
 
 interface BackgroundSyncOptions {
-    minInterval: number;
+  minInterval: number;
 }
 
 interface PeriodicSyncManager {
-    getTags(): Promise<ReadonlyArray<string>>;
-    register(tag: string, options?: BackgroundSyncOptions): Promise<void>;
-    unregister(tag: string): Promise<void>;
-}
-
-declare var PeriodicSyncManager: {
-    prototype: PeriodicSyncManager;
-    new(): PeriodicSyncManager;
-};
-
-interface ServiceWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
-    "periodicsync": PeriodicSyncEvent;
+  getTags(): Promise<ReadonlyArray<string>>;
+  register(tag: string, options?: BackgroundSyncOptions): Promise<void>;
+  unregister(tag: string): Promise<void>;
 }
 
 interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
-    onperiodicsync: ((this: ServiceWorkerGlobalScope, ev: PeriodicSyncEvent) => any) | null;
+  onperiodicsync: ((this: ServiceWorkerGlobalScope, ev: PeriodicSyncEvent) => any) | null;
 }
 
 interface ServiceWorkerRegistration extends EventTarget {
-    readonly periodicSync: PeriodicSyncManager;
+  readonly periodicSync: PeriodicSyncManager;
 }
 ```
 

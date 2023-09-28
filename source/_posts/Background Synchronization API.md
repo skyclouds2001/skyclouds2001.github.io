@@ -96,41 +96,22 @@ function sync() {
 ## 相关接口
 
 ```ts
-interface SyncEventInit {
-    tag: string;
-    lastChance?: boolean;
-}
-
 interface SyncEvent extends ExtendableEvent {
-    readonly tag: string;
-    readonly lastChance: boolean;
+  readonly tag: string;
+  readonly lastChance: boolean;
 }
-
-declare var SyncEvent: {
-    prototype: SyncEvent;
-    new(type: string, eventInitDict?: SyncEventInit): SyncEvent;
-};
 
 interface SyncManager {
-    getTags(): Promise<ReadonlyArray<string>>;
-    register(tag: string): Promise<void>;
-}
-
-declare var SyncManager: {
-    prototype: SyncManager;
-    new(): SyncManager;
-};
-
-interface ServiceWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
-    "sync": SyncEvent;
+  getTags(): Promise<ReadonlyArray<string>>;
+  register(tag: string): Promise<void>;
 }
 
 interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
-    onsync: ((this: ServiceWorkerGlobalScope, ev: SyncEvent) => any) | null;
+  onsync: ((this: ServiceWorkerGlobalScope, ev: SyncEvent) => any) | null;
 }
 
 interface ServiceWorkerRegistration extends EventTarget {
-    readonly sync: SyncManager;
+  readonly sync: SyncManager;
 }
 ```
 

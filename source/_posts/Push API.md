@@ -209,92 +209,56 @@ ServiceWorkerGlobalScope 接口的 `pushsubscriptionchange` 事件在更新订�
 
 ```ts
 type PushEncryptionKeyName = "auth" | "p256dh";
-type PushMessageDataInit = BufferSource | string;
-
-interface PushEventInit extends ExtendableEventInit {
-    data?: PushMessageDataInit;
-}
 
 interface PushSubscriptionJSON {
-    endpoint?: string;
-    expirationTime?: EpochTimeStamp | null;
-    keys?: Record<string, string>;
+  endpoint?: string;
+  expirationTime?: EpochTimeStamp | null;
+  keys?: Record<string, string>;
 }
 
 interface PushSubscriptionOptionsInit {
-    applicationServerKey?: BufferSource | string | null;
-    userVisibleOnly?: boolean;
+  applicationServerKey?: BufferSource | string | null;
+  userVisibleOnly?: boolean;
 }
 
 interface PushEvent extends ExtendableEvent {
-    readonly data: PushMessageData | null;
+  readonly data: PushMessageData | null;
 }
-
-declare var PushEvent: {
-    prototype: PushEvent;
-    new(type: string, eventInitDict?: PushEventInit): PushEvent;
-};
 
 interface PushManager {
-    getSubscription(): Promise<PushSubscription | null>;
-    permissionState(options?: PushSubscriptionOptionsInit): Promise<PermissionState>;
-    subscribe(options?: PushSubscriptionOptionsInit): Promise<PushSubscription>;
+  getSubscription(): Promise<PushSubscription | null>;
+  permissionState(options?: PushSubscriptionOptionsInit): Promise<PermissionState>;
+  subscribe(options?: PushSubscriptionOptionsInit): Promise<PushSubscription>;
 }
-
-declare var PushManager: {
-    prototype: PushManager;
-    new(): PushManager;
-    readonly supportedContentEncodings: ReadonlyArray<string>;
-};
 
 interface PushMessageData {
-    arrayBuffer(): ArrayBuffer;
-    blob(): Blob;
-    json(): any;
-    text(): string;
+  arrayBuffer(): ArrayBuffer;
+  blob(): Blob;
+  json(): any;
+  text(): string;
 }
-
-declare var PushMessageData: {
-    prototype: PushMessageData;
-    new(): PushMessageData;
-};
 
 interface PushSubscription {
-    readonly endpoint: string;
-    readonly expirationTime: EpochTimeStamp | null;
-    readonly options: PushSubscriptionOptions;
-    getKey(name: PushEncryptionKeyName): ArrayBuffer | null;
-    toJSON(): PushSubscriptionJSON;
-    unsubscribe(): Promise<boolean>;
+  readonly endpoint: string;
+  readonly expirationTime: EpochTimeStamp | null;
+  readonly options: PushSubscriptionOptions;
+  getKey(name: PushEncryptionKeyName): ArrayBuffer | null;
+  toJSON(): PushSubscriptionJSON;
+  unsubscribe(): Promise<boolean>;
 }
-
-declare var PushSubscription: {
-    prototype: PushSubscription;
-    new(): PushSubscription;
-};
 
 interface PushSubscriptionOptions {
-    readonly applicationServerKey: ArrayBuffer | null;
-    readonly userVisibleOnly: boolean;
+  readonly applicationServerKey: ArrayBuffer | null;
+  readonly userVisibleOnly: boolean;
 }
-
-declare var PushSubscriptionOptions: {
-    prototype: PushSubscriptionOptions;
-    new(): PushSubscriptionOptions;
-};
 
 interface ServiceWorkerRegistration extends EventTarget {
-    readonly pushManager: PushManager;
-}
-
-interface ServiceWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
-    "push": PushEvent;
-    "pushsubscriptionchange": Event;
+  readonly pushManager: PushManager;
 }
 
 interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
-    onpush: ((this: ServiceWorkerGlobalScope, ev: PushEvent) => any) | null;
-    onpushsubscriptionchange: ((this: ServiceWorkerGlobalScope, ev: Event) => any) | null;
+  onpush: ((this: ServiceWorkerGlobalScope, ev: PushEvent) => any) | null;
+  onpushsubscriptionchange: ((this: ServiceWorkerGlobalScope, ev: Event) => any) | null;
 }
 ```
 

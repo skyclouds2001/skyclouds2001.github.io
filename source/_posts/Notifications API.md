@@ -131,6 +131,56 @@ self.addEventListener('notificationclose', (e) => {
 >
 > * `action` 顺序代表触发事件的 action 的 ID
 
+## 相关接口
+
+```ts
+interface NotificationAction {
+  action: string;
+  icon?: string;
+  title: string;
+}
+
+interface NotificationOptions {
+  actions?: NotificationAction[];
+  badge?: string;
+  body?: string;
+  data?: any;
+  dir?: NotificationDirection;
+  icon?: string;
+  image?: string;
+  lang?: string;
+  renotify?: boolean;
+  requireInteraction?: boolean;
+  silent?: boolean | null;
+  tag?: string;
+  timestamp?: EpochTimeStamp;
+  vibrate?: VibratePattern;
+}
+
+interface NotificationEvent extends ExtendableEvent {
+  readonly action: string;
+  readonly notification: Notification;
+}
+
+class Notification extends EventTarget {
+  constructor(title: string, options?: NotificationOptions);
+  static readonly permission: NotificationPermission;
+  readonly body: string;
+  readonly data: any;
+  readonly dir: NotificationDirection;
+  readonly icon: string;
+  readonly lang: string;
+  onclick: ((this: Notification, ev: Event) => any) | null;
+  onclose: ((this: Notification, ev: Event) => any) | null;
+  onerror: ((this: Notification, ev: Event) => any) | null;
+  onshow: ((this: Notification, ev: Event) => any) | null;
+  readonly silent: boolean | null;
+  readonly tag: string;
+  readonly title: string;
+  close(): void;
+}
+```
+
 ## 源码链接
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html)
