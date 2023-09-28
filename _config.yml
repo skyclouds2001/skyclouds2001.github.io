@@ -5,7 +5,7 @@
 # Site
 title: skyclouds2001's Blog
 subtitle: ''
-description: 'The personal blog of skyclouds2001'
+description: The personal blog of skyclouds2001
 keywords: skyclouds2001 blog
 author: skyclouds2001
 language: zh-CN
@@ -111,7 +111,7 @@ include:
 exclude:
 ignore:
 
-# hexo-generator-feed plugin
+# RSS hexo-generator-feed Plugin
 feed:
   type: atom
   path: atom.xml
