@@ -8,6 +8,7 @@ categories:
 - Frontend
 - JavaScript
 thumbnail: https://paulmiller3000.com/wp-content/uploads/JavaScript-ES6-Logo.jpeg
+cover: 
 toc: true
 recommend: 1
 keywords: 

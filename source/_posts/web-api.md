@@ -8,6 +8,7 @@ categories:
 - Frontend
 - Web API
 thumbnail: 
+cover: 
 toc: true
 recommend: 1
 keywords: 

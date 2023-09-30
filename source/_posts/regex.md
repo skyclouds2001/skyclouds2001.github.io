@@ -8,6 +8,7 @@ categories:
 - Frontend
 - Other
 thumbnail: https://picx.zhimg.com/v2-3b8c20cb2c106a15b6f83a148bc52bba_1440w.jpg
+cover: 
 toc: true
 recommend: 1
 keywords: 

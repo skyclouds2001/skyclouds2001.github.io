@@ -8,6 +8,7 @@ categories:
 - Frontend
 - Other
 thumbnail: https://th.bing.com/th/id/OIP.v3b022s2UAyhVAFLUtzhJgHaDj
+cover: 
 toc: true
 recommend: 1
 keywords: 

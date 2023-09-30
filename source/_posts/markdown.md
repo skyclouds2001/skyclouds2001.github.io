@@ -6,6 +6,7 @@ tags:
 categories:
 - Other
 thumbnail: https://tse3-mm.cn.bing.net/th/id/OIP-C.dX0BoWdOGYkaSunaRkTXTgHaEj
+cover: 
 toc: true
 recommend: 1
 keywords: 

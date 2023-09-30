@@ -8,6 +8,7 @@ categories:
 - Frontend
 - Tool
 thumbnail: https://git-scm.com/images/logo@2x.png
+cover: 
 toc: true
 recommend: 1
 keywords: 

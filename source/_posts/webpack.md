@@ -8,6 +8,7 @@ categories:
 - Frontend
 - Tool
 thumbnail: http://webmobtuts.com/wp-content/uploads/2018/04/tutorial-webpack-4-featured.png
+cover: 
 toc: true
 recommend: 1
 keywords: 

@@ -6,6 +6,7 @@ tags:
 categories:
 - Other
 thumbnail: https://pic2.zhimg.com/v2-e4eaab2af21f10ec3efb1e3f7de22b8a_r.jpg
+cover: 
 toc: true
 recommend: 1
 keywords: 

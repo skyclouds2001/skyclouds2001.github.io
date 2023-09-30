@@ -9,6 +9,7 @@ categories:
 - Frontend
 - Library
 thumbnail: https://logos-download.com/wp-content/uploads/2016/09/jQuery_logo.png
+cover: 
 toc: true
 recommend: 1
 keywords: 

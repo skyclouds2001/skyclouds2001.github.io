@@ -9,6 +9,7 @@ categories:
 - Frontend
 - FrameWork
 thumbnail: https://blog.amio.io/content/images/2019/06/vue-3.png
+cover: 
 toc: true
 recommend: 1
 keywords: 

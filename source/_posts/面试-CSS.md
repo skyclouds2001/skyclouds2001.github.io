@@ -6,6 +6,7 @@ tags:
 categories:
   - Interview
 thumbnail: 
+cover: 
 toc: true
 recommend: 1
 keywords: 
