@@ -8,6 +8,8 @@ categories:
   - test3
   - test4
 thumbnail: 
+cover: 
+updated: {{ date }}
 toc: true
 recommend: 1
 keywords: 
