@@ -1,5 +1,5 @@
 ---
-title: nest.js - i
+title: NestJS
 date: 2023-06-17 01:43:45
 tags:
 - Backend
@@ -13,7 +13,7 @@ cover:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-06-17 01:43:45/nest.js - i.html'
+uniqueId: '2023-06-17 01:43:45/NestJS.html'
 mathJax: false
 ---
 
