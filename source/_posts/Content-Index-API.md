@@ -36,19 +36,20 @@ Content Index API 允许网站注册离线启用的内容，向用户告知网�
 
 方法支持传入一组配置项
 
-- 参数 id 指定离线内容的唯一标识符
-
-- 参数 url 指定离线内容的 URL，需要与当前网页或脚本同源
-
-- 参数 title 指定离线内容的标题
-
-- 参数 description 指定离线内容的描述
-
-- 可选参数 icons 指定离线内容的图标组，每组支持 `src`、`sizes`、`type` 参数
-
-- 可选参数 category 指定离线内容的类别，可选的值为 `''`、`'homepage'`、`'article'`、`'video'`、`'audio'`，默认值是 `''`
+- 参数 `id` 指定离线内容的唯一标识符
+- 参数 `url` 指定离线内容的 URL，需要与当前网页或脚本同源
+- 参数 `title` 指定离线内容的标题
+- 参数 `description` 指定离线内容的描述
+- 可选参数 `icons` 指定离线内容的图标组，每组图标对象支持指定 `src` 参数和 可选的 `sizes` 及 `type` 参数，默认值是一个空数组
+- 可选参数 `category` 指定离线内容的类别，可选的值为 `''`、`'homepage'`、`'article'`、`'video'`、`'audio'`，默认值是 `''`
 
 方法返回一个 Promise 的 `undefined`
+
+方法在以下情况下会抛出一个 `TypeError` 异常
+
+- 当前 ContentIndex 对应的 ServiceWorker 未激活或 ServiceWorker 未包含 FetchEvent
+- `id`、 `title`、 `description`、 `url` 参数未指定或参数类型不为字符串或参数为空串
+- `icons` 参数某个 icon 的 URL 的类型不是图像或获取对应 icon 出现网络异常
 
 ```js
 self.registration.index.add({
@@ -86,7 +87,11 @@ self.registration.index.getAll()
 方法返回一个 Promise 的 `undefined`
 
 ```js
-self.registration.index.delete(id)
+self.registration.index.delete(id).then(() => (
+  self.caches.open('v1').then((cache) => (
+    cache.delete(e.id)
+  ))
+))
 ```
 
 需要注意的是，调用该方法同时，需要手动从存储中移除对应的离线内容
@@ -110,4 +115,20 @@ self.addEventListener('contentdelete', (e) => {
 ## 相关接口
 
 ```ts
+type ContentCategory = "" | "homepage" | "article" | "video" | "audio"
+
+interface ContentDescription {
+  id: string
+  title: string
+  description: string
+  category?: ContentCategory
+  icons?: ImageResource[];
+  url: string
+}
+
+interface ContentIndex {
+  add(ContentDescription description): Promise<undefined>
+  delete(DOMString id): Promise<undefined>
+  getAll(): Promise<ContentDescription[]>
+};
 ```
