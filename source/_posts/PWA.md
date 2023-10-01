@@ -18,7 +18,7 @@ mathJax: false
 
 PWA 即 Progressive Web App ———— 渐进式网络应用
 
-PWA 技术允许用户像 Native 应用一样使用 Web 应用
+PWA 技术允许用户像 Native 应用一样使用 Web 应用，支持多平台和多设备访问，并且支持在线或离线访问
 
 PWA 技术的核心是 ServiceWorker 技术，并基于 ServiceWorker 技术支持离线访问
 
@@ -35,7 +35,7 @@ PWA 技术的核心是 ServiceWorker 技术，并基于 ServiceWorker 技术支�
 
 ## PWA 创建
 
-1. 通过 `link` 标签引入 `manifest` 文件
+1. 页面通过 `link` 标签引入 `manifest` 文件
 
     文件后缀名可以是 json 或者 webapp、webmanifest
 
@@ -59,16 +59,25 @@ PWA 技术的核心是 ServiceWorker 技术，并基于 ServiceWorker 技术支�
     ```
 
     `name` 指定应用的名称，接受一个字符串
+
     `icons` 指定应用的图标，接受一个数组，数组各项可以指定 `src`、`sizes`、`type` 项，分别代表图标的 URL、尺寸及 MIME 类型
 
     `manifest.json` 文件的详细配置可以参考相关的文档
 
 2. 页面中注册 ServiceWorker，且 ServiceWorker 中监听了 `fetch` 事件
 
-3. 必须启用 `Secure Context` 环境
+3. 页面须启用 `Secure Context`，即使用 HTTPS 协议或者为本地资源
 
-    即处于 HTTPS 协议或者为本地资源
+## PWA 下载
+
+PWA 下载可以通过浏览器访问对应的网页实现
+
+通常浏览器检测到网页支持下载为 PWA 时，会显示一个默认的“下载为 PWA”的按钮，也可以自定义“下载为 PWA”的按钮
+
+通过监听全局的 `beforeinstallprompt` 事件获取到 `BeforeInstallPromptEvent` 事件实例并存储，通常该事件在页面加载时即触发；在必要时刻调用 `BeforeInstallPromptEvent.prompt()` 方法以使用户确认下载 PWA 应用；下载完成后会在全局触发 `appinstalled` 事件
+
+PWA 下载亦可以通过应用商店等场景下载
 
 ## PWA 原理
 
-PWA 实质是仅将应用行为上类似于原生应用，如在桌面显示图标，在应用列表显示，支持卸载等；并不会将应用程序的资源文件主动下载至本地，具体策略由开发者通过 IndexDB、ServiceWorker、Cache Storage 等实施
+PWA 实质是仅将应用行为上类似于原生应用，如在桌面显示图标，在应用列表显示，支持卸载等；并不会将应用程序的资源文件主动下载至本地，具体策略由开发者通过 IndexDB、ServiceWorker、Cache Storage 等开发实施
