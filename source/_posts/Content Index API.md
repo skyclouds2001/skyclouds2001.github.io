@@ -127,8 +127,8 @@ interface ContentDescription {
 }
 
 interface ContentIndex {
-  add(ContentDescription description): Promise<undefined>
-  delete(DOMString id): Promise<undefined>
+  add(description: ContentDescription): Promise<undefined>
+  delete(id: string): Promise<undefined>
   getAll(): Promise<ContentDescription[]>
 };
 ```
