@@ -115,7 +115,7 @@ self.addEventListener('contentdelete', (e) => {
 ## 相关接口
 
 ```ts
-type ContentCategory = "" | "homepage" | "article" | "video" | "audio"
+type ContentCategory = '' | 'homepage' | 'article' | 'video' | 'audio'
 
 interface ContentDescription {
   id: string
@@ -132,3 +132,7 @@ interface ContentIndex {
   getAll(): Promise<ContentDescription[]>
 };
 ```
+
+## 源码链接
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg)
