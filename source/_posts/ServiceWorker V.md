@@ -198,7 +198,9 @@ ServiceWorker 的缓存策略是基于 ServiceWorker 环境全局 fetch 事件�
 self.addEventListener('fetch', (e) => {
   e.respondWith(
     self.caches
-      .match(e.request)
+      .match(e.request, {
+          cacheName: 'v2',
+      })
       .then((response) => {
         if (response != null) {
           return response
@@ -216,31 +218,6 @@ self.addEventListener('fetch', (e) => {
             .catch(() => caches.match('/404'))
         }
       })
-  )
-})
-```
-
-```js
-self.addEventListener('fetch', (e) => {
-  e.respondWith(
-    self.caches
-      .open('v2')
-      .then((cache) => cache
-        .match(e.request)
-        .then((response) => {
-          if (response != null) {
-            return response
-          } else {
-            return fetch(e.request.clone())
-              .then((response) => {
-                cache.put(e.request, response.clone())
-
-                return response
-              })
-              .catch(() => caches.match('/404'))
-          }
-        })
-      )
   )
 })
 ```
