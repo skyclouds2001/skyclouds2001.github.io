@@ -93,11 +93,13 @@ head:
         # Page images (optional)
         # You should leave this blank for most of the time
         image: https://avatars.githubusercontent.com/u/95597335
+
     # Additional HTML meta tags in an array
     meta:
         # Meta tag specified in <attribute>=<value> style
         # E.g., name=theme-color;content=#123456 => <meta name="theme-color" content="#123456">
         - 'name=theme-color;content=#3273dc'
+
     # URL or path to the website's RSS atom.xml
     rss: /atom.xml
 
@@ -268,6 +270,7 @@ widgets:
         type: toc
         # Select show index
         index: true
+
     # Profile widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -303,6 +306,7 @@ widgets:
                 url: /atom.xml
         # todo - unknown setting
         has_hitokoto: true
+
     # Recommendation links widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -313,26 +317,31 @@ widgets:
             Hexo: 'https://hexo.io'
             Icarus: 'https://github.com/ppoffice/hexo-theme-icarus'
             Amazing: 'https://github.com/removeif/hexo-theme-amazing'
+
     # Latest comment widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: latest_comment
+
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: recent_posts
+
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: categories
+
     # Archives widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: archives
+
     # Tags widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -344,6 +353,7 @@ widgets:
         amount: 20
         # Whether to show post count right to tag name.
         show_count: true
+
     # # Google FeedBurner email subscription widget configurations
     # -
     #     # Where should the widget be placed, left sidebar or right sidebar
@@ -353,15 +363,15 @@ widgets:
     #     description: 
     #     # Feedburner ID
     #     feedburner_id: ''
-    # todo - ads
+
     # Google AdSense unit configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: adsense
-        client_id: 
-        slot_id: 
-    # todo - finish
+        client_id: ca-pub-6540459960525651
+        slot_id: 3012941103
+
     # Follow.it email subscription configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -371,18 +381,18 @@ widgets:
         action_url: https://api.follow.it/subscription-form/VUJhY1Y3Q05Ha3pvS3RzZDYrcWlRc1JTNGZQTEx5QXh4Z1llTmRtbHFDcy85allmd3hzWHkxcTc4dUFyNEhmQTkxQlZpL2JXdVQyeFVkY1pGaWNJY0ZLM0h4eGtyc0NnNlB3N2FvRnBxN1F1YVBLMkxmVHMweFlnZm1tWUorUXJ8UFBRMzljRXAyT3Nkd2NwK1VIei9RajZieHppdUVudEYzOGpIazh0bnBVZz0=/8
         verification_code: savxwnjFRLRWr4EYrhLa
 
-# todo - verify ad configs
 # AdSense client ID
-adsense_client_id: #'ca-pub-6343805421927634'
+adsense_client_id: ca-pub-6540459960525651
 # AdSense AD unit ID
-adsense_slot_id: #'5134765588'
+adsense_slot_id: 3012941103
 # article head ad
 article_head_has_ad: true
 # comment head ad
 comment_head_has_ad: true
 # other ad
 index_zero_position_ad: true
-index_ad_positions: 2,5,9 #首页adsense放置广告的位置，尽量少配置些，多了有可能不显示。一位的时候，加个逗号，如1,或者1,5,9
+# ad put position
+index_ad_positions: 2,5,9
 
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
