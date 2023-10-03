@@ -6,7 +6,7 @@
   <link href="https://skyclouds2001.github.io/atom.xml" rel="self"/>
   
   <link href="https://skyclouds2001.github.io/"/>
-  <updated>2023-09-23T16:18:21.367Z</updated>
+  <updated>2023-10-03T11:35:59.986Z</updated>
   <id>https://skyclouds2001.github.io/</id>
   
   <author>
@@ -15,6 +15,273 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Window Controls Overlay API</title>
+    <link href="https://skyclouds2001.github.io/2023/10/03/Window%20Controls%20Overlay%20API/"/>
+    <id>https://skyclouds2001.github.io/2023/10/03/Window%20Controls%20Overlay%20API/</id>
+    <published>2023-10-02T19:44:41.000Z</published>
+    <updated>2023-10-03T11:35:59.986Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Window Controls Overlay API 给 PWA 应用提供了管理默认系统的应用标题栏的能力，允许应用完全掌控应用窗口的区域，不过仅支持 PC 端 PWA</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Badging API</title>
+    <link href="https://skyclouds2001.github.io/2023/10/02/Badging%20API/"/>
+    <id>https://skyclouds2001.github.io/2023/10/02/Badging%20API/</id>
+    <published>2023-10-02T14:14:54.000Z</published>
+    <updated>2023-10-02T15:46:08.154Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Badging API 用于设置 PWA 应用的图标上的徽章信息&lt;/p&gt;
+&lt;p&gt;该 API 需要在 Secure Context 下使用&lt;/p&gt;
+&lt;p&gt;某些情况下该 API 需要请求用户授予</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Content Index API</title>
+    <link href="https://skyclouds2001.github.io/2023/10/01/Content%20Index%20API/"/>
+    <id>https://skyclouds2001.github.io/2023/10/01/Content%20Index%20API/</id>
+    <published>2023-10-01T12:12:19.000Z</published>
+    <updated>2023-10-02T12:38:39.887Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Content Index API 允许网站注册离线启用的内容，向用户告知网站支持的离线内容并允许开发者对其进行管理&lt;/p&gt;
+&lt;p&gt;该 API 仅支持 HTML 文档对应的</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PWA</title>
+    <link href="https://skyclouds2001.github.io/2023/09/30/PWA/"/>
+    <id>https://skyclouds2001.github.io/2023/09/30/PWA/</id>
+    <published>2023-09-30T15:53:34.000Z</published>
+    <updated>2023-10-02T12:38:39.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;PWA 即 Progressive Web App ———— 渐进式网络应用&lt;/p&gt;
+&lt;p&gt;PWA 技术允许用户像 Native 应用一样使用 Web</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/categories/Frontend/Other/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ServiceWorker VI</title>
+    <link href="https://skyclouds2001.github.io/2023/09/28/ServiceWorker-VI/"/>
+    <id>https://skyclouds2001.github.io/2023/09/28/ServiceWorker-VI/</id>
+    <published>2023-09-28T02:20:34.000Z</published>
+    <updated>2023-09-28T09:05:11.955Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;ServiceWorker-导航预加载&quot;&gt;&lt;a href=&quot;#ServiceWorker-导航预加载&quot; class=&quot;headerlink&quot; title=&quot;ServiceWorker</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-工程</title>
+    <link href="https://skyclouds2001.github.io/2023/09/28/%E9%9D%A2%E8%AF%95-%E5%B7%A5%E7%A8%8B/"/>
+    <id>https://skyclouds2001.github.io/2023/09/28/%E9%9D%A2%E8%AF%95-%E5%B7%A5%E7%A8%8B/</id>
+    <published>2023-09-28T02:20:10.000Z</published>
+    <updated>2023-09-30T12:57:02.496Z</updated>
+    
+    
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/categories/Interview/"/>
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/tags/Interview/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-JavaScript</title>
+    <link href="https://skyclouds2001.github.io/2023/09/27/%E9%9D%A2%E8%AF%95-JavaScript/"/>
+    <id>https://skyclouds2001.github.io/2023/09/27/%E9%9D%A2%E8%AF%95-JavaScript/</id>
+    <published>2023-09-26T16:18:54.000Z</published>
+    <updated>2023-09-30T12:57:13.466Z</updated>
+    
+    
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/categories/Interview/"/>
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/tags/Interview/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-CSS</title>
+    <link href="https://skyclouds2001.github.io/2023/09/27/%E9%9D%A2%E8%AF%95-CSS/"/>
+    <id>https://skyclouds2001.github.io/2023/09/27/%E9%9D%A2%E8%AF%95-CSS/</id>
+    <published>2023-09-26T16:18:33.000Z</published>
+    <updated>2023-09-30T12:57:08.633Z</updated>
+    
+    
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/categories/Interview/"/>
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/tags/Interview/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-HTML</title>
+    <link href="https://skyclouds2001.github.io/2023/09/27/%E9%9D%A2%E8%AF%95-HTML/"/>
+    <id>https://skyclouds2001.github.io/2023/09/27/%E9%9D%A2%E8%AF%95-HTML/</id>
+    <published>2023-09-26T16:18:17.000Z</published>
+    <updated>2023-09-30T12:57:10.809Z</updated>
+    
+    
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/categories/Interview/"/>
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/tags/Interview/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-Vue</title>
+    <link href="https://skyclouds2001.github.io/2023/09/25/%E9%9D%A2%E8%AF%95-Vue/"/>
+    <id>https://skyclouds2001.github.io/2023/09/25/%E9%9D%A2%E8%AF%95-Vue/</id>
+    <published>2023-09-25T15:38:10.000Z</published>
+    <updated>2023-09-30T12:57:15.996Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Vue-diff-算法&quot;&gt;&lt;a href=&quot;#Vue-diff-算法&quot; class=&quot;headerlink&quot; title=&quot;Vue diff 算法&quot;&gt;&lt;/a&gt;Vue diff</summary>
+        
+      
+    
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/categories/Interview/"/>
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/tags/Interview/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试-计算机网络</title>
+    <link href="https://skyclouds2001.github.io/2023/09/25/%E9%9D%A2%E8%AF%95-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    <id>https://skyclouds2001.github.io/2023/09/25/%E9%9D%A2%E8%AF%95-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</id>
+    <published>2023-09-25T13:17:13.000Z</published>
+    <updated>2023-09-30T12:57:05.901Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;HTTP2-与-HTTP1-区别&quot;&gt;&lt;a href=&quot;#HTTP2-与-HTTP1-区别&quot; class=&quot;headerlink&quot; title=&quot;HTTP2 与 HTTP1</summary>
+        
+      
+    
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/categories/Interview/"/>
+    
+    
+    <category term="Interview" scheme="https://skyclouds2001.github.io/tags/Interview/"/>
+    
+  </entry>
   
   <entry>
     <title>SharedWorker</title>
@@ -50,7 +317,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/21/Worker/"/>
     <id>https://skyclouds2001.github.io/2023/09/21/Worker/</id>
     <published>2023-09-21T04:36:10.000Z</published>
-    <updated>2023-09-23T16:17:58.142Z</updated>
+    <updated>2023-09-30T12:57:57.932Z</updated>
     
     
       
@@ -76,18 +343,18 @@
   </entry>
   
   <entry>
-    <title>ServiceWorker X</title>
-    <link href="https://skyclouds2001.github.io/2023/09/20/service-worker-x/"/>
-    <id>https://skyclouds2001.github.io/2023/09/20/service-worker-x/</id>
+    <title>ServiceWorker II</title>
+    <link href="https://skyclouds2001.github.io/2023/09/20/ServiceWorker%20II/"/>
+    <id>https://skyclouds2001.github.io/2023/09/20/ServiceWorker%20II/</id>
     <published>2023-09-20T07:04:36.000Z</published>
-    <updated>2023-09-21T18:26:36.670Z</updated>
+    <updated>2023-09-26T18:13:33.077Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Service-Worker-使用-全局上下文&quot;&gt;&lt;a href=&quot;#Service-Worker-使用-全局上下文&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;ServiceWorker-全局上下文&quot;&gt;&lt;a href=&quot;#ServiceWorker-全局上下文&quot; class=&quot;headerlink&quot; title=&quot;ServiceWorker</summary>
         
       
     
@@ -109,7 +376,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/20/Local%20Font%20Access%20API/"/>
     <id>https://skyclouds2001.github.io/2023/09/20/Local%20Font%20Access%20API/</id>
     <published>2023-09-20T04:38:21.000Z</published>
-    <updated>2023-09-22T06:32:56.549Z</updated>
+    <updated>2023-09-30T12:58:55.625Z</updated>
     
     
       
@@ -139,14 +406,14 @@
     <link href="https://skyclouds2001.github.io/2023/09/18/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     <id>https://skyclouds2001.github.io/2023/09/18/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</id>
     <published>2023-09-18T04:36:26.000Z</published>
-    <updated>2023-09-21T18:15:27.450Z</updated>
+    <updated>2023-10-03T12:44:54.492Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;打包相关&quot;&gt;&lt;a href=&quot;#打包相关&quot; class=&quot;headerlink&quot; title=&quot;打包相关&quot;&gt;&lt;/a&gt;打包相关&lt;/h2&gt;&lt;h3 id=&quot;路由懒加载&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;构建相关&quot;&gt;&lt;a href=&quot;#构建相关&quot; class=&quot;headerlink&quot; title=&quot;构建相关&quot;&gt;&lt;/a&gt;构建相关&lt;/h2&gt;&lt;h3 id=&quot;路由懒加载&quot;&gt;&lt;a</summary>
         
       
     
@@ -164,18 +431,18 @@
   </entry>
   
   <entry>
-    <title>ServiceWorker IX</title>
-    <link href="https://skyclouds2001.github.io/2023/09/16/service-worker-ix/"/>
-    <id>https://skyclouds2001.github.io/2023/09/16/service-worker-ix/</id>
+    <title>ServiceWorker III</title>
+    <link href="https://skyclouds2001.github.io/2023/09/16/ServiceWorker%20III/"/>
+    <id>https://skyclouds2001.github.io/2023/09/16/ServiceWorker%20III/</id>
     <published>2023-09-15T16:35:28.000Z</published>
-    <updated>2023-09-23T16:40:24.210Z</updated>
+    <updated>2023-09-28T04:35:14.196Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;ServiceWorker-使用-Client-与-Worker-的交互&quot;&gt;&lt;a href=&quot;#ServiceWorker-使用-Client-与-Worker-的交互&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;ServiceWorker-中-Client-与-Worker&quot;&gt;&lt;a href=&quot;#ServiceWorker-中-Client-与-Worker&quot;</summary>
         
       
     
@@ -193,18 +460,19 @@
   </entry>
   
   <entry>
-    <title>ServiceWorker VIII</title>
-    <link href="https://skyclouds2001.github.io/2023/09/14/service-worker-viii/"/>
-    <id>https://skyclouds2001.github.io/2023/09/14/service-worker-viii/</id>
+    <title>Web Periodic Background Synchronization API</title>
+    <link href="https://skyclouds2001.github.io/2023/09/14/Web%20Periodic%20Background%20Synchronization%20API/"/>
+    <id>https://skyclouds2001.github.io/2023/09/14/Web%20Periodic%20Background%20Synchronization%20API/</id>
     <published>2023-09-14T15:42:48.000Z</published>
-    <updated>2023-09-21T18:26:23.790Z</updated>
+    <updated>2023-09-30T12:58:04.191Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;ServiceWorker-使用-周期后台同步-Periodic-Background-Synchronization&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;p&gt;后台周期同步 API 提供了一种注册在网络状态允许下周期性执行任务的方法，这些任务被称为周期后台同步请求。&lt;/p&gt;
+&lt;p&gt;API</summary>
         
       
     
@@ -222,18 +490,18 @@
   </entry>
   
   <entry>
-    <title>ServiceWorker VII</title>
-    <link href="https://skyclouds2001.github.io/2023/09/13/service-worker-vii/"/>
-    <id>https://skyclouds2001.github.io/2023/09/13/service-worker-vii/</id>
+    <title>Background Fetch API</title>
+    <link href="https://skyclouds2001.github.io/2023/09/13/Background%20Fetch%20API/"/>
+    <id>https://skyclouds2001.github.io/2023/09/13/Background%20Fetch%20API/</id>
     <published>2023-09-13T07:43:44.000Z</published>
-    <updated>2023-09-21T18:26:10.688Z</updated>
+    <updated>2023-09-30T12:59:43.046Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;ServiceWorker-使用-后台获取-Background-Fetch&quot;&gt;&lt;a href=&quot;#ServiceWorker-使用-后台获取-Background-Fetch&quot;</summary>
+    <summary type="html">&lt;p&gt;后台获取 API</summary>
         
       
     
@@ -251,18 +519,77 @@
   </entry>
   
   <entry>
-    <title>ServiceWorker VI</title>
-    <link href="https://skyclouds2001.github.io/2023/09/12/service-worker-vi/"/>
-    <id>https://skyclouds2001.github.io/2023/09/12/service-worker-vi/</id>
+    <title>Background Synchronization API</title>
+    <link href="https://skyclouds2001.github.io/2023/09/12/Background%20Synchronization%20API/"/>
+    <id>https://skyclouds2001.github.io/2023/09/12/Background%20Synchronization%20API/</id>
     <published>2023-09-12T00:45:37.000Z</published>
-    <updated>2023-09-21T18:25:55.449Z</updated>
+    <updated>2023-09-30T12:59:28.437Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;ServiceWorker-使用-消息同步-Background-Sync&quot;&gt;&lt;a href=&quot;#ServiceWorker-使用-消息同步-Background-Sync&quot;</summary>
+    <summary type="html">&lt;p&gt;消息同步 API 用于同步创建任务，直至用户获取到稳定的网络连接时才开始按序执行。&lt;/p&gt;
+&lt;p&gt;消息同步 API</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Push API</title>
+    <link href="https://skyclouds2001.github.io/2023/09/10/Push%20API/"/>
+    <id>https://skyclouds2001.github.io/2023/09/10/Push%20API/</id>
+    <published>2023-09-10T15:58:21.000Z</published>
+    <updated>2023-09-30T12:58:26.659Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;img src=&quot;/2023/09/10/Push%20API/%E6%8E%A8%E9%80%81%E6%B6%88%E6%81%AF.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Notifications API</title>
+    <link href="https://skyclouds2001.github.io/2023/09/10/Notifications%20API/"/>
+    <id>https://skyclouds2001.github.io/2023/09/10/Notifications%20API/</id>
+    <published>2023-09-10T13:26:07.000Z</published>
+    <updated>2023-09-30T12:58:32.842Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;创建通知&quot;&gt;&lt;a href=&quot;#创建通知&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -281,17 +608,18 @@
   
   <entry>
     <title>ServiceWorker V</title>
-    <link href="https://skyclouds2001.github.io/2023/09/10/service-worker-v/"/>
-    <id>https://skyclouds2001.github.io/2023/09/10/service-worker-v/</id>
-    <published>2023-09-10T15:58:21.000Z</published>
-    <updated>2023-09-21T18:25:40.152Z</updated>
+    <link href="https://skyclouds2001.github.io/2023/08/31/ServiceWorker%20V/"/>
+    <id>https://skyclouds2001.github.io/2023/08/31/ServiceWorker%20V/</id>
+    <published>2023-08-31T15:47:47.000Z</published>
+    <updated>2023-10-02T13:34:11.781Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;ServiceWorker-使用-消息推送-Push&quot;&gt;&lt;a href=&quot;#ServiceWorker-使用-消息推送-Push&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;ServiceWorker 的缓存策略是基于 CacheStorage 实现的。&lt;/p&gt;
+&lt;h2 id=&quot;CacheStorage&quot;&gt;&lt;a href=&quot;#CacheStorage&quot;</summary>
         
       
     
@@ -310,75 +638,17 @@
   
   <entry>
     <title>ServiceWorker IV</title>
-    <link href="https://skyclouds2001.github.io/2023/09/10/service-worker-iv/"/>
-    <id>https://skyclouds2001.github.io/2023/09/10/service-worker-iv/</id>
-    <published>2023-09-10T13:26:07.000Z</published>
-    <updated>2023-09-21T18:25:16.570Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Service-Worker-使用-通知-Notification&quot;&gt;&lt;a href=&quot;#Service-Worker-使用-通知-Notification&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
-    
-    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
-    
-    
-    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
-    
-    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ServiceWorker III</title>
-    <link href="https://skyclouds2001.github.io/2023/08/31/service-worker-iii/"/>
-    <id>https://skyclouds2001.github.io/2023/08/31/service-worker-iii/</id>
-    <published>2023-08-31T15:47:47.000Z</published>
-    <updated>2023-09-21T18:24:50.024Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Service-Worker-使用-缓存-Cache-Storage&quot;&gt;&lt;a href=&quot;#Service-Worker-使用-缓存-Cache-Storage&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
-    
-    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
-    
-    
-    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
-    
-    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ServiceWorker II</title>
-    <link href="https://skyclouds2001.github.io/2023/08/31/service-worker-ii/"/>
-    <id>https://skyclouds2001.github.io/2023/08/31/service-worker-ii/</id>
+    <link href="https://skyclouds2001.github.io/2023/08/31/ServiceWorker%20IV/"/>
+    <id>https://skyclouds2001.github.io/2023/08/31/ServiceWorker%20IV/</id>
     <published>2023-08-31T15:46:02.000Z</published>
-    <updated>2023-09-21T18:24:40.255Z</updated>
+    <updated>2023-09-27T10:29:17.930Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Service-Worker-使用-消息及请求代理&quot;&gt;&lt;a href=&quot;#Service-Worker-使用-消息及请求代理&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;Service-Worker-消息传递&quot;&gt;&lt;a href=&quot;#Service-Worker-消息传递&quot; class=&quot;headerlink&quot; title=&quot;Service</summary>
         
       
     
@@ -397,17 +667,17 @@
   
   <entry>
     <title>ServiceWorker I</title>
-    <link href="https://skyclouds2001.github.io/2023/08/26/service-worker-i/"/>
-    <id>https://skyclouds2001.github.io/2023/08/26/service-worker-i/</id>
+    <link href="https://skyclouds2001.github.io/2023/08/26/ServiceWorker%20I/"/>
+    <id>https://skyclouds2001.github.io/2023/08/26/ServiceWorker%20I/</id>
     <published>2023-08-26T07:13:32.000Z</published>
-    <updated>2023-09-21T18:24:29.671Z</updated>
+    <updated>2023-09-28T16:29:02.598Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Service-Worker-概念&quot;&gt;&lt;a href=&quot;#Service-Worker-概念&quot; class=&quot;headerlink&quot; title=&quot;Service Worker</summary>
+    <summary type="html">&lt;h2 id=&quot;ServiceWorker-概念&quot;&gt;&lt;a href=&quot;#ServiceWorker-概念&quot; class=&quot;headerlink&quot; title=&quot;ServiceWorker</summary>
         
       
     
@@ -429,7 +699,7 @@
     <link href="https://skyclouds2001.github.io/2023/08/22/KeyboardEvent%20Sequence/"/>
     <id>https://skyclouds2001.github.io/2023/08/22/KeyboardEvent%20Sequence/</id>
     <published>2023-08-22T12:39:55.000Z</published>
-    <updated>2023-09-21T18:08:48.495Z</updated>
+    <updated>2023-09-30T12:58:59.682Z</updated>
     
     
       
@@ -454,11 +724,11 @@
   </entry>
   
   <entry>
-    <title>nest.js - i</title>
-    <link href="https://skyclouds2001.github.io/2023/06/17/nest-js-i/"/>
-    <id>https://skyclouds2001.github.io/2023/06/17/nest-js-i/</id>
+    <title>NestJS</title>
+    <link href="https://skyclouds2001.github.io/2023/06/17/NestJS/"/>
+    <id>https://skyclouds2001.github.io/2023/06/17/NestJS/</id>
     <published>2023-06-16T17:43:45.000Z</published>
-    <updated>2023-09-21T18:06:10.009Z</updated>
+    <updated>2023-10-01T12:15:09.899Z</updated>
     
     
       
@@ -489,7 +759,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/web-api/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/web-api/</id>
     <published>2022-12-14T14:55:58.000Z</published>
-    <updated>2023-09-21T18:04:07.026Z</updated>
+    <updated>2023-09-30T12:57:53.691Z</updated>
     
     
       
@@ -518,7 +788,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/npm/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/npm/</id>
     <published>2022-12-14T14:49:10.000Z</published>
-    <updated>2023-09-21T18:07:51.793Z</updated>
+    <updated>2023-09-30T12:58:35.394Z</updated>
     
     
       
@@ -547,7 +817,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/node/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/node/</id>
     <published>2022-12-14T14:45:38.000Z</published>
-    <updated>2023-09-21T18:07:35.830Z</updated>
+    <updated>2023-09-30T12:58:38.159Z</updated>
     
     
       
@@ -576,7 +846,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/es6/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/es6/</id>
     <published>2022-12-14T14:21:39.000Z</published>
-    <updated>2023-09-21T18:13:08.208Z</updated>
+    <updated>2023-09-30T12:59:23.441Z</updated>
     
     
       
@@ -605,7 +875,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/svg/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/svg/</id>
     <published>2022-12-14T14:11:59.000Z</published>
-    <updated>2023-09-21T18:03:22.953Z</updated>
+    <updated>2023-09-30T12:58:13.869Z</updated>
     
     
       
@@ -634,7 +904,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/webpack/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/webpack/</id>
     <published>2022-12-14T14:06:02.000Z</published>
-    <updated>2023-09-21T18:03:58.742Z</updated>
+    <updated>2023-09-30T12:57:50.058Z</updated>
     
     
       
@@ -663,7 +933,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/react/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/react/</id>
     <published>2022-12-14T13:47:54.000Z</published>
-    <updated>2023-09-21T18:05:31.318Z</updated>
+    <updated>2023-09-30T12:58:19.838Z</updated>
     
     
       
@@ -694,7 +964,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/vue/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/vue/</id>
     <published>2022-12-14T13:47:47.000Z</published>
-    <updated>2023-09-21T18:04:10.697Z</updated>
+    <updated>2023-09-30T12:58:06.907Z</updated>
     
     
       
@@ -725,7 +995,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/typescript/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/typescript/</id>
     <published>2022-12-14T13:36:44.000Z</published>
-    <updated>2023-09-21T18:03:39.126Z</updated>
+    <updated>2023-09-30T12:58:10.536Z</updated>
     
     
       
@@ -754,7 +1024,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/markdown/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/markdown/</id>
     <published>2022-12-14T13:20:59.000Z</published>
-    <updated>2023-09-21T18:05:11.523Z</updated>
+    <updated>2023-09-30T12:58:51.267Z</updated>
     
     
       
@@ -779,7 +1049,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/network/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/network/</id>
     <published>2022-12-14T13:06:37.000Z</published>
-    <updated>2023-09-21T18:06:36.112Z</updated>
+    <updated>2023-09-30T12:58:40.802Z</updated>
     
     
       
@@ -804,7 +1074,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/ajax/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/ajax/</id>
     <published>2022-12-14T12:46:23.000Z</published>
-    <updated>2023-09-21T18:10:38.948Z</updated>
+    <updated>2023-09-30T12:59:16.764Z</updated>
     
     
       
@@ -833,7 +1103,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/regex/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/regex/</id>
     <published>2022-12-14T12:28:35.000Z</published>
-    <updated>2023-09-21T18:04:44.105Z</updated>
+    <updated>2023-09-30T12:58:16.428Z</updated>
     
     
       
@@ -862,7 +1132,7 @@
     <link href="https://skyclouds2001.github.io/2022/08/14/jquery/"/>
     <id>https://skyclouds2001.github.io/2022/08/14/jquery/</id>
     <published>2022-08-14T14:55:26.000Z</published>
-    <updated>2023-09-21T18:15:54.601Z</updated>
+    <updated>2023-09-30T12:59:03.713Z</updated>
     
     
       
@@ -893,7 +1163,7 @@
     <link href="https://skyclouds2001.github.io/2022/08/09/git/"/>
     <id>https://skyclouds2001.github.io/2022/08/09/git/</id>
     <published>2022-08-09T15:45:51.000Z</published>
-    <updated>2023-09-21T18:12:44.669Z</updated>
+    <updated>2023-09-30T12:59:19.813Z</updated>
     
     
       
@@ -922,7 +1192,7 @@
     <link href="https://skyclouds2001.github.io/2022/08/06/css-3/"/>
     <id>https://skyclouds2001.github.io/2022/08/06/css-3/</id>
     <published>2022-08-06T14:06:41.000Z</published>
-    <updated>2023-09-21T18:18:59.014Z</updated>
+    <updated>2023-09-30T12:59:54.920Z</updated>
     
     
       
@@ -951,7 +1221,7 @@
     <link href="https://skyclouds2001.github.io/2022/08/05/css-2/"/>
     <id>https://skyclouds2001.github.io/2022/08/05/css-2/</id>
     <published>2022-08-05T13:50:38.000Z</published>
-    <updated>2023-09-21T18:18:12.208Z</updated>
+    <updated>2023-09-30T12:59:48.886Z</updated>
     
     
       
@@ -980,7 +1250,7 @@
     <link href="https://skyclouds2001.github.io/2022/08/05/css-1/"/>
     <id>https://skyclouds2001.github.io/2022/08/05/css-1/</id>
     <published>2022-08-05T10:52:25.000Z</published>
-    <updated>2023-09-21T18:17:48.709Z</updated>
+    <updated>2023-09-30T12:59:46.296Z</updated>
     
     
       
@@ -1009,7 +1279,7 @@
     <link href="https://skyclouds2001.github.io/2022/07/29/html-2/"/>
     <id>https://skyclouds2001.github.io/2022/07/29/html-2/</id>
     <published>2022-07-29T12:51:59.000Z</published>
-    <updated>2023-09-21T18:16:45.550Z</updated>
+    <updated>2023-09-30T12:59:09.291Z</updated>
     
     
       
@@ -1038,7 +1308,7 @@
     <link href="https://skyclouds2001.github.io/2022/07/27/html-1/"/>
     <id>https://skyclouds2001.github.io/2022/07/27/html-1/</id>
     <published>2022-07-27T10:54:10.000Z</published>
-    <updated>2023-09-21T18:16:32.213Z</updated>
+    <updated>2023-09-30T12:59:07.091Z</updated>
     
     
       
@@ -1067,7 +1337,7 @@
     <link href="https://skyclouds2001.github.io/2022/07/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     <id>https://skyclouds2001.github.io/2022/07/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</id>
     <published>2022-07-20T09:20:28.000Z</published>
-    <updated>2023-09-21T18:13:35.218Z</updated>
+    <updated>2023-09-30T12:57:34.205Z</updated>
     
     
       
@@ -1099,7 +1369,7 @@
     <link href="https://skyclouds2001.github.io/2022/07/20/hello-world/"/>
     <id>https://skyclouds2001.github.io/2022/07/20/hello-world/</id>
     <published>2022-07-19T17:04:43.000Z</published>
-    <updated>2023-09-21T18:20:46.642Z</updated>
+    <updated>2023-09-30T12:59:13.105Z</updated>
     
     
       
