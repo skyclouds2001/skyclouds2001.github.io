@@ -108,4 +108,44 @@ File System API 与扩展的 File System Access API 提供了管理设备本地�
 
 并在用户代理无法使用请求的文件目录建立本地 OPFS 索引时抛出 SecurityError 异常
 
+## 文件及目录操作
+
+通过 `FileSystemHandle` 接口进行文件目录相关的操作，该接口是 `FileSystemFileHandle` 接口与 `FileSystemDirectoryHandle` 接口的父接口
+
+### 句柄类型
+
+`FileSystemHandle` 接口的 `kind` 属性返回一个字符串枚举值，代表句柄的类型
+
+当当前句柄为 `FileSystemFileHandle` 时，返回 `'file'`
+
+当当前句柄为 `FileSystemDirectoryHandle` 时，返回 `'directory'`
+
+### 句柄名称
+
+`FileSystemHandle` 接口的 `name` 属性返回一个字符串，代表句柄对应的文件或目录的名称
+
+### 句柄比较
+
+`FileSystemHandle` 接口的 `isSameEntry()` 方法判断当前句柄与传入的句柄是否指向同一个文件或目录
+
+方法接收一个 `FileSystemHandle`
+
+方法返回一个 boolean
+
+### 权限操作
+
+`FileSystemHandle` 接口的 `queryPermission()` 方法用于枚举当前句柄的权限
+
+`FileSystemHandle` 接口的 `requestPermission()` 方法用于
+
+方法均支持传入一组可选的描述符，唯一 mode 参数可以为 `'read'` 或 `'readwrite'` 之一，默认为 `'read'`
+
+方法均返回一个 Promise 的 `PermissionStatus` 接口实例
+
 ## 文件操作
+
+通过 `FileSystemFileHandle` 接口进行文件相关的操作，该接口继承自 `FileSystemHandle` 接口
+
+## 目录操作
+
+通过 `FileSystemDirectoryHandle` 接口进行目录相关的操作，该接口继承自 `FileSystemHandle` 接口
