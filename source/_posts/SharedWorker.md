@@ -2,11 +2,11 @@
 title: SharedWorker
 date: 2023-09-22 02:31:34
 tags:
-  - test1
-  - test2
+- Frontend
+- Web API
 categories:
-  - test3
-  - test4
+- Frontend
+- Web API
 toc: true
 recommend: 1
 keywords: 
