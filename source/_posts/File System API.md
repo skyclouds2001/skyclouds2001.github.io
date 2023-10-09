@@ -130,13 +130,13 @@ File System API 与扩展的 File System Access API 提供了管理设备本地�
 
 方法接收一个 `FileSystemHandle`
 
-方法返回一个 boolean
+方法返回一个 Promise 的 boolean
 
 ### 权限操作
 
-`FileSystemHandle` 接口的 `queryPermission()` 方法用于枚举当前句柄的权限
+`FileSystemHandle` 接口的 `queryPermission()` 方法用于枚举当前句柄的指定权限
 
-`FileSystemHandle` 接口的 `requestPermission()` 方法用于
+`FileSystemHandle` 接口的 `requestPermission()` 方法用于请求当前句柄的指定权限
 
 方法均支持传入一组可选的描述符，唯一 mode 参数可以为 `'read'` 或 `'readwrite'` 之一，默认为 `'read'`
 
@@ -146,6 +146,102 @@ File System API 与扩展的 File System Access API 提供了管理设备本地�
 
 通过 `FileSystemFileHandle` 接口进行文件相关的操作，该接口继承自 `FileSystemHandle` 接口
 
+### 获取文件
+
+`FileSystemFileHandle` 接口的 `getFile()` 方法可以用于读取文件相关信息及用于网络传输
+
+返回一个 Promise 的 `File` 对象
+
+抛出一个 `NotAllowedError` 若未授予访问权限
+
+### 获取同步访问句柄
+
+`FileSystemFileHandle` 接口的 `createSyncAccessHandle()` 方法可以用于同步读写文件内容，但仅允许在专属 Worker 内部使用，目前仅适用于 OPFS 机制
+
+返回一个 Promise 的 `FileSystemSyncAccessHandle` 对象
+
+抛出一个 `NotAllowedError` 若未授予访问权限
+
+抛出一个 `NoModificationAllowedError` 若无法建立文件锁
+
+抛出一个 `InvalidStateError` 若句柄无法表示 OPFS 中的文件
+
+### 获取可写文件流
+
+`FileSystemFileHandle` 接口的 `createWritable()` 方法可以用于修改文件内容
+
+可以传入一组可选的配置项，唯一选项 keepExistingData 指定
+
+返回一个 Promise 的 `FileSystemWritableFileStream` 对象
+
+抛出一个 `NotAllowedError` 若未授予访问权限
+
 ## 目录操作
 
 通过 `FileSystemDirectoryHandle` 接口进行目录相关的操作，该接口继承自 `FileSystemHandle` 接口
+
+### 目录遍历
+
+`FileSystemDirectoryHandle` 接口支持异步遍历，包含 `[@@asyncIterator]()` 以及 `entries()`、`keys()`、`values()` 等方法
+
+### 获取路径
+
+`FileSystemDirectoryHandle` 接口的 `resolve()` 方法用于获取当前句柄到指定句柄的相对路径
+
+需要传入一个 `FileSystemHandle`，代表目标句柄
+
+返回一个 Promise 的字符串数组或 `null`
+
+### 获取子目录
+
+`FileSystemDirectoryHandle` 接口的 `getDirectoryHandle()` 方法用于获取当前目录下的指定名称的子目录的句柄
+
+需要传入一个字符串参数，代表目录的名称，与 `FileSystemHandle.name` 相符
+
+可以传入一组配置项，唯一参数 `create` 为一个布尔值，指定目录不存在情况下是否创建目录，默认值为 `false`
+
+返回一个 Promise 的 `FileSystemDirectoryHandle` 对象
+
+抛出一个 `TypeError` 若 `name` 参数不是字符串或为非法的文件系统名称
+
+抛出一个 `TypeMismatchError` 若匹配到的为文件而非目录
+
+抛出一个 `NotFoundError` 若未找到目录且 `create` 选项设定为 `false`
+
+抛出一个 `NotAllowedError` 若未授予访问权限
+
+### 获取子文件
+
+`FileSystemDirectoryHandle` 接口的 `getFileHandle()` 方法用于获取当前目录下的指定名称的子文件的句柄
+
+需要传入一个字符串参数，代表目录的名称，与 `FileSystemHandle.name` 相符
+
+可以传入一组配置项，唯一参数 `create` 为一个布尔值，指定目录不存在情况下是否创建目录，默认值为 `false`
+
+返回一个 Promise 的 `FileSystemFileHandle` 对象
+
+抛出一个 `TypeError` 若 `name` 参数不是字符串或为非法的文件系统名称
+
+抛出一个 `TypeMismatchError` 若匹配到的为目录而非文件
+
+抛出一个 `NotFoundError` 若未找到文件且 `create` 选项设定为 `false`
+
+抛出一个 `NotAllowedError` 若未授予访问权限
+
+### 删除子目录或子文件
+
+`FileSystemDirectoryHandle` 接口的 `removeEntry()` 方法用于删除当前目录下的指定名称的子目录或子文件的句柄
+
+需要传入一个字符串参数，代表目录的名称，与 `FileSystemHandle.name` 相符
+
+可以传入一组配置项，唯一参数 `recursive` 为一个布尔值，指定是否递归删除，默认值为 `false`
+
+返回一个 Promise 的 `undefined`
+
+抛出一个 `TypeError` 若 `name` 参数不是字符串或为非法的文件系统名称
+
+抛出一个 `InvalidModificationError` 若目标为目录，并且包含子文件或子目录，并且 `recursive` 设置为 `false`
+
+抛出一个 `NotFoundError` 若未找到文件或目录
+
+抛出一个 `NotAllowedError` 若未授予访问权限
