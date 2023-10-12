@@ -156,7 +156,7 @@ File System API 与扩展的 File System Access API 提供了管理设备本地�
 
 ### 获取同步访问句柄
 
-`FileSystemFileHandle` 接口的 `createSyncAccessHandle()` 方法可以用于同步读写文件内容，但仅允许在专属 Worker 内部使用，目前仅适用于 OPFS 机制
+`FileSystemFileHandle` 接口的 `createSyncAccessHandle()` 方法可以用于同步读写文件内容，但仅允许在专属 Worker 内部使用，且目前仅适用于 OPFS 机制
 
 返回一个 Promise 的 `FileSystemSyncAccessHandle` 对象
 
@@ -306,10 +306,62 @@ File System API 与扩展的 File System Access API 提供了管理设备本地�
 
 抛出一个 `TypeError` 若 `size` 参数不是正整数或未传递
 
-### 文件同步读写
+## 文件同步读写
 
 文件同步读写通过 `FileSystemFileHandle` 接口的 `createSyncAccessHandle()` 方法获取到对应的 `FileSystemSyncAccessHandle` 实例实现
 
-`FileSystemSyncAccessHandle` 接口继承自 `FileSystemHandle` 接口
+`FileSystemSyncAccessHandle` 实例仅支持在专属 Worker 中使用，且目前仅适用于 OPFS 机制
 
-*`FileSystemSyncAccessHandle` 实例的创建会锁定对应文件，阻止对该文件创建其他的 `FileSystemSyncAccessHandle` 实例或 `FileSystemWritableFileStream` 实例，直到 `FileSystemSyncAccessHandle` 实例被销毁*
+因为其无需进行权限检查，其相对而言具有更好的性能
+
+*创建 `FileSystemSyncAccessHandle` 实例会创建与之对应的文件锁，阻止对该文件创建其他的 `FileSystemSyncAccessHandle` 实例或 `FileSystemWritableFileStream` 实例，直到 `FileSystemSyncAccessHandle` 实例被销毁*
+
+### 读
+
+`FileSystemSyncAccessHandle` 接口的 `read()` 方法读取文件内容
+
+方法传入一个 `buffer` 参数，可以是 `ArrayBuffer` `SharedArrayBuffer` `TypedArray` 或 `DataView`，代表用于存储读取文件内容的缓存区
+
+方法支持传入一个可选的配置项：其 `at` 参数指定开始读取文件内容的起始位置
+
+方法返回一个正整数，代表读取的文件内容的字节数
+
+方法在若对应的句柄已关闭的情况下，抛出一个 `InvalidStateError`
+
+### 写
+
+`FileSystemSyncAccessHandle` 接口的 `write()` 方法向文件写入内容
+
+方法传入一个 `buffer` 参数，可以是 `ArrayBuffer` `SharedArrayBuffer` `TypedArray` 或 `DataView`，代表将用于写入的文件内容
+
+方法可以传入一个可选的配置项：其 `at` 参数指定开始写入文件内容的起始位置
+
+方法返回一个正整数，代表写入的文件内容的字节数
+
+方法在若对应的句柄已关闭的情况下，抛出一个 `InvalidStateError`
+
+### 读取尺寸
+
+`FileSystemSyncAccessHandle` 接口的 `getSize()` 方法返回文件的尺寸
+
+方法返回一个正整数，代表文件内容的字节数
+
+方法在若对应的句柄已关闭的情况下，抛出一个 `InvalidStateError`
+
+### 更改尺寸
+
+`FileSystemSyncAccessHandle` 接口的 `truncate()` 方法用于更改文件的尺寸
+
+方法传入一个 `newSize` 参数，需要是一个正整数，代表将更改的文件的目标大小
+
+方法在若对应的句柄已关闭的情况下，抛出一个 `InvalidStateError`
+
+方法在若对应的句柄已关闭的情况下，抛出一个 `InvalidStateError`
+
+### 刷新缓冲区
+
+`FileSystemSyncAccessHandle` 接口的 `flush()` 方法用于将缓冲的更改同步至存储，通常只在特定时间段需要将缓冲的更改同步至存储时使用，否则可以让底层自行处理
+
+### 关闭句柄
+
+`FileSystemSyncAccessHandle` 接口的 `close()` 方法用于关闭当前句柄，释放文件锁
