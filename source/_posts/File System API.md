@@ -245,3 +245,71 @@ File System API 与扩展的 File System Access API 提供了管理设备本地�
 抛出一个 `NotFoundError` 若未找到文件或目录
 
 抛出一个 `NotAllowedError` 若未授予访问权限
+
+## 文件读取
+
+文件读取通过 `FileSystemFileHandle` 接口的 `getFile()` 方法获取到对应的 `File` 实例实现
+
+## 文件修改
+
+文件修改通过 `FileSystemFileHandle` 接口的 `createWritable()` 方法获取到对应的 `FileSystemWritableFileStream` 实例实现
+
+`FileSystemWritableFileStream` 接口继承自 `WritableStream` 接口
+
+*`FileSystemWritableFileStream` 接口的更改不会立即反映到实际的文件上，仅在关闭流之后才会同步其产生的更改；原因是对流的更改，至少会存储到一个临时文件中，仅在流关闭之后，才会将更改同步到实际的文件中*
+
+### 移动指针
+
+使用 `FileSystemWritableFileStream` 接口的 `seek()` 方法移动文件指针的位置
+
+需要传入一个正整数 `position` 参数，代表文件指针的位置
+
+返回一个 Promise
+
+抛出一个 `NotAllowedError` 若未授予访问权限
+
+抛出一个 `TypeError` 若 `position` 参数不是正整数或未传递
+
+### 文件写入
+
+使用 `FileSystemWritableFileStream` 接口的 `write()` 方法用于向文件中写入内容
+
+可以传入一个 `data` 参数，代表需要写入文件的内容，可以是 `ArrayBuffer` `TypedArray` `DataView` `Blob` 或 `string`
+
+亦可以传入一组配置项：
+
+`type` 选项传入一组字符串枚举，指定操作的模式，可以是 `"write"` `"seek"` 或 `"truncate"`
+
+`data` 选项，代表需要写入文件的内容，可以是 `ArrayBuffer` `TypedArray` `DataView` `Blob` 或 `string`，在 `"write"` 模式下是必须的
+
+`position` 选项，代表需要移动的文件指针的目标位置，是一个正整数，在 `"seek"` 模式下是必须的；同样可以在 `"write"` 模式下使用，此时代表写入内容的目标位置
+
+`size` 选项，代表需要文件流的大小，是一个正整数，在 `"truncate"` 模式下是必须的
+
+返回一个 Promise
+
+抛出一个 `NotAllowedError` 若未授予访问权限
+
+抛出一个 `TypeError` 若传入参数非法
+
+抛出一个 `InvalidStateError` 若 `position` 选项的值超出文件大小
+
+### 文件尺寸修改
+
+使用 `FileSystemWritableFileStream` 接口的 `truncate()` 方法改变文件的尺寸；方法可能会改变文件指针的位置
+
+需要传入一个正整数 `size` 参数，代表目标的文件尺寸；若参数超出原有尺寸，则扩大当前文件并使用空内容填充扩大的部分，反之会裁剪当前文件
+
+返回一个 Promise
+
+抛出一个 `NotAllowedError` 若未授予访问权限
+
+抛出一个 `TypeError` 若 `size` 参数不是正整数或未传递
+
+### 文件同步读写
+
+文件同步读写通过 `FileSystemFileHandle` 接口的 `createSyncAccessHandle()` 方法获取到对应的 `FileSystemSyncAccessHandle` 实例实现
+
+`FileSystemSyncAccessHandle` 接口继承自 `FileSystemHandle` 接口
+
+*`FileSystemSyncAccessHandle` 实例的创建会锁定对应文件，阻止对该文件创建其他的 `FileSystemSyncAccessHandle` 实例或 `FileSystemWritableFileStream` 实例，直到 `FileSystemSyncAccessHandle` 实例被销毁*
