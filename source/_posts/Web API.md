@@ -1,5 +1,5 @@
 ---
-title: web api
+title: Web API
 date: 2022-12-14 22:55:58
 tags:
 - Frontend
@@ -16,11 +16,9 @@ uniqueId: '2022-12-14 22:55:58/web api.html'
 mathJax: false
 ---
 
-# Web API
+## Web API
 
-Web API 是 Web 的应用程序编程接口
-
-内置的 Web API 来支持复杂的操作，并帮助访问数据
+在编写 Web 项目时，有许多 Web API 可供调用来实现各种各样的功能
 
 ### Web Storage
 
@@ -28,12 +26,12 @@ Web API 是 Web 的应用程序编程接口
 
 > 注意：仅HTTPS协议下可用
 
-##### 类型
+#### 类型
 
 * localStorage  存储数据长期有效
 * sessionStorage  存储数据仅网页打开期间有效
 
-##### 属性方法
+#### 属性方法
 
 * **setItem(*key*， *value*)**  设置存储
 * **getItem(*key*)**  获取存储
