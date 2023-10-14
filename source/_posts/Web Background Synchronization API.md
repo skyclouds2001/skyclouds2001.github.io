@@ -1,5 +1,5 @@
 ---
-title: Background Synchronization API
+title: Web Background Synchronization API
 date: 2023-09-12 08:45:37
 tags:
 - Frontend
@@ -12,7 +12,7 @@ cover:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-09-12 08:45:37/Background Synchronization API.html'
+uniqueId: '2023-09-12 08:45:37/Web Background Synchronization API.html'
 mathJax: false
 ---
 
