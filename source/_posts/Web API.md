@@ -20,6 +20,66 @@ mathJax: false
 
 在编写 Web 项目时，有许多 Web API 可供调用来实现各种各样的功能
 
+### Local Font Access API
+
+[Local Font Access API](/2023/09/20/Local%20Font%20Access%20API/)
+
+### File System API
+
+[File System API](/2023/10/05/File%20System%20API/)
+
+### Web Worker API
+
+[Worker](/2023/09/21/Worker/)
+
+[SharedWorker](/2023/09/22/SharedWorker/)
+
+### Service Worker API
+
+[ServiceWorker I](/2023/08/26/ServiceWorker%20I/)
+
+[ServiceWorker II](/2023/09/20/ServiceWorker%20II/)
+
+[ServiceWorker III](/2023/09/16/ServiceWorker%20III/)
+
+[ServiceWorker IV](/2023/08/31/ServiceWorker%20IV/)
+
+[ServiceWorker V](/2023/08/31/ServiceWorker%20V/)
+
+[ServiceWorker VI](/2023/09/28/ServiceWorker-VI/)
+
+### Push API
+
+[Push API](/2023/09/10/Push%20API/)
+
+### Notifications API
+
+[Notifications API](/2023/09/10/Notifications%20API/)
+
+### Background Fetch API
+
+[Background Fetch API](/2023/09/13/Background%20Fetch%20API/)
+
+### Web Background Synchronization API
+
+[Web Background Synchronization API](/2023/09/12/Background%20Synchronization%20API/)
+
+### Web Periodic Background Synchronization API
+
+[Web Periodic Background Synchronization API](/2023/09/14/Web%20Periodic%20Background%20Synchronization%20API/)
+
+### Content Index API
+
+[Content Index API](/2023/10/01/Content%20Index%20API/)
+
+### Badging API
+
+[Badging API](/2023/10/02/Badging%20API/)
+
+### Window Controls Overlay API
+
+[Window Controls Overlay API](/2023/10/03/Window%20Controls%20Overlay%20API/)
+
 ### Web Storage
 
 存储
@@ -173,35 +233,6 @@ fetch(req).then(function(response) {
 ```
 
 > 当接收至HTTP错误码时不会报错，而是正常resolve
-
-### Web Worker
-
-后台运行的 JavaScript
-
-> 注意：Web Worker 内无法访问 window 对象；document 对象；parent 对象
-
-```js
-    let w;
-
-    function startWorker() {
-      if (typeof(w) === "undefined") {
-        w = new Worker("demo_workers.js");
-      }
-      w.onmessage = function(event) {
-        document.getElementById("result").innerHTML = event.data;
-      };
-    }
-
-    function stopWorker() {
-      w.terminate();
-      w = undefined;
-    }
-```
-
-* 创建  `let w = new Worker("demo_workers.js");`
-* 监听onmessage事件 `w.onmessage =  () => {};`  子页面使用`postMessage()`方法传递数据
-
-* 终止 `w.terminate();`
 
 ### Battery
 
