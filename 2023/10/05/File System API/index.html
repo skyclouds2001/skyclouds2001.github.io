@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="theme-color" content="#3273dc"><title>File System API - skyclouds2001&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#3273dc"><meta name="application-name" content="skyclouds2001&#039;s blog"><meta name="msapplication-TileImage" content="https://avatars.githubusercontent.com/u/95597335"><meta name="msapplication-TileColor" content="#3273dc"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="skyclouds2001&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="apple-touch-icon" sizes="460x460" href="https://avatars.githubusercontent.com/u/95597335"><meta name="description" content="The personal blog of skyclouds2001"><meta property="og:type" content="blog"><meta property="og:title" content="skyclouds2001&#039;s blog"><meta property="og:url" content="https://skyclouds2001.github.io/"><meta property="og:site_name" content="skyclouds2001&#039;s blog"><meta property="og:description" content="The personal blog of skyclouds2001"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://avatars.githubusercontent.com/u/95597335"><meta property="article:published_time" content="2023-10-05T07:53:12.000Z"><meta property="article:modified_time" content="2023-10-12T16:20:25.776Z"><meta property="article:author" content="skyclouds2001"><meta property="article:tag" content="Frontend"><meta property="article:tag" content="Web API"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://avatars.githubusercontent.com/u/95597335"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://skyclouds2001.github.io/"},"headline":"skyclouds2001's blog","image":[],"datePublished":"2023-10-05T07:53:12.000Z","dateModified":"2023-10-12T16:20:25.776Z","author":{"@type":"Person","name":"skyclouds2001"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject"}},"description":"The personal blog of skyclouds2001"}</script><link rel="canonical" href="https://skyclouds2001.github.io/2023/10/05/File%20System%20API/"><link rel="alternate" href="/atom.xml" title="skyclouds2001&#039;s Blog" type="application/atom+xml"><link rel="icon" href="https://avatars.githubusercontent.com/u/95597335"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="/js/globalUtils.js"></script><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdnjs.loli.net/ajax/libs/pace/1.2.4/pace.min.js"></script><script data-ad-client="ca-pub-6540459960525651" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://avatars.githubusercontent.com/u/95597335" alt="skyclouds2001&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/album">Album</a><a class="navbar-item" href="/friend">Friend</a><a class="navbar-item" href="/message">Message</a><a class="navbar-item" href="/self-talking">Self-talking</a><a class="navbar-item" href="/music">Music</a><a class="navbar-item" href="/media">Media</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/skyclouds2001/skyclouds2001.github.io/"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card widget"><div class="g-ads-x"><div class="card-content"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6540459960525651" data-ad-slot="3012941103"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2023-10-05  <a class="commentCountImg" href="/2023/10/05/File%20System%20API/#comment-container"><span class="display-none-class">c5a796ce63dbd2569a4bb5fc888148a0</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="c5a796ce63dbd2569a4bb5fc888148a0">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>23 分钟  <i class="fas fa-pencil-alt"> </i>3.4 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">File System API</h1><div class="content"><p>File System API 与扩展的 File System Access API 提供了管理设备本地文件系统的功能，包括读取、修改和管理文件的功能</p>
+<ul>
+<li><code>FileSystemHandle</code> 接口作为文件句柄或目录句柄的通用接口</li>
+<li><code>FileSystemFileHandle</code> 接口作为文件句柄的接口</li>
+<li><code>FileSystemDirectoryHandle</code> 接口作为目录句柄的接口</li>
+<li><code>FileSystemSyncAccessHandle</code> 接口作为同步访问句柄的接口</li>
+<li><code>FileSystemWritableFileStream</code> 接口作为读写本地文件流的接口</li>
+<li><code>Window</code> 接口上的 <code>showOpenFilePicker()</code>、<code>showSaveFilePicker()</code>、<code>showDirectoryPicker()</code> 方法及 <code>DataTransferItem</code> 接口的 <code>getAsFileSystemHandle()</code> 方法用于获取文件句柄或目录句柄</li>
+<li><code>StorageManager</code> 接口上的 <code>getDirectory()</code> 方法用于获取 OPFS 的根目录句柄</li>
+</ul>
+<p>通常而言，File System API 需要用户明确的许可，但 OPFS —— Origin Private File System 机制除外。</p>
+<p>通常 File System API 的大多数操作是异步的，支持同步的 <code>FileSystemSyncAccessHandle</code> 接口仅在 Web Worker 内可用针对 OPFS 使用。</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><h3 id="获取用户选择资源的文件句柄"><a href="#获取用户选择资源的文件句柄" class="headerlink" title="获取用户选择资源的文件句柄"></a>获取用户选择资源的文件句柄</h3><p>使用 <code>Window</code> 接口的  <code>showOpenFilePicker()</code> 方法选取单个或多个文件，返回对应的文件句柄</p>
+<p>方法传入一组可选的配置项</p>
+<ul>
+<li><p><code>excludeAcceptAllOption</code> 可选选项指定选择器是否启用筛选文件类型的选项，默认值是 false</p>
+</li>
+<li><p><code>id</code> 选项用于和当前目录配对，会自动记忆与之相关的目录，后续选择时若指定相同的 id 可以自动打开与之前选择相同的目录，接收一个字符串</p>
+</li>
+<li><p><code>startIn</code> 选项指定初始打开目录，接收一个 <code>FileSystemHandle</code> 或预设的目录 <code>&quot;desktop&quot;</code> <code>&quot;documents&quot;</code> <code>&quot;downloads&quot;</code> <code>&quot;music&quot;</code> <code>&quot;pictures&quot;</code> 或 <code>&quot;videos&quot;</code></p>
+</li>
+<li><p><code>multiple</code> 可选选项指定是否允许多选，默认值是 false</p>
+</li>
+<li><p><code>types</code> 选项指定允许选择的文件类型，传递一个数组，数组各项支持 <code>accept</code> 选项，指定文件类型的 MIME 类型和 <code>description</code> 可选选项，指定文件类型的描述</p>
+</li>
+</ul>
+<p>返回一个 Promise 的 <code>FileSystemFileHandle</code> 数组</p>
+<p>方法在用户未选择目录或用户代理拒绝目录访问时抛出 <code>AbortError</code> 异常</p>
+<p>方法要求在调用需基于发生用户交互</p>
+<h3 id="获取用户新增资源的文件句柄"><a href="#获取用户新增资源的文件句柄" class="headerlink" title="获取用户新增资源的文件句柄"></a>获取用户新增资源的文件句柄</h3><p>使用 <code>Window</code> 接口的 <code>showSaveFilePicker()</code> 方法新增文件（可以是已有文件或新文件），返回对应的文件句柄</p>
+<p>方法传入一组可选的配置项</p>
+<ul>
+<li><p><code>excludeAcceptAllOption</code> 可选选项同上</p>
+</li>
+<li><p><code>id</code> 选项同上</p>
+</li>
+<li><p><code>startIn</code> 选项同上</p>
+</li>
+<li><p><code>suggestedName</code> 可选选项指定建议的新增文件名称</p>
+</li>
+<li><p><code>types</code> 选项同上</p>
+</li>
+</ul>
+<p>返回一个 Promise 的 <code>FileSystemFileHandle</code></p>
+<p>方法在用户未选择目录或用户代理拒绝目录访问时抛出 <code>AbortError</code> 异常</p>
+<p>方法要求在调用需基于发生用户交互</p>
+<h3 id="获取用户选择资源的目录句柄"><a href="#获取用户选择资源的目录句柄" class="headerlink" title="获取用户选择资源的目录句柄"></a>获取用户选择资源的目录句柄</h3><p>使用 <code>Window</code> 接口的 <code>showDirectoryPicker()</code> 选取目录，返回对应的目录句柄</p>
+<p>方法传入一组可选的配置项</p>
+<ul>
+<li><p><code>id</code> 选项同上</p>
+</li>
+<li><p><code>mode</code> 可选选项用于指定权限模式，接收字符串枚举 <code>&quot;read&quot;</code> 或 <code>&quot;readwrite&quot;</code>，默认值为 <code>&quot;read&quot;</code></p>
+</li>
+<li><p><code>startIn</code> 选项同上</p>
+</li>
+</ul>
+<p>返回一个 Promise 的 <code>FileSystemDirectoryHandle</code></p>
+<p>方法在用户未选择目录或用户代理拒绝目录访问时抛出 <code>AbortError</code> 异常</p>
+<p>方法要求在调用需基于发生用户交互</p>
+<h3 id="获取拖动资源的文件句柄或目录句柄"><a href="#获取拖动资源的文件句柄或目录句柄" class="headerlink" title="获取拖动资源的文件句柄或目录句柄"></a>获取拖动资源的文件句柄或目录句柄</h3><p>使用 <code>DataTransferItem</code> 接口的 <code>getAsFileSystemHandle()</code> 方法获取拖动资源的文件句柄或目录句柄</p>
+<p>返回一个 Promise 的 <code>FileSystemFileHandle</code> 或 <code>FileSystemDirectoryHandle</code></p>
+<h3 id="获取-OPFS-的根目录句柄"><a href="#获取-OPFS-的根目录句柄" class="headerlink" title="获取 OPFS 的根目录句柄"></a>获取 OPFS 的根目录句柄</h3><p>使用 <code>StorageManager</code> 接口的 <code>getDirectory()</code> 方法获取 OPFS 的根目录句柄</p>
+<p>返回一个 Promise 的 <code>FileSystemDirectoryHandle</code> 对象</p>
+<p>并在用户代理无法使用请求的文件目录建立本地 OPFS 索引时抛出 SecurityError 异常</p>
+<h2 id="文件及目录操作"><a href="#文件及目录操作" class="headerlink" title="文件及目录操作"></a>文件及目录操作</h2><p>通过 <code>FileSystemHandle</code> 接口进行文件目录相关的操作，该接口是 <code>FileSystemFileHandle</code> 接口与 <code>FileSystemDirectoryHandle</code> 接口的父接口</p>
+<h3 id="句柄类型"><a href="#句柄类型" class="headerlink" title="句柄类型"></a>句柄类型</h3><p><code>FileSystemHandle</code> 接口的 <code>kind</code> 属性返回一个字符串枚举值，代表句柄的类型</p>
+<p>当当前句柄为 <code>FileSystemFileHandle</code> 时，返回 <code>&#39;file&#39;</code></p>
+<p>当当前句柄为 <code>FileSystemDirectoryHandle</code> 时，返回 <code>&#39;directory&#39;</code></p>
+<h3 id="句柄名称"><a href="#句柄名称" class="headerlink" title="句柄名称"></a>句柄名称</h3><p><code>FileSystemHandle</code> 接口的 <code>name</code> 属性返回一个字符串，代表句柄对应的文件或目录的名称</p>
+<h3 id="句柄比较"><a href="#句柄比较" class="headerlink" title="句柄比较"></a>句柄比较</h3><p><code>FileSystemHandle</code> 接口的 <code>isSameEntry()</code> 方法判断当前句柄与传入的句柄是否指向同一个文件或目录</p>
+<p>方法接收一个 <code>FileSystemHandle</code></p>
+<p>方法返回一个 Promise 的 boolean</p>
+<h3 id="权限操作"><a href="#权限操作" class="headerlink" title="权限操作"></a>权限操作</h3><p><code>FileSystemHandle</code> 接口的 <code>queryPermission()</code> 方法用于枚举当前句柄的指定权限</p>
+<p><code>FileSystemHandle</code> 接口的 <code>requestPermission()</code> 方法用于请求当前句柄的指定权限</p>
+<p>方法均支持传入一组可选的描述符，唯一 mode 参数可以为 <code>&#39;read&#39;</code> 或 <code>&#39;readwrite&#39;</code> 之一，默认为 <code>&#39;read&#39;</code></p>
+<p>方法均返回一个 Promise 的 <code>PermissionStatus</code> 接口实例</p>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><p>通过 <code>FileSystemFileHandle</code> 接口进行文件相关的操作，该接口继承自 <code>FileSystemHandle</code> 接口</p>
+<h3 id="获取文件"><a href="#获取文件" class="headerlink" title="获取文件"></a>获取文件</h3><p><code>FileSystemFileHandle</code> 接口的 <code>getFile()</code> 方法可以用于读取文件相关信息及用于网络传输</p>
+<p>返回一个 Promise 的 <code>File</code> 对象</p>
+<p>抛出一个 <code>NotAllowedError</code> 若未授予访问权限</p>
+<h3 id="获取同步访问句柄"><a href="#获取同步访问句柄" class="headerlink" title="获取同步访问句柄"></a>获取同步访问句柄</h3><p><code>FileSystemFileHandle</code> 接口的 <code>createSyncAccessHandle()</code> 方法可以用于同步读写文件内容，但仅允许在专属 Worker 内部使用，且目前仅适用于 OPFS 机制</p>
+<p>返回一个 Promise 的 <code>FileSystemSyncAccessHandle</code> 对象</p>
+<p>抛出一个 <code>NotAllowedError</code> 若未授予访问权限</p>
+<p>抛出一个 <code>NoModificationAllowedError</code> 若无法建立文件锁</p>
+<p>抛出一个 <code>InvalidStateError</code> 若句柄无法表示 OPFS 中的文件</p>
+<h3 id="获取可写文件流"><a href="#获取可写文件流" class="headerlink" title="获取可写文件流"></a>获取可写文件流</h3><p><code>FileSystemFileHandle</code> 接口的 <code>createWritable()</code> 方法可以用于修改文件内容</p>
+<p>可以传入一组可选的配置项，唯一选项 keepExistingData 指定</p>
+<p>返回一个 Promise 的 <code>FileSystemWritableFileStream</code> 对象</p>
+<p>抛出一个 <code>NotAllowedError</code> 若未授予访问权限</p>
+<h2 id="目录操作"><a href="#目录操作" class="headerlink" title="目录操作"></a>目录操作</h2><p>通过 <code>FileSystemDirectoryHandle</code> 接口进行目录相关的操作，该接口继承自 <code>FileSystemHandle</code> 接口</p>
+<h3 id="目录遍历"><a href="#目录遍历" class="headerlink" title="目录遍历"></a>目录遍历</h3><p><code>FileSystemDirectoryHandle</code> 接口支持异步遍历，包含 <code>[@@asyncIterator]()</code> 以及 <code>entries()</code>、<code>keys()</code>、<code>values()</code> 等方法</p>
+<h3 id="获取路径"><a href="#获取路径" class="headerlink" title="获取路径"></a>获取路径</h3><p><code>FileSystemDirectoryHandle</code> 接口的 <code>resolve()</code> 方法用于获取当前句柄到指定句柄的相对路径</p>
+<p>需要传入一个 <code>FileSystemHandle</code>，代表目标句柄</p>
+<p>返回一个 Promise 的字符串数组或 <code>null</code></p>
+<h3 id="获取子目录"><a href="#获取子目录" class="headerlink" title="获取子目录"></a>获取子目录</h3><p><code>FileSystemDirectoryHandle</code> 接口的 <code>getDirectoryHandle()</code> 方法用于获取当前目录下的指定名称的子目录的句柄</p>
+<p>需要传入一个字符串参数，代表目录的名称，与 <code>FileSystemHandle.name</code> 相符</p>
+<p>可以传入一组配置项，唯一参数 <code>create</code> 为一个布尔值，指定目录不存在情况下是否创建目录，默认值为 <code>false</code></p>
+<p>返回一个 Promise 的 <code>FileSystemDirectoryHandle</code> 对象</p>
+<p>抛出一个 <code>TypeError</code> 若 <code>name</code> 参数不是字符串或为非法的文件系统名称</p>
+<p>抛出一个 <code>TypeMismatchError</code> 若匹配到的为文件而非目录</p>
+<p>抛出一个 <code>NotFoundError</code> 若未找到目录且 <code>create</code> 选项设定为 <code>false</code></p>
+<p>抛出一个 <code>NotAllowedError</code> 若未授予访问权限</p>
+<h3 id="获取子文件"><a href="#获取子文件" class="headerlink" title="获取子文件"></a>获取子文件</h3><p><code>FileSystemDirectoryHandle</code> 接口的 <code>getFileHandle()</code> 方法用于获取当前目录下的指定名称的子文件的句柄</p>
+<p>需要传入一个字符串参数，代表目录的名称，与 <code>FileSystemHandle.name</code> 相符</p>
+<p>可以传入一组配置项，唯一参数 <code>create</code> 为一个布尔值，指定目录不存在情况下是否创建目录，默认值为 <code>false</code></p>
+<p>返回一个 Promise 的 <code>FileSystemFileHandle</code> 对象</p>
+<p>抛出一个 <code>TypeError</code> 若 <code>name</code> 参数不是字符串或为非法的文件系统名称</p>
+<p>抛出一个 <code>TypeMismatchError</code> 若匹配到的为目录而非文件</p>
+<p>抛出一个 <code>NotFoundError</code> 若未找到文件且 <code>create</code> 选项设定为 <code>false</code></p>
+<p>抛出一个 <code>NotAllowedError</code> 若未授予访问权限</p>
+<h3 id="删除子目录或子文件"><a href="#删除子目录或子文件" class="headerlink" title="删除子目录或子文件"></a>删除子目录或子文件</h3><p><code>FileSystemDirectoryHandle</code> 接口的 <code>removeEntry()</code> 方法用于删除当前目录下的指定名称的子目录或子文件的句柄</p>
+<p>需要传入一个字符串参数，代表目录的名称，与 <code>FileSystemHandle.name</code> 相符</p>
+<p>可以传入一组配置项，唯一参数 <code>recursive</code> 为一个布尔值，指定是否递归删除，默认值为 <code>false</code></p>
+<p>返回一个 Promise 的 <code>undefined</code></p>
+<p>抛出一个 <code>TypeError</code> 若 <code>name</code> 参数不是字符串或为非法的文件系统名称</p>
+<p>抛出一个 <code>InvalidModificationError</code> 若目标为目录，并且包含子文件或子目录，并且 <code>recursive</code> 设置为 <code>false</code></p>
+<p>抛出一个 <code>NotFoundError</code> 若未找到文件或目录</p>
+<p>抛出一个 <code>NotAllowedError</code> 若未授予访问权限</p>
+<h2 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h2><p>文件读取通过 <code>FileSystemFileHandle</code> 接口的 <code>getFile()</code> 方法获取到对应的 <code>File</code> 实例实现</p>
+<h2 id="文件修改"><a href="#文件修改" class="headerlink" title="文件修改"></a>文件修改</h2><p>文件修改通过 <code>FileSystemFileHandle</code> 接口的 <code>createWritable()</code> 方法获取到对应的 <code>FileSystemWritableFileStream</code> 实例实现</p>
+<p><code>FileSystemWritableFileStream</code> 接口继承自 <code>WritableStream</code> 接口</p>
+<p><em><code>FileSystemWritableFileStream</code> 接口的更改不会立即反映到实际的文件上，仅在关闭流之后才会同步其产生的更改；原因是对流的更改，至少会存储到一个临时文件中，仅在流关闭之后，才会将更改同步到实际的文件中</em></p>
+<h3 id="移动指针"><a href="#移动指针" class="headerlink" title="移动指针"></a>移动指针</h3><p>使用 <code>FileSystemWritableFileStream</code> 接口的 <code>seek()</code> 方法移动文件指针的位置</p>
+<p>需要传入一个正整数 <code>position</code> 参数，代表文件指针的位置</p>
+<p>返回一个 Promise</p>
+<p>抛出一个 <code>NotAllowedError</code> 若未授予访问权限</p>
+<p>抛出一个 <code>TypeError</code> 若 <code>position</code> 参数不是正整数或未传递</p>
+<h3 id="文件写入"><a href="#文件写入" class="headerlink" title="文件写入"></a>文件写入</h3><p>使用 <code>FileSystemWritableFileStream</code> 接口的 <code>write()</code> 方法用于向文件中写入内容</p>
+<p>可以传入一个 <code>data</code> 参数，代表需要写入文件的内容，可以是 <code>ArrayBuffer</code> <code>TypedArray</code> <code>DataView</code> <code>Blob</code> 或 <code>string</code></p>
+<p>亦可以传入一组配置项：</p>
+<p><code>type</code> 选项传入一组字符串枚举，指定操作的模式，可以是 <code>&quot;write&quot;</code> <code>&quot;seek&quot;</code> 或 <code>&quot;truncate&quot;</code></p>
+<p><code>data</code> 选项，代表需要写入文件的内容，可以是 <code>ArrayBuffer</code> <code>TypedArray</code> <code>DataView</code> <code>Blob</code> 或 <code>string</code>，在 <code>&quot;write&quot;</code> 模式下是必须的</p>
+<p><code>position</code> 选项，代表需要移动的文件指针的目标位置，是一个正整数，在 <code>&quot;seek&quot;</code> 模式下是必须的；同样可以在 <code>&quot;write&quot;</code> 模式下使用，此时代表写入内容的目标位置</p>
+<p><code>size</code> 选项，代表需要文件流的大小，是一个正整数，在 <code>&quot;truncate&quot;</code> 模式下是必须的</p>
+<p>返回一个 Promise</p>
+<p>抛出一个 <code>NotAllowedError</code> 若未授予访问权限</p>
+<p>抛出一个 <code>TypeError</code> 若传入参数非法</p>
+<p>抛出一个 <code>InvalidStateError</code> 若 <code>position</code> 选项的值超出文件大小</p>
+<h3 id="文件尺寸修改"><a href="#文件尺寸修改" class="headerlink" title="文件尺寸修改"></a>文件尺寸修改</h3><p>使用 <code>FileSystemWritableFileStream</code> 接口的 <code>truncate()</code> 方法改变文件的尺寸；方法可能会改变文件指针的位置</p>
+<p>需要传入一个正整数 <code>size</code> 参数，代表目标的文件尺寸；若参数超出原有尺寸，则扩大当前文件并使用空内容填充扩大的部分，反之会裁剪当前文件</p>
+<p>返回一个 Promise</p>
+<p>抛出一个 <code>NotAllowedError</code> 若未授予访问权限</p>
+<p>抛出一个 <code>TypeError</code> 若 <code>size</code> 参数不是正整数或未传递</p>
+<h2 id="文件同步读写"><a href="#文件同步读写" class="headerlink" title="文件同步读写"></a>文件同步读写</h2><p>文件同步读写通过 <code>FileSystemFileHandle</code> 接口的 <code>createSyncAccessHandle()</code> 方法获取到对应的 <code>FileSystemSyncAccessHandle</code> 实例实现</p>
+<p><code>FileSystemSyncAccessHandle</code> 实例仅支持在专属 Worker 中使用，且目前仅适用于 OPFS 机制</p>
+<p>因为其无需进行权限检查，其相对而言具有更好的性能</p>
+<p><em>创建 <code>FileSystemSyncAccessHandle</code> 实例会创建与之对应的文件锁，阻止对该文件创建其他的 <code>FileSystemSyncAccessHandle</code> 实例或 <code>FileSystemWritableFileStream</code> 实例，直到 <code>FileSystemSyncAccessHandle</code> 实例被销毁</em></p>
+<h3 id="读"><a href="#读" class="headerlink" title="读"></a>读</h3><p><code>FileSystemSyncAccessHandle</code> 接口的 <code>read()</code> 方法读取文件内容</p>
+<p>方法传入一个 <code>buffer</code> 参数，可以是 <code>ArrayBuffer</code> <code>SharedArrayBuffer</code> <code>TypedArray</code> 或 <code>DataView</code>，代表用于存储读取文件内容的缓存区</p>
+<p>方法支持传入一个可选的配置项：其 <code>at</code> 参数指定开始读取文件内容的起始位置</p>
+<p>方法返回一个正整数，代表读取的文件内容的字节数</p>
+<p>方法在若对应的句柄已关闭的情况下，抛出一个 <code>InvalidStateError</code></p>
+<h3 id="写"><a href="#写" class="headerlink" title="写"></a>写</h3><p><code>FileSystemSyncAccessHandle</code> 接口的 <code>write()</code> 方法向文件写入内容</p>
+<p>方法传入一个 <code>buffer</code> 参数，可以是 <code>ArrayBuffer</code> <code>SharedArrayBuffer</code> <code>TypedArray</code> 或 <code>DataView</code>，代表将用于写入的文件内容</p>
+<p>方法可以传入一个可选的配置项：其 <code>at</code> 参数指定开始写入文件内容的起始位置</p>
+<p>方法返回一个正整数，代表写入的文件内容的字节数</p>
+<p>方法在若对应的句柄已关闭的情况下，抛出一个 <code>InvalidStateError</code></p>
+<h3 id="读取尺寸"><a href="#读取尺寸" class="headerlink" title="读取尺寸"></a>读取尺寸</h3><p><code>FileSystemSyncAccessHandle</code> 接口的 <code>getSize()</code> 方法返回文件的尺寸</p>
+<p>方法返回一个正整数，代表文件内容的字节数</p>
+<p>方法在若对应的句柄已关闭的情况下，抛出一个 <code>InvalidStateError</code></p>
+<h3 id="更改尺寸"><a href="#更改尺寸" class="headerlink" title="更改尺寸"></a>更改尺寸</h3><p><code>FileSystemSyncAccessHandle</code> 接口的 <code>truncate()</code> 方法用于更改文件的尺寸</p>
+<p>方法传入一个 <code>newSize</code> 参数，需要是一个正整数，代表将更改的文件的目标大小</p>
+<p>方法在若对应的句柄已关闭的情况下，抛出一个 <code>InvalidStateError</code></p>
+<p>方法在若对应的句柄已关闭的情况下，抛出一个 <code>InvalidStateError</code></p>
+<h3 id="刷新缓冲区"><a href="#刷新缓冲区" class="headerlink" title="刷新缓冲区"></a>刷新缓冲区</h3><p><code>FileSystemSyncAccessHandle</code> 接口的 <code>flush()</code> 方法用于将缓冲的更改同步至存储，通常只在特定时间段需要将缓冲的更改同步至存储时使用，否则可以让底层自行处理</p>
+<h3 id="关闭句柄"><a href="#关闭句柄" class="headerlink" title="关闭句柄"></a>关闭句柄</h3><p><code>FileSystemSyncAccessHandle</code> 接口的 <code>close()</code> 方法用于关闭当前句柄，释放文件锁</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>File System API</p><p><a href="https://skyclouds2001.github.io/2023/10/05/File System API/">https://skyclouds2001.github.io/2023/10/05/File System API/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://skyclouds2001.github.io"><p>skyclouds2001</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-10-05</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-10-13</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="License" href="https://mit-license.org/"><i class="fab fa-creative-commons"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/2023/10/03/Window%20Controls%20Overlay%20API/" target="_blank">Window Controls Overlay API</a><br></span><span>  2.<a class="is-size-6" href="/2023/10/02/Badging%20API/" target="_blank">Badging API</a><br></span><span>  3.<a class="is-size-6" href="/2023/10/01/Content%20Index%20API/" target="_blank">Content Index API</a><br></span><span>  4.<a class="is-size-6" href="/2023/09/28/ServiceWorker-VI/" target="_blank">ServiceWorker VI</a><br></span><span>  5.<a class="is-size-6" href="/2023/09/22/SharedWorker/" target="_blank">SharedWorker</a><br></span><span>  6.<a class="is-size-6" href="/2023/09/21/Worker/" target="_blank">Worker</a><br></span><span>  7.<a class="is-size-6" href="/2023/09/20/ServiceWorker%20II/" target="_blank">ServiceWorker II</a><br></span><span>  8.<a class="is-size-6" href="/2023/09/20/Local%20Font%20Access%20API/" target="_blank">Local Font Access API</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2023/09/13/Background%20Fetch%20API/" target="_blank">Background Fetch API</a><br></span><span>  2.<a class="is-size-6" href="/2023/09/12/Background%20Synchronization%20API/" target="_blank">Background Synchronization API</a><br></span><span>  3.<a class="is-size-6" href="/2023/10/02/Badging%20API/" target="_blank">Badging API</a><br></span><span>  4.<a class="is-size-6" href="/2023/10/01/Content%20Index%20API/" target="_blank">Content Index API</a><br></span><span>  5.<a class="is-size-6" href="/2023/08/22/KeyboardEvent%20Sequence/" target="_blank">KeyboardEvent Sequence</a><br></span><span>  6.<a class="is-size-6" href="/2023/10/05/File%20System%20API/" target="_blank">File System API</a><br></span></div></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135456.png" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://raw.githubusercontent.com/removeif/blog_image/master/img/2019/20190802135550.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/10/03/Window%20Controls%20Overlay%20API/"><span class="level-item">Window Controls Overlay API</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card widget"><div class="g-ads-x"><div class="card-content"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6540459960525651" data-ad-slot="3012941103"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-CN',
+            id: 'c5a796ce63dbd2569a4bb5fc888148a0',
+            repo: 'blog_comment',
+            owner: 'removeif',
+            clientID: '46a9f3481b46ea0129d8',
+            clientSecret: '79c7c9cb847e141757d7864453bcbf89f0655b24',
+            admin: ["removeif"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#初始化"><span class="mr-2">1</span><span>初始化</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#获取用户选择资源的文件句柄"><span class="mr-2">1.1</span><span>获取用户选择资源的文件句柄</span></a></li><li><a class="is-flex is-mobile" href="#获取用户新增资源的文件句柄"><span class="mr-2">1.2</span><span>获取用户新增资源的文件句柄</span></a></li><li><a class="is-flex is-mobile" href="#获取用户选择资源的目录句柄"><span class="mr-2">1.3</span><span>获取用户选择资源的目录句柄</span></a></li><li><a class="is-flex is-mobile" href="#获取拖动资源的文件句柄或目录句柄"><span class="mr-2">1.4</span><span>获取拖动资源的文件句柄或目录句柄</span></a></li><li><a class="is-flex is-mobile" href="#获取-OPFS-的根目录句柄"><span class="mr-2">1.5</span><span>获取 OPFS 的根目录句柄</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#文件及目录操作"><span class="mr-2">2</span><span>文件及目录操作</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#句柄类型"><span class="mr-2">2.1</span><span>句柄类型</span></a></li><li><a class="is-flex is-mobile" href="#句柄名称"><span class="mr-2">2.2</span><span>句柄名称</span></a></li><li><a class="is-flex is-mobile" href="#句柄比较"><span class="mr-2">2.3</span><span>句柄比较</span></a></li><li><a class="is-flex is-mobile" href="#权限操作"><span class="mr-2">2.4</span><span>权限操作</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#文件操作"><span class="mr-2">3</span><span>文件操作</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#获取文件"><span class="mr-2">3.1</span><span>获取文件</span></a></li><li><a class="is-flex is-mobile" href="#获取同步访问句柄"><span class="mr-2">3.2</span><span>获取同步访问句柄</span></a></li><li><a class="is-flex is-mobile" href="#获取可写文件流"><span class="mr-2">3.3</span><span>获取可写文件流</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#目录操作"><span class="mr-2">4</span><span>目录操作</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#目录遍历"><span class="mr-2">4.1</span><span>目录遍历</span></a></li><li><a class="is-flex is-mobile" href="#获取路径"><span class="mr-2">4.2</span><span>获取路径</span></a></li><li><a class="is-flex is-mobile" href="#获取子目录"><span class="mr-2">4.3</span><span>获取子目录</span></a></li><li><a class="is-flex is-mobile" href="#获取子文件"><span class="mr-2">4.4</span><span>获取子文件</span></a></li><li><a class="is-flex is-mobile" href="#删除子目录或子文件"><span class="mr-2">4.5</span><span>删除子目录或子文件</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#文件读取"><span class="mr-2">5</span><span>文件读取</span></a></li><li><a class="is-flex is-mobile" href="#文件修改"><span class="mr-2">6</span><span>文件修改</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#移动指针"><span class="mr-2">6.1</span><span>移动指针</span></a></li><li><a class="is-flex is-mobile" href="#文件写入"><span class="mr-2">6.2</span><span>文件写入</span></a></li><li><a class="is-flex is-mobile" href="#文件尺寸修改"><span class="mr-2">6.3</span><span>文件尺寸修改</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#文件同步读写"><span class="mr-2">7</span><span>文件同步读写</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#读"><span class="mr-2">7.1</span><span>读</span></a></li><li><a class="is-flex is-mobile" href="#写"><span class="mr-2">7.2</span><span>写</span></a></li><li><a class="is-flex is-mobile" href="#读取尺寸"><span class="mr-2">7.3</span><span>读取尺寸</span></a></li><li><a class="is-flex is-mobile" href="#更改尺寸"><span class="mr-2">7.4</span><span>更改尺寸</span></a></li><li><a class="is-flex is-mobile" href="#刷新缓冲区"><span class="mr-2">7.5</span><span>刷新缓冲区</span></a></li><li><a class="is-flex is-mobile" href="#关闭句柄"><span class="mr-2">7.6</span><span>关闭句柄</span></a></li></ul></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/95597335" alt="skyclouds2001"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">skyclouds2001</p><p class="is-size-6 is-block">总有奋不顾身的相信，总要坚韧恒久的勇气</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">50</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">11</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/skyclouds2001" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/skyclouds2001"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:skyclouds2001@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Blog" href="https://skyclouds2001.github.io/"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Icarus</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li><li><a class="level is-mobile" href="https://github.com/removeif/hexo-theme-amazing" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Amazing</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-10-05T07:53:12.000Z">2023-10-05</time></p><p class="title"><a href="/2023/10/05/File%20System%20API/">File System API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-10-02T19:44:41.000Z">2023-10-03</time></p><p class="title"><a href="/2023/10/03/Window%20Controls%20Overlay%20API/">Window Controls Overlay API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-10-02T14:14:54.000Z">2023-10-02</time></p><p class="title"><a href="/2023/10/02/Badging%20API/">Badging API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-10-01T12:12:19.000Z">2023-10-01</time></p><p class="title"><a href="/2023/10/01/Content%20Index%20API/">Content Index API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-09-30T15:53:34.000Z">2023-09-30</time></p><p class="title"><a href="/2023/09/30/PWA/">PWA</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Other/">Other</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Backend/"><span class="level-start"><span class="level-item">Backend</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Backend/FrameWork/"><span class="level-start"><span class="level-item">FrameWork</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/"><span class="level-start"><span class="level-item">Frontend</span></span><span class="level-end"><span class="level-item tag">40</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Frontend/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/FrameWork/"><span class="level-start"><span class="level-item">FrameWork</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Library/"><span class="level-start"><span class="level-item">Library</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Other/"><span class="level-start"><span class="level-item">Other</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Tool/"><span class="level-start"><span class="level-item">Tool</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2023/10/"><span class="level-start"><span class="level-item">十月 2023</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/09/"><span class="level-start"><span class="level-item">九月 2023</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/08/"><span class="level-start"><span class="level-item">八月 2023</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/06/"><span class="level-start"><span class="level-item">六月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2022/12/"><span class="level-start"><span class="level-item">十二月 2022</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Frontend/"><span class="tag">Frontend</span><span class="tag is-grey-lightest">40</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web-API/"><span class="tag">Web API</span><span class="tag is-grey-lightest">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Other/"><span class="tag">Other</span><span class="tag is-grey-lightest">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Interview/"><span class="tag">Interview</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tool/"><span class="tag">Tool</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FrameWork/"><span class="tag">FrameWork</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Backend/"><span class="tag">Backend</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Library/"><span class="tag">Library</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="g-ads-x"><div class="card-content"><div class="menu"><h3 class="menu-label">广告</h3></div><br><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true" data-ad-client="ca-pub-6540459960525651" data-ad-slot="3012941103"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">widget.followit</h3><form action="https://api.follow.it/subscription-form/VUJhY1Y3Q05Ha3pvS3RzZDYrcWlRc1JTNGZQTEx5QXh4Z1llTmRtbHFDcy85allmd3hzWHkxcTc4dUFyNEhmQTkxQlZpL2JXdVQyeFVkY1pGaWNJY0ZLM0h4eGtyc0NnNlB3N2FvRnBxN1F1YVBLMkxmVHMweFlnZm1tWUorUXJ8UFBRMzljRXAyT3Nkd2NwK1VIei9RajZieHppdUVudEYzOGpIazh0bnBVZz0=/8" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://avatars.githubusercontent.com/u/95597335" alt="skyclouds2001&#039;s Blog" height="28"></a><p class="size-small"><span>&copy; 2023 skyclouds2001</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备88888888号-8</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2022/06/20 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="License" href="https://mit-license.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="GitHub" href="https://github.com/skyclouds2001/skyclouds2001.github.io/"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="2364053447" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.10.0/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('46a9f3481b46ea0129d8','79c7c9cb847e141757d7864453bcbf89f0655b24','removeif','blog_comment',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('46a9f3481b46ea0129d8','79c7c9cb847e141757d7864453bcbf89f0655b24','removeif','blog_comment',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>

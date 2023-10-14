@@ -6,7 +6,7 @@
   <link href="https://skyclouds2001.github.io/atom.xml" rel="self"/>
   
   <link href="https://skyclouds2001.github.io/"/>
-  <updated>2023-10-03T11:35:59.986Z</updated>
+  <updated>2023-10-12T16:20:25.776Z</updated>
   <id>https://skyclouds2001.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>File System API</title>
+    <link href="https://skyclouds2001.github.io/2023/10/05/File%20System%20API/"/>
+    <id>https://skyclouds2001.github.io/2023/10/05/File%20System%20API/</id>
+    <published>2023-10-05T07:53:12.000Z</published>
+    <updated>2023-10-12T16:20:25.776Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;File System API 与扩展的 File System Access API</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
   
   <entry>
     <title>Window Controls Overlay API</title>
@@ -170,8 +199,16 @@
     <link href="https://skyclouds2001.github.io/2023/09/28/%E9%9D%A2%E8%AF%95-%E5%B7%A5%E7%A8%8B/"/>
     <id>https://skyclouds2001.github.io/2023/09/28/%E9%9D%A2%E8%AF%95-%E5%B7%A5%E7%A8%8B/</id>
     <published>2023-09-28T02:20:10.000Z</published>
-    <updated>2023-09-30T12:57:02.496Z</updated>
+    <updated>2023-10-08T13:59:11.324Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Git-常用指令&quot;&gt;&lt;a href=&quot;#Git-常用指令&quot; class=&quot;headerlink&quot; title=&quot;Git 常用指令&quot;&gt;&lt;/a&gt;Git</summary>
+        
+      
     
     
     
@@ -221,8 +258,17 @@
     <link href="https://skyclouds2001.github.io/2023/09/27/%E9%9D%A2%E8%AF%95-HTML/"/>
     <id>https://skyclouds2001.github.io/2023/09/27/%E9%9D%A2%E8%AF%95-HTML/</id>
     <published>2023-09-26T16:18:17.000Z</published>
-    <updated>2023-09-30T12:57:10.809Z</updated>
+    <updated>2023-10-10T15:35:06.891Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;语义化标签作用&quot;&gt;&lt;a href=&quot;#语义化标签作用&quot; class=&quot;headerlink&quot; title=&quot;语义化标签作用&quot;&gt;&lt;/a&gt;语义化标签作用&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;优化</summary>
+        
+      
     
     
     
@@ -238,7 +284,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/25/%E9%9D%A2%E8%AF%95-Vue/"/>
     <id>https://skyclouds2001.github.io/2023/09/25/%E9%9D%A2%E8%AF%95-Vue/</id>
     <published>2023-09-25T15:38:10.000Z</published>
-    <updated>2023-09-30T12:57:15.996Z</updated>
+    <updated>2023-10-08T11:55:00.399Z</updated>
     
     
       
@@ -263,7 +309,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/25/%E9%9D%A2%E8%AF%95-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     <id>https://skyclouds2001.github.io/2023/09/25/%E9%9D%A2%E8%AF%95-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</id>
     <published>2023-09-25T13:17:13.000Z</published>
-    <updated>2023-09-30T12:57:05.901Z</updated>
+    <updated>2023-10-11T08:08:35.937Z</updated>
     
     
       
@@ -288,7 +334,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/22/SharedWorker/"/>
     <id>https://skyclouds2001.github.io/2023/09/22/SharedWorker/</id>
     <published>2023-09-21T18:31:34.000Z</published>
-    <updated>2023-09-23T16:18:21.367Z</updated>
+    <updated>2023-10-08T11:52:59.901Z</updated>
     
     
       
@@ -301,14 +347,14 @@
     
     
     
-    <category term="test3" scheme="https://skyclouds2001.github.io/categories/test3/"/>
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
     
-    <category term="test4" scheme="https://skyclouds2001.github.io/categories/test3/test4/"/>
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
     
     
-    <category term="test1" scheme="https://skyclouds2001.github.io/tags/test1/"/>
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
     
-    <category term="test2" scheme="https://skyclouds2001.github.io/tags/test2/"/>
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
     
   </entry>
   
@@ -406,7 +452,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/18/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     <id>https://skyclouds2001.github.io/2023/09/18/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</id>
     <published>2023-09-18T04:36:26.000Z</published>
-    <updated>2023-10-03T12:44:54.492Z</updated>
+    <updated>2023-10-11T04:47:41.715Z</updated>
     
     
       
@@ -746,27 +792,27 @@
     <category term="FrameWork" scheme="https://skyclouds2001.github.io/categories/Backend/FrameWork/"/>
     
     
-    <category term="JavaScript" scheme="https://skyclouds2001.github.io/tags/JavaScript/"/>
-    
     <category term="Backend" scheme="https://skyclouds2001.github.io/tags/Backend/"/>
+    
+    <category term="JavaScript" scheme="https://skyclouds2001.github.io/tags/JavaScript/"/>
     
     <category term="FrameWork" scheme="https://skyclouds2001.github.io/tags/FrameWork/"/>
     
   </entry>
   
   <entry>
-    <title>web api</title>
-    <link href="https://skyclouds2001.github.io/2022/12/14/web-api/"/>
-    <id>https://skyclouds2001.github.io/2022/12/14/web-api/</id>
+    <title>Web API</title>
+    <link href="https://skyclouds2001.github.io/2022/12/14/Web%20API/"/>
+    <id>https://skyclouds2001.github.io/2022/12/14/Web%20API/</id>
     <published>2022-12-14T14:55:58.000Z</published>
-    <updated>2023-09-30T12:57:53.691Z</updated>
+    <updated>2023-10-14T16:07:34.497Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Web-API&quot;&gt;&lt;a href=&quot;#Web-API&quot; class=&quot;headerlink&quot; title=&quot;Web API&quot;&gt;&lt;/a&gt;Web API&lt;/h1&gt;&lt;p&gt;Web API 是</summary>
+    <summary type="html">&lt;h2 id=&quot;Web-API&quot;&gt;&lt;a href=&quot;#Web-API&quot; class=&quot;headerlink&quot; title=&quot;Web API&quot;&gt;&lt;/a&gt;Web API&lt;/h2&gt;&lt;p&gt;在编写 Web</summary>
         
       
     
