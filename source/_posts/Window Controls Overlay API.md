@@ -48,13 +48,24 @@ navigator.windowControlsOverlay.addEventListener('geometrychange', (e) => {
 
 ## 相关的 CSS 环境变量
 
-`titlebar-area-x`
+- `titlebar-area-x`
 
-`titlebar-area-y`
+- `titlebar-area-y`
 
-`titlebar-area-width`
+- `titlebar-area-width`
 
-`titlebar-area-height`
+- `titlebar-area-height`
+
+可以通过 `env()` CSS 函数使用 CSS 环境变量
+
+```css
+env(titlebar-area-x)
+env(titlebar-area-y)
+env(titlebar-area-width)
+env(titlebar-area-height)
+```
+
+但需要指定 `display_override` 选项为 `window-controls-overlay` 才可用
 
 ## 相关接口
 
