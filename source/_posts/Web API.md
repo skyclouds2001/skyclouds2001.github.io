@@ -20,6 +20,10 @@ mathJax: false
 
 在编写 Web 项目时，有许多 Web API 可供调用来实现各种各样的功能
 
+### Geolocation API
+
+Geolocation API 允许访问设备的地理位置
+
 ### Local Font Access API
 
 Local Font Access API 允许访问设备本地安装的字体数据
@@ -124,61 +128,6 @@ Window Controls Overlay API 允许 PWA 应用能够隐藏默认窗口标题栏�
 * clear()  清空存储
 * length  存储数据项数
 * key(*index*)   获取第n项数据项的键名
-
-### Geolocation
-
-地理位置
-
-需要用户批准
-
-* getCurrentPosition(*success*，*fail*)   获取用户位置
-
-接收两个回调函数参数，分别在获取成功与失败时调用
-
-成功返回参数coords
-
-coords.latitude  纬度
-
-coords.longitude  经度
-
-coords.accuracy  位置精度
-
-* watchPosition()  持续返回用户的当前位置
-* clearWatch()   停止 watchPosition () 方法
-
-```js
-    const x = document.getElementById("demo");
-
-    function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
-      } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
-    }
-
-    function showPosition(position) {
-      x.innerHTML = "Latitude: " + position.coords.latitude + 
-      "<br>Longitude: " + position.coords.longitude;
-    }
-
-    function showError(error) {
-      switch(error.code) {
-        case error.PERMISSION_DENIED:
-          x.innerHTML = "User denied the request for Geolocation."
-          break;
-        case error.POSITION_UNAVAILABLE:
-          x.innerHTML = "Location information is unavailable."
-          break;
-        case error.TIMEOUT:
-          x.innerHTML = "The request to get user location timed out."
-          break;
-        case error.UNKNOWN_ERROR:
-          x.innerHTML = "An unknown error occurred."
-          break;
-      }
-    }
-```
 
 ### Cookies
 
