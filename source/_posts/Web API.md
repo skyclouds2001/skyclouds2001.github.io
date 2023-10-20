@@ -20,9 +20,15 @@ mathJax: false
 
 在编写 Web 项目时，有许多 Web API 可供调用来实现各种各样的功能
 
+### Cookie
+
+[Cookie](/2023/10/20/Cookie/)
+
 ### Geolocation API
 
 Geolocation API 允许访问设备的地理位置
+
+[Geolocation API](/2023/10/15/Geolocation%20API/)
 
 ### Local Font Access API
 
@@ -128,63 +134,6 @@ Window Controls Overlay API 允许 PWA 应用能够隐藏默认窗口标题栏�
 * clear()  清空存储
 * length  存储数据项数
 * key(*index*)   获取第n项数据项的键名
-
-### Cookies
-
-cookie 长期存储信息
-
-* 添加
-
-`document.cookie="username=John Doe";`
-
-`document.cookie="username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 GMT; path=/";`
-
-* 读取
-
-`var x = document.cookie;`
-
-需要自己建立方法查找Cookie
-
-expires：过期时间
-
-path：cookie所属路径
-
-* 修改：相当于新建Cookie
-* 删除：只需设置expires 参数为以前时间
-
-`document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT";`
-
-```js
- function getCookie(cname) {
-      var name = cname + "=";
-      var ca = document.cookie.split(';');
-      for(var i=0; i<ca.length; i++) {
-        var c = ca[i].trim();
-        if (c.indexOf(name)==0) return c.substring(name.length,c.length);
-      }
-      return "";
-    }
-
-    function setCookie(cname,cvalue,exdays) {
-      var d = new Date();
-      d.setTime(d.getTime()+(exdays*24*60*60*1000));
-      var expires = "expires="+d.toGMTString();
-      document.cookie = cname + "=" + cvalue + "; " + expires;
-    }
-
-    function checkCookie() {
-      var username=getCookie("username");
-      if (username!="") {
-        alert("Welcome again " + username);
-      }
-      else {
-        username = prompt("Please enter your name:","");
-        if (username!="" && username!=null) {
-          setCookie("username",username,365);
-        }
-      }
- }
-```
 
 ### fetch
 
