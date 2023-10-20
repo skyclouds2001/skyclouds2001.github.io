@@ -11,7 +11,7 @@ const tasks = [
   },
 ]
 
-await Promise.allSettled(
+Promise.allSettled(
   tasks.map((task) =>
     fs.copyFile(
       path.resolve(process.cwd(), task.source),

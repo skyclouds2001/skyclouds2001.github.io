@@ -8,7 +8,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "sync": "node ./scripts/sync.mjs"
+    "sync": "node ./scripts/sync.js"
   },
   "hexo": {
     "version": "5.4.2"
