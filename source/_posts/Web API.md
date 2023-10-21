@@ -38,6 +38,12 @@ Geolocation API 允许访问设备的地理位置
 
 [Geolocation API](/2023/10/15/Geolocation%20API/)
 
+### Battery Status API
+
+Battery Status API 允许访问设备的电池状态
+
+[Battery Status API](/2023/10/21/Battery%20Status%20API/)
+
 ### Local Font Access API
 
 Local Font Access API 允许访问设备本地安装的字体数据
@@ -142,16 +148,3 @@ fetch(req).then(function(response) {
 ```
 
 > 当接收至HTTP错误码时不会报错，而是正常resolve
-
-### Battery
-
-```js
- navigator.getBattery().then((res) => {
-        console.log(res);   // res: BatteryManager对象
-    });
-```
-
-* charging   当前电池是否在充电
-* chargingTime  距充电完成所需时间
-* dischargingTime   据电池电量耗尽时间
-* level  代表电量的占最大容量的比值
