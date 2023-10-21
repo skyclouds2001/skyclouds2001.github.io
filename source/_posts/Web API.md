@@ -20,9 +20,17 @@ mathJax: false
 
 在编写 Web 项目时，有许多 Web API 可供调用来实现各种各样的功能
 
-### Cookie
+### Cookie API
 
-[Cookie](/2023/10/20/Cookie/)
+Cookie API 允许用于保存小数据
+
+[Cookie API](/2023/10/20/Cookie%20API/)
+
+### Web Storage API
+
+Web Storage API 允许用于保存键值对形式的数据
+
+[Web Storage API](/2023/10/21/Web%20Storage%20API/)
 
 ### Geolocation API
 
@@ -113,27 +121,6 @@ Badging API 允许用户代理在网站或 PWA 应用上设置徽章
 Window Controls Overlay API 允许 PWA 应用能够隐藏默认窗口标题栏并在应用程序窗口区域显示自定义的内容
 
 [Window Controls Overlay API](/2023/10/03/Window%20Controls%20Overlay%20API/)
-
-### Web Storage
-
-存储
-
-> 注意：仅HTTPS协议下可用
-
-#### 类型
-
-* localStorage  存储数据长期有效
-* sessionStorage  存储数据仅网页打开期间有效
-
-#### 属性方法
-
-* **setItem(*key*， *value*)**  设置存储
-* **getItem(*key*)**  获取存储
-
-* removeItem(*key*)  删除存储
-* clear()  清空存储
-* length  存储数据项数
-* key(*index*)   获取第n项数据项的键名
 
 ### fetch
 
