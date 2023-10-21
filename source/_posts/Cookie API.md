@@ -1,5 +1,5 @@
 ---
-title: Cookie
+title: Cookie API
 date: 2023-10-20 12:30:37
 tags:
 - Frontend
@@ -12,7 +12,7 @@ cover:
 toc: true
 recommend: 1
 keywords: 
-uniqueId: '2023-10-20 04:30:37/Cookie.html'
+uniqueId: '2023-10-20 04:30:37/Cookie API.html'
 mathJax: false
 ---
 
