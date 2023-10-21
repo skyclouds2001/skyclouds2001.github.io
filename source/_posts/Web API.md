@@ -127,24 +127,3 @@ Badging API 允许用户代理在网站或 PWA 应用上设置徽章
 Window Controls Overlay API 允许 PWA 应用能够隐藏默认窗口标题栏并在应用程序窗口区域显示自定义的内容
 
 [Window Controls Overlay API](/2023/10/03/Window%20Controls%20Overlay%20API/)
-
-### fetch
-
-发送 HTTP 请求
-
-```js
-    fetch(url).then(res => res.json())
-        .then(data => console.log(data))
-        .catch(e => console.error(e))
-```
-
-```js
-var req = new Request(URL, {method: 'GET', cache: 'reload'});
-fetch(req).then(function(response) {
-  return response.json();
-}).then(function(json) {
-  insertPhotos(json);
-});
-```
-
-> 当接收至HTTP错误码时不会报错，而是正常resolve
