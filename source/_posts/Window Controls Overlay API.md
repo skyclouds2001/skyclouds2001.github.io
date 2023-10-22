@@ -16,9 +16,9 @@ uniqueId: '2023-10-02 19:44:41/Window Controls Overlay API.html'
 mathJax: false
 ---
 
-Window Controls Overlay API 给 PWA 应用提供了管理默认系统的应用标题栏的能力，允许应用完全掌控应用窗口的区域，不过仅支持 PC 端 PWA 应用。
+Window Controls Overlay API 给 PWA 应用提供了管理默认系统的应用标题栏的能力，允许应用完全掌控应用窗口的区域，不过仅支持 PC 端 PWA 应用
 
-该 API 通过 `WindowControlsOverlay` 接口提供了相关功能，并通过 `navigator.windowControlsOverlay` 对外暴露该接口实例。
+该 API 通过 `WindowControlsOverlay` 接口提供了相关功能，并通过 `navigator.windowControlsOverlay` 对外暴露该接口实例
 
 使用该 API 需要在 PWA 应用的 Manifest 文件的 `display_override` 选项指定 `window-controls-overlay`
 
@@ -48,13 +48,13 @@ navigator.windowControlsOverlay.addEventListener('geometrychange', (e) => {
 
 ## 相关的 CSS 环境变量
 
-- `titlebar-area-x`
+- `titlebar-area-x` 应用标题栏左上角横坐标
 
-- `titlebar-area-y`
+- `titlebar-area-y` 应用标题栏左上角纵坐标
 
-- `titlebar-area-width`
+- `titlebar-area-width` 应用标题栏宽度
 
-- `titlebar-area-height`
+- `titlebar-area-height` 应用标题栏高度
 
 可以通过 `env()` CSS 函数使用 CSS 环境变量
 
@@ -64,8 +64,6 @@ env(titlebar-area-y)
 env(titlebar-area-width)
 env(titlebar-area-height)
 ```
-
-但需要指定 `display_override` 选项为 `window-controls-overlay` 才可用
 
 ## 相关接口
 
