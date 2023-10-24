@@ -2,16 +2,16 @@
 title: typescript
 date: 2022-12-14 21:36:44
 tags:
-- Frontend
-- Other
+  - Frontend
+  - Other
 categories:
-- Frontend
-- Other
+  - Frontend
+  - Other
 thumbnail: https://tse2-mm.cn.bing.net/th/id/OIP-C.X6S_XCoE1pfm6fKK2zpQNwHaD4
-cover: 
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2022-12-14 21:36:44/typescript.html'
 mathJax: false
 ---
@@ -23,44 +23,44 @@ mathJax: false
     let str: string = '12';
     let num: number = 20;
     let flag: boolean = true;
-    
+
     let arr: number[] = [1];
     let ar: Array<number> = [2];
     let tuple: [string, number] = ['test', 10];
-    
+
     enum Color {
       Red,
       Green,
       Blue,
     };
     let co: Color = Color.Red;
-    
+
     function hello(): void {
       console.log('hello');
     }
-    
+
     let nu: null;
     let un: undefined;
     let ne: never;
-    
+
     /** 类型断言 */
     var num0: number = <number> <any> str;
-    
+
     /** 类型推断 */
-    
+
     /**
      * 变量作用域
      * - 全局作用域
      * - 类作用域
      * - 局部作用域
      */
-    
+
     /** 运算符 */
-    
+
     /** 条件 */
-    
+
     /** 循环 */
-    
+
     /** 函数 */
     // 可选参数 默认参数 剩余参数
     function add(x: number = 0, y: number = 0, z?: number/* 可选参数: 必须在参数列表最后 */, ...other: number[]): number {
@@ -68,22 +68,22 @@ mathJax: false
     }
     const sub = (x: number, y: number): number => x - y
     const add_plus: (x: number, y:number) => number = (x, y) => x + y;
-    
+
     // 匿名函数 自动执行函数 递归函数 箭头函数
     var res = function(a: number, b: number) {
       return a * b;
     };
     (() => console.log('Hello!'))();
-    
+
     // 函数重载
-    
+
     /** 字面量类型 */
     // 使用具体值作为类型
     let fu: '0' | '1' | '2' | '3' = '1';
     const fv = 1;
-    
+
     /** Number String Boolean 包装类型 */
-    
+
     /** Array 数组 元组 Map */
     // 数组
     let arr1: number[] = [1, 2];
@@ -92,12 +92,12 @@ mathJax: false
     let position: [number, string, boolean] = [1, '2', true];
     // Map
     const m: Map<number, number> = new Map();
-    
+
     /** 联合类型 */
     var union: number | number[];
     union = 12;
     union = [12, 34];
-    
+
     /** 枚举类型 */
     enum Direction {
       Up,
@@ -118,10 +118,10 @@ mathJax: false
       Left = 'Left',
       Right = 'Right',
     };
-    
+
     /** typeof */
     var cc: typeof position;
-    
+
     /** 接口 interface */
     // 描述一个对象类型
     // 当然也可以使用 type 关键字声明
@@ -148,7 +148,7 @@ mathJax: false
       father: Person,
       mother: Person
     }
-    
+
     /** 类型推论 */
     // 自动推断变量类型
     //  1. 声明变量并初始化
@@ -161,7 +161,7 @@ mathJax: false
     // （可类型推论变量类型）自行指定变量的类型
     const alink1 = document.getElementById('link') as HTMLAnchorElement;
     const alink2 = <HTMLAnchorElement>document.getElementById('link');
-    
+
     /**
      * 类 对象
      * - 构造函数
@@ -175,21 +175,21 @@ mathJax: false
       public a: string;
       protected b: number;
       private c: boolean;
-    
+
       name = 'CSY';
       age = 40;
       birth = new Date();
       sayHi = () => 'Hi';
-    
+
       readonly d: String;
-    
+
       constructor (v: boolean) {
         super();
         this.c = v;
       };
-    
+
       static isHuman = (o: any) => typeof o === 'object' && o instanceof Human;
-    
+
       get e () {
         return this.a + this.a
       }
@@ -198,7 +198,7 @@ mathJax: false
       }
     }
     const son: Human = new Human(true);
-    
+
     /**
      * 类型兼容  不同名称相同结构的类型是等价的
      *
@@ -207,7 +207,7 @@ mathJax: false
      *   类与接口亦可相互兼容
      * - 函数 | 若B函数参数表包含A函数参数表（非严格包含），则A类型函数可赋值给B类型函数；相同位置参数需相同或兼容（对象多数服从少数）；返回值需相同或兼容（对象少数服从多数）
      */
-    
+
     /**
      * 交叉类型（类似接口继承）
      * 将多个类型组合为同一个类型
@@ -224,7 +224,7 @@ mathJax: false
       a: 12,
       b: '',
     };
-    
+
     /** 泛型 */
     // 泛型方法
     function print <T> (v: T): void {
@@ -244,17 +244,17 @@ mathJax: false
       console.log(v[k]);
     }
     // keyof 关键字接受对象类型并生成键名称（字符串和数字）的联合类型
-    
+
     // 泛型接口
     interface PrintInterface <T> {
       do: (v: T) => void
     }
-    
+
     // 泛型类
     class PrintClass <T> {
       value: T;
     }
-    
+
     // 泛型工具类
     // Partial<T> 创建一个类型且T中所有属性均可选
     type partial = Partial<Person>
@@ -264,13 +264,13 @@ mathJax: false
     type pick = Pick<Person, 'name' | 'age'>
     // Record<K extends keyof any, T> 构造一个对象类型，属性键为keys，属性类型为Type
     type record = Record<'a' | 'b', string>
-    
+
     // 索引签名类型
     interface Obj {
       [K: string]: number,
     }
     // [K: string] 表示任意string类型属性名称均可作为对象出现，且属性值为number类型变量
-    
+
     // 映射类型 in 关键字和 keyof 关键字
     type p = {
       [K in 'x' | 'y' | 'z']: number
@@ -278,24 +278,24 @@ mathJax: false
     type q = {
       [K in keyof Person]: string
     }
-    
+
     // 索引查询类型
     type props = { a: number };
     type typeA = props['a'];
-    
+
     /** 命名空间（可嵌套） */
     namespace n {
       export interface Person {};
-    
+
       namespace nn {}
     }
     var d: n.Person = {};
-    
+
     // 单独引用ts文件
     /// <reference path="SomeFileName.ts" />
-    
+
     /** 模块 */
-    
+
     /** 声明 */
     declare var jQuery: (selector: string) => any;
 

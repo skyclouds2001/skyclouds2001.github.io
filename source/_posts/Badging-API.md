@@ -2,16 +2,16 @@
 title: Badging API
 date: 2023-10-02 22:14:54
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
-cover: 
+  - Frontend
+  - Web API
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-10-02 14:14:54/Badging API.html'
 mathJax: false
 ---

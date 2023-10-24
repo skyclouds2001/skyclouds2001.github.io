@@ -2,23 +2,23 @@
 title: svg
 date: 2022-12-14 22:11:59
 tags:
-- Frontend
-- Other
+  - Frontend
+  - Other
 categories:
-- Frontend
-- Other
-thumbnail: 
-cover: 
+  - Frontend
+  - Other
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2022-12-14 22:11:59/svg.html'
 mathJax: false
 ---
 
 ```html
       <svg width="500" height="500" style="background-color: #eee;">
-    
+
         <!-- 矩形 rect -->
         <rect width="100" height="100" x="100" y="100" rx="10" ry="10"></rect>
         <!-- 圆形 circle -->
@@ -67,7 +67,7 @@ mathJax: false
             RGB 和 RGBA
             HSL 和 HSLA
          -->
-    
+
          <!-- 文本元素 text -->
         <text x="250" y="250" fill="pink" font-size="50" font-weight="bold" text-decoration="underline" text-anchor="middle" dominant-baseline="middle">SVG</text>
         <!-- 多行文本 tspan -->
@@ -85,14 +85,14 @@ mathJax: false
             dominant-baseline 垂直对齐方式
             writing-mode 文字方向
          -->
-    
+
         <!-- 超链接 a -->
         <a xlink:href="https://developer.mozilla.org/zh-CN/docs/Web/SVG" xlink:title="svg" target="_blank">
           <text x="50" y="50" font-size="25">SVG</text>
         </a>
-    
+
         <!-- 图片 image -->
         <image xlink:href="https://img.zcool.cn/community/0167b95fc9ea7a11013ee04dc55982.jpg@1280w_1l_2o_100sh.jpg" width="50" height="50" x="100" y="100"></image>
-    
+
       </svg>
 ```

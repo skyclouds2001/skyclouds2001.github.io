@@ -2,16 +2,16 @@
 title: es6
 date: 2022-12-14 22:21:39
 tags:
-- Frontend
-- JavaScript
+  - Frontend
+  - JavaScript
 categories:
-- Frontend
-- JavaScript
+  - Frontend
+  - JavaScript
 thumbnail: https://paulmiller3000.com/wp-content/uploads/JavaScript-ES6-Logo.jpeg
-cover: 
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2022-12-14 22:21:39/es6.html'
 mathJax: false
 ---

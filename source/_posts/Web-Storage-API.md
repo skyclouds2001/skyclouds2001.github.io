@@ -2,16 +2,16 @@
 title: Web Storage API
 date: 2023-10-21 15:56:34
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
-cover: 
+  - Frontend
+  - Web API
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-10-21 07:56:34/Web Storage API.html'
 mathJax: false
 ---

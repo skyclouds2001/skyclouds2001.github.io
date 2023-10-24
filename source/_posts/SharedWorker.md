@@ -2,14 +2,14 @@
 title: SharedWorker
 date: 2023-09-22 02:31:34
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-09-22 02:31:34/SharedWorker.html'
 mathJax: false
 thumbnail:
@@ -76,11 +76,11 @@ self.addEventListener('connect', (e) => {
   port.addEventListener('message', (e) => {
     console.log('receive message in worker: ', e.data)
   })
-  
+
   port.start()
 
   port.postMessage('message from worker')
-  
+
   port.close()
 })
 ```

@@ -2,16 +2,16 @@
 title: KeyboardEvent Sequence
 date: 2023-08-22 20:39:55
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
-cover: 
+  - Frontend
+  - Web API
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-08-22 20:39:55/KeyboardEvent Sequence.html'
 mathJax: false
 ---

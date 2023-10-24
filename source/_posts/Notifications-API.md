@@ -2,16 +2,16 @@
 title: Notifications API
 date: 2023-09-10 21:26:07
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
-cover: 
+  - Frontend
+  - Web API
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-09-10 21:26:07/Notifications API.html'
 mathJax: false
 ---

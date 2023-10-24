@@ -2,16 +2,16 @@
 title: git
 date: 2022-08-09 23:45:51
 tags:
-- Frontend
-- Tool
+  - Frontend
+  - Tool
 categories:
-- Frontend
-- Tool
+  - Frontend
+  - Tool
 thumbnail: https://git-scm.com/images/logo@2x.png
-cover: 
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2022-08-09 23:45:51/git.html'
 mathJax: false
 ---

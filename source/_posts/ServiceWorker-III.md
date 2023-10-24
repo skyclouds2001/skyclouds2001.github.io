@@ -2,15 +2,15 @@
 title: ServiceWorker III
 date: 2023-09-16 00:35:28
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
+  - Frontend
+  - Web API
+thumbnail:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-09-16 00:35:28/ServiceWorker III.html'
 mathJax: false
 ---

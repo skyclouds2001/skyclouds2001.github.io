@@ -2,17 +2,17 @@
 title: jquery
 date: 2022-08-14 22:55:26
 tags:
-- Frontend
-- JavaScript
-- Library
+  - Frontend
+  - JavaScript
+  - Library
 categories:
-- Frontend
-- Library
+  - Frontend
+  - Library
 thumbnail: https://logos-download.com/wp-content/uploads/2016/09/jQuery_logo.png
-cover: 
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2022-08-14 22:55:26/jquery.html'
 mathJax: false
 ---

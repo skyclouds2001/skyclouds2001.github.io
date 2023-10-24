@@ -2,16 +2,16 @@
 title: Web API
 date: 2022-12-14 22:55:58
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
-cover: 
+  - Frontend
+  - Web API
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2022-12-14 22:55:58/web api.html'
 mathJax: false
 ---

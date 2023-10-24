@@ -2,15 +2,15 @@
 title: ServiceWorker V
 date: 2023-08-31 23:47:47
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
+  - Frontend
+  - Web API
+thumbnail:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-08-31 23:47:47/ServiceWorker V.html'
 mathJax: false
 ---
@@ -229,7 +229,7 @@ self.addEventListener('install', (e) => {
   e.waitUntil(
     self.caches
       .open('v2')
-      .then((cache) => 
+      .then((cache) =>
         cache.addAll([
           '/',
           '/index.html',
@@ -248,7 +248,7 @@ self.addEventListener('activate', (e) => {
   const CACHES_NEED_MOVE = ['v1']
 
   e.waitUntil(
-    self.caches.keys().then((keys) => 
+    self.caches.keys().then((keys) =>
       Promise.all(
         keys.map((key) => {
           if (CACHES_NEED_MOVE.includes(key)) {

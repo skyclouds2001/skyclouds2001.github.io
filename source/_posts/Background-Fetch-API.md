@@ -2,16 +2,16 @@
 title: Background Fetch API
 date: 2023-09-13 15:43:44
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
-cover: 
+  - Frontend
+  - Web API
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-09-13 15:43:44/Background Fetch API.html'
 mathJax: false
 ---
@@ -129,7 +129,7 @@ window.navigator.serviceWorker.ready.then((registration) => {
 
 ```js
 self.addEventListener('backgroundfetchsuccess', (e) => {
-  e.waitUntil(() => 
+  e.waitUntil(() =>
     self.caches.open('movies').then((cache) =>
       e.registration.matchAll().then((records) =>
         Promise.all(

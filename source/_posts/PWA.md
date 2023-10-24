@@ -2,16 +2,16 @@
 title: PWA
 date: 2023-09-30 23:53:34
 tags:
-- Frontend
-- Other
+  - Frontend
+  - Other
 categories:
-- Frontend
-- Other
-thumbnail: 
-cover: 
+  - Frontend
+  - Other
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-09-30 15:53:34/PWA.html'
 mathJax: false
 ---

@@ -2,16 +2,16 @@
 title: Push API
 date: 2023-09-10 23:58:21
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
-cover: 
+  - Frontend
+  - Web API
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-09-10 23:58:21/Push API.html'
 mathJax: false
 ---
@@ -142,7 +142,7 @@ app.get('/push', (req, res) => {
         "auth": "fxDt8RtB92KHpQM7HetBUw" // 用户身份验证秘密
       }
     }
-    
+
     webpush.sendNotification(pushSubscription, 'Hello world')
       .then(result => {
         res.send(result);

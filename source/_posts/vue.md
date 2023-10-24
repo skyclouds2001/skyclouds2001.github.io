@@ -2,17 +2,17 @@
 title: vue
 date: 2022-12-14 21:47:47
 tags:
-- Frontend
-- JavaScript
-- FrameWork
+  - Frontend
+  - JavaScript
+  - FrameWork
 categories:
-- Frontend
-- FrameWork
+  - Frontend
+  - FrameWork
 thumbnail: https://blog.amio.io/content/images/2019/06/vue-3.png
-cover: 
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2022-12-14 21:47:47/vue.html'
 mathJax: false
 ---
@@ -279,7 +279,7 @@ filters
         return value.charAt(0).toUpperCase() + value.slice(1)
       }
     }
-    
+
     // 全局过滤器
     Vue.filter('capitalize', function (value) {
       if (!value) return ''

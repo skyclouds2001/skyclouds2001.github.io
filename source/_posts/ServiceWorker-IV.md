@@ -2,15 +2,15 @@
 title: ServiceWorker IV
 date: 2023-08-31 23:46:02
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
+  - Frontend
+  - Web API
+thumbnail:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-08-31 23:46:02/ServiceWorker IV.html'
 mathJax: false
 ---

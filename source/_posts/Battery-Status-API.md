@@ -2,16 +2,16 @@
 title: Battery Status API
 date: 2023-10-21 22:17:43
 tags:
-- Frontend
-- Web API
+  - Frontend
+  - Web API
 categories:
-- Frontend
-- Web API
-thumbnail: 
-cover: 
+  - Frontend
+  - Web API
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-10-21 14:17:43/Battery Status API.html'
 mathJax: false
 ---

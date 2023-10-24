@@ -2,17 +2,17 @@
 title: react
 date: 2022-12-14 21:47:54
 tags:
-- Frontend
-- JavaScript
-- FrameWork
+  - Frontend
+  - JavaScript
+  - FrameWork
 categories:
-- Frontend
-- FrameWork
+  - Frontend
+  - FrameWork
 thumbnail: https://tse4-mm.cn.bing.net/th/id/OIP-C.33CwBYkmnMfpA9Djup22JwHaHa
-cover: 
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2022-12-14 21:47:54/react.html'
 mathJax: false
 ---

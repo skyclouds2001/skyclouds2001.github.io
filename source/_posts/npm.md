@@ -2,16 +2,16 @@
 title: npm
 date: 2022-12-14 22:49:10
 tags:
-- Frontend
-- Tool
+  - Frontend
+  - Tool
 categories:
-- Frontend
-- Tool
+  - Frontend
+  - Tool
 thumbnail: https://www.bleepstatic.com/content/posts/2018/07/12/npm.png
-cover: 
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2022-12-14 22:49:10/npm.html'
 mathJax: false
 ---

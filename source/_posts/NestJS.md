@@ -2,17 +2,17 @@
 title: NestJS
 date: 2023-06-17 01:43:45
 tags:
-- Backend
-- JavaScript
-- FrameWork
+  - Backend
+  - JavaScript
+  - FrameWork
 categories:
-- Backend
-- FrameWork
+  - Backend
+  - FrameWork
 thumbnail: https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg
-cover: 
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-06-17 01:43:45/NestJS.html'
 mathJax: false
 ---
