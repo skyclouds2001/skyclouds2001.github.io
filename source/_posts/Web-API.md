@@ -38,6 +38,12 @@ Pointer Lock API 允许控制鼠标的输入形式，将鼠标的移动从光标
 
 [Pointer Lock API](/2023/10/24/Pointer-Lock-API/)
 
+### Keyboard Lock API
+
+Keyboard Lock API 允许控制键盘的输入形式，捕获键盘的输入从而进行自定义的处理（特别是针对一些特殊按键）
+
+[Keyboard Lock API](/2023/10/24/Keyboard-Lock-API/)
+
 ### Geolocation API
 
 Geolocation API 允许访问设备的地理位置
