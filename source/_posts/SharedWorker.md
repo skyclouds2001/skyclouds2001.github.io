@@ -19,21 +19,6 @@ SharedWorker 是 HTML 标准定义的 Web API 的一部分，是一种特殊的 
 
 同时，SharedWorker 的全局上下文 `SharedWorkerGlobalScope` 也与 Worker 不同
 
-SharedWorker 相关接口定义如下
-
-```ts
-class SharedWorker extends EventTarget, AbstractWorker {
-  constructor(scriptURL: string | URL, options?: string | WorkerOptions);
-  readonly port: MessagePort;
-}
-
-interface SharedWorkerGlobalScope extends WorkerGlobalScope {
-  readonly name: string;
-  close(): void;
-  onconnect: ((this: SharedWorkerGlobalScope, ev: MessageEvent) => any) | null;
-}
-```
-
 ## 创建 SharedWorker
 
 和 Worker 一样，通过调用 `SharedWorker()` 构造函数来创建
@@ -122,6 +107,29 @@ SharedWorker 生命周期与 Client 端的生命周期独立，当任一页面�
 ## SharedWorker 全局环境
 
 SharedWorker 全局环境通过 `SharedWorkerGlobalScope` 表示，该接口继承自 `WorkerGlobalScope`，它与 Worker 全局环境差别不大
+
+## 相关接口
+
+```ts
+interface SharedWorker extends EventTarget, AbstractWorker {
+  constructor(scriptURL: string | URL, options?: string | WorkerOptions);
+  readonly port: MessagePort;
+}
+
+interface SharedWorkerGlobalScope extends WorkerGlobalScope {
+  readonly name: string;
+  close(): void;
+  onconnect: ((this: SharedWorkerGlobalScope, ev: MessageEvent) => any) | null;
+}
+
+interface WorkerOptions {
+  credentials?: RequestCredentials
+  name?: string
+  type?: WorkerType
+}
+
+type WorkerType = 'classic' | 'module'
+```
 
 ## 源码链接
 

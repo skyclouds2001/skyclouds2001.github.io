@@ -7,11 +7,11 @@ tags:
 categories:
   - Frontend
   - Web API
-thumbnail: 
-cover: 
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-09-21 04:36:10/Worker.html'
 mathJax: false
 ---
@@ -25,26 +25,6 @@ Web Worker 是独立于主线程的一个线程，具有独立的作用域，其
 Web Worker 中的全局作用域 `DedicatedWorkerGlobalScope` 与 Window 的全局作用域不同，Window 环境中部分 API 在 Worker 环境中不可用或受到一定的限制
 
 Web Worker 线程与主线程之间的通信通过 message 机制实现，传递的数据通过结构化拷贝算法传递，因此通常不存在处理线程安全的需要
-
-Web Worker 相关接口的定义如下
-
-```ts
-class Worker extends EventTarget, AbstractWorker {
-  constructor(scriptURL: string | URL, options?: WorkerOptions);
-  postMessage(message: any, transfer: Transferable[]): void;
-  postMessage(message: any, options?: StructuredSerializeOptions): void;
-  terminate(): void;
-}
-
-interface DedicatedWorkerGlobalScope extends WorkerGlobalScope {
-  readonly name: string;
-  close(): void;
-  onmessage: ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null;
-  onmessageerror: ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null;
-  postMessage(message: any, transfer: Transferable[]): void;
-  postMessage(message: any, options?: StructuredSerializeOptions): void;
-}
-```
 
 ## 创建 Worker
 
@@ -169,6 +149,39 @@ Worker 全局环境通过 `DedicatedWorkerGlobalScope` 表示，该接口继承�
 Worker 全局环境的 `messageerror` 事件会在传递的消息无法解析时触发，可用用于监听发送失败的消息（Worker 对象上同样存在）
 
 Worker 全局环境的 `importScripts()` 方法可以导入一组同源的脚本文件，并在 Worker 全局环境下执行
+
+## 相关接口
+
+```ts
+
+interface Worker extends EventTarget, AbstractWorker {
+  constructor(scriptURL: string | URL, options?: WorkerOptions)
+  postMessage(message: any, transfer: Transferable[]): void
+  postMessage(message: any, options?: StructuredSerializeOptions): void
+  terminate(): void
+}
+
+interface DedicatedWorkerGlobalScope extends WorkerGlobalScope {
+  readonly name: string
+  close(): void
+  onmessage: ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null
+  onmessageerror: ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null
+  postMessage(message: any, transfer: Transferable[]): void
+  postMessage(message: any, options?: StructuredSerializeOptions): void
+}
+
+interface StructuredSerializeOptions {
+  transfer?: Transferable[]
+}
+
+interface WorkerOptions {
+  credentials?: RequestCredentials
+  name?: string
+  type?: WorkerType
+}
+
+type WorkerType = 'classic' | 'module'
+```
 
 ## 源码链接
 
