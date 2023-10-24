@@ -28,6 +28,8 @@ Screen Wake Lock API 允许控制设备的屏幕变暗、休眠或锁定的策�
 
 方法返回一个 Promise 的 `WakeLockSentinel` 实例
 
+方法可能抛出一个 NotAllowedError 异常，例如被 Permissions Policy 拒绝、当前网页未处于活跃状态、当前网页处于隐藏状态或用户代理无法获取到系统的屏幕管理策略
+
 ```js
 const sentinel = await navigator.wakeLock.request()
 ```
