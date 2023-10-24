@@ -39,7 +39,7 @@ Web Storage API 同样受同源策略限制，不同源的 Storage 无法共享
 `Storage` 接口的 `getItem()` 方法用于获取指定键名对应的键值，若数据不存在则返回 `null`
 
 ```js
-localStorage.getItem('k')
+window.localStorage.getItem('k')
 ```
 
 ### 设置键值对
@@ -47,7 +47,7 @@ localStorage.getItem('k')
 `Storage` 接口的 `setItem()` 方法用于设置键值对
 
 ```js
-localStorage.setItem('k', 'v')
+window.localStorage.setItem('k', 'v')
 ```
 
 ### 清除键值对
@@ -55,7 +55,7 @@ localStorage.setItem('k', 'v')
 `Storage` 接口的 `removeItem()` 方法用于移除指定键名对应的键值
 
 ```js
-localStorage.removeItem('k')
+window.localStorage.removeItem('k')
 ```
 
 ### 清空存储
@@ -63,7 +63,7 @@ localStorage.removeItem('k')
 `Storage` 接口的 `clear()` 方法用于清除整个存储
 
 ```js
-localStorage.clear()
+window.localStorage.clear()
 ```
 
 ### 其他
@@ -75,17 +75,17 @@ localStorage.clear()
 `Storage` 接口的 `key()` 方法用于获取指定索引的值，索引的顺序是由浏览器决定的，因此该顺序是不可靠的，若数据不存在则返回 `null`
 
 ```js
-localStorage.length
-localStorage.k
-localStorage['k']
-localStorage.k = 'v'
-localStorage['k'] = 'v'
-delete localStorage.k
-delete localStorage['k']
-localStorage.key(0)
+window.localStorage.length
+window.localStorage.k
+window.localStorage['k']
+window.localStorage.k = 'v'
+window.localStorage['k'] = 'v'
+delete window.localStorage.k
+delete window.localStorage['k']
+window.localStorage.key(0)
 ```
 
-## Storage 的 更改
+## 存储更改
 
 会话存储或本地存储的更改会在与之同域的会话中触发全局 `Window` 的 `storage` 事件，并返回一个 `StorageEvent` 事件
 
@@ -98,3 +98,42 @@ localStorage.key(0)
 `StorageEvent` 事件的 `oldValue` 属性返回存储变化的原键值或 `null`
 
 `StorageEvent` 事件的 `newValue` 属性返回存储变化的现键值或 `null`
+
+```js
+window.addEventListener('storage', (e) => {
+  console.log(e.key)
+  console.log(e.oldValue)
+  console.log(e.newValue)
+  console.log(e.url)
+  console.log(e.storageArea)
+})
+```
+
+## 相关接口
+
+```ts
+interface Window {
+  readonly localStorage: Storage
+  readonly sessionStorage: Storage
+  onstorage: ((this: WindowEventHandlers, ev: StorageEvent) => any) | null
+}
+
+interface Storage {
+  readonly length: number
+  clear(): void
+  getItem(key: string): string | null
+  key(index: number): string | null
+  removeItem(key: string): void
+  setItem(key: string, value: string): void
+  [name: string]: any
+}
+
+interface StorageEvent extends Event {
+  readonly key: string | null
+  readonly newValue: string | null
+  readonly oldValue: string | null
+  readonly storageArea: Storage | null
+  readonly url: string
+  initStorageEvent(type: string, bubbles?: boolean, cancelable?: boolean, key?: string | null, oldValue?: string | null, newValue?: string | null, url?: string | URL, storageArea?: Storage | null): void
+}
+```
