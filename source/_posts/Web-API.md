@@ -50,6 +50,12 @@ Local Font Access API 允许访问设备本地安装的字体数据
 
 [Local Font Access API](/2023/09/20/Local-Font-Access-API/)
 
+### Screen Wake Lock API
+
+Screen Wake Lock API 允许管理设备的屏幕变暗或休眠策略
+
+[Screen Wake Lock API](/2023/10/24/Screen-Wake-Lock-API/)
+
 ### File System API
 
 File System API 以及 File System Access API 允许访问设备文件系统上的文件-允许读取、写入和文件管理功能，或利用 OPFS 机制存储类文件的数据
