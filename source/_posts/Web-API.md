@@ -32,6 +32,12 @@ Web Storage API 允许用于保存键值对形式的数据
 
 [Web Storage API](/2023/10/21/Web-Storage-API/)
 
+### Pointer Lock API
+
+Pointer Lock API 允许控制鼠标的输入形式，将鼠标的移动从光标位置移动转换为自定义的形式（同时隐藏光标）
+
+[Pointer Lock API](/2023/10/24/Pointer-Lock-API/)
+
 ### Geolocation API
 
 Geolocation API 允许访问设备的地理位置
