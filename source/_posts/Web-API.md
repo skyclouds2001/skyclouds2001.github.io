@@ -32,6 +32,12 @@ Web Storage API 允许用于保存键值对形式的数据
 
 [Web Storage API](/2023/10/21/Web-Storage-API/)
 
+### Fullscreen API
+
+Fullscreen API 允许某个特定的元素管理全屏模式
+
+[Fullscreen API](/2023/10/25/Fullscreen-API/)
+
 ### Pointer Lock API
 
 Pointer Lock API 允许控制鼠标的输入形式，将鼠标的移动从光标位置移动转换为自定义的形式（同时隐藏光标）
