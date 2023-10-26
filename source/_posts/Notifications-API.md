@@ -18,11 +18,11 @@ mathJax: false
 
 ## 创建通知
 
-ServiceWorkerRegistration 接口的 `showNotification()` 方法用于在对应的 Service Worker 上创建一条（系统）通知，该通知的相关操作会在对应的 Service Worker 全局上下文上触发相应的事件。
+`ServiceWorkerRegistration` 接口的 `showNotification()` 方法用于在对应的 Service Worker 上创建一条（系统）通知，该通知的相关操作会在对应的 Service Worker 全局上下文上触发相应的事件。
 
-该方法接受一个字符串作为通知的标题，并接受一组配置项作为通知的选项，相关参数类似 Notification 构造函数的选项；返回一个无参的 Promise。
+该方法接受一个字符串作为通知的标题，并接受一组配置项作为通知的选项，相关参数类似 `Notification()` 构造函数的选项；返回一个无参的 Promise。
 
-浏览器环境中可以利用 `navigator.serviceWorker.ready` 等属性或方法获取到 ServiceWorkerRegistration 实例以创建通知。
+浏览器环境中可以利用 `navigator.serviceWorker.ready` 等属性或方法获取到 `ServiceWorkerRegistration` 实例以创建通知。
 
 ```js
 window.navigator.serviceWorker.ready.then((registration) => {
@@ -43,7 +43,7 @@ window.navigator.serviceWorker.ready.then((registration) => {
 })
 ```
 
-Service Worker 环境可以利用 `self.registration` 属性获取到当前 Service Worker 对应的 ServiceWorkerRegistration 实例以创建通知。
+Service Worker 环境可以利用 `self.registration` 属性获取到当前 Service Worker 对应的 `ServiceWorkerRegistration` 实例以创建通知。
 
 ```js
 self.registration.showNotification('Hello', {
@@ -62,7 +62,13 @@ self.registration.showNotification('Hello', {
 })
 ```
 
-*需要注意的是，ServiceWorker 内无法调用 Notification 构造函数来创建通知。*
+如果未使用 Service Worker，可以在浏览器环境中直接使用 `Notification()` 构造函数来创建通知
+
+```js
+const notificaion = new Notification('notification')
+```
+
+***需要注意的是，ServiceWorker 环境内无法调用 `Notification()` 构造函数来创建通知。***
 
 ## 请求通知权限
 
@@ -71,7 +77,7 @@ self.registration.showNotification('Hello', {
 ```js
 if (Notification.permission === 'granted') {
   // just go to create the notification
-} else if (Notification.permission != 'denied') {
+} else if (Notification.permission !== 'denied') {
   Notification.requestPermission().then((result) => {
     if (result === 'granted') {
       // then go to create the notification
@@ -82,7 +88,7 @@ if (Notification.permission === 'granted') {
 
 ## 获取通知
 
-ServiceWorkerRegistration 接口的 `getNotifications()` 方法用于获取在对应的 Service Worker 上创建的（系统）通知。
+`ServiceWorkerRegistration` 接口的 `getNotifications()` 方法用于获取在对应的 Service Worker 上创建的（系统）通知。
 
 该方法支持传入一组筛选项，其仅支持 tag 参数，以筛选返回结果的通知；该方法返回一个 Promise 的 Notification 列表
 
@@ -108,7 +114,7 @@ self.registration.getNotifications({
 
 ## 通知处理
 
-当与当前 Service Worker 对应的通知被点击时，在 Service Worker 全局触发 notificationclick 事件。
+当与当前 Service Worker 对应的通知被点击时，在 Service Worker 全局触发 `notificationclick` 事件。
 
 ```js
 self.addEventListener('notificationclick', (e) => {
@@ -117,7 +123,7 @@ self.addEventListener('notificationclick', (e) => {
 })
 ```
 
-当与当前 Service Worker 对应的通知被关闭时，在 Service Worker 全局触发 notificationclose 事件。
+当与当前 Service Worker 对应的通知被关闭时，在 Service Worker 全局触发 `notificationclose` 事件。
 
 ```js
 self.addEventListener('notificationclose', (e) => {
