@@ -62,6 +62,12 @@ Geolocation API 允许访问设备的地理位置
 
 [Geolocation API](/2023/10/15/Geolocation-API/)
 
+### Network Information API
+
+Network Information API 允许获取网络信息和监听网络信息更改
+
+[Network Information API](/2023/10/26/Network-Information-API/)
+
 ### Battery Status API
 
 Battery Status API 允许访问设备的电池状态
