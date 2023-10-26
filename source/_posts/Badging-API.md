@@ -59,6 +59,11 @@ interface Navigator {
   clearAppBadge(): Promise<void>
   setAppBadge(contents?: number): Promise<void>
 }
+
+interface WorkerNavigator {
+  clearAppBadge(): Promise<void>
+  setAppBadge(contents?: number): Promise<void>
+}
 ```
 
 ## 源码链接
