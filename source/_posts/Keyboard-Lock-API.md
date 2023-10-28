@@ -58,4 +58,8 @@ interface Keyboard extends EventTarget {
   lock(keyCodes?: string[]): Promise<void>
   unlock(): void
 }
+
+interface Navigator {
+  readonly keyboard: Keyboard
+}
 ```
