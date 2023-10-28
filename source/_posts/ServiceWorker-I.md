@@ -122,7 +122,12 @@ navigator.serviceWorker.ready.then((registration) => {
 
 但如果存在可用的现有 ServiceWorker，则新版本会在后台安装，但尚未激活 - 此时它称为等待中的 Worker。仅当不再加载任何仍在使用旧 ServiceWorker 的页面时，它才会被激活。一旦没有更多页面需要加载，新的 ServiceWorker 就会激活（成为活动 ServiceWorker）。不过可以手动提前终止当前 ServiceWorker 并启用新的 ServiceWorker。
 
-## 源码链接
+## 示例
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html)
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js)
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API>
+* <https://w3c.github.io/ServiceWorker/>

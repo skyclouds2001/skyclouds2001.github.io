@@ -56,7 +56,7 @@ document.exitPictureInPicture()
 
 `PictureInPictureWindow` 接口反映了当前的画中画模式窗口，其 `width` 只读属性和 `height` 只读属性反映了窗口的宽高，其 `resize` 事件在窗口尺寸改变时触发并返回一个 `PictureInPictureEvent` 事件
 
-## 相关接口
+## 类型
 
 ```ts
 interface Document {
@@ -86,3 +86,8 @@ interface PictureInPictureWindow extends EventTarget {
   onresize: ((this: PictureInPictureWindow, ev: PictureInPictureEvent) => any) | null
 }
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Picture-in-Picture_API>
+* <https://w3c.github.io/picture-in-picture/>

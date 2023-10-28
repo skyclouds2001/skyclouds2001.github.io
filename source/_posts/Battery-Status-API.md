@@ -46,7 +46,7 @@ Battery Status API 提供了访问设备电源信息和监听电源信息变化�
 
 `BatteryManager` 接口的 `levelchange` 事件在电源电量改变时触发，即 `level` 属性改变时触发
 
-## 相关接口
+## 类型
 
 ```ts
 interface Navigator {
@@ -64,3 +64,8 @@ interface BatteryManager extends EventTarget {
   onlevelchange: ((this: BatteryManager, ev: Event) => any) | null
 }
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API>
+* <https://w3c.github.io/battery/>

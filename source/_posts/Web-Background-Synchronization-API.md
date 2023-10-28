@@ -94,7 +94,12 @@ function sync() {
 
 `SyncEvent` 事件继承自 `ExtendableEvent` 事件，其 `tag` 属性给出定义的同步事件标识符，其 `lastChance` 属性标识当前同步事件后是否有新的同步事件。
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.js)
+
+## 类型
 
 ```ts
 interface SyncEvent extends ExtendableEvent {
@@ -116,7 +121,7 @@ interface ServiceWorkerRegistration extends EventTarget {
 }
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.js)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Background_Synchronization_API>
+* <https://wicg.github.io/background-sync/spec/>

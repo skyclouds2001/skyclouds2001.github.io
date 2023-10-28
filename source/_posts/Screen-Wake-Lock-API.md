@@ -54,7 +54,7 @@ sentinel.release()
 
 `WakeLockSentinel` 接口的 `release` 事件，在 `WakeLockSentinel` 被释放时触发，返回一个 `Event` 事件
 
-## 相关接口
+## 类型
 
 ```ts
 interface WakeLock {
@@ -70,3 +70,8 @@ interface WakeLockSentinel extends EventTarget {
 
 type WakeLockType = 'screen'
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API>
+* <https://w3c.github.io/screen-wake-lock/>

@@ -94,7 +94,12 @@ self.addEventListener('periodicsync', (e) => {
 
 `PeriodicSyncEvent` 事件继承自 `ExtendableEvent` 事件。其 `tag` 属性返回事件对应的周期后台同步任务的唯一标识符。
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/periodic-sync.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/periodic-sync.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/periodic-sync.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/periodic-sync.js)
+
+## 类型
 
 ```ts
 interface PeriodicSyncEvent extends ExtendableEvent {
@@ -120,7 +125,7 @@ interface ServiceWorkerRegistration extends EventTarget {
 }
 ```
 
-### 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/periodic-sync.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/periodic-sync.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/periodic-sync.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/periodic-sync.js)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API>
+* <https://wicg.github.io/periodic-background-sync/>

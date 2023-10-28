@@ -48,13 +48,13 @@ navigator.windowControlsOverlay.addEventListener('geometrychange', (e) => {
 
 ## 相关的 CSS 环境变量
 
-- `titlebar-area-x` 应用标题栏左上角横坐标
+* `titlebar-area-x` 应用标题栏左上角横坐标
 
-- `titlebar-area-y` 应用标题栏左上角纵坐标
+* `titlebar-area-y` 应用标题栏左上角纵坐标
 
-- `titlebar-area-width` 应用标题栏宽度
+* `titlebar-area-width` 应用标题栏宽度
 
-- `titlebar-area-height` 应用标题栏高度
+* `titlebar-area-height` 应用标题栏高度
 
 可以通过 `env()` CSS 函数使用 CSS 环境变量
 
@@ -65,7 +65,11 @@ env(titlebar-area-width)
 env(titlebar-area-height)
 ```
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg)
+
+## 类型
 
 ```ts
 interface Navigator {
@@ -84,6 +88,7 @@ interface WindowControlsOverlayGeometryChangeEvent extends Event {
 }
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Window_Controls_Overlay_API>
+* <https://wicg.github.io/window-controls-overlay/>

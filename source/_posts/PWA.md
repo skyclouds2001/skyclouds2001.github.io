@@ -80,8 +80,8 @@ PWA 下载亦可以通过应用商店等场景下载
 
 ## PWA 原理
 
-PWA 实质是仅将应用行为上类似于原生应用，如在桌面显示图标，在应用列表显示，支持卸载等；并不会将应用程序的资源文件主动下载至本地，具体策略由开发者通过 IndexDB、ServiceWorker、Cache Storage 等开发实施
+PWA 实质是仅将应用行为上类似于原生应用，如在桌面显示图标，在应用列表显示，支持卸载等；并不会将应用程序的资源文件主动下载至本地，具体策略由开发者通过 IndexedDB、ServiceWorker、Cache Storage 等开发实施
 
-## 源码链接
+## 示例
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg)

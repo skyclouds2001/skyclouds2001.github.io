@@ -150,7 +150,12 @@ Worker 全局环境的 `messageerror` 事件会在传递的消息无法解析时
 
 Worker 全局环境的 `importScripts()` 方法可以导入一组同源的脚本文件，并在 Worker 全局环境下执行
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/worker.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/worker.js)
+
+## 类型
 
 ```ts
 
@@ -183,7 +188,7 @@ interface WorkerOptions {
 type WorkerType = 'classic' | 'module'
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/worker.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/worker.js)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API>
+* <https://html.spec.whatwg.org/multipage/workers.html>

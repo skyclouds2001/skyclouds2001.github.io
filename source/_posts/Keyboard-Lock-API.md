@@ -51,7 +51,7 @@ navigator.keyboard.lock(['KeyW', 'KeyA', 'KeyS', 'KeyD'])
 navigator.keyboard.unlock()
 ```
 
-## 相关接口
+## 类型
 
 ```ts
 interface Keyboard extends EventTarget {
@@ -63,3 +63,8 @@ interface Navigator {
   readonly keyboard: Keyboard
 }
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Keyboard_API>
+* <https://wicg.github.io/keyboard-lock/>

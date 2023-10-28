@@ -54,7 +54,7 @@ document.exitFullscreen()
 
 > 通常，监听 Web 程序内的全屏状态改变，通过监听 `Document` 接口上的即可，文档内元素的相应事件会冒泡至文档
 
-## 相关接口
+## 类型
 
 ```ts
 interface Document {
@@ -81,3 +81,8 @@ interface FullscreenOptions {
 
 type FullscreenNavigationUI = 'auto' | 'hide' | 'show'
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API>
+* <https://fullscreen.spec.whatwg.org/>

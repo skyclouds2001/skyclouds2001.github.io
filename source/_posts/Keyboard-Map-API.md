@@ -41,7 +41,7 @@ navigator.keyboard.getLayoutMap().then((layoutMap) => {
 
 该事件尚未得到主流浏览器的支持
 
-## 接口
+## 类型
 
 ```ts
 interface Keyboard extends EventTarget {

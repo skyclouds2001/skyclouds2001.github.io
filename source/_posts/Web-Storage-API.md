@@ -109,7 +109,7 @@ window.addEventListener('storage', (e) => {
 })
 ```
 
-## 相关接口
+## 类型
 
 ```ts
 interface Window {
@@ -137,3 +137,8 @@ interface StorageEvent extends Event {
   initStorageEvent(type: string, bubbles?: boolean, cancelable?: boolean, key?: string | null, oldValue?: string | null, newValue?: string | null, url?: string | URL, storageArea?: Storage | null): void
 }
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API>
+* <https://html.spec.whatwg.org/multipage/webstorage.html>

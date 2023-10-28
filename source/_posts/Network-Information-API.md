@@ -51,7 +51,7 @@ const saveData = navigator.connection.saveData
 navigator.connection.addEventListener('change', () => { /* to do something */ })
 ```
 
-## 相关接口
+## 类型
 
 ```ts
 interface Navigator {
@@ -80,3 +80,8 @@ type ConnectionType = 'bluetooth' | 'cellular' | 'ethernet' | 'none' | 'wifi' | 
 
 type EffectiveConnectionType = 'slow-2g' | '2g' | '3g' | '4g'
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API>
+* <https://wicg.github.io/netinfo/>

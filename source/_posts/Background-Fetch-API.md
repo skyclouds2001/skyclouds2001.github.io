@@ -197,7 +197,12 @@ self.addEventListener('backgroundfetchclick', (e) => {
 
 `BackgroundFetchUpdateUIEvent` 接口继承自 `BackgroundFetchEvent` 接口，其 `updateUI()` 方法用于更新浏览器提供的下载进度条弹出框的信息。接收一组参数，包括 `icons` 及 `title` 参数，与 `BackgroundFetchManager` 接口的 `fetch()` 方法中的相应参数相同。返回一个 Promise。
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.js)
+
+## 类型
 
 ```ts
 type BackgroundFetchFailureReason = "" | "aborted" | "bad-status" | "fetch-error" | "quota-exceeded" | "download-total-exceeded";
@@ -265,7 +270,7 @@ interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
 }
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.js)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Background_Fetch_API>
+* <https://wicg.github.io/background-fetch/>

@@ -72,7 +72,7 @@ navigator.geolocation.getCurrentPosition(
 
 而 `timestamp` 只读属性返回一个时间戳，代表获取地址位置信息的时间点
 
-`GeolocationCoordinates` 实例用于表示一个地址位置信息详情
+`GeolocationCoordinates` 接口用于表示一个地址位置信息详情
 
 `latitude` 只读属性代表纬度
 
@@ -96,7 +96,7 @@ navigator.geolocation.getCurrentPosition(
 
 `message` 只读属性代表错误信息，通常是用于调试目的而非直接向用户展示
 
-## 相关接口
+## 类型
 
 ```ts
 interface Navigator {
@@ -146,3 +146,8 @@ interface GeolocationCoordinates {
   readonly speed: number | null
 }
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API>
+* <https://w3c.github.io/geolocation-api/>

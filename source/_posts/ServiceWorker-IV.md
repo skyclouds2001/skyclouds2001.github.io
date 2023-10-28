@@ -131,7 +131,12 @@ self.addEventListener('fetch', (e) => {
 >
 > * `FetchEvent` 事件的 `preloadResponse` 属性返回若导航预加载情况下的 Promise 的 Response，否则返回 Promise 的 undefined。
 
-## 源码链接
+## 示例
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/message.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/message.html)
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/message.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/message.js)
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API>
+* <https://w3c.github.io/ServiceWorker/>

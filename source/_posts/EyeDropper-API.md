@@ -54,7 +54,7 @@ try {
 }
 ```
 
-## 接口
+## 类型
 
 ```ts
 interface ColorSelectionResult {

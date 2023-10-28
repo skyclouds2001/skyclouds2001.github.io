@@ -261,7 +261,14 @@ self.addEventListener('activate', (e) => {
 })
 ```
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.js)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/fetch-cache.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/fetch-cache.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/fetch-cache.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/fetch-cache.js)
+
+## 类型
 
 ```ts
 interface Cache {
@@ -289,9 +296,7 @@ interface WindowOrWorkerGlobalScope {
 declare var caches: CacheStorage;
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/cache-storage.js)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/fetch-cache.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/fetch-cache.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/fetch-cache.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/fetch-cache.js)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API>
+* <https://w3c.github.io/ServiceWorker/>

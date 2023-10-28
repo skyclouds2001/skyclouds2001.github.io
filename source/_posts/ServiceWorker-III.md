@@ -148,7 +148,12 @@ mathJax: false
 
 * `ServiceWorker` 接口的 `statechange` 事件在 ServiceWorker 的状态更新时触发，返回一个 `Event` 事件
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js)
+
+## 类型
 
 ```ts
 interface Client {
@@ -210,7 +215,7 @@ interface ServiceWorkerRegistration extends EventTarget {
 }
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/service-worker.js)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API>
+* <https://w3c.github.io/ServiceWorker/>

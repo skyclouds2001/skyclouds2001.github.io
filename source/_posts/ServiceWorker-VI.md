@@ -68,3 +68,8 @@ self.addEventListener('fetch', (e) => {
   )
 })
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API>
+* <https://w3c.github.io/ServiceWorker/>

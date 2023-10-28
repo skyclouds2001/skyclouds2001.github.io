@@ -52,7 +52,7 @@ document.exitPointerLock()
 
 `MouseEvent` 接口的 `movementX` 属性与 `movementY` 属性仅在 `mousemove` 事件中可用，反映了前后两个 `mousemove` 事件的鼠标移动的坐标
 
-## 相关接口
+## 类型
 
 ```ts
 interface Document {
@@ -74,3 +74,8 @@ interface MouseEvent {
   readonly movementY: number
 }
 ```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Pointer_Lock_API>
+* <https://w3c.github.io/pointerlock/>

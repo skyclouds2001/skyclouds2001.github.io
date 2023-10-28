@@ -36,20 +36,20 @@ Content Index API 允许网站注册离线启用的内容，向用户告知网�
 
 方法支持传入一组配置项
 
-- 参数 `id` 指定离线内容的唯一标识符
-- 参数 `url` 指定离线内容的 URL，需要与当前网页或脚本同源
-- 参数 `title` 指定离线内容的标题
-- 参数 `description` 指定离线内容的描述
-- 可选参数 `icons` 指定离线内容的图标组，每组图标对象支持指定 `src` 参数和 可选的 `sizes` 及 `type` 参数，默认值是一个空数组
-- 可选参数 `category` 指定离线内容的类别，可选的值为 `''`、`'homepage'`、`'article'`、`'video'`、`'audio'`，默认值是 `''`
+* 参数 `id` 指定离线内容的唯一标识符
+* 参数 `url` 指定离线内容的 URL，需要与当前网页或脚本同源
+* 参数 `title` 指定离线内容的标题
+* 参数 `description` 指定离线内容的描述
+* 可选参数 `icons` 指定离线内容的图标组，每组图标对象支持指定 `src` 参数和 可选的 `sizes` 及 `type` 参数，默认值是一个空数组
+* 可选参数 `category` 指定离线内容的类别，可选的值为 `''`、`'homepage'`、`'article'`、`'video'`、`'audio'`，默认值是 `''`
 
 方法返回一个 Promise 的 `undefined`
 
 方法在以下情况下会抛出一个 `TypeError` 异常
 
-- 当前 ContentIndex 对应的 ServiceWorker 未激活或 ServiceWorker 未包含 FetchEvent
-- `id`、 `title`、 `description`、 `url` 参数未指定或参数类型不为字符串或参数为空串
-- `icons` 参数某个 icon 的 URL 的类型不是图像或获取对应 icon 出现网络异常
+* 当前 ContentIndex 对应的 ServiceWorker 未激活或 ServiceWorker 未包含 FetchEvent
+* `id`、 `title`、 `description`、 `url` 参数未指定或参数类型不为字符串或参数为空串
+* `icons` 参数某个 icon 的 URL 的类型不是图像或获取对应 icon 出现网络异常
 
 ```js
 self.registration.index.add({
@@ -112,7 +112,11 @@ self.addEventListener('contentdelete', (e) => {
 
 通常利用该事件同步移除与待移除页面的相关的资源存储
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg)
+
+## 类型
 
 ```ts
 type ContentCategory = '' | 'homepage' | 'article' | 'video' | 'audio'
@@ -133,6 +137,7 @@ interface ContentIndex {
 };
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Content_Index_API>
+* <https://wicg.github.io/content-index/spec/>

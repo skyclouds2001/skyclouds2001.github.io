@@ -94,3 +94,9 @@ Set-Cookie: cookie_b=b; Expires=Thu, 31 Oct 2021 07:28:00 GMT; Secure; HttpOnly;
 * `__Secure-` 前缀
 
   指定对应的 Cookie 需指定 `Secure` 属性（即需要在 Secure Context 发送）
+
+## 链接
+
+* <https://html.spec.whatwg.org/multipage/dom.html#dom-document-cookie>
+* <https://httpwg.org/specs/rfc6265.html#cookie>
+* <https://httpwg.org/specs/rfc6265.html#sane-set-cookie>

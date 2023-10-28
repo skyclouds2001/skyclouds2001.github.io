@@ -138,7 +138,12 @@ self.addEventListener('notificationclose', (e) => {
 >
 > * `action` 顺序代表触发事件的 action 的 ID
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.js)
+
+## 类型
 
 ```ts
 interface NotificationAction {
@@ -188,7 +193,7 @@ class Notification extends EventTarget {
 }
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.js)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API>
+* <https://notifications.spec.whatwg.org/>

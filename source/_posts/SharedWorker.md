@@ -108,7 +108,12 @@ SharedWorker 生命周期与 Client 端的生命周期独立，当任一页面�
 
 SharedWorker 全局环境通过 `SharedWorkerGlobalScope` 表示，该接口继承自 `WorkerGlobalScope`，它与 Worker 全局环境差别不大
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.js)
+
+## 类型
 
 ```ts
 interface SharedWorker extends EventTarget, AbstractWorker {
@@ -131,7 +136,7 @@ interface WorkerOptions {
 type WorkerType = 'classic' | 'module'
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/shared-worker.js)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API>
+* <https://html.spec.whatwg.org/multipage/workers.html>

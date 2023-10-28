@@ -52,7 +52,11 @@ navigator.clearAppBadge()
 
 使用 Navigator 接口的 `setAppBadge()` 方法并传递参数 `0` 同样具有类似的效果
 
-## 相关接口
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg)
+
+## 类型
 
 ```ts
 interface Navigator {
@@ -66,6 +70,7 @@ interface WorkerNavigator {
 }
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Badging_API>
+* <https://w3c.github.io/badging/>
