@@ -62,6 +62,12 @@ Keyboard Lock API 允许控制键盘的输入形式，捕获键盘的输入从�
 
 [Keyboard Lock API](/2023/10/24/Keyboard-Lock-API/)
 
+### Keyboard Map API
+
+Keyboard Map API 允许获取键盘按键码至键盘按键名的映射
+
+[Keyboard Map API](/2023/10/28/Keyboard-Map-API/)
+
 ### Geolocation API
 
 Geolocation API 允许访问设备的地理位置
