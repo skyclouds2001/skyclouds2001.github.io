@@ -68,6 +68,12 @@ Keyboard Map API 允许获取键盘按键码至键盘按键名的映射
 
 [Keyboard Map API](/2023/10/28/Keyboard-Map-API/)
 
+### VirtualKeyboard API
+
+VirtualKeyboard API 允许控制设备的虚拟键盘的几何信息和展示及隐藏
+
+[VirtualKeyboard API](/2023/10/29/VirtualKeyboard-API/)
+
 ### Geolocation API
 
 Geolocation API 允许访问设备的地理位置
