@@ -356,6 +356,106 @@ File System API 与扩展的 File System Access API 提供了管理设备本地�
 
 `FileSystemSyncAccessHandle` 接口的 `close()` 方法用于关闭当前句柄，释放文件锁
 
+## 类型
+
+```ts
+interface Window {
+  showOpenFilePicker: (options?: OpenFilePickerOptions) => Promise<FileSystemFileHandle[]>
+  showSaveFilePicker: (options?: SaveFilePickerOptions) => Promise<FileSystemFileHandle>
+  showDirectoryPicker: (options?: DirectoryPickerOptions) => Promise<FileSystemDirectoryHandle>
+}
+
+interface FilePickerAcceptType {
+  description?: string
+  accept: Record<string, string | string[]>
+}
+
+interface FilePickerOptions {
+  excludeAcceptAllOption?: boolean
+  id?: string
+  types?: FilePickerAcceptType[]
+  startIn?: StartInDirectory
+}
+
+interface OpenFilePickerOptions extends FilePickerOptions {
+  multiple?: boolean
+}
+
+interface SaveFilePickerOptions extends FilePickerOptions {
+  suggestedName?: string
+}
+
+interface DirectoryPickerOptions {
+  id?: string
+  startIn?: StartInDirectory
+  mode?: FileSystemPermissionMode
+}
+
+type WellKnownDirectory = 'desktop' | 'documents' | 'downloads' | 'music' | 'pictures' | 'videos'
+
+type StartInDirectory = WellKnownDirectory | FileSystemHandle
+
+type FileSystemPermissionMode = 'read' | 'readwrite'
+
+interface FileSystemHandle {
+  readonly kind: FileSystemHandleKind
+  readonly name: string
+  isSameEntry(other: FileSystemHandle): Promise<boolean>
+}
+
+interface FileSystemFileHandle extends FileSystemHandle {
+  readonly kind: 'file'
+  createSyncAccessHandle(): Promise<FileSystemSyncAccessHandle>
+  createWritable(options?: FileSystemCreateWritableOptions): Promise<FileSystemWritableFileStream>
+  getFile(): Promise<File>
+}
+
+interface FileSystemDirectoryHandle extends FileSystemHandle {
+  readonly kind: 'directory'
+  getDirectoryHandle(name: string, options?: FileSystemGetDirectoryOptions): Promise<FileSystemDirectoryHandle>
+  getFileHandle(name: string, options?: FileSystemGetFileOptions): Promise<FileSystemFileHandle>
+  removeEntry(name: string, options?: FileSystemRemoveOptions): Promise<void>
+  resolve(possibleDescendant: FileSystemHandle): Promise<string[] | null>
+}
+
+interface FileSystemWritableFileStream extends WritableStream {
+  seek(position: number): Promise<void>
+  truncate(size: number): Promise<void>
+  write(data: FileSystemWriteChunkType): Promise<void>
+}
+
+interface FileSystemSyncAccessHandle {
+  close(): void;
+  flush(): void;
+  getSize(): number;
+  read(buffer: AllowSharedBufferSource, options?: FileSystemReadWriteOptions): number;
+  truncate(newSize: number): void;
+  write(buffer: AllowSharedBufferSource, options?: FileSystemReadWriteOptions): number;
+}
+
+interface FileSystemCreateWritableOptions {
+  keepExistingData?: boolean
+}
+
+interface FileSystemGetDirectoryOptions {
+  create?: boolean
+}
+
+interface FileSystemGetFileOptions {
+  create?: boolean
+}
+
+interface FileSystemReadWriteOptions {
+  at?: number
+}
+
+interface FileSystemRemoveOptions {
+  recursive?: boolean
+}
+
+type FileSystemWriteChunkType = BufferSource | Blob | string | WriteParams
+```
+
 ## 链接
 
 * <https://developer.mozilla.org/en-US/docs/Web/API/File_System_API>
