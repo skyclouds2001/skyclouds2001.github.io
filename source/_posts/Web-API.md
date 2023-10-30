@@ -12,7 +12,7 @@ cover:
 toc: true
 recommend: 1
 keywords:
-uniqueId: '2022-12-14 22:55:58/web api.html'
+uniqueId: '2022-12-14 22:55:58/Web API.html'
 mathJax: false
 ---
 
@@ -115,6 +115,12 @@ Get Installed Related Apps API 允许网页应用检测与之相关的应用是�
 Screen Wake Lock API 允许管理设备的屏幕变暗或休眠策略
 
 [Screen Wake Lock API](/2023/10/24/Screen-Wake-Lock-API/)
+
+### Vibration API
+
+Vibration API 允许调用设备的振动功能
+
+[Vibration API](/2023/10/30/Vibration-API/)
 
 ### File System API
 
