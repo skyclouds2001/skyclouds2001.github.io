@@ -104,6 +104,12 @@ Local Font Access API 允许访问设备本地安装的字体数据
 
 [Local Font Access API](/2023/09/20/Local-Font-Access-API/)
 
+### Get Installed Related Apps API
+
+Get Installed Related Apps API 允许网页应用检测与之相关的应用是否已在本地设备下载
+
+[Get Installed Related Apps API](/2023/10/30/Get-Installed-Related-Apps-API/)
+
 ### Screen Wake Lock API
 
 Screen Wake Lock API 允许管理设备的屏幕变暗或休眠策略
