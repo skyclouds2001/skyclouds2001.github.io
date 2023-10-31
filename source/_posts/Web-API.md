@@ -44,6 +44,12 @@ Picture-in-Picture API 允许某个特定的视频元素管理画中画模式
 
 [Picture-in-Picture API](/2023/10/25/Picture-in-Picture-API/)
 
+### Document Picture-in-Picture API
+
+Document Picture-in-Picture API 是对原有 Picture-in-Picture API 的扩展，允许任意 DOM 元素进入画中画模式
+
+[Document Picture-in-Picture API](/2023/10/31/Document-Picture-in-Picture-API/)
+
 ### EyeDropper API
 
 EyeDropper API 提供了 eyedropper 工具，允许用户选择屏幕上的某个特定位置的颜色
