@@ -1,1 +1,4 @@
 * text=auto eol=crlf
+
+*.md	linguist-detectable
+README.md	-linguist-detectable
