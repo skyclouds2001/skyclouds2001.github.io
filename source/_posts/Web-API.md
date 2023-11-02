@@ -62,6 +62,12 @@ EyeDropper API 提供了 eyedropper 工具，允许用户选择屏幕上的某�
 
 [EyeDropper API](/2023/10/27/EyeDropper-API/)
 
+### Clipboard API
+
+Clipboard API 允许异步地读写剪切板
+
+[Clipboard API](/2023/11/02/Clipboard-API/)
+
 ### Web Share API
 
 Web Share API 允许分享文字、链接、文件或其他内容到用户指定的分享目标
