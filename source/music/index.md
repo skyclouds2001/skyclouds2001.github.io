@@ -1,6 +1,7 @@
 ---
-title: 音乐歌单收藏
-date: 2019-07-30 10:43:45
+thumbnail: https://avatars.githubusercontent.com/u/95597335
+date: 2023-11-02 08:24:49
+comments: true
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">

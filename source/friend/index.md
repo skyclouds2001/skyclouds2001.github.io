@@ -1,7 +1,9 @@
 ---
-thumbnail: https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2020/20201030170457.png
-date: 2019-09-09 18:52:09
+thumbnail: https://avatars.githubusercontent.com/u/95597335
+date: 2023-11-02 08:24:49
+comments: true
 ---
+
 <div class="friend-title-item"><br>申请友链须知<br><br><hr></div>
 
 - 原则上只和技术类博客交换，但不包括含有和色情、暴力、政治敏感的网站。

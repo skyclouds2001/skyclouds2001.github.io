@@ -1,8 +1,9 @@
 ---
-title: 
-date: 2019-07-30 09:33:48
-thumbnail: https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2020/20201030170254.png
+thumbnail: https://avatars.githubusercontent.com/u/95597335
+date: 2023-11-02 08:24:49
+comments: true
 ---
+
 <div class="music-container">
     <div class="music-player">
         <div class="d-title">
