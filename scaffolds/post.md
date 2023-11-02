@@ -4,24 +4,14 @@ date: {{ date }}
 tags:
   - test1
   - test2
-categories: 
+categories:
   - test3
   - test4
-thumbnail: 
-cover: 
-updated: {{ date }}
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: {{ date }}/{{ title }}.html
 mathJax: false
 ---
-
-> 摘要
-首页显示摘要内容（替换成自己的）
-
-<!-- more -->
-正文内容（替换成自己的）
-
-参考文章:  
-[参考链接]()
