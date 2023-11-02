@@ -6,7 +6,7 @@
   <link href="https://skyclouds2001.github.io/atom.xml" rel="self"/>
   
   <link href="https://skyclouds2001.github.io/"/>
-  <updated>2023-10-30T09:59:29.000Z</updated>
+  <updated>2023-11-02T08:05:58.007Z</updated>
   <id>https://skyclouds2001.github.io/</id>
   
   <author>
@@ -17,11 +17,130 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Broadcast Channel API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/02/Broadcast-Channel-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/02/Broadcast-Channel-API/</id>
+    <published>2023-11-02T07:30:25.000Z</published>
+    <updated>2023-11-02T08:05:58.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Broadcast Channel API 允许在同源的浏览上下文中交换数据&lt;/p&gt;
+&lt;h2 id=&quot;创建广播频道&quot;&gt;&lt;a href=&quot;#创建广播频道&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pyodide</title>
+    <link href="https://skyclouds2001.github.io/2023/11/01/Pyodide/"/>
+    <id>https://skyclouds2001.github.io/2023/11/01/Pyodide/</id>
+    <published>2023-11-01T06:34:58.000Z</published>
+    <updated>2023-11-01T11:27:21.094Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Pyodide 是一个在浏览器环境中运行的 Python 解释器，利用了 CPython 技术和 WebAssembly 技术，从而可以在浏览器中运行 Python 软件包；并且</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/categories/Frontend/Other/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Document Picture-in-Picture API</title>
+    <link href="https://skyclouds2001.github.io/2023/10/31/Document-Picture-in-Picture-API/"/>
+    <id>https://skyclouds2001.github.io/2023/10/31/Document-Picture-in-Picture-API/</id>
+    <published>2023-10-31T14:09:38.000Z</published>
+    <updated>2023-10-31T15:28:57.270Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Document Picture-in-Picture API 是对原有 Picture-in-Picture API 的扩展，允许任意 DOM</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vibration API</title>
+    <link href="https://skyclouds2001.github.io/2023/10/30/Vibration-API/"/>
+    <id>https://skyclouds2001.github.io/2023/10/30/Vibration-API/</id>
+    <published>2023-10-30T14:14:06.000Z</published>
+    <updated>2023-10-30T14:33:39.229Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Vibration API 允许调用设备的振动功能&lt;/p&gt;
+&lt;p&gt;若设备不支持振动，调用该方法不会具有任何效果&lt;/p&gt;
+&lt;h2 id=&quot;振动&quot;&gt;&lt;a href=&quot;#振动&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Get Installed Related Apps API</title>
     <link href="https://skyclouds2001.github.io/2023/10/30/Get-Installed-Related-Apps-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/30/Get-Installed-Related-Apps-API/</id>
     <published>2023-10-30T09:59:29.000Z</published>
-    <updated>2023-10-30T09:59:29.000Z</updated>
+    <updated>2023-10-30T11:35:59.083Z</updated>
     
     
       
@@ -35,14 +154,14 @@
     
     
     
-    <category term="test3" scheme="https://skyclouds2001.github.io/categories/test3/"/>
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
     
-    <category term="test4" scheme="https://skyclouds2001.github.io/categories/test3/test4/"/>
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
     
     
-    <category term="test1" scheme="https://skyclouds2001.github.io/tags/test1/"/>
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
     
-    <category term="test2" scheme="https://skyclouds2001.github.io/tags/test2/"/>
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
     
   </entry>
   
@@ -1255,7 +1374,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/Web-API/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/Web-API/</id>
     <published>2022-12-14T14:55:58.000Z</published>
-    <updated>2023-10-30T10:06:05.974Z</updated>
+    <updated>2023-11-02T07:38:21.212Z</updated>
     
     
       
