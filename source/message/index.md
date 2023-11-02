@@ -1,8 +1,15 @@
 ---
-thumbnail: https://cdn.jsdelivr.net/gh/removeif/blog_image/img/2020/20201030172738.png
+thumbnail: https://avatars.githubusercontent.com/u/95597335
 date: 2018-11-11 08:24:49
 comments: true
 ---
 
-**来而不往非礼也**  
-**畅所欲言，有留必应**
+**哪怕世界在历史三峡中漂流，你我有彼此在**
+
+**命运以痛吻我，我愿报之以歌**
+
+**凡是过往，皆为序章**
+
+**每一次抉择都期盼一场苦尽甜来**
+
+**总有奋不顾身的相信，总要坚韧恒久的勇气**
