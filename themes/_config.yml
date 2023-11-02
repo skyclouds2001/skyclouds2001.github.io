@@ -63,17 +63,17 @@ head:
         # You should leave this blank for most of the time
         description: The personal blog of skyclouds2001
         # Twitter card type (twitter:card)
-        twitter_card: 
+        twitter_card:
         # Twitter ID (twitter:creator)
-        twitter_id: 
+        twitter_id:
         # Twitter Site (twitter:site)
-        twitter_site: 
+        twitter_site:
         # Google+ profile link (deprecated)
-        google_plus: 
+        google_plus:
         # Facebook admin ID
-        fb_admins: 
+        fb_admins:
         # Facebook App ID
-        fb_app_id: 
+        fb_app_id:
 
     # Structured data of the page
     # https://developers.google.com/search/docs/guides/intro-structured-data
@@ -197,24 +197,12 @@ donates:
         type: alipay
         # Qrcode image URL
         qrcode: /images/alipay.jpg
-    # "Buy me a coffee" donate button configurations
-#    -
-#        type: buymeacoffee
-#        # URL to the "Buy me a coffee" page
-#        url: ''
-#    # Patreon donate button configurations
-#    -
-#        type: patreon
-#        # URL to the Patreon page
-#        url: ''
-#    # Paypal donate button configurations
-#    -
-#        type: paypal
-#        # Paypal business ID or email address
-#        business: ''
-#        # Currency code
-#        currency_code: USD
-    # Wechat donate button configurations
+    # Patreon donate button configurations
+    -
+        type: patreon
+        # URL to the Patreon page
+        url: https://www.patreon.com/user?u=105708204
+    # WeChat donate button configurations
     -
         type: wechat
         # Wechat qrcode image URL
@@ -264,7 +252,7 @@ widgets:
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
-        gravatar: 
+        gravatar:
         # URL or path for the follow button
         follow_link: 'https://github.com/skyclouds2001'
         # Links to be shown on the bottom of the profile widget
@@ -344,7 +332,7 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: followit
-        description: 
+        description:
         action_url: https://api.follow.it/subscription-form/VUJhY1Y3Q05Ha3pvS3RzZDYrcWlRc1JTNGZQTEx5QXh4Z1llTmRtbHFDcy85allmd3hzWHkxcTc4dUFyNEhmQTkxQlZpL2JXdVQyeFVkY1pGaWNJY0ZLM0h4eGtyc0NnNlB3N2FvRnBxN1F1YVBLMkxmVHMweFlnZm1tWUorUXJ8UFBRMzljRXAyT3Nkd2NwK1VIei9RajZieHppdUVudEYzOGpIazh0bnBVZz0=/8
         verification_code: savxwnjFRLRWr4EYrhLa
 
@@ -361,63 +349,71 @@ index_zero_position_ad: true
 # ad put position
 index_ad_positions: 2,5,9
 
-# todo unknown config
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
-    # Enable page startup animations
-    animejs: true
-    # Show the "back to top" button
-    back_to_top: true
-    # Baidu Analytics plugin settings
-    # https://tongji.baidu.com
-    baidu_analytics:
-        # Baidu Analytics tracking ID
-        tracking_id: 
-    # BuSuanZi site/page view counter
-    # https://busuanzi.ibruce.info
-    busuanzi: true
-    # CNZZ statistics
-    # https://www.umeng.com/web
-    cnzz:
-        # CNZZ tracker id
-        id: 
-        # CNZZ website id
-        web_id: 
     # Enable the lightGallery and Justified Gallery plugins
+    # https://www.lightgalleryjs.com/
+    # https://miromannino.github.io/Justified-Gallery/
     gallery: true
-    # Google Analytics plugin settings
-    # https://analytics.google.com
-    google_analytics:
-        # Google Analytics tracking ID
-        tracking_id: 
-    # Hotjar user feedback plugin
-    # https://www.hotjar.com/
-    hotjar:
-        # Hotjar site id
-        site_id: 
-    # Enable the KaTeX math typesetting supprot
+    # Enable the KaTeX math typesetting support
     # https://katex.org/
     katex: false
     # Enable the MathJax math typesetting support
     # https://www.mathjax.org/
     mathjax: false
+    # Enable the cookie consent support
+    # https://www.osano.com/cookieconsent
+    cookie_consent:
+        # The compliance type. Can be "info", "opt-in", or "opt-out"
+        type: info
+        # Theme of the popup. Can be "block", "edgeless", or "classic"
+        theme: edgeless
+        # Whether the popup should stay static regardless of the page scrolls
+        static: false
+        # Where on the screen the consent popup should display
+        position: bottom-left
+        # URL to your site's cookie policy
+        policyLink: 'https://www.cookiesandyou.com/'
     # Enable the Outdated Browser plugin
     # http://outdatedbrowser.com/
     outdated_browser: false
+    # Enable page startup animations
+    animejs: true
     # Show a progress bar at top of the page on page loading
     progressbar: true
+
+    ## unknown
+    # Show the "back to top" button
+    back_to_top: true
+
+    # Baidu Analytics plugin settings
+    # https://tongji.baidu.com
+    baidu_analytics:
+        # Baidu Analytics tracking ID
+        tracking_id: 98608f7861aa9247199463aaae2cffb9
+    # Bing Webmaster Tools settings
+    # https://www.bing.com/webmasters
+    bing_webmaster:
+        tracking_id: F334E8AF334D26B39D41AF73E58A98AC
+    # BuSuanZi site/page view counter
+    # https://busuanzi.ibruce.info
+    busuanzi: true
+    # Google Analytics plugin settings
+    # https://analytics.google.com
+    google_analytics:
+        # Google Analytics tracking ID
+        tracking_id: G-257NZ7S1BB
+
 # CDN provider settings
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:
     # Name or URL template of the JavaScript and/or stylesheet CDN provider
-    cdn: loli
+    cdn: jsdelivr
     # Name or URL template of the webfont CDN provider
-    fontcdn: loli
+    fontcdn: google
     # Name or URL of the fontawesome icon font CDN provider
-    iconcdn: loli
-    # https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v1.0.6/json_data/record.json, cdn前缀，对于hexo new page 页面中引用的资源文件不生效，需要手动改，如friend友链页中引用的资源
-    # my_cdn_pre: https://cdn.jsdelivr.net/gh/removeif/removeif-demo@v1.0.8/ #https://cdn.jsdelivr.net/gh/removeif/removeif.github.io@v2.2.1
+    iconcdn: fontawesome
 
 # footer 版权说明 可自由配置
 footer_copyright_dsec: © 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br />
