@@ -32,6 +32,12 @@ Web Storage API 允许用于保存键值对形式的数据
 
 [Web Storage API](/2023/10/21/Web-Storage-API/)
 
+### Broadcast Channel API
+
+Broadcast Channel API 允许在同源的浏览上下文中交换数据
+
+[Broadcast Channel API](/2023/11/02/Broadcast-Channel-API/)
+
 ### Fullscreen API
 
 Fullscreen API 允许某个特定的元素管理全屏模式
