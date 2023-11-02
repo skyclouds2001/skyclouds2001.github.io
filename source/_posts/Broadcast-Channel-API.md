@@ -69,3 +69,25 @@ bc.close()
 ```
 
 广播频道在没有任一浏览上下文连接至其时被回收
+
+## 类型
+
+```ts
+interface BroadcastChannel extends EventTarget {
+  readonly name: string
+  onmessage: ((this: BroadcastChannel, ev: MessageEvent) => any) | null
+  onmessageerror: ((this: BroadcastChannel, ev: MessageEvent) => any) | null
+  close(): void
+  postMessage(message: any): void
+}
+
+declare var BroadcastChannel: {
+  prototype: BroadcastChannel
+  new(name: string): BroadcastChannel
+}
+```
+
+## 链接
+
+* <https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API>
+* <https://html.spec.whatwg.org/multipage/web-messaging.html#broadcasting-to-other-browsing-contexts>
