@@ -146,6 +146,12 @@ File System API 以及 File System Access API 允许访问设备文件系统上�
 
 [File System API](/2023/10/05/File-System-API/)
 
+### Window Management API
+
+Window Management API 允许获取连接到设备的显示器的详细信息，并将窗口放置在指定的屏幕上
+
+[Window Management API](/2023/11/04/Window-Management-API/)
+
 ### Web Worker API
 
 Web Worker API 允许在与 Web 应用程序的主执行线程分开的后台线程中运行脚本操作，避免阻碍主执行线程的进行
