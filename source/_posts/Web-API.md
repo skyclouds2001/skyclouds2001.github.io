@@ -20,6 +20,12 @@ mathJax: false
 
 在编写 Web 项目时，有许多 Web API 可供调用来实现各种各样的功能
 
+### Beacon API
+
+Beacon API 可用于异步地向服务器发送 HTTP POST 网络请求
+
+[Beacon API](/2023/11/04/Beacon-API/)
+
 ### Cookie API
 
 Cookie API 允许用于保存小数据
