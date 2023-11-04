@@ -174,7 +174,7 @@ interface NotificationEvent extends ExtendableEvent {
   readonly notification: Notification;
 }
 
-class Notification extends EventTarget {
+interface Notification extends EventTarget {
   constructor(title: string, options?: NotificationOptions);
   static readonly permission: NotificationPermission;
   readonly body: string;
