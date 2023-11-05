@@ -38,6 +38,12 @@ Web Storage API 允许用于保存键值对形式的数据
 
 [Web Storage API](/2023/10/21/Web-Storage-API/)
 
+### Permissions API
+
+Permissions API 提供了编程式地检测当前浏览上下文 API 权限
+
+[Permissions API](/2023/11/05/Permissions-API/)
+
 ### Broadcast Channel API
 
 Broadcast Channel API 允许在同源的浏览上下文中交换数据
