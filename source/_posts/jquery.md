@@ -3,7 +3,6 @@ title: jquery
 date: 2022-08-14 22:55:26
 tags:
   - Frontend
-  - JavaScript
   - Library
 categories:
   - Frontend

@@ -3,7 +3,6 @@ title: vue
 date: 2022-12-14 21:47:47
 tags:
   - Frontend
-  - JavaScript
   - FrameWork
 categories:
   - Frontend

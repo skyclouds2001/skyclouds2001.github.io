@@ -3,7 +3,6 @@ title: react
 date: 2022-12-14 21:47:54
 tags:
   - Frontend
-  - JavaScript
   - FrameWork
 categories:
   - Frontend
