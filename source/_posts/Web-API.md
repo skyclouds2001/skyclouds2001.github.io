@@ -38,6 +38,12 @@ Web Storage API 允许用于保存键值对形式的数据
 
 [Web Storage API](/2023/10/21/Web-Storage-API/)
 
+### Storage API
+
+Storage API 提供了多个存储 API 的共享的管理方法，允许获取存储的信息并控制存储的清除策略
+
+[Storage API](/2023/11/06/Storage-API/)
+
 ### Permissions API
 
 Permissions API 提供了编程式地检测当前浏览上下文 API 权限
