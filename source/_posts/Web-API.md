@@ -44,6 +44,12 @@ Storage API 提供了多个存储 API 的共享的管理方法，允许获取存
 
 [Storage API](/2023/11/06/Storage-API/)
 
+### Storage Access API
+
+Storage Access API 允许第三方上下文中跨站内容（如嵌入 `<iframe>` 标签中）获取对未分区 cookie （即以传统方式存储的 cookie，仅允许在第一方上下文（直接加载在浏览器选项卡中）中访问）的访问权限
+
+[Storage Access API](/2023/11/06/Storage-Access-API/)
+
 ### Permissions API
 
 Permissions API 提供了编程式地检测当前浏览上下文 API 权限
