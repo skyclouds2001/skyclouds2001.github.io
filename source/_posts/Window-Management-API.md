@@ -94,6 +94,20 @@ screenDetails.addEventListener('screenschange', () => {
 
 `ScreenDetailed` 接口的 `top` 属性返回一个 number，代表总屏幕区域的 y 坐标
 
+> `Screen` 接口反映了屏幕的信息，可以通过 `window.screen` 使用
+>
+> `Screen` 接口的 `height` 属性返回一个 number，代表屏幕的高度
+>
+> `Screen` 接口的 `width` 属性返回一个 number，代表屏幕的宽度
+>
+> `Screen` 接口的 `availHeight` 属性返回一个 number，代表屏幕可用区域的高度
+>
+> `Screen` 接口的 `availWidth` 属性返回一个 number，代表屏幕可用区域的宽度
+>
+> `Screen` 接口的 `colorDepth` 属性返回一个 number，代表屏幕的颜色位深度
+>
+> `Screen` 接口的 `pixelDepth` 属性返回一个 number，代表屏幕的像素位深度
+
 ## 指定屏幕打开窗口
 
 调用 `Window` 接口的 `open()` 方法时，通过 `windowFeatures` 可选参数指定打开窗口的 `left` `top` `width` `height` 参数，从而实现指定屏幕打开窗口
