@@ -158,6 +158,12 @@ Screen Wake Lock API 允许管理设备的屏幕变暗或休眠策略
 
 [Screen Wake Lock API](/2023/10/24/Screen-Wake-Lock-API/)
 
+### Screen Orientation API
+
+Screen Orientation API 允许获取屏幕朝向信息和监听屏幕朝向信息变化
+
+[Screen Orientation API](/2023/11/07/Screen-Orientation-API/)
+
 ### Vibration API
 
 Vibration API 允许调用设备的振动功能
