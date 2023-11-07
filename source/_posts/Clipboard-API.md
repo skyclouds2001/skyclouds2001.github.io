@@ -80,6 +80,10 @@ const blob = await datas.at(0).getType('text/plain')
 
 方法调用需要用户授予 `clipboard-read` 权限
 
+## 权限 API
+
+该 API 调用需要用户授予 `clipboard-read` 或 `clipboard-write` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
+
 ## 类型
 
 ```ts

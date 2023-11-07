@@ -52,6 +52,10 @@ navigator.clearAppBadge()
 
 使用 Navigator 接口的 `setAppBadge()` 方法并传递参数 `0` 同样具有类似的效果
 
+## 权限 API
+
+该 API 调用需要用户授予 `notifications` 权限，可以调用 `Permission.query()` 方法或读取 `Notification.permission` 属性检查用户是否已授予了该权限
+
 ## 示例
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/PWA-eg)

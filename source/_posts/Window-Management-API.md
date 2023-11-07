@@ -134,15 +134,15 @@ el.requestFullscreen({
 })
 ```
 
-## 权限 API
-
-权限 API 中拥有与该 API 相关的 `window-management` 权限
-
 ## 权限策略
 
 该 API 受 `window-management` 权限策略的限制（无论是通过 `Permissions-Policy` 响应头指定抑或是通过 `iframe` 元素的 `allow` 属性指定）
 
 默认为 `self`，即允许在当前上下文或内嵌的其他同源上下文中使用
+
+## 权限 API
+
+该 API 调用需要用户授予 `window-management` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
 
 ## 类型
 

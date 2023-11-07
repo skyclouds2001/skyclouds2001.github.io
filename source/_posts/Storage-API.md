@@ -55,7 +55,9 @@ if (result) {
 }
 ```
 
-该方法调用需要用户同意授予 `"persistent-storage"` 权限
+## 权限 API
+
+该 API 调用需要用户 `persistent-storage` 授予权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
 
 ## 类型
 

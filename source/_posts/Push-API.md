@@ -24,7 +24,7 @@ Push API 让网络应用从用户代理接收来自服务器发送的消息，�
 
 ## 生成服务器公秘钥对
 
-可以使用 web-push 来生成服务器公秘钥对。
+可以使用 `web-push` 库来生成服务器公秘钥对。
 
 ```js
 const webpush = require('web-push');
@@ -184,7 +184,7 @@ PushManager 接口的 `permissionState()` 方法用于获取当前的请求消�
 
 参数同 subscribe 方法的参数。
 
-返回一个 Promise 的 'prompt'、'denied'、'granted' 的字符串枚举。
+返回一个 Promise 的 `'prompt'`、`'denied'`、`'granted'` 的字符串枚举。
 
 ```js
 self.registration.pushManager.permissionState({
@@ -208,7 +208,16 @@ PushManager 接口的 `supportedContentEncodings` 静态属性返回一组消息
 
 ServiceWorkerGlobalScope 接口的 `pushsubscriptionchange` 事件在更新订阅的消息推送时触发（可能原因包括消息推送服务刷新、消息推送服务失效等）。
 
-## 相关接口
+## 权限 API
+
+该 API 调用需要用户授予 `push` 权限，可以调用 `Permission.query()` 方法或 `PushManager.permissionState()` 检查用户是否已授予了该权限
+
+## 示例
+
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.html)
+* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.js)
+
+## 类型
 
 ```ts
 type PushEncryptionKeyName = "auth" | "p256dh";
@@ -265,7 +274,7 @@ interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
 }
 ```
 
-## 源码链接
+## 链接
 
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.html)
-* [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.js](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/push.js)
+* <https://developer.mozilla.org/en-US/docs/Web/API/Push_API>
+* <https://w3c.github.io/push-api/>

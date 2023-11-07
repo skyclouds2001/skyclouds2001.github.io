@@ -86,6 +86,16 @@ async function getFontFormat(font) {
 }
 ```
 
+## 权限策略
+
+该 API 调用受到 `local-fonts` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
+
+默认为 `self`，即允许在当前上下文或内嵌的其他同源上下文中使用
+
+## 权限 API
+
+该 API 调用需要用户授予 `local-fonts` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
+
 ## 类型
 
 ```ts

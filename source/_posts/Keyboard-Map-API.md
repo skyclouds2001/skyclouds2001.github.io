@@ -41,6 +41,12 @@ navigator.keyboard.getLayoutMap().then((layoutMap) => {
 
 该事件尚未得到主流浏览器的支持
 
+## 权限策略
+
+该 API 调用受到 `keyboard-map` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
+
+默认为 `self`，即允许在当前上下文或内嵌的其他同源上下文中使用
+
 ## 类型
 
 ```ts

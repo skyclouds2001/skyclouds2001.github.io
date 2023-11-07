@@ -197,6 +197,10 @@ self.addEventListener('backgroundfetchclick', (e) => {
 
 `BackgroundFetchUpdateUIEvent` 接口继承自 `BackgroundFetchEvent` 接口，其 `updateUI()` 方法用于更新浏览器提供的下载进度条弹出框的信息。接收一组参数，包括 `icons` 及 `title` 参数，与 `BackgroundFetchManager` 接口的 `fetch()` 方法中的相应参数相同。返回一个 Promise。
 
+## 权限 API
+
+该 API 调用需要用户授予 `background-fetch` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
+
 ## 示例
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/background-fetch.html)

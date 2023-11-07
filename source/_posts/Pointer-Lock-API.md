@@ -52,6 +52,10 @@ document.exitPointerLock()
 
 `MouseEvent` 接口的 `movementX` 属性与 `movementY` 属性仅在 `mousemove` 事件中可用，反映了前后两个 `mousemove` 事件的鼠标移动的坐标
 
+## 沙箱策略
+
+该 API 在 `<iframe>` 标签中的调用受到 `allow-pointer-lock` 沙箱策略的控制，需要将 `sandbox` 的属性指定为允许
+
 ## 类型
 
 ```ts

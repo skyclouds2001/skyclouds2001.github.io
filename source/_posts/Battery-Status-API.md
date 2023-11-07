@@ -46,6 +46,12 @@ Battery Status API 提供了访问设备电源信息和监听电源信息变化�
 
 `BatteryManager` 接口的 `levelchange` 事件在电源电量改变时触发，即 `level` 属性改变时触发
 
+## 权限策略
+
+该 API 受 `battery` 权限策略的限制（无论是通过 `Permissions-Policy` 响应头指定抑或是通过 `iframe` 元素的 `allow` 属性指定）
+
+默认为 `self`，即允许在当前上下文或内嵌的其他同源上下文中使用
+
 ## 类型
 
 ```ts

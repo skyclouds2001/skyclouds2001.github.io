@@ -94,6 +94,10 @@ function sync() {
 
 `SyncEvent` 事件继承自 `ExtendableEvent` 事件，其 `tag` 属性给出定义的同步事件标识符，其 `lastChance` 属性标识当前同步事件后是否有新的同步事件。
 
+## 权限 API
+
+该 API 调用需要用户授予 `background-sync` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
+
 ## 示例
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/sync.html)

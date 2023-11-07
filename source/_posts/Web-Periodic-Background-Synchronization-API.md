@@ -82,6 +82,10 @@ window.navigator.serviceWorker.ready.then((registration) => {
 
 事件触发周期大于或等于在注册时设置的最小执行周期。
 
+## 权限 API
+
+该 API 调用需要用户授予 `periodic-background-sync` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
+
 ```js
 const TAG = 'tag'
 

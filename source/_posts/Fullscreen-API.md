@@ -54,6 +54,12 @@ document.exitFullscreen()
 
 > 通常，监听 Web 程序内的全屏状态改变，通过监听 `Document` 接口上的即可，文档内元素的相应事件会冒泡至文档
 
+## 权限策略
+
+该 API 调用受到 `fullscreen` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
+
+默认为 `self`，即允许在当前上下文或内嵌的其他同源上下文中使用
+
 ## 类型
 
 ```ts

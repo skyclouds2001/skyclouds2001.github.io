@@ -56,6 +56,12 @@ Web Share API 允许分享文字、链接、文件或其他内容到用户指定
 
 若调用 `share()` 方法会成功，则 `canShare()` 方法一定返回 `true`；反之返回 `false`
 
+## 权限策略
+
+该 API 调用受到 `web-share` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
+
+默认为 `self`，即允许在当前上下文或内嵌的其他同源上下文中使用
+
 ## 类型
 
 ```ts

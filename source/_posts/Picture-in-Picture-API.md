@@ -56,6 +56,12 @@ document.exitPictureInPicture()
 
 `PictureInPictureWindow` 接口反映了当前的画中画模式窗口，其 `width` 只读属性和 `height` 只读属性反映了窗口的宽高，其 `resize` 事件在窗口尺寸改变时触发并返回一个 `PictureInPictureEvent` 事件
 
+## 权限策略
+
+该 API 调用受到 `picture-in-picture` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
+
+默认值是 `*`，即允许任意源的浏览上下文使用该 API
+
 ## 类型
 
 ```ts

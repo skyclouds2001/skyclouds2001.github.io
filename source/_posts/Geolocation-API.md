@@ -38,6 +38,16 @@ Geolocation API 提供了访问用户地理位置的方法
 
 `enableHighAccuracy` 可选选项接收一个布尔值，指定是否尝试获取最精确的可能值，默认值 `false`
 
+## 权限策略
+
+该 API 调用受到 `geolocation` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
+
+默认值是 `*`，即允许任意源的浏览上下文使用该 API
+
+## 权限 API
+
+该 API 调用需要获得用户 `geolocation` 权限的允许，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
+
 ```js
 navigator.geolocation.getCurrentPosition(
   (position) => {
@@ -95,6 +105,16 @@ navigator.geolocation.getCurrentPosition(
 `code` 只读属性代表错误状态码，可能为常量枚举 `PERMISSION_DENIED`、`POSITION_UNAVAILABLE` 或 `TIMEOUT` 之一，常量枚举可以通过 `GeolocationPositionError` 本身或其实例访问
 
 `message` 只读属性代表错误信息，通常是用于调试目的而非直接向用户展示
+
+## 权限策略
+
+该 API 调用受到 `geolocation` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
+
+默认为 `self`，即允许在当前上下文或内嵌的其他同源上下文中使用
+
+## 权限 API
+
+该 API 调用需要用户授予 `geolocation` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
 
 ## 类型
 

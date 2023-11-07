@@ -138,6 +138,10 @@ self.addEventListener('notificationclose', (e) => {
 >
 > * `action` 顺序代表触发事件的 action 的 ID
 
+## 权限 API
+
+该 API 调用需要用户授予 `notifications` 权限，可以调用 `Permission.query()` 方法或读取 `Notification.permission` 属性检查用户是否已授予了该权限
+
 ## 示例
 
 * [https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html](https://github.com/skyclouds2001/Frontend-Learning/blob/main/next-learning/notification.html)

@@ -58,7 +58,7 @@ document.hasStorageAccess().then((sym) => {
 
 ## 沙箱策略
 
-该 API 的调用受到 `allow-storage-access-by-user-activation` 沙箱策略的控制，在 `<iframe>` 标签中的调用需要将 `sandbox` 的属性指定为允许
+该 API 在 `<iframe>` 标签中的调用受到 `allow-storage-access-by-user-activation` 沙箱策略的控制，需要将 `sandbox` 的属性指定为允许
 
 （同时为使用该 API，也需要指定 `allow-scripts` 与 `allow-same-origin` 沙箱策略）
 
@@ -66,11 +66,11 @@ document.hasStorageAccess().then((sym) => {
 
 该 API 调用受到 `storage-access` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
 
-默认值是 `*`
+默认值是 `*`，即允许任意源的浏览上下文使用该 API
 
 ## 权限 API
 
-该 API 调用需要获得用户 `storage-access` 权限的允许，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
+该 API 调用需要用户授予 `storage-access` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
 
 ## 类型
 
