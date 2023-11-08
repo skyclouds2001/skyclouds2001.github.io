@@ -50,6 +50,12 @@ Storage Access API 允许第三方上下文中跨站内容（如嵌入 `<iframe>
 
 [Storage Access API](/2023/11/06/Storage-Access-API/)
 
+### Prioritized Task Scheduling API
+
+Prioritized Task Scheduling API 提供了标准化的任务的优先级排序的方式
+
+[Prioritized Task Scheduling API](/2023/11/08/Prioritized-Task-Scheduling-API/)
+
 ### Permissions API
 
 Permissions API 提供了编程式地检测当前浏览上下文 API 权限
