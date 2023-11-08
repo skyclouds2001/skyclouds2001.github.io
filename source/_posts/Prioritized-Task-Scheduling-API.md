@@ -125,6 +125,22 @@ controller.signal.addEventListener("prioritychange", (e) => {
 })
 ```
 
+## 输入检测
+
+`Scheduling` 接口提供了管理计划任务的方法，通过 `navigator.scheduling` 属性暴露
+
+`Scheduling` 接口的 `isInputPending()` 方法判断当前事件队列中是否有输入事件，该方法可以用于判断用户是否在与网页交互
+
+方法接收一个可选的配置项，其参数 `includeContinuous` 代表是否需考虑持续性触发的事件
+
+方法返回一个 boolean
+
+```js
+const flag = navigator.scheduling.isInputPending({
+  includeContinuous: false,
+})
+```
+
 ## 类型
 
 ```ts
@@ -171,9 +187,22 @@ interface TaskSignal extends AbortSignal {
 interface WindowOrWorkerGlobalScope {
   readonly scheduler: Scheduler
 }
+
+interface Navigator {
+  readonly scheduling: Scheduling
+}
+
+interface Scheduling {
+  isInputPending(isInputPendingOptions?: IsInputPendingOptions): boolean
+}
+
+interface IsInputPendingOptions {
+  includeContinuous: boolean
+}
 ```
 
 ## 链接
 
 * <https://developer.mozilla.org/en-US/docs/Web/API/Prioritized_Task_Scheduling_API>
 * <https://wicg.github.io/scheduling-apis/>
+* <https://wicg.github.io/is-input-pending/>
