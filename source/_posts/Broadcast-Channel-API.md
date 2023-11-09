@@ -70,6 +70,29 @@ bc.close()
 
 广播频道在没有任一浏览上下文连接至其时被回收
 
+## 示例
+
+<div id="broadcast-channel" style="gap: 25px" role="article">
+  <span>收到的信息为：</span>
+  <label>
+    <input type="text" />
+  </label>
+  <button>发送</button>
+  <script>
+    const name = 'broadcast-channel';
+    const span = document.querySelector('#broadcast-channel span');
+    const input = document.querySelector('#broadcast-channel input');
+    const button = document.querySelector('#broadcast-channel button');
+    const broadcast = new BroadcastChannel(name);
+    broadcast.addEventListener('message', (e) => {
+      span.innerText = '接收到信息为：' + e.data;
+    });
+    button.addEventListener('click', () => {
+      broadcast.postMessage(input.value);
+    });
+  </script>
+</div>
+
 ## 类型
 
 ```ts

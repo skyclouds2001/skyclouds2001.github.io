@@ -54,6 +54,31 @@ try {
 }
 ```
 
+## 示例
+
+<div id="eyedropper" style="padding: 20px; background-color: white; display: flex; justify-content: flex-start; align-items: center; gap: 25px" role="article">
+  <span>选择的颜色为：</span>
+  <div style="width: 50px; height: 50px; display: inline-block; background-color: yellow"></div>
+  <button style="border: none; outline: none">选择颜色</button>
+  <script type="module">
+    const span = document.querySelector('#eyedropper span');
+    const div = document.querySelector('#eyedropper div');
+    const button = document.querySelector('#eyedropper button');
+    const eyedropper = new window.EyeDropper();
+    button.addEventListener('click', async () => {
+      const controller = new AbortController();
+      setTimeout(() => {
+        controller.abort();
+      }, 2500);
+      const { sRGBHex } = await eyedropper.open({
+        signal: controller.signal,
+      });
+      div.style.backgroundColor = sRGBHex;
+      span.innerText = '选择的颜色为：' + sRGBHex;
+    });
+  </script>
+</div>
+
 ## 类型
 
 ```ts
