@@ -152,6 +152,12 @@ Local Font Access API 允许访问设备本地安装的字体数据
 
 [Local Font Access API](/2023/09/20/Local-Font-Access-API/)
 
+### User-Agent Client Hints API
+
+User-Agent Client Hints API 扩展了 HTTP Client Hints 以提供允许 JavaScript API 读取浏览器和操作系统信息的方式
+
+[User-Agent Client Hints API](/2023/11/09/User-Agent-Client-Hints-API/)
+
 ### Get Installed Related Apps API
 
 Get Installed Related Apps API 允许网页应用检测与之相关的应用是否已在本地设备下载
