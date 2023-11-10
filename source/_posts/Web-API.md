@@ -38,6 +38,12 @@ Web Storage API 允许用于保存键值对形式的数据
 
 [Web Storage API](/2023/10/21/Web-Storage-API/)
 
+### Cookie Store API
+
+Cookie Store API 提供了异步地管理 Cookie 的方式，同时允许在 ServiceWorker 中使用
+
+[Cookie Store API](/2023/11/09/Cookie-Store-API/)
+
 ### Storage API
 
 Storage API 提供了多个存储 API 的共享的管理方法，允许获取存储的信息并控制存储的清除策略
