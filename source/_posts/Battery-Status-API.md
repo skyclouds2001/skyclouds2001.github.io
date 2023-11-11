@@ -22,6 +22,10 @@ Battery Status API 提供了访问设备电源信息和监听电源信息变化�
 
 使用 `Navigator` 接口的 `getBattery()` 方法获取到电源管理实例，方法返回一个 Promise 的 `BatteryManager` 实例
 
+```js
+const batteryManager = await navigator.getBattery()
+```
+
 ## 获取设备电源信息
 
 `BatteryManager` 接口提供了访问设备电源信息的属性
@@ -34,6 +38,13 @@ Battery Status API 提供了访问设备电源信息和监听电源信息变化�
 
 `BatteryManager` 接口的 `level` 属性返回一个范围从 `0.0` 到 `1.0` 之间的 number，表示当前设备电源的电量百分比，若无法获取电源信息则返回 `1.0`
 
+```js
+batteryManager.charging
+batteryManager.chargingTime
+batteryManager.dischargingTime
+batteryManager.level
+```
+
 ## 监听设备电源信息更新
 
 `BatteryManager` 接口提供了监听设备电源信息变化的事件
@@ -45,6 +56,21 @@ Battery Status API 提供了访问设备电源信息和监听电源信息变化�
 `BatteryManager` 接口的 `dischargingtimechange` 事件在电源电量耗尽时间改变时触发，即 `dischargingTime` 属性改变时触发
 
 `BatteryManager` 接口的 `levelchange` 事件在电源电量改变时触发，即 `level` 属性改变时触发
+
+```js
+batteryManager.addEventListener('chargingchange', () => {
+  console.log(batteryManager.charging)
+})
+batteryManager.addEventListener('chargingtimechange', () => {
+    console.log(batteryManager.chargingTime)
+})
+batteryManager.addEventListener('dischargingtimechange', () => {
+    console.log(batteryManager.dischargingTime)
+})
+batteryManager.addEventListener('levelchange', () => {
+    console.log(batteryManager.level)
+})
+```
 
 ## 权限策略
 
