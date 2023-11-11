@@ -218,6 +218,77 @@ self.addEventListener('cookiechange', (e) => {
 })
 ```
 
+## 示例
+
+<div id="cookie-store" role="article">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th>Operation</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <hr />
+
+  <form>
+    <label for="name">name</label>
+    <input id="name" />
+    <label for="value">value</label>
+    <input id="value" />
+    <button id="submit">submit</button>
+  </form>
+
+  <style>
+    #cookie-store {
+      gap: 25px;
+    }
+  </style>
+
+  <script type="module">
+    const generateRecordHTML = (cookie) => {
+      const record = document.createElement('tr');
+      const name = document.createElement('td');
+      name.innerText = cookie.name;
+      record.appendChild(name);
+      const value = document.createElement('td');
+      value.innerText = cookie.value;
+      record.appendChild(value);
+      const operation = document.createElement('td');
+      operation.innerText = 'Delete';
+      operation.addEventListener('click', () => {
+        if (window.confirm('delete cookie')) {
+          window.cookieStore.delete(cookie);
+          list.removeChild(record);
+        }
+      });
+      record.appendChild(operation);
+      return record;
+    };
+    const list = document.querySelector('#cookie-store table tbody');
+    const cookies = await window.cookieStore.getAll();
+    const fragment = document.createDocumentFragment();
+    for (const cookie of cookies) {
+      fragment.appendChild(generateRecordHTML(cookie));
+    }
+    list.appendChild(fragment);
+    const name = document.querySelector('#cookie-store #name');
+    const value = document.querySelector('#cookie-store #value');
+    const submit = document.querySelector('#cookie-store #submit');
+    submit.addEventListener('click', () => {
+      const cookie = {
+        name: name.value,
+        value: value.value,
+      };
+      window.cookieStore.set(cookie);
+      list.appendChild(generateRecordHTML(cookie));
+    });
+  </script>
+</div>
+
 ## 类型
 
 ```ts

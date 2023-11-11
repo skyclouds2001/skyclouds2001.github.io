@@ -151,7 +151,7 @@ interface Screen extends EventTarget {
   readonly isExtended: boolean
 
   onchange: ((this: Screen, ev: Event) => any) | null
-};
+}
 
 interface Window {
   getScreenDetails(): Promise<ScreenDetails>

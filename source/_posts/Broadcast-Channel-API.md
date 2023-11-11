@@ -78,7 +78,7 @@ bc.close()
     <input type="text" />
   </label>
   <button>发送</button>
-  <script>
+  <script type="module">
     const name = 'broadcast-channel';
     const span = document.querySelector('#broadcast-channel span');
     const input = document.querySelector('#broadcast-channel input');
