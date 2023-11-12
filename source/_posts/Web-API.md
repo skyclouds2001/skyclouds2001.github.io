@@ -110,6 +110,12 @@ Web Share API 允许分享文字、链接、文件或其他内容到用户指定
 
 [Web Share API](/2023/10/30/Web-Share-API/)
 
+### Contact Picker API
+
+Contact Picker API 允许用户从通讯录选择记录并与网页应用分享
+
+[Contact Picker API](/2023/11/12/Contact-Picker-API/)
+
 ### Pointer Lock API
 
 Pointer Lock API 允许控制鼠标的输入形式，将鼠标的移动从光标位置移动转换为自定义的形式（同时隐藏光标）
