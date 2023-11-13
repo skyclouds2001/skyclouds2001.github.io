@@ -116,6 +116,12 @@ Contact Picker API 允许用户从通讯录选择记录并与网页应用分享
 
 [Contact Picker API](/2023/11/12/Contact-Picker-API/)
 
+### DeviceOrientation Event
+
+DeviceOrientation Event 允许监测设备的物理朝向及物理加速度
+
+[DeviceOrientation Event](/2023/11/13/DeviceOrientation-Event/)
+
 ### Pointer Lock API
 
 Pointer Lock API 允许控制鼠标的输入形式，将鼠标的移动从光标位置移动转换为自定义的形式（同时隐藏光标）
