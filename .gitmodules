@@ -1,0 +1,3 @@
+[submodule "themes/fantastic"]
+	path = themes/fantastic
+	url = https://github.com/skyclouds2001/hexo-theme-fantastic
