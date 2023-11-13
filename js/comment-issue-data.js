@@ -333,14 +333,12 @@ function loadIssueData(appId, appKey, userName, userRepo, isValine) {
                 }
             }
         }
-        // console.clear();
-        console.log("~~~~欢迎光临！记得有时间多来看看哦，https://removeif.github.io/ ~~~~")
+        console.log(`~~~~欢迎光临！记得有时间多来看看哦，${location.origin} ~~~~`)
     }
         ,
         500
     )
 }
-// $(document).ready(loadIssueData());
 
 //load issue data completely execute
 function loadPjax() {

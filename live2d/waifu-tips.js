@@ -92,7 +92,6 @@ String.prototype.render = function(context) {
 };
 
 var re = /x/;
-console.log(re);
 
 function empty(obj) {return typeof obj=="undefined"||obj==null||obj==""?true:false}
 function getRandText(text) {return Array.isArray(text) ? text[Math.floor(Math.random() * text.length + 1)-1] : text}

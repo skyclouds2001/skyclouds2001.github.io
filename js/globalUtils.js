@@ -105,11 +105,9 @@ function isNightRange(beginTime, endTime) {
     n.setHours(strn[0]);
     n.setMinutes(strn[1]);
 
-    console.log(n.getTime());
     if (n.getTime() - b.getTime() > 0 && n.getTime() - e.getTime() < 0) {
         return true;
     } else {
-        console.log("now Date is：" + n.getHours() + ":" + n.getMinutes() + "，is not Night！");
         return false;
     }
 }

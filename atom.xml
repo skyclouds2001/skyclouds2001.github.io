@@ -6,7 +6,7 @@
   <link href="https://skyclouds2001.github.io/atom.xml" rel="self"/>
   
   <link href="https://skyclouds2001.github.io/"/>
-  <updated>2023-11-02T08:05:58.007Z</updated>
+  <updated>2023-11-13T08:25:57.914Z</updated>
   <id>https://skyclouds2001.github.io/</id>
   
   <author>
@@ -17,11 +17,372 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>DeviceOrientation Event</title>
+    <link href="https://skyclouds2001.github.io/2023/11/13/DeviceOrientation-Event/"/>
+    <id>https://skyclouds2001.github.io/2023/11/13/DeviceOrientation-Event/</id>
+    <published>2023-11-13T06:35:50.000Z</published>
+    <updated>2023-11-13T08:25:57.914Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;DeviceOrientation Event 允许监测设备的物理朝向及物理加速度&lt;/p&gt;
+&lt;h2 id=&quot;物理加速度&quot;&gt;&lt;a href=&quot;#物理加速度&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Contact Picker API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/12/Contact-Picker-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/12/Contact-Picker-API/</id>
+    <published>2023-11-11T19:37:51.000Z</published>
+    <updated>2023-11-12T04:56:53.028Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Contact Picker API 允许用户从通讯录选择记录并与网页应用分享&lt;/p&gt;
+&lt;p&gt;该 API 通过 &lt;code&gt;ContactsManager&lt;/code&gt; 接口使用，并通过</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cookie Store API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/09/Cookie-Store-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/09/Cookie-Store-API/</id>
+    <published>2023-11-09T15:09:33.000Z</published>
+    <updated>2023-11-11T19:37:27.912Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Cookie Store API 提供了异步地管理 Cookie 的方式，同时允许在 ServiceWorker 中使用&lt;/p&gt;
+&lt;p&gt;在该 API 之前，使用 cookie 的方式是通过读写</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>User-Agent Client Hints API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/09/User-Agent-Client-Hints-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/09/User-Agent-Client-Hints-API/</id>
+    <published>2023-11-09T05:55:01.000Z</published>
+    <updated>2023-11-10T13:15:20.870Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;User-Agent Client Hints API 扩展了 HTTP Client Hints 以提供允许 JavaScript API 读取浏览器和操作系统信息的方式&lt;/p&gt;
+&lt;p&gt;该</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Prioritized Task Scheduling API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/08/Prioritized-Task-Scheduling-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/08/Prioritized-Task-Scheduling-API/</id>
+    <published>2023-11-08T03:39:12.000Z</published>
+    <updated>2023-11-10T13:15:20.833Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Prioritized Task Scheduling API 提供了标准化的任务的优先级排序的方式&lt;/p&gt;
+&lt;p&gt;通过该 API</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Screen Orientation API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/07/Screen-Orientation-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/07/Screen-Orientation-API/</id>
+    <published>2023-11-07T14:15:33.000Z</published>
+    <updated>2023-11-10T13:15:20.761Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Screen Orientation API 允许获取屏幕朝向信息和监听屏幕朝向信息变化&lt;/p&gt;
+&lt;p&gt;该 API 通过 &lt;code&gt;ScreenOrientation&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Storage Access API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/06/Storage-Access-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/06/Storage-Access-API/</id>
+    <published>2023-11-06T08:06:39.000Z</published>
+    <updated>2023-11-10T13:15:20.727Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Storage Access API 允许第三方上下文中跨站内容（如嵌入 &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; 标签中）获取对未分区 cookie （即以传统方式存储的</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Storage API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/06/Storage-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/06/Storage-API/</id>
+    <published>2023-11-06T06:00:16.000Z</published>
+    <updated>2023-11-10T13:15:20.726Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Storage API 提供了多个存储 API 的共享的管理方法，允许获取存储的信息并控制存储的清除策略&lt;/p&gt;
+&lt;p&gt;通常管理的存储包括包括 IndexedDB 、 Cache</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Permissions API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/05/Permissions-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/05/Permissions-API/</id>
+    <published>2023-11-05T06:39:30.000Z</published>
+    <updated>2023-11-10T13:15:20.522Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Permissions API 提供了编程式地检测当前浏览上下文 API 权限&lt;/p&gt;
+&lt;p&gt;可以用于确定对应的 API 是否已授予权限或被拒绝授予权限，或等待授权权限&lt;/p&gt;
+&lt;p&gt;同时</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Beacon API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/04/Beacon-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/04/Beacon-API/</id>
+    <published>2023-11-04T11:20:29.000Z</published>
+    <updated>2023-11-10T13:15:20.491Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Beacon API 可用于向服务器发送 HTTP POST 网络请求&lt;/p&gt;
+&lt;p&gt;通常目的旨在向服务器发送用户数据，特别是在页面关闭时机（能够避免阻碍下一网页的加载）&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Window Management API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/04/Window-Management-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/04/Window-Management-API/</id>
+    <published>2023-11-03T18:39:55.000Z</published>
+    <updated>2023-11-11T09:28:56.305Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Window Management API 允许获取连接到设备的显示器的详细信息，并将窗口放置在指定的屏幕上&lt;/p&gt;
+&lt;h2 id=&quot;检测是否多屏&quot;&gt;&lt;a href=&quot;#检测是否多屏&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Clipboard API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/02/Clipboard-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/02/Clipboard-API/</id>
+    <published>2023-11-02T12:51:52.000Z</published>
+    <updated>2023-11-10T13:15:20.718Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Clipboard API 允许异步地读写剪切板&lt;/p&gt;
+&lt;p&gt;剪切板操作通过 &lt;code&gt;Navigator&lt;/code&gt; 接口的 &lt;code&gt;clipboard&lt;/code&gt; 属性暴露的</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Broadcast Channel API</title>
     <link href="https://skyclouds2001.github.io/2023/11/02/Broadcast-Channel-API/"/>
     <id>https://skyclouds2001.github.io/2023/11/02/Broadcast-Channel-API/</id>
     <published>2023-11-02T07:30:25.000Z</published>
-    <updated>2023-11-02T08:05:58.007Z</updated>
+    <updated>2023-11-11T11:08:52.956Z</updated>
     
     
       
@@ -51,7 +412,7 @@
     <link href="https://skyclouds2001.github.io/2023/11/01/Pyodide/"/>
     <id>https://skyclouds2001.github.io/2023/11/01/Pyodide/</id>
     <published>2023-11-01T06:34:58.000Z</published>
-    <updated>2023-11-01T11:27:21.094Z</updated>
+    <updated>2023-11-10T13:15:20.077Z</updated>
     
     
       
@@ -80,7 +441,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/31/Document-Picture-in-Picture-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/31/Document-Picture-in-Picture-API/</id>
     <published>2023-10-31T14:09:38.000Z</published>
-    <updated>2023-10-31T15:28:57.270Z</updated>
+    <updated>2023-11-10T13:15:20.053Z</updated>
     
     
       
@@ -109,7 +470,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/30/Vibration-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/30/Vibration-API/</id>
     <published>2023-10-30T14:14:06.000Z</published>
-    <updated>2023-10-30T14:33:39.229Z</updated>
+    <updated>2023-11-10T13:15:20.016Z</updated>
     
     
       
@@ -140,7 +501,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/30/Get-Installed-Related-Apps-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/30/Get-Installed-Related-Apps-API/</id>
     <published>2023-10-30T09:59:29.000Z</published>
-    <updated>2023-10-30T11:35:59.083Z</updated>
+    <updated>2023-11-10T13:15:19.982Z</updated>
     
     
       
@@ -170,7 +531,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/30/Web-Share-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/30/Web-Share-API/</id>
     <published>2023-10-30T04:03:44.000Z</published>
-    <updated>2023-10-30T08:51:46.963Z</updated>
+    <updated>2023-11-10T13:15:20.729Z</updated>
     
     
       
@@ -200,7 +561,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/29/VirtualKeyboard-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/29/VirtualKeyboard-API/</id>
     <published>2023-10-29T06:13:52.000Z</published>
-    <updated>2023-10-29T08:48:52.512Z</updated>
+    <updated>2023-11-10T13:15:19.915Z</updated>
     
     
       
@@ -230,7 +591,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/28/Keyboard-Map-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/28/Keyboard-Map-API/</id>
     <published>2023-10-28T08:40:59.000Z</published>
-    <updated>2023-10-28T11:46:11.092Z</updated>
+    <updated>2023-11-10T13:15:20.721Z</updated>
     
     
       
@@ -260,7 +621,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/27/EyeDropper-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/27/EyeDropper-API/</id>
     <published>2023-10-27T14:49:36.000Z</published>
-    <updated>2023-10-28T12:39:53.355Z</updated>
+    <updated>2023-11-10T13:15:20.908Z</updated>
     
     
       
@@ -291,7 +652,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/26/Network-Information-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/26/Network-Information-API/</id>
     <published>2023-10-26T04:08:55.000Z</published>
-    <updated>2023-10-28T11:58:28.763Z</updated>
+    <updated>2023-11-10T13:15:19.841Z</updated>
     
     
       
@@ -321,7 +682,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/25/Picture-in-Picture-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/25/Picture-in-Picture-API/</id>
     <published>2023-10-25T14:58:49.000Z</published>
-    <updated>2023-10-28T12:03:47.680Z</updated>
+    <updated>2023-11-10T13:15:20.723Z</updated>
     
     
       
@@ -351,7 +712,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/25/Fullscreen-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/25/Fullscreen-API/</id>
     <published>2023-10-25T11:28:58.000Z</published>
-    <updated>2023-10-28T12:41:36.363Z</updated>
+    <updated>2023-11-10T13:15:20.719Z</updated>
     
     
       
@@ -381,7 +742,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/24/Keyboard-Lock-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/24/Keyboard-Lock-API/</id>
     <published>2023-10-24T11:31:18.000Z</published>
-    <updated>2023-10-28T11:46:52.226Z</updated>
+    <updated>2023-11-10T13:15:19.838Z</updated>
     
     
       
@@ -411,7 +772,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/24/Pointer-Lock-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/24/Pointer-Lock-API/</id>
     <published>2023-10-24T08:39:54.000Z</published>
-    <updated>2023-10-28T12:05:56.825Z</updated>
+    <updated>2023-11-10T13:15:20.724Z</updated>
     
     
       
@@ -440,7 +801,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/24/Screen-Wake-Lock-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/24/Screen-Wake-Lock-API/</id>
     <published>2023-10-23T16:18:48.000Z</published>
-    <updated>2023-10-28T12:18:12.088Z</updated>
+    <updated>2023-11-10T13:15:20.725Z</updated>
     
     
       
@@ -470,7 +831,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/21/Battery-Status-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/21/Battery-Status-API/</id>
     <published>2023-10-21T14:17:43.000Z</published>
-    <updated>2023-10-28T12:53:38.936Z</updated>
+    <updated>2023-11-11T12:35:50.966Z</updated>
     
     
       
@@ -500,7 +861,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/21/Web-Storage-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/21/Web-Storage-API/</id>
     <published>2023-10-21T07:56:34.000Z</published>
-    <updated>2023-10-28T12:29:44.958Z</updated>
+    <updated>2023-11-10T13:15:19.853Z</updated>
     
     
       
@@ -529,7 +890,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/20/Cookie-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/20/Cookie-API/</id>
     <published>2023-10-20T04:30:37.000Z</published>
-    <updated>2023-10-28T12:47:36.736Z</updated>
+    <updated>2023-11-10T13:15:19.834Z</updated>
     
     
       
@@ -559,7 +920,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/15/Geolocation-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/15/Geolocation-API/</id>
     <published>2023-10-15T06:56:35.000Z</published>
-    <updated>2023-10-28T12:38:46.247Z</updated>
+    <updated>2023-11-10T13:15:20.720Z</updated>
     
     
       
@@ -589,7 +950,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/05/File-System-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/05/File-System-API/</id>
     <published>2023-10-05T07:53:12.000Z</published>
-    <updated>2023-10-28T13:24:57.294Z</updated>
+    <updated>2023-11-10T13:15:19.885Z</updated>
     
     
       
@@ -618,7 +979,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/03/Window-Controls-Overlay-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/03/Window-Controls-Overlay-API/</id>
     <published>2023-10-02T19:44:41.000Z</published>
-    <updated>2023-10-28T12:20:40.040Z</updated>
+    <updated>2023-11-10T13:15:19.854Z</updated>
     
     
       
@@ -647,7 +1008,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/02/Badging-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/02/Badging-API/</id>
     <published>2023-10-02T14:14:54.000Z</published>
-    <updated>2023-10-28T12:52:44.774Z</updated>
+    <updated>2023-11-10T13:15:20.716Z</updated>
     
     
       
@@ -678,7 +1039,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/01/Content-Index-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/01/Content-Index-API/</id>
     <published>2023-10-01T12:12:19.000Z</published>
-    <updated>2023-10-28T12:49:03.566Z</updated>
+    <updated>2023-11-10T13:15:19.833Z</updated>
     
     
       
@@ -708,7 +1069,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/30/PWA/"/>
     <id>https://skyclouds2001.github.io/2023/09/30/PWA/</id>
     <published>2023-09-30T15:53:34.000Z</published>
-    <updated>2023-10-28T12:06:14.599Z</updated>
+    <updated>2023-11-10T13:15:19.843Z</updated>
     
     
       
@@ -738,7 +1099,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/28/ServiceWorker-VI/"/>
     <id>https://skyclouds2001.github.io/2023/09/28/ServiceWorker-VI/</id>
     <published>2023-09-28T02:20:34.000Z</published>
-    <updated>2023-10-28T12:37:32.074Z</updated>
+    <updated>2023-11-10T13:15:19.850Z</updated>
     
     
       
@@ -902,7 +1263,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/22/SharedWorker/"/>
     <id>https://skyclouds2001.github.io/2023/09/22/SharedWorker/</id>
     <published>2023-09-21T18:31:34.000Z</published>
-    <updated>2023-10-28T12:28:19.735Z</updated>
+    <updated>2023-11-10T13:15:19.851Z</updated>
     
     
       
@@ -931,7 +1292,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/21/Worker/"/>
     <id>https://skyclouds2001.github.io/2023/09/21/Worker/</id>
     <published>2023-09-21T04:36:10.000Z</published>
-    <updated>2023-10-28T12:28:14.669Z</updated>
+    <updated>2023-11-10T13:15:19.856Z</updated>
     
     
       
@@ -961,7 +1322,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/20/ServiceWorker-II/"/>
     <id>https://skyclouds2001.github.io/2023/09/20/ServiceWorker-II/</id>
     <published>2023-09-20T07:04:36.000Z</published>
-    <updated>2023-10-28T12:37:17.150Z</updated>
+    <updated>2023-11-10T13:15:19.846Z</updated>
     
     
       
@@ -990,7 +1351,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/20/Local-Font-Access-API/"/>
     <id>https://skyclouds2001.github.io/2023/09/20/Local-Font-Access-API/</id>
     <published>2023-09-20T04:38:21.000Z</published>
-    <updated>2023-10-28T11:50:24.330Z</updated>
+    <updated>2023-11-10T13:15:20.722Z</updated>
     
     
       
@@ -1049,7 +1410,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/16/ServiceWorker-III/"/>
     <id>https://skyclouds2001.github.io/2023/09/16/ServiceWorker-III/</id>
     <published>2023-09-15T16:35:28.000Z</published>
-    <updated>2023-10-28T12:37:20.504Z</updated>
+    <updated>2023-11-10T13:15:19.847Z</updated>
     
     
       
@@ -1078,7 +1439,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/14/Web-Periodic-Background-Synchronization-API/"/>
     <id>https://skyclouds2001.github.io/2023/09/14/Web-Periodic-Background-Synchronization-API/</id>
     <published>2023-09-14T15:42:48.000Z</published>
-    <updated>2023-10-28T12:31:44.307Z</updated>
+    <updated>2023-11-13T10:17:46.609Z</updated>
     
     
       
@@ -1108,7 +1469,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/13/Background-Fetch-API/"/>
     <id>https://skyclouds2001.github.io/2023/09/13/Background-Fetch-API/</id>
     <published>2023-09-13T07:43:44.000Z</published>
-    <updated>2023-10-28T12:51:38.421Z</updated>
+    <updated>2023-11-10T13:15:20.715Z</updated>
     
     
       
@@ -1137,7 +1498,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/12/Web-Background-Synchronization-API/"/>
     <id>https://skyclouds2001.github.io/2023/09/12/Web-Background-Synchronization-API/</id>
     <published>2023-09-12T00:45:37.000Z</published>
-    <updated>2023-10-28T12:33:24.739Z</updated>
+    <updated>2023-11-10T13:15:20.727Z</updated>
     
     
       
@@ -1167,7 +1528,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/10/Push-API/"/>
     <id>https://skyclouds2001.github.io/2023/09/10/Push-API/</id>
     <published>2023-09-10T15:58:21.000Z</published>
-    <updated>2023-10-24T08:47:47.764Z</updated>
+    <updated>2023-11-10T13:15:20.724Z</updated>
     
     
       
@@ -1197,7 +1558,7 @@
     <link href="https://skyclouds2001.github.io/2023/09/10/Notifications-API/"/>
     <id>https://skyclouds2001.github.io/2023/09/10/Notifications-API/</id>
     <published>2023-09-10T13:26:07.000Z</published>
-    <updated>2023-10-28T12:02:30.604Z</updated>
+    <updated>2023-11-10T13:15:20.722Z</updated>
     
     
       
@@ -1226,7 +1587,7 @@
     <link href="https://skyclouds2001.github.io/2023/08/31/ServiceWorker-V/"/>
     <id>https://skyclouds2001.github.io/2023/08/31/ServiceWorker-V/</id>
     <published>2023-08-31T15:47:47.000Z</published>
-    <updated>2023-10-28T12:37:29.016Z</updated>
+    <updated>2023-11-10T13:15:19.849Z</updated>
     
     
       
@@ -1256,7 +1617,7 @@
     <link href="https://skyclouds2001.github.io/2023/08/31/ServiceWorker-IV/"/>
     <id>https://skyclouds2001.github.io/2023/08/31/ServiceWorker-IV/</id>
     <published>2023-08-31T15:46:02.000Z</published>
-    <updated>2023-10-28T12:37:24.558Z</updated>
+    <updated>2023-11-10T13:15:19.848Z</updated>
     
     
       
@@ -1285,7 +1646,7 @@
     <link href="https://skyclouds2001.github.io/2023/08/26/ServiceWorker-I/"/>
     <id>https://skyclouds2001.github.io/2023/08/26/ServiceWorker-I/</id>
     <published>2023-08-26T07:13:32.000Z</published>
-    <updated>2023-10-28T12:36:24.399Z</updated>
+    <updated>2023-11-10T13:15:19.845Z</updated>
     
     
       
@@ -1374,7 +1735,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/Web-API/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/Web-API/</id>
     <published>2022-12-14T14:55:58.000Z</published>
-    <updated>2023-11-02T07:38:21.212Z</updated>
+    <updated>2023-11-13T08:30:36.591Z</updated>
     
     
       
@@ -1548,7 +1909,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/react/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/react/</id>
     <published>2022-12-14T13:47:54.000Z</published>
-    <updated>2023-10-24T08:50:40.649Z</updated>
+    <updated>2023-11-10T13:15:20.558Z</updated>
     
     
       
@@ -1568,8 +1929,6 @@
     
     <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
     
-    <category term="JavaScript" scheme="https://skyclouds2001.github.io/tags/JavaScript/"/>
-    
     <category term="FrameWork" scheme="https://skyclouds2001.github.io/tags/FrameWork/"/>
     
   </entry>
@@ -1579,7 +1938,7 @@
     <link href="https://skyclouds2001.github.io/2022/12/14/vue/"/>
     <id>https://skyclouds2001.github.io/2022/12/14/vue/</id>
     <published>2022-12-14T13:47:47.000Z</published>
-    <updated>2023-10-24T08:50:40.584Z</updated>
+    <updated>2023-11-10T13:15:20.559Z</updated>
     
     
       
@@ -1598,8 +1957,6 @@
     
     
     <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
-    
-    <category term="JavaScript" scheme="https://skyclouds2001.github.io/tags/JavaScript/"/>
     
     <category term="FrameWork" scheme="https://skyclouds2001.github.io/tags/FrameWork/"/>
     
@@ -1747,7 +2104,7 @@
     <link href="https://skyclouds2001.github.io/2022/08/14/jquery/"/>
     <id>https://skyclouds2001.github.io/2022/08/14/jquery/</id>
     <published>2022-08-14T14:55:26.000Z</published>
-    <updated>2023-10-24T08:50:40.516Z</updated>
+    <updated>2023-11-10T13:15:20.557Z</updated>
     
     
       
@@ -1766,8 +2123,6 @@
     
     
     <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
-    
-    <category term="JavaScript" scheme="https://skyclouds2001.github.io/tags/JavaScript/"/>
     
     <category term="Library" scheme="https://skyclouds2001.github.io/tags/Library/"/>
     
@@ -1952,17 +2307,14 @@
     <link href="https://skyclouds2001.github.io/2022/07/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     <id>https://skyclouds2001.github.io/2022/07/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</id>
     <published>2022-07-20T09:20:28.000Z</published>
-    <updated>2023-10-24T08:43:12.615Z</updated>
+    <updated>2023-11-11T19:34:04.838Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;说明：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;以下建议学习时间按&lt;strong&gt;假期&lt;/strong&gt;计算，可根据个人实际情况合理调整&lt;/li&gt;
-&lt;li&gt;关于视频学习资源，&lt;strong&gt;B站&lt;/stron</summary>
+    <summary type="html">&lt;img</summary>
         
       
     
