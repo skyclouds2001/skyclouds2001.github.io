@@ -245,6 +245,7 @@ self.addEventListener('cookiechange', (e) => {
   <style>
     #cookie-store {
       gap: 25px;
+      backdrop-filter: invert(100%);
     }
   </style>
 
