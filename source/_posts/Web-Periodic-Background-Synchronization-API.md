@@ -82,10 +82,6 @@ window.navigator.serviceWorker.ready.then((registration) => {
 
 事件触发周期大于或等于在注册时设置的最小执行周期。
 
-## 权限 API
-
-该 API 调用需要用户授予 `periodic-background-sync` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
-
 ```js
 const TAG = 'tag'
 
@@ -97,6 +93,10 @@ self.addEventListener('periodicsync', (e) => {
 ```
 
 `PeriodicSyncEvent` 事件继承自 `ExtendableEvent` 事件。其 `tag` 属性返回事件对应的周期后台同步任务的唯一标识符。
+
+## 权限 API
+
+该 API 调用需要用户授予 `periodic-background-sync` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
 
 ## 示例
 
