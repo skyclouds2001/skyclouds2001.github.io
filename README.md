@@ -2,4 +2,4 @@
 
 基于 [Hexo Blog Framework](https://hexo.io/)
 
-基于 [Amazing 主题](https://github.com/removeif/hexo-theme-amazing)
+基于 [Fantastic 主题](https://github.com/skyclouds2001/hexo-theme-fantastic)
