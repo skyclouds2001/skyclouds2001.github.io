@@ -24,6 +24,14 @@ mathJax: false
 
 UI Events 定义了与用户交互的事件
 
+[UI Events](/2023/11/15/UI-Events/)
+
+### User Activation API
+
+User Activation API 用于检测当前网页的用户激活状态
+
+[User Activation API](/2023/11/15/User-Activation-API/)
+
 ### Beacon API
 
 Beacon API 可用于异步地向服务器发送 HTTP POST 网络请求
