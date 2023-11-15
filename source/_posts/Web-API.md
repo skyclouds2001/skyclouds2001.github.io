@@ -74,6 +74,12 @@ Broadcast Channel API 允许在同源的浏览上下文中交换数据
 
 [Broadcast Channel API](/2023/11/02/Broadcast-Channel-API/)
 
+### Drag and Drop API
+
+Drag and Drop API 允许网页应用使用拖放功能
+
+[Drag and Drop API](/2023/11/14/Drag-and-Drop-API/)
+
 ### Fullscreen API
 
 Fullscreen API 允许某个特定的元素管理全屏模式
