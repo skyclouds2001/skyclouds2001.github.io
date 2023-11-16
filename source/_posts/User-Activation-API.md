@@ -42,6 +42,42 @@ User Activation API 用于检测当前网页的用户激活状态
 
 可通过 `UserActivation` 接口的 `isActive` 属性检测
 
+## 示例
+
+<div id="user-activation" role="article">
+  <table>
+    <thead>
+      <tr>
+        <th>粘性激活</th>
+        <th>瞬时激活</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="hasBeenActive">false</td>
+        <td id="isActive">false</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <style>
+    #user-activation {
+      gap: 25px;
+    }
+  </style>
+
+  <script type="module">
+    const hasBeenActive = document.querySelector('#user-activation #hasBeenActive');
+    const isActive = document.querySelector('#user-activation #isActive');
+    const update = () => {
+      hasBeenActive.innerText = navigator.userActivation.hasBeenActive;
+      isActive.innerText = navigator.userActivation.isActive;
+      window.requestAnimationFrame(update);
+    };
+    window.requestAnimationFrame(update);
+  </script>
+</div>
+
 ## 类型
 
 ```ts

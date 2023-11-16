@@ -16,207 +16,341 @@ uniqueId: '2023-11-09 15:09:33/Cookie Store API.html'
 mathJax: false
 ---
 
-Cookie Store API 提供了异步地管理 Cookie 的方式，同时允许在 ServiceWorker 中使用
+[//]: # (Cookie Store API 提供了异步地管理 Cookie 的方式，同时允许在 ServiceWorker 中使用)
 
-在该 API 之前，使用 cookie 的方式是通过读写 `document.cookie` 属性，但其是单线程同步的，可能会阻碍事件循环；并且其无法在 ServiceWorker 中使用
+[//]: # ()
+[//]: # (在该 API 之前，使用 cookie 的方式是通过读写 `document.cookie` 属性，但其是单线程同步的，可能会阻碍事件循环；并且其无法在 ServiceWorker 中使用)
 
-## Cookie 的读写
+[//]: # ()
+[//]: # (## Cookie 的读写)
 
-Window 环境中通过 `Window` 接口的 `cookieStore` 属性使用
+[//]: # ()
+[//]: # (Window 环境中通过 `Window` 接口的 `cookieStore` 属性使用)
 
-Window 环境中通过 `ServiceWorkerGlobalScope` 接口的 `cookieStore` 属性使用
+[//]: # ()
+[//]: # (Window 环境中通过 `ServiceWorkerGlobalScope` 接口的 `cookieStore` 属性使用)
 
-```js
-window.cookieStore
-self.cookieStore
-```
+[//]: # ()
+[//]: # (```js)
 
-### 读取单条 Cookie
+[//]: # (window.cookieStore)
 
-`CookieStore` 接口的 `get()` 方法用于获取单条 Cookie
+[//]: # (self.cookieStore)
 
-方法接收一个字符串，代表 Cookie 的名称；或接收一个对象，其 `name` 参数与 `url` 参数均需指定
+[//]: # (```)
 
-方法返回一个 Promise 的 `CookieListItem` 结构，代表匹配到的 Cookie 信息；反之返回 `undefined`
+[//]: # ()
+[//]: # (### 读取单条 Cookie)
 
-```js
-const cookie = await window.cookieStore.get('cookie')
-const cookie = await window.cookieStore.get({
-  name: 'cookie',
-  url: 'https://www.example.com',
-})
-```
+[//]: # ()
+[//]: # (`CookieStore` 接口的 `get&#40;&#41;` 方法用于获取单条 Cookie)
 
-### 读取多条 Cookie
+[//]: # ()
+[//]: # (方法接收一个字符串，代表 Cookie 的名称；或接收一个对象，其 `name` 参数与 `url` 参数均需指定)
 
-`CookieStore` 接口的 `getAll()` 方法用于获取单条 Cookie
+[//]: # ()
+[//]: # (方法返回一个 Promise 的 `CookieListItem` 结构，代表匹配到的 Cookie 信息；反之返回 `undefined`)
 
-方法接收一个字符串，代表 Cookie 的名称；或接收一个对象，其 `name` 参数与 `url` 参数均需指定
+[//]: # ()
+[//]: # (```js)
 
-方法返回一个 Promise 的 `CookieList` 结构，代表匹配到的所有 Cookie
+[//]: # (const cookie = await window.cookieStore.get&#40;'cookie'&#41;)
 
-```js
-const cookies = await window.cookieStore.getAll('key')
-const cookies = await window.cookieStore.getAll({
-  name: 'key',
-  url: 'https://www.example.com',
-})
-```
+[//]: # (const cookie = await window.cookieStore.get&#40;{)
 
-### 设置 Cookie
+[//]: # (  name: 'cookie',)
 
-`CookieStore` 接口的 `set()` 方法用于设置 Cookie
+[//]: # (  url: 'https://www.example.com',)
 
-方法可以接收两个字符串，分别代表 Cookie 的名称与值；亦可以接收一个配置项，各项如下所示：
+[//]: # (}&#41;)
 
-* `name` 属性必需
-* `value` 属性必需
-* `expires` 属性可选，默认 `null`
-* `domain` 属性可选，默认 `null`
-* `path` 属性可选，默认 `"/"`
-* `sameSite` 属性可选，默认 `"strict"`
-* `partitioned` 属性可选，默认 `false`
+[//]: # (```)
 
-方法返回一个 Promise
+[//]: # ()
+[//]: # (### 读取多条 Cookie)
 
-```js
-await window.cookieStore.set('key', 'value')
-await window.cookieStore.set({
-  name: 'key',
-  value: 'value',
-  expires: null,
-  domain: null,
-  path: '/',
-  sameSite: 'strict',
-  partitioned: false,
-})
-```
+[//]: # ()
+[//]: # (`CookieStore` 接口的 `getAll&#40;&#41;` 方法用于获取单条 Cookie)
 
-### 移除 Cookie
+[//]: # ()
+[//]: # (方法接收一个字符串，代表 Cookie 的名称；或接收一个对象，其 `name` 参数与 `url` 参数均需指定)
 
-`CookieStore` 接口的 `delete()` 方法用于移除 Cookie
+[//]: # ()
+[//]: # (方法返回一个 Promise 的 `CookieList` 结构，代表匹配到的所有 Cookie)
 
-方法接收一个字符串，代表 Cookie 的名称；或接收一个对象，其 `name` 参数必需指定；`path` 参数 `domain` 参数 `partitioned` 参数可选
+[//]: # ()
+[//]: # (```js)
 
-方法返回一个 Promise
+[//]: # (const cookies = await window.cookieStore.getAll&#40;'key'&#41;)
 
-```js
-await window.cookieStore.delete('key')
-await window.cookieStore.delete({
-  name: 'key',
-  path: '/',
-  domain: null,
-  partitioned: false,
-})
-```
+[//]: # (const cookies = await window.cookieStore.getAll&#40;{)
 
-### Cookie 详细信息
+[//]: # (  name: 'key',)
 
-`CookieList` 结构相当于 `CookieListItem` 结构的数组
+[//]: # (  url: 'https://www.example.com',)
 
-`CookieListItem` 结构反映了 Cookie 的详细信息
+[//]: # (}&#41;)
 
-`CookieListItem` 结构的 `name` 属性返回一个字符串，代表 Cookie 的名称
+[//]: # (```)
 
-`CookieListItem` 结构的 `value` 属性返回一个字符串，代表 Cookie 的值
+[//]: # ()
+[//]: # (### 设置 Cookie)
 
-`CookieListItem` 结构的 `domain` 属性返回一个字符串，代表 Cookie 的域，该属性可能返回 `null`
+[//]: # ()
+[//]: # (`CookieStore` 接口的 `set&#40;&#41;` 方法用于设置 Cookie)
 
-`CookieListItem` 结构的 `path` 属性返回一个字符串，代表 Cookie 的路径
+[//]: # ()
+[//]: # (方法可以接收两个字符串，分别代表 Cookie 的名称与值；亦可以接收一个配置项，各项如下所示：)
 
-`CookieListItem` 结构的 `expires` 属性返回一个数字，代表 Cookie 的过期时间，该属性可能返回 `null`
+[//]: # ()
+[//]: # (* `name` 属性必需)
 
-`CookieListItem` 结构的 `secure` 属性返回一个布尔值，代表 Cookie 的严格上下文策略
+[//]: # (* `value` 属性必需)
 
-`CookieListItem` 结构的 `sameSite` 属性返回一个字符串，代表 Cookie 的同域策略，为 `"strict"` `"lax"` `"none"` 之一
+[//]: # (* `expires` 属性可选，默认 `null`)
 
-`CookieListItem` 结构的 `partitioned` 属性返回一个布尔值，代表 Cookie 的分区策略
+[//]: # (* `domain` 属性可选，默认 `null`)
 
-## 监听 Cookie 变化
+[//]: # (* `path` 属性可选，默认 `"/"`)
 
-`CookieStore` 接口的 `change` 事件在任一 Cookie 变化时触发，返回一个 `CookieChangeEvent` 事件
+[//]: # (* `sameSite` 属性可选，默认 `"strict"`)
 
-`CookieChangeEvent` 接口的 `changed` 属性返回一个 `CookieListItem` 结构只读数组，表示被修改的 Cookie
+[//]: # (* `partitioned` 属性可选，默认 `false`)
 
-`CookieChangeEvent` 接口的 `deleted` 属性返回一个 `CookieListItem` 结构只读数组，表示被移除的 Cookie
+[//]: # ()
+[//]: # (方法返回一个 Promise)
 
-```js
-window.cookieStore.addEventListener('change', (e) => {
-  e.changed
-  e.deleted
-})
-```
+[//]: # ()
+[//]: # (```js)
 
-但该事件仅在 Window 环境中可用
+[//]: # (await window.cookieStore.set&#40;'key', 'value'&#41;)
 
-## 订阅 Cookie 变化
+[//]: # (await window.cookieStore.set&#40;{)
 
-ServiceWorker 中允许通过 `CookieStoreManager` 接口的方法动态控制 Cookie 变化的订阅
+[//]: # (  name: 'key',)
 
-可通过 `ServiceWorkerRegistration` 接口的 `cookies` 属性获取到 `CookieStoreManager` 实例
+[//]: # (  value: 'value',)
 
-```js
-self.registration.cookies
-```
+[//]: # (  expires: null,)
 
-### 获取订阅
+[//]: # (  domain: null,)
 
-`CookieStoreManager` 接口的 `getSubscriptions()` 方法用于获取当前所有的订阅
+[//]: # (  path: '/',)
 
-方法返回一个对象数组，数组各项包含 `name` 参数和 `url` 参数
+[//]: # (  sameSite: 'strict',)
 
-```js
-const subscriptions = await self.registration.cookies.getSubscriptions()
-```
+[//]: # (  partitioned: false,)
 
-### 添加订阅
+[//]: # (}&#41;)
 
-`CookieStoreManager` 接口的 `subscribe()` 方法用于添加订阅
+[//]: # (```)
 
-方法传入一个对象数组参数，各项的 `name` 参数与 `url` 参数均需指定
+[//]: # ()
+[//]: # (### 移除 Cookie)
 
-方法返回一个 Promise
+[//]: # ()
+[//]: # (`CookieStore` 接口的 `delete&#40;&#41;` 方法用于移除 Cookie)
 
-```js
-self.registration.cookies.subscribe([
-  {
-    name: 'key',
-    url: '/',
-  },
-])
-```
+[//]: # ()
+[//]: # (方法接收一个字符串，代表 Cookie 的名称；或接收一个对象，其 `name` 参数必需指定；`path` 参数 `domain` 参数 `partitioned` 参数可选)
 
-### 移除订阅
+[//]: # ()
+[//]: # (方法返回一个 Promise)
 
-`CookieStoreManager` 接口的 `unsubscribe()` 方法用于移除订阅
+[//]: # ()
+[//]: # (```js)
 
-方法传入一个对象数组参数，各项的 `name` 参数与 `url` 参数均需指定
+[//]: # (await window.cookieStore.delete&#40;'key'&#41;)
 
-方法返回一个 Promise
+[//]: # (await window.cookieStore.delete&#40;{)
 
-```js
-self.registration.cookies.unsubscribe([
-  {
-    name: 'key',
-    url: '/',
-  },
-])
-```
+[//]: # (  name: 'key',)
 
-### 监听 Cookie 变化
+[//]: # (  path: '/',)
 
-`ServiceWorkerGlobalScope` 接口的 `cookiechange` 事件在订阅的 Cookie 发生变化时触发，返回一个  `ExtendableCookieChangeEvent` 事件
+[//]: # (  domain: null,)
 
-`ExtendableCookieChangeEvent` 接口的 `changed` 属性返回一个 `CookieListItem` 结构只读数组，表示被修改的 Cookie
+[//]: # (  partitioned: false,)
 
-`ExtendableCookieChangeEvent` 接口的 `deleted` 属性返回一个 `CookieListItem` 结构只读数组，表示被移除的 Cookie
+[//]: # (}&#41;)
 
-```js
-self.addEventListener('cookiechange', (e) => {
-  e.changed
-  e.deleted
-})
-```
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### Cookie 详细信息)
+
+[//]: # ()
+[//]: # (`CookieList` 结构相当于 `CookieListItem` 结构的数组)
+
+[//]: # ()
+[//]: # (`CookieListItem` 结构反映了 Cookie 的详细信息)
+
+[//]: # ()
+[//]: # (`CookieListItem` 结构的 `name` 属性返回一个字符串，代表 Cookie 的名称)
+
+[//]: # ()
+[//]: # (`CookieListItem` 结构的 `value` 属性返回一个字符串，代表 Cookie 的值)
+
+[//]: # ()
+[//]: # (`CookieListItem` 结构的 `domain` 属性返回一个字符串，代表 Cookie 的域，该属性可能返回 `null`)
+
+[//]: # ()
+[//]: # (`CookieListItem` 结构的 `path` 属性返回一个字符串，代表 Cookie 的路径)
+
+[//]: # ()
+[//]: # (`CookieListItem` 结构的 `expires` 属性返回一个数字，代表 Cookie 的过期时间，该属性可能返回 `null`)
+
+[//]: # ()
+[//]: # (`CookieListItem` 结构的 `secure` 属性返回一个布尔值，代表 Cookie 的严格上下文策略)
+
+[//]: # ()
+[//]: # (`CookieListItem` 结构的 `sameSite` 属性返回一个字符串，代表 Cookie 的同域策略，为 `"strict"` `"lax"` `"none"` 之一)
+
+[//]: # ()
+[//]: # (`CookieListItem` 结构的 `partitioned` 属性返回一个布尔值，代表 Cookie 的分区策略)
+
+[//]: # ()
+[//]: # (## 监听 Cookie 变化)
+
+[//]: # ()
+[//]: # (`CookieStore` 接口的 `change` 事件在任一 Cookie 变化时触发，返回一个 `CookieChangeEvent` 事件)
+
+[//]: # ()
+[//]: # (`CookieChangeEvent` 接口的 `changed` 属性返回一个 `CookieListItem` 结构只读数组，表示被修改的 Cookie)
+
+[//]: # ()
+[//]: # (`CookieChangeEvent` 接口的 `deleted` 属性返回一个 `CookieListItem` 结构只读数组，表示被移除的 Cookie)
+
+[//]: # ()
+[//]: # (```js)
+
+[//]: # (window.cookieStore.addEventListener&#40;'change', &#40;e&#41; => {)
+
+[//]: # (  e.changed)
+
+[//]: # (  e.deleted)
+
+[//]: # (}&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (但该事件仅在 Window 环境中可用)
+
+[//]: # ()
+[//]: # (## 订阅 Cookie 变化)
+
+[//]: # ()
+[//]: # (ServiceWorker 中允许通过 `CookieStoreManager` 接口的方法动态控制 Cookie 变化的订阅)
+
+[//]: # ()
+[//]: # (可通过 `ServiceWorkerRegistration` 接口的 `cookies` 属性获取到 `CookieStoreManager` 实例)
+
+[//]: # ()
+[//]: # (```js)
+
+[//]: # (self.registration.cookies)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### 获取订阅)
+
+[//]: # ()
+[//]: # (`CookieStoreManager` 接口的 `getSubscriptions&#40;&#41;` 方法用于获取当前所有的订阅)
+
+[//]: # ()
+[//]: # (方法返回一个对象数组，数组各项包含 `name` 参数和 `url` 参数)
+
+[//]: # ()
+[//]: # (```js)
+
+[//]: # (const subscriptions = await self.registration.cookies.getSubscriptions&#40;&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### 添加订阅)
+
+[//]: # ()
+[//]: # (`CookieStoreManager` 接口的 `subscribe&#40;&#41;` 方法用于添加订阅)
+
+[//]: # ()
+[//]: # (方法传入一个对象数组参数，各项的 `name` 参数与 `url` 参数均需指定)
+
+[//]: # ()
+[//]: # (方法返回一个 Promise)
+
+[//]: # ()
+[//]: # (```js)
+
+[//]: # (self.registration.cookies.subscribe&#40;[)
+
+[//]: # (  {)
+
+[//]: # (    name: 'key',)
+
+[//]: # (    url: '/',)
+
+[//]: # (  },)
+
+[//]: # (]&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### 移除订阅)
+
+[//]: # ()
+[//]: # (`CookieStoreManager` 接口的 `unsubscribe&#40;&#41;` 方法用于移除订阅)
+
+[//]: # ()
+[//]: # (方法传入一个对象数组参数，各项的 `name` 参数与 `url` 参数均需指定)
+
+[//]: # ()
+[//]: # (方法返回一个 Promise)
+
+[//]: # ()
+[//]: # (```js)
+
+[//]: # (self.registration.cookies.unsubscribe&#40;[)
+
+[//]: # (  {)
+
+[//]: # (    name: 'key',)
+
+[//]: # (    url: '/',)
+
+[//]: # (  },)
+
+[//]: # (]&#41;)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (### 监听 Cookie 变化)
+
+[//]: # ()
+[//]: # (`ServiceWorkerGlobalScope` 接口的 `cookiechange` 事件在订阅的 Cookie 发生变化时触发，返回一个  `ExtendableCookieChangeEvent` 事件)
+
+[//]: # ()
+[//]: # (`ExtendableCookieChangeEvent` 接口的 `changed` 属性返回一个 `CookieListItem` 结构只读数组，表示被修改的 Cookie)
+
+[//]: # ()
+[//]: # (`ExtendableCookieChangeEvent` 接口的 `deleted` 属性返回一个 `CookieListItem` 结构只读数组，表示被移除的 Cookie)
+
+[//]: # ()
+[//]: # (```js)
+
+[//]: # (self.addEventListener&#40;'cookiechange', &#40;e&#41; => {)
+
+[//]: # (  e.changed)
+
+[//]: # (  e.deleted)
+
+[//]: # (}&#41;)
+
+[//]: # (```)
 
 ## 示例
 
@@ -226,30 +360,68 @@ self.addEventListener('cookiechange', (e) => {
       <tr>
         <th>Name</th>
         <th>Value</th>
+        <th>Domain</th>
+        <th>Path</th>
+        <th>Expires</th>
+        <th>Secure</th>
+        <th>SameSite</th>
+        <th>Partition Key</th>
         <th>Operation</th>
       </tr>
     </thead>
     <tbody></tbody>
+
   </table>
 
-  <hr />
-
   <form>
-    <label for="name">name</label>
-    <input id="name" />
-    <label for="value">value</label>
-    <input id="value" />
-    <button id="submit">submit</button>
+    <div>
+      <label for="name">name</label>
+      <input id="name" type="text" />
+    </div>
+    <div>
+      <label for="value">value</label>
+      <input id="value" type="text" />
+    </div>
+    <div>
+      <label for="domain">domain</label>
+      <input id="domain" type="url" />
+    </div>
+    <div>
+      <label for="path">path</label>
+      <input id="path" type="text" />
+    </div>
+    <div>
+      <label for="expires">expires</label>
+      <input id="expires" type="number" />
+    </div>
+    <div>
+      <label for="sameSite">sameSite</label>
+      <input id="sameSite" type="text" />
+    </div>
+    <div>
+      <label for="partitioned">partitioned</label>
+      <input id="partitioned" type="checkbox" />
+    </div>
+    <div>
+      <button id="submit" type="button">submit</button>
+    </div>
   </form>
 
   <style>
     #cookie-store {
-      gap: 25px;
-      backdrop-filter: invert(100%);
+      :is(table) {
+        table-layout: fixed;
+      }
+      :is(form) {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
     }
   </style>
 
   <script type="module">
+    // 生成单个 Cookie 的 HTML 格式
     const generateRecordHTML = (cookie) => {
       const record = document.createElement('tr');
       const name = document.createElement('td');
@@ -258,6 +430,24 @@ self.addEventListener('cookiechange', (e) => {
       const value = document.createElement('td');
       value.innerText = cookie.value;
       record.appendChild(value);
+      const domain = document.createElement('td');
+      domain.innerText = cookie.domain;
+      record.appendChild(domain);
+      const path = document.createElement('td');
+      path.innerText = cookie.path;
+      record.appendChild(path);
+      const expires = document.createElement('td');
+      expires.innerText = cookie.expires;
+      record.appendChild(expires);
+      const secure = document.createElement('td');
+      secure.innerText = cookie.secure;
+      record.appendChild(secure);
+      const sameSite = document.createElement('td');
+      sameSite.innerText = cookie.sameSite;
+      record.appendChild(sameSite);
+      const partitioned = document.createElement('td');
+      partitioned.innerText = cookie.partitioned;
+      record.appendChild(partitioned);
       const operation = document.createElement('td');
       operation.innerText = 'Delete';
       operation.addEventListener('click', () => {
@@ -269,6 +459,7 @@ self.addEventListener('cookiechange', (e) => {
       record.appendChild(operation);
       return record;
     };
+    // 生成 Cookie 表格
     const list = document.querySelector('#cookie-store table tbody');
     const cookies = await window.cookieStore.getAll();
     const fragment = document.createDocumentFragment();
@@ -276,13 +467,24 @@ self.addEventListener('cookiechange', (e) => {
       fragment.appendChild(generateRecordHTML(cookie));
     }
     list.appendChild(fragment);
+    // 绑定添加 Cookie 相关函数
     const name = document.querySelector('#cookie-store #name');
     const value = document.querySelector('#cookie-store #value');
+    const domain = document.querySelector('#cookie-store #domain');
+    const path = document.querySelector('#cookie-store #path');
+    const expires = document.querySelector('#cookie-store #expires');
+    const sameSite = document.querySelector('#cookie-store #sameSite');
+    const partitioned = document.querySelector('#cookie-store #partitioned');
     const submit = document.querySelector('#cookie-store #submit');
     submit.addEventListener('click', () => {
       const cookie = {
         name: name.value,
         value: value.value,
+        domain: domain.value || location.hostname,
+        path: path.value,
+        expires: Number(expires.value),
+        sameSite: sameSite.value || 'lax',
+        partitioned: partitioned.checked,
       };
       window.cookieStore.set(cookie);
       list.appendChild(generateRecordHTML(cookie));
