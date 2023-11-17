@@ -26,6 +26,12 @@ UI Events 定义了与用户交互的事件
 
 [UI Events](/2023/11/15/UI-Events/)
 
+### Page Visibility API
+
+Page Visibility API 用于反馈当前文档的可见性
+
+[Page Visibility API](/2023/11/16/Page-Visibility-API/)
+
 ### User Activation API
 
 User Activation API 用于检测当前网页的用户激活状态
@@ -79,6 +85,12 @@ Prioritized Task Scheduling API 提供了标准化的任务的优先级排序的
 Permissions API 提供了编程式地检测当前浏览上下文 API 权限
 
 [Permissions API](/2023/11/05/Permissions-API/)
+
+### Barcode Detection API
+
+Barcode Detection API 支持检测并扫描条形码和二维码
+
+[Barcode Detection API](/2023/11/16/Barcode-Detection-API/)
 
 ### Broadcast Channel API
 
