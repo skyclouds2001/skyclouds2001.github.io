@@ -238,9 +238,15 @@ File API 允许获取文件及其内容
 
 ### File System API
 
-File System API 以及 File System Access API 允许访问设备文件系统上的文件-允许读取、写入和文件管理功能，或利用 OPFS 机制存储类文件的数据
+File System API 允许使用内置文件系统，包含读取、修改和移除文件
 
 [File System API](/2023/10/05/File-System-API/)
+
+### File System Access API
+
+File System Access API 允许访问本地文件系统
+
+[File System Access API](/2023/11/19/File-System-Access-API/)
 
 ### Window Management API
 
