@@ -230,6 +230,12 @@ Vibration API 允许调用设备的振动功能
 
 [Vibration API](/2023/10/30/Vibration-API/)
 
+### File API
+
+File API 允许获取文件及其内容
+
+[File API](/2023/11/18/File-API/)
+
 ### File System API
 
 File System API 以及 File System Access API 允许访问设备文件系统上的文件-允许读取、写入和文件管理功能，或利用 OPFS 机制存储类文件的数据
