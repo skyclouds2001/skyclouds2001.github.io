@@ -325,3 +325,9 @@ Badging API 允许用户代理在网站或 PWA 应用上设置徽章
 Window Controls Overlay API 允许 PWA 应用能够隐藏默认窗口标题栏并在应用程序窗口区域显示自定义的内容
 
 [Window Controls Overlay API](/2023/10/03/Window-Controls-Overlay-API/)
+
+### Web App Launch Handler API
+
+Web App Launch Handler API 允许管理 Progressive Web App 的启动导航方式
+
+[Web App Launch Handler API](/2023/11/19/Web-App-Launch-Handler-API/)
