@@ -32,6 +32,12 @@ Touch Events 定义与用户触摸交互的事件
 
 [Touch Events](/2023/11/20/Touch-Events/)
 
+### Pointer Events
+
+Pointer Events 定义指针相关的一系列事件
+
+[Pointer Events](/2023/11/20/Pointer-Events/)
+
 ### Page Visibility API
 
 Page Visibility API 用于反馈当前文档的可见性
