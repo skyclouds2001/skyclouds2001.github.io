@@ -26,6 +26,12 @@ UI Events 定义了与用户交互的事件
 
 [UI Events](/2023/11/15/UI-Events/)
 
+### Touch Events
+
+Touch Events 定义与用户触摸交互的事件
+
+[Touch Events](/2023/11/20/Touch-Events/)
+
 ### Page Visibility API
 
 Page Visibility API 用于反馈当前文档的可见性
