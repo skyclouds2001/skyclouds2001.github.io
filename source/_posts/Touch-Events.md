@@ -18,14 +18,14 @@ mathJax: false
 
 Touch Events 定义与用户触摸交互的事件
 
-## 事件列表
+## 触摸事件列表
 
-|    事件名称     | 事件类型       |  事件目标   | 事件是否冒泡 | 事件是否可取消 |     事件描述      |
-|:-----------:|------------|:-------:|:------:|:-------:|:-------------:|
-| touchstart  | TouchEvent | Element |   是    |  视情况而定  |  触摸点放置到触摸面上   |
-|  touchmove  | TouchEvent | Element |   是    |  视情况而定  |  触摸点在触摸面上移动   |
-|  touchend   | TouchEvent | Element |   是    |  视情况而定  |  触摸点从触摸板上移除   |
-| touchcancel | TouchEvent | Element |   是    |    否    | 触摸行为被特定于实现被中断 |
+|    事件名称     | 事件类型       |                         事件目标                         | 事件是否冒泡 | 事件是否可取消 |     事件描述      |
+|:-----------:|------------|:----------------------------------------------------:|:------:|:-------:|:-------------:|
+| touchstart  | TouchEvent | Window,Document,HTMLElement,SVGElement,MathMLElement |   是    |  视情况而定  |  触摸点放置到触摸面上   |
+|  touchmove  | TouchEvent | Window,Document,HTMLElement,SVGElement,MathMLElement |   是    |  视情况而定  |  触摸点在触摸面上移动   |
+|  touchend   | TouchEvent | Window,Document,HTMLElement,SVGElement,MathMLElement |   是    |  视情况而定  |  触摸点从触摸板上移除   |
+| touchcancel | TouchEvent | Window,Document,HTMLElement,SVGElement,MathMLElement |   是    |    否    | 触摸行为被特定于实现被中断 |
 
 ## 触摸事件
 
@@ -38,6 +38,13 @@ Touch Events 定义与用户触摸交互的事件
 ## 类型
 
 ```ts
+interface GlobalEventHandlers {
+  ontouchcancel?: ((this: GlobalEventHandlers, ev: TouchEvent) => any) | null | undefined
+  ontouchend?: ((this: GlobalEventHandlers, ev: TouchEvent) => any) | null | undefined
+  ontouchmove?: ((this: GlobalEventHandlers, ev: TouchEvent) => any) | null | undefined
+  ontouchstart?: ((this: GlobalEventHandlers, ev: TouchEvent) => any) | null | undefined
+}
+
 interface Touch {
   readonly clientX: number
   readonly clientY: number
