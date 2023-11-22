@@ -38,6 +38,12 @@ Pointer Events 定义指针相关的一系列事件
 
 [Pointer Events](/2023/11/20/Pointer-Events/)
 
+### Navigation API
+
+Navigation API 提供了启动、拦截和管理浏览器导航行为的能力，同时允许检查应用的历史条目
+
+[Navigation API](/2023/11/21/Navigation-API/)
+
 ### Page Visibility API
 
 Page Visibility API 用于反馈当前文档的可见性
