@@ -44,6 +44,12 @@ Location API 提供获取和管理当前网页的 URL 的方法
 
 [Location API](/2023/11/23/Location-API/)
 
+### History API
+
+History API 提供了管理浏览会话历史记录的方式
+
+[History API](/2023/11/23/History-API/)
+
 ### Navigation API
 
 Navigation API 提供了启动、拦截和管理浏览器导航行为的能力，同时允许检查应用的历史条目
