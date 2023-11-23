@@ -38,6 +38,12 @@ Pointer Events 定义指针相关的一系列事件
 
 [Pointer Events](/2023/11/20/Pointer-Events/)
 
+### Location API
+
+Location API 提供获取和管理当前网页的 URL 的方法
+
+[Location API](/2023/11/23/Location-API/)
+
 ### Navigation API
 
 Navigation API 提供了启动、拦截和管理浏览器导航行为的能力，同时允许检查应用的历史条目
