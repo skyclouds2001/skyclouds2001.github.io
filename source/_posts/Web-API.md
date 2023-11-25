@@ -212,6 +212,12 @@ Geolocation API 允许访问设备的地理位置
 
 [Geolocation API](/2023/10/15/Geolocation-API/)
 
+### Device Memory API
+
+Device Memory API 允许获取运行内存容量的大小
+
+[Device Memory API](/2023/11/25/Device-Memory-API/)
+
 ### Network Information API
 
 Network Information API 允许获取网络信息和监听网络信息更改
