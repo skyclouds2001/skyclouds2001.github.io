@@ -134,6 +134,12 @@ Drag and Drop API 允许网页应用使用拖放功能
 
 [Drag and Drop API](/2023/11/14/Drag-and-Drop-API/)
 
+### Popover API
+
+Popover API 提供了标准化的显示弹出窗口的形式
+
+[Popover API](/2023/11/29/Popover-API/)
+
 ### Fullscreen API
 
 Fullscreen API 允许某个特定的元素管理全屏模式
