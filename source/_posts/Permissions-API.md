@@ -46,22 +46,24 @@ console.log(status.state) // 'granted' 'denied' 'prompt'
 
 `PermissionStatus` 的 `change` 事件在权限的状态改变时触发，返回一个 `Event`
 
-## 权限名称
+## 权限名称列表
 
-* Background Synchronization API - `background-sync`
-* Clipboard API - `clipboard-read` `clipboard-write`
-* Geolocation API - `geolocation`
-* Local Font Access API - `local-fonts`
-* Media Capture and Streams API - `microphone`, `camera`
-* Notifications API - `notifications`
-* Payment Handler API - `payment-handler`
-* Push API - `push`
-* Sensor APIs - `accelerometer` `gyroscope` `magnetometer` `ambient-light-sensor`
-* Storage Access API - `storage-access`
-* Storage API - `persistent-storage`
-* Web Audio Output Devices API - `speaker-selection`
-* Web MIDI API - `midi`
-* Window Management API - `window-management`
+|                  API name                   |                                Permission name                                |
+|:-------------------------------------------:|:-----------------------------------------------------------------------------:|
+|       Background Synchronization API        |                               `background-sync`                               |
+|                Clipboard API                |                    `clipboard-read`<br/>`clipboard-write`                     |
+|               Geolocation API               |                                 `geolocation`                                 |
+|            Local Font Access API            |                                 `local-fonts`                                 |
+|        Media Capture and Streams API        |                           `microphone`<br/>`camera`                           |
+|              Notifications API              |                                `notifications`                                |
+|             Payment Handler API             |                               `payment-handler`                               |
+|                  Push API                   |                                    `push`                                     |
+|                 Sensor API                  | `accelerometer`<br/>`gyroscope`<br/>`magnetometer`<br/>`ambient-light-sensor` |
+|             Storage Access API              |                               `storage-access`                                |
+|                 Storage API                 |                             `persistent-storage`                              |
+|        Web Audio Output Devices API         |                              `speaker-selection`                              |
+|                Web MIDI API                 |                                    `midi`                                     |
+|            Window Management API            |                              `window-management`                              |
 
 不同浏览器支持的权限名称亦不同
 
