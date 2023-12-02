@@ -48,20 +48,20 @@ console.log(status.state) // 'granted' 'denied' 'prompt'
 
 ## 权限名称
 
-* Background Synchronization API - background-sync (should always be granted)
-* Clipboard API - clipboard-read, clipboard-write
-* Geolocation API - geolocation
-* Local Font Access API
-* Media Capture and Streams API - microphone, camera
-* Notifications API - notifications
-* Payment Handler API - payment-handler
-* Push API - push
-* Sensor APIs - accelerometer, gyroscope, magnetometer, ambient-light-sensor
-* Storage Access API - storage-access
-* Storage API - persistent-storage
-* Web Audio Output Devices API - speaker-selection
-* Web MIDI API - midi
-* Window Management API - window-management
+* Background Synchronization API - `background-sync`
+* Clipboard API - `clipboard-read` `clipboard-write`
+* Geolocation API - `geolocation`
+* Local Font Access API - `local-fonts`
+* Media Capture and Streams API - `microphone`, `camera`
+* Notifications API - `notifications`
+* Payment Handler API - `payment-handler`
+* Push API - `push`
+* Sensor APIs - `accelerometer` `gyroscope` `magnetometer` `ambient-light-sensor`
+* Storage Access API - `storage-access`
+* Storage API - `persistent-storage`
+* Web Audio Output Devices API - `speaker-selection`
+* Web MIDI API - `midi`
+* Window Management API - `window-management`
 
 不同浏览器支持的权限名称亦不同
 
