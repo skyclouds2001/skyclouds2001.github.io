@@ -48,30 +48,35 @@ console.log(status.state) // 'granted' 'denied' 'prompt'
 
 ## 权限名称列表
 
-|                  API name                   |                                Permission name                                |
-|:-------------------------------------------:|:-----------------------------------------------------------------------------:|
-|       Background Synchronization API        |                               `background-sync`                               |
-|                Clipboard API                |                    `clipboard-read`<br/>`clipboard-write`                     |
-|               Geolocation API               |                                 `geolocation`                                 |
-|            Local Font Access API            |                                 `local-fonts`                                 |
-|        Media Capture and Streams API        |                           `microphone`<br/>`camera`                           |
-|              Notifications API              |                                `notifications`                                |
-|             Payment Handler API             |                               `payment-handler`                               |
-|                  Push API                   |                                    `push`                                     |
-|                 Sensor API                  | `accelerometer`<br/>`gyroscope`<br/>`magnetometer`<br/>`ambient-light-sensor` |
-|             Storage Access API              |                               `storage-access`                                |
-|                 Storage API                 |                             `persistent-storage`                              |
-|        Web Audio Output Devices API         |                              `speaker-selection`                              |
-|                Web MIDI API                 |                                    `midi`                                     |
-|            Window Management API            |                              `window-management`                              |
+|    Permission name     |     Permission description     |
+|:----------------------:|:------------------------------:|
+|    `accelerometer`     |          Sensor APIs           |
+| `ambient-light-sensor` |          Sensor APIs           |
+|   `background-sync`    | Background Synchronization API |
+|        `camera`        | Media Capture and Streams API  |
+|    `clipboard-read`    |         Clipboard API          |
+|   `clipboard-write`    |         Clipboard API          |
+|     `geolocation`      |        Geolocation API         |
+|      `gyroscope`       |          Sensor APIs           |
+|     `local-fonts`      |     Local Font Access API      |
+|     `magnetometer`     |          Sensor APIs           |
+|      `microphone`      | Media Capture and Streams API  |
+|         `midi`         |          Web MIDI API          |
+|    `notifications`     |       Notifications API        |
+|   `payment-handler`    |      Payment Handler API       |
+|         `push`         |            Push API            |
+|  `persistent-storage`  |          Storage API           |
+|  `speaker-selection`   |  Web Audio Output Devices API  |
+|    `storage-access`    |       Storage Access API       |
+|  `window-management`   |     Window Management API      |
 
-不同浏览器支持的权限名称亦不同
+不同浏览器支持的权限名称参考如下
 
-Firefox 参见 <https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10>
+* Firefox 参见 <https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10>
 
-Chromium 参见 <https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl#6>
+* Chromium 参见 <https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl#6>
 
-Webkit 参见 <https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl#L28>
+* Webkit 参见 <https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl#L28>
 
 ## 类型
 
