@@ -64,8 +64,8 @@ console.log(status.state) // 'granted' 'denied' 'prompt'
 |         `midi`         |          Web MIDI API          |
 |    `notifications`     |       Notifications API        |
 |   `payment-handler`    |      Payment Handler API       |
-|         `push`         |            Push API            |
 |  `persistent-storage`  |          Storage API           |
+|         `push`         |            Push API            |
 |  `speaker-selection`   |  Web Audio Output Devices API  |
 |    `storage-access`    |       Storage Access API       |
 |  `window-management`   |     Window Management API      |
