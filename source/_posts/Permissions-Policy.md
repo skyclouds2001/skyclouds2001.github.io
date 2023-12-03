@@ -50,6 +50,43 @@ Permissions Policy 允许开发者设置权限的策略，而 Permissions API �
 
 ## Permissions Policy 指令
 
+|          Directive name           |                                     Directive description                                      |
+|:---------------------------------:|:----------------------------------------------------------------------------------------------:|
+|          `accelerometer`          |                                        `Accelerometer`                                         |
+|      `ambient-light-sensor`       |                                      `AmbientLightSensor`                                      |
+|            `autoplay`             |                   `HTMLMediaElement.play()` `<audio>` & `<video>` `autoplay`                   |
+|             `battery`             |                         Battery Status API - `Navigator.getBattery()`                          |
+|             `camera`              |                       video input devices `MediaDevices.getUserMedia()`                        |
+|         `display-capture`         |                                `MediaDevices.getDisplayMedia()`                                |
+|         `document-domain`         |                                     set `document.domain`                                      |
+|         `encrypted-media`         |           Encrypted Media Extensions API - `Navigator.requestMediaKeySystemAccess()`           |
+|  `execution-while-not-rendered`   |                              script execution of renderer status                               |
+| `execution-while-out-of-viewport` |                              script execution of viewport status                               |
+|           `fullscreen`            |                                 `Element.requestFullscreen()`                                  |
+|             `gamepad`             | Gamepad API - `Navigator.getGamepads()` `Window:gamepadconnected` `Window:gamepaddisconnected` |
+|           `geolocation`           |       Geolocation API - `Geolocation.getCurrentPosition()` `Geolocation.watchPosition()`       |
+|            `gyroscope`            |                                          `Gyroscope`                                           |
+|               `hid`               |                                           WebHID API                                           |
+|    `identity-credentials-get`     |                                           FedCM API                                            |
+|         `idle-detection`          |                                       Idle Detection API                                       |
+|           `local-fonts`           |                       Local Font Access API - `Window.queryLocalFonts()`                       |
+|          `magnetometer`           |                                         `Magnetometer`                                         |
+|           `microphone`            |                       audio input devices `MediaDevices.getUserMedia()`                        |
+|              `midi`               |                         Web MIDI API - `Navigator.requestMIDIAccess()`                         |
+|         `otp-credentials`         |                                           WebOTP API                                           |
+|             `payment`             |                             Payment Request API - `PaymentRequest`                             |
+|       `picture-in-picture`        |                                     Picture In Picture API                                     |
+|  `publickey-credentials-create`   |                                     Web Authentication API                                     |
+|    `publickey-credentials-get`    |                                     Web Authentication API                                     |
+|        `screen-wake-lock`         |                                      Screen Wake Lock API                                      |
+|             `serial`              |                                         Web Serial API                                         |
+|        `speaker-selection`        |                                    Audio Output Devices API                                    |
+|         `storage-access`          |                                       Storage Access API                                       |
+|               `usb`               |                                           WebUSB API                                           |
+|            `web-share`            |                              Web Share API - `Navigator.share()`                               |
+|        `window-management`        |                                     Window Management API                                      |
+|       `xr-spatial-tracking`       |                                        WebXR Device API                                        |
+
 ## Permissions Policy 允许列表
 
 * `*` 允许在顶层浏览上下文及其嵌入浏览上下文中使用
