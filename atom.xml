@@ -6,7 +6,7 @@
   <link href="https://skyclouds2001.github.io/atom.xml" rel="self"/>
   
   <link href="https://skyclouds2001.github.io/"/>
-  <updated>2023-11-13T08:25:57.914Z</updated>
+  <updated>2023-12-03T12:45:11.885Z</updated>
   <id>https://skyclouds2001.github.io/</id>
   
   <author>
@@ -15,6 +15,489 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Permissions Policy</title>
+    <link href="https://skyclouds2001.github.io/2023/12/02/Permissions-Policy/"/>
+    <id>https://skyclouds2001.github.io/2023/12/02/Permissions-Policy/</id>
+    <published>2023-12-02T04:35:25.000Z</published>
+    <updated>2023-12-03T12:45:11.885Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Permissions Policy 允许开发者定义在网页中控制功能的可用性，从而增加应用的安全性和隐私性&lt;/p&gt;
+&lt;p&gt;Permissions Policy 与 Content</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="HTTP" scheme="https://skyclouds2001.github.io/categories/Frontend/HTTP/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="HTTP" scheme="https://skyclouds2001.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Popover API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/29/Popover-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/29/Popover-API/</id>
+    <published>2023-11-29T04:14:52.000Z</published>
+    <updated>2023-11-29T09:29:41.900Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Popover API 提供了标准化的显示弹出窗口的形式&lt;/p&gt;
+&lt;p&gt;Popover API 可以通过 HTML 控制或通过 JavaScript 控制&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Device Memory API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/25/Device-Memory-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/25/Device-Memory-API/</id>
+    <published>2023-11-25T15:35:19.000Z</published>
+    <updated>2023-11-25T16:27:55.984Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Device Memory API 允许获取运行内存容量的大小&lt;/p&gt;
+&lt;h2 id=&quot;JS-使用&quot;&gt;&lt;a href=&quot;#JS-使用&quot; class=&quot;headerlink&quot; title=&quot;JS</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>History API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/23/History-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/23/History-API/</id>
+    <published>2023-11-23T07:15:19.000Z</published>
+    <updated>2023-11-23T09:30:49.646Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;History API 提供了管理浏览会话历史记录的方式&lt;/p&gt;
+&lt;p&gt;通过 &lt;code&gt;window.history&lt;/code&gt; 暴露的 &lt;code&gt;History&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Location API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/23/Location-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/23/Location-API/</id>
+    <published>2023-11-23T03:22:33.000Z</published>
+    <updated>2023-11-23T06:54:35.903Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Location API 提供获取和管理当前网页的 URL 的方法&lt;/p&gt;
+&lt;p&gt;通过 &lt;code&gt;document.location&lt;/code&gt; 或</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Navigation API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/21/Navigation-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/21/Navigation-API/</id>
+    <published>2023-11-21T11:41:20.000Z</published>
+    <updated>2023-11-23T13:40:57.648Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Navigation API 提供了启动、拦截和管理浏览器导航行为的能力，同时允许检查应用的历史条目&lt;/p&gt;
+&lt;p&gt;该 API 是对 History API 和 Location</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pointer Events</title>
+    <link href="https://skyclouds2001.github.io/2023/11/20/Pointer-Events/"/>
+    <id>https://skyclouds2001.github.io/2023/11/20/Pointer-Events/</id>
+    <published>2023-11-20T13:08:46.000Z</published>
+    <updated>2023-11-20T15:28:29.030Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Pointer Events 定义指针相关的一系列事件&lt;/p&gt;
+&lt;p&gt;旨在为 Mouse Events 和 Touch Events 在不同平台上提供统一的行为&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Touch Events</title>
+    <link href="https://skyclouds2001.github.io/2023/11/20/Touch-Events/"/>
+    <id>https://skyclouds2001.github.io/2023/11/20/Touch-Events/</id>
+    <published>2023-11-20T06:32:58.000Z</published>
+    <updated>2023-11-20T13:53:01.186Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Touch Events 定义与用户触摸交互的事件&lt;/p&gt;
+&lt;h2 id=&quot;触摸事件列表&quot;&gt;&lt;a href=&quot;#触摸事件列表&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web App Launch Handler API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/19/Web-App-Launch-Handler-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/19/Web-App-Launch-Handler-API/</id>
+    <published>2023-11-18T19:31:34.000Z</published>
+    <updated>2023-11-19T04:19:55.994Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Web App Launch Handler API 允许管理 Progressive Web App 的启动导航方式（针对已开启的 PWA 应用）&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>File System Access API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/19/File-System-Access-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/19/File-System-Access-API/</id>
+    <published>2023-11-18T19:14:20.000Z</published>
+    <updated>2023-11-18T19:25:05.350Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;File System Access API 允许访问本地文件系统&lt;/p&gt;
+&lt;h2 id=&quot;获取选择资源的文件句柄&quot;&gt;&lt;a href=&quot;#获取选择资源的文件句柄&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>File API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/18/File-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/18/File-API/</id>
+    <published>2023-11-17T19:35:27.000Z</published>
+    <updated>2023-11-18T15:43:15.533Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;File API 允许获取文件及其内容&lt;/p&gt;
+&lt;h2 id=&quot;二进制对象&quot;&gt;&lt;a href=&quot;#二进制对象&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Barcode Detection API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/16/Barcode-Detection-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/16/Barcode-Detection-API/</id>
+    <published>2023-11-16T14:28:16.000Z</published>
+    <updated>2023-11-17T06:17:56.525Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Barcode Detection API 支持检测并扫描条形码和二维码&lt;/p&gt;
+&lt;p&gt;该 API 主要通过 &lt;code&gt;BarcodeDetector&lt;/code&gt; 类使用&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Page Visibility API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/16/Page-Visibility-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/16/Page-Visibility-API/</id>
+    <published>2023-11-16T07:36:03.000Z</published>
+    <updated>2023-11-16T09:28:05.291Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Page Visibility API 用于反馈当前文档的可见性&lt;/p&gt;
+&lt;h2 id=&quot;读取可见性&quot;&gt;&lt;a href=&quot;#读取可见性&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>User Activation API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/15/User-Activation-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/15/User-Activation-API/</id>
+    <published>2023-11-15T12:55:22.000Z</published>
+    <updated>2023-11-16T06:58:55.539Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;User Activation API 用于检测当前网页的用户激活状态&lt;/p&gt;
+&lt;p&gt;该 API 通过 &lt;code&gt;UserActivation&lt;/code&gt; 提供相关功能，并通过</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UI Events</title>
+    <link href="https://skyclouds2001.github.io/2023/11/15/UI-Events/"/>
+    <id>https://skyclouds2001.github.io/2023/11/15/UI-Events/</id>
+    <published>2023-11-15T03:44:20.000Z</published>
+    <updated>2023-11-15T08:02:26.974Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;UI Events 定义了与用户交互的事件&lt;/p&gt;
+&lt;h2 id=&quot;事件类型&quot;&gt;&lt;a href=&quot;#事件类型&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Drag and Drop API</title>
+    <link href="https://skyclouds2001.github.io/2023/11/14/Drag-and-Drop-API/"/>
+    <id>https://skyclouds2001.github.io/2023/11/14/Drag-and-Drop-API/</id>
+    <published>2023-11-14T06:10:27.000Z</published>
+    <updated>2023-11-15T03:05:55.875Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Drag and Drop API 允许网页应用使用拖放功能&lt;/p&gt;
+&lt;h2 id=&quot;拖放事件&quot;&gt;&lt;a href=&quot;#拖放事件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
   
   <entry>
     <title>DeviceOrientation Event</title>
@@ -81,7 +564,7 @@
     <link href="https://skyclouds2001.github.io/2023/11/09/Cookie-Store-API/"/>
     <id>https://skyclouds2001.github.io/2023/11/09/Cookie-Store-API/</id>
     <published>2023-11-09T15:09:33.000Z</published>
-    <updated>2023-11-11T19:37:27.912Z</updated>
+    <updated>2023-11-30T15:11:58.263Z</updated>
     
     
       
@@ -260,7 +743,7 @@
     <link href="https://skyclouds2001.github.io/2023/11/05/Permissions-API/"/>
     <id>https://skyclouds2001.github.io/2023/11/05/Permissions-API/</id>
     <published>2023-11-05T06:39:30.000Z</published>
-    <updated>2023-11-10T13:15:20.522Z</updated>
+    <updated>2023-12-03T13:19:58.881Z</updated>
     
     
       
@@ -772,7 +1255,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/24/Pointer-Lock-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/24/Pointer-Lock-API/</id>
     <published>2023-10-24T08:39:54.000Z</published>
-    <updated>2023-11-10T13:15:20.724Z</updated>
+    <updated>2023-11-22T12:09:55.710Z</updated>
     
     
       
@@ -950,14 +1433,14 @@
     <link href="https://skyclouds2001.github.io/2023/10/05/File-System-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/05/File-System-API/</id>
     <published>2023-10-05T07:53:12.000Z</published>
-    <updated>2023-11-10T13:15:19.885Z</updated>
+    <updated>2023-11-18T19:25:05.342Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;File System API 与扩展的 File System Access API</summary>
+    <summary type="html">&lt;p&gt;File System API 允许使用内置文件系统，包含读取、修改和移除文件，扩展的 File System Access API</summary>
         
       
     
@@ -1671,35 +2154,6 @@
   </entry>
   
   <entry>
-    <title>KeyboardEvent Sequence</title>
-    <link href="https://skyclouds2001.github.io/2023/08/22/KeyboardEvent%20Sequence/"/>
-    <id>https://skyclouds2001.github.io/2023/08/22/KeyboardEvent%20Sequence/</id>
-    <published>2023-08-22T12:39:55.000Z</published>
-    <updated>2023-10-24T08:50:40.598Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;KeyboardEvent-事件链路&quot;&gt;&lt;a href=&quot;#KeyboardEvent-事件链路&quot; class=&quot;headerlink&quot; title=&quot;KeyboardEvent</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
-    
-    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
-    
-    
-    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
-    
-    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
-    
-  </entry>
-  
-  <entry>
     <title>NestJS</title>
     <link href="https://skyclouds2001.github.io/2023/06/17/NestJS/"/>
     <id>https://skyclouds2001.github.io/2023/06/17/NestJS/</id>
@@ -1727,35 +2181,6 @@
     <category term="JavaScript" scheme="https://skyclouds2001.github.io/tags/JavaScript/"/>
     
     <category term="FrameWork" scheme="https://skyclouds2001.github.io/tags/FrameWork/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web API</title>
-    <link href="https://skyclouds2001.github.io/2022/12/14/Web-API/"/>
-    <id>https://skyclouds2001.github.io/2022/12/14/Web-API/</id>
-    <published>2022-12-14T14:55:58.000Z</published>
-    <updated>2023-11-13T08:30:36.591Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Web-API&quot;&gt;&lt;a href=&quot;#Web-API&quot; class=&quot;headerlink&quot; title=&quot;Web API&quot;&gt;&lt;/a&gt;Web API&lt;/h2&gt;&lt;p&gt;在编写 Web</summary>
-        
-      
-    
-    
-    
-    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
-    
-    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
-    
-    
-    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
-    
-    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
     
   </entry>
   
@@ -2307,7 +2732,7 @@
     <link href="https://skyclouds2001.github.io/2022/07/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
     <id>https://skyclouds2001.github.io/2022/07/20/%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</id>
     <published>2022-07-20T09:20:28.000Z</published>
-    <updated>2023-11-11T19:34:04.838Z</updated>
+    <updated>2023-11-14T06:02:57.679Z</updated>
     
     
       

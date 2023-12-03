@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="theme-color" content="#3273dc"><title>UI Events - skyclouds2001&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#3273dc"><meta name="application-name" content="skyclouds2001&#039;s blog"><meta name="msapplication-TileImage" content="https://avatars.githubusercontent.com/u/95597335"><meta name="msapplication-TileColor" content="#3273dc"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="skyclouds2001&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="apple-touch-icon" sizes="460x460" href="https://avatars.githubusercontent.com/u/95597335"><meta name="description" content="The personal blog of skyclouds2001"><meta property="og:type" content="blog"><meta property="og:title" content="skyclouds2001&#039;s blog"><meta property="og:url" content="https://skyclouds2001.github.io/"><meta property="og:site_name" content="skyclouds2001&#039;s blog"><meta property="og:description" content="The personal blog of skyclouds2001"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://avatars.githubusercontent.com/u/95597335"><meta property="article:published_time" content="2023-11-15T03:44:20.000Z"><meta property="article:modified_time" content="2023-11-15T08:02:26.974Z"><meta property="article:author" content="skyclouds2001"><meta property="article:tag" content="Frontend"><meta property="article:tag" content="Web API"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://avatars.githubusercontent.com/u/95597335"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://skyclouds2001.github.io/"},"headline":"skyclouds2001's blog","image":[],"datePublished":"2023-11-15T03:44:20.000Z","dateModified":"2023-11-15T08:02:26.974Z","author":{"@type":"Person","name":"skyclouds2001"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject"}},"description":"The personal blog of skyclouds2001"}</script><link rel="canonical" href="https://skyclouds2001.github.io/2023/11/15/UI-Events/"><link rel="alternate" href="/atom.xml" title="skyclouds2001&#039;s Blog" type="application/atom+xml"><link rel="icon" href="https://avatars.githubusercontent.com/u/95597335"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro|Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Microsoft YaHei:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&amp;amp;subset=latin,latin-ext|Inconsolata|Itim|Lobster.css"><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="/js/globalUtils.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?98608f7861aa9247199463aaae2cffb9";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><meta name="msvalidate.01" content="F334E8AF334D26B39D41AF73E58A98AC"><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><script src="https://www.googletagmanager.com/gtag/js?id=G-257NZ7S1BB" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-257NZ7S1BB');</script><script data-ad-client="ca-pub-6540459960525651" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><link rel="stylesheet" href="/live2d/waifu.css"><script type="text/javascript" async src="/live2d/autoload.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body class="is-3-column has-navbar-fixed-top"><nav class="navbar navbar-main is-fixed-top"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://avatars.githubusercontent.com/u/95597335" alt="skyclouds2001&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a><a class="navbar-item" href="/album">Album</a><a class="navbar-item" href="/friend">Friend</a><a class="navbar-item" href="/message">Message</a><a class="navbar-item" href="/self-talking">Self-talking</a><a class="navbar-item" href="/music">Music</a><a class="navbar-item" href="/media">Media</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/skyclouds2001/skyclouds2001.github.io/"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a></div></div></div></nav><script type="text/javascript" src="/js/theme-setting.js"></script><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="card widget"><div class="g-ads-x"><div class="card-content"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6540459960525651" data-ad-slot="3012941103"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><i class="far fa-calendar-plus"> </i>2023-11-15  <a class="commentCountImg" href="/2023/11/15/UI-Events/#comment-container"><span class="display-none-class">42bbbadceef2ca43b27bbf04ad6d091b</span><i class="far fa-comment-dots"></i> <span class="commentCount" id="42bbbadceef2ca43b27bbf04ad6d091b">99+</span>  </a><span class="level-item"><i class="far fa-clock"> </i>10 分钟  <i class="fas fa-pencil-alt"> </i>1.5 k</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">UI Events</h1><div class="content"><p>UI Events 定义了与用户交互的事件</p>
+<h2 id="事件类型"><a href="#事件类型" class="headerlink" title="事件类型"></a>事件类型</h2><table>
+<thead>
+<tr>
+<th align="center">事件类型</th>
+<th align="center">事件描述</th>
+<th align="center">事件列表</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">UIEvent</td>
+<td align="center">作为其他用户交互事件的基类的事件</td>
+<td align="center">load<br/>unload<br/>abort<br/>error<br/>select</td>
+</tr>
+<tr>
+<td align="center">FocusEvent</td>
+<td align="center">涉及页面的聚焦和失焦的事件</td>
+<td align="center">blur<br/>focus<br/>focusin<br/>focusout</td>
+</tr>
+<tr>
+<td align="center">MouseEvent</td>
+<td align="center">涉及鼠标移动的事件</td>
+<td align="center">mousedown<br/>mouseenter<br/>mouseleave<br/>mousemove<br/>mouseout<br/>mouseover<br/>mouseup<br/>auxclick<br/>click<br/>contextmenu<br/>dblclick</td>
+</tr>
+<tr>
+<td align="center">WheelEvent</td>
+<td align="center">涉及鼠标滚动的事件</td>
+<td align="center">wheel</td>
+</tr>
+<tr>
+<td align="center">InputEvent</td>
+<td align="center">涉及输入的事件</td>
+<td align="center">beforeinput<br/>input</td>
+</tr>
+<tr>
+<td align="center">KeyboardEvent</td>
+<td align="center">涉及键盘敲击相关的事件</td>
+<td align="center">keydown<br/>keyup</td>
+</tr>
+<tr>
+<td align="center">CompositionEvent</td>
+<td align="center">涉及组合输入的事件</td>
+<td align="center">compositionstart<br/>compositionupdate<br/>compositionend</td>
+</tr>
+</tbody></table>
+<h2 id="事件列表"><a href="#事件列表" class="headerlink" title="事件列表"></a>事件列表</h2><table>
+<thead>
+<tr>
+<th align="center">事件名称</th>
+<th align="center">事件类型</th>
+<th align="center">事件目标</th>
+<th align="center">事件是否冒泡</th>
+<th align="center">事件是否可取消</th>
+<th align="center">事件描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">load</td>
+<td align="center">UIEvent</td>
+<td align="center">Window Document Element</td>
+<td align="center">否</td>
+<td align="center">否</td>
+<td align="center">DOM 实现从环境中加载资源或依赖资源</td>
+</tr>
+<tr>
+<td align="center">unload</td>
+<td align="center">UIEvent</td>
+<td align="center">Window Document Element</td>
+<td align="center">否</td>
+<td align="center">否</td>
+<td align="center">DOM 实现从环境中删除资源或依赖资源</td>
+</tr>
+<tr>
+<td align="center">abort</td>
+<td align="center">UIEvent</td>
+<td align="center">Window Element</td>
+<td align="center">否</td>
+<td align="center">否</td>
+<td align="center">用户代理加载资源被中止</td>
+</tr>
+<tr>
+<td align="center">error</td>
+<td align="center">UIEvent</td>
+<td align="center">Window Element</td>
+<td align="center">否</td>
+<td align="center">否</td>
+<td align="center">用户代理加载资源失败或解析执行资源失败</td>
+</tr>
+<tr>
+<td align="center">select</td>
+<td align="center">UIEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">否</td>
+<td align="center">用户选择一些文字</td>
+</tr>
+<tr>
+<td align="center">blur</td>
+<td align="center">FocusEvent</td>
+<td align="center">Window Element</td>
+<td align="center">否</td>
+<td align="center">否</td>
+<td align="center">事件目标失去焦点</td>
+</tr>
+<tr>
+<td align="center">focus</td>
+<td align="center">FocusEvent</td>
+<td align="center">Window Element</td>
+<td align="center">否</td>
+<td align="center">否</td>
+<td align="center">事件目标获得焦点</td>
+</tr>
+<tr>
+<td align="center">focusin</td>
+<td align="center">FocusEvent</td>
+<td align="center">Window Element</td>
+<td align="center">是</td>
+<td align="center">否</td>
+<td align="center">事件目标获得焦点</td>
+</tr>
+<tr>
+<td align="center">focusout</td>
+<td align="center">FocusEvent</td>
+<td align="center">Window Element</td>
+<td align="center">是</td>
+<td align="center">否</td>
+<td align="center">事件目标失去焦点</td>
+</tr>
+<tr>
+<td align="center">auxclick</td>
+<td align="center">PointerEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">按下并释放非主指针按钮</td>
+</tr>
+<tr>
+<td align="center">click</td>
+<td align="center">PointerEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">按下并释放主指针按钮</td>
+</tr>
+<tr>
+<td align="center">contextmenu</td>
+<td align="center">PointerEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">打开上下文菜单时触发</td>
+</tr>
+<tr>
+<td align="center">dblclick</td>
+<td align="center">MouseEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">两次按下并释放主指针按钮</td>
+</tr>
+<tr>
+<td align="center">mousedown</td>
+<td align="center">MouseEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">元素上按下指针按钮</td>
+</tr>
+<tr>
+<td align="center">mouseenter</td>
+<td align="center">MouseEvent</td>
+<td align="center">Element</td>
+<td align="center">否</td>
+<td align="center">否</td>
+<td align="center">指针按钮移入元素及其子元素</td>
+</tr>
+<tr>
+<td align="center">mouseleave</td>
+<td align="center">MouseEvent</td>
+<td align="center">Element</td>
+<td align="center">否</td>
+<td align="center">否</td>
+<td align="center">指针按钮移出元素及其子元素</td>
+</tr>
+<tr>
+<td align="center">mousemove</td>
+<td align="center">MouseEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">指针按钮在元素内移动</td>
+</tr>
+<tr>
+<td align="center">mouseout</td>
+<td align="center">MouseEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">指针按钮移出元素及其子元素</td>
+</tr>
+<tr>
+<td align="center">mouseover</td>
+<td align="center">MouseEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">指针按钮移入元素及其子元素</td>
+</tr>
+<tr>
+<td align="center">mouseup</td>
+<td align="center">MouseEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">元素上释放指针按钮</td>
+</tr>
+<tr>
+<td align="center">wheel</td>
+<td align="center">WheelEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">鼠标滚轮滚动</td>
+</tr>
+<tr>
+<td align="center">beforeinput</td>
+<td align="center">InputEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">DOM 将要更新</td>
+</tr>
+<tr>
+<td align="center">input</td>
+<td align="center">InputEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">否</td>
+<td align="center">DOM 已经更新</td>
+</tr>
+<tr>
+<td align="center">keydown</td>
+<td align="center">KeyboardEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">按下键盘按键</td>
+</tr>
+<tr>
+<td align="center">keyup</td>
+<td align="center">KeyboardEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">释放键盘按键</td>
+</tr>
+<tr>
+<td align="center">compositionstart</td>
+<td align="center">CompositionEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">是</td>
+<td align="center">组合输入将开始</td>
+</tr>
+<tr>
+<td align="center">compositionupdate</td>
+<td align="center">CompositionEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">否</td>
+<td align="center">组合输入中</td>
+</tr>
+<tr>
+<td align="center">compositionend</td>
+<td align="center">CompositionEvent</td>
+<td align="center">Element</td>
+<td align="center">是</td>
+<td align="center">否</td>
+<td align="center">组合输入结束</td>
+</tr>
+</tbody></table>
+<h2 id="事件顺序"><a href="#事件顺序" class="headerlink" title="事件顺序"></a>事件顺序</h2><h3 id="聚焦事件顺序"><a href="#聚焦事件顺序" class="headerlink" title="聚焦事件顺序"></a>聚焦事件顺序</h3><p>聚焦 A 元素后聚焦 B 元素</p>
+<p>focus A -&gt; focusin A -&gt; blur A -&gt; focusout A -&gt; focus B -&gt; focusin B</p>
+<h3 id="鼠标事件顺序"><a href="#鼠标事件顺序" class="headerlink" title="鼠标事件顺序"></a>鼠标事件顺序</h3><p>指针设备移入 A 元素后移出</p>
+<p>mouseover A -&gt; mouseenter A -&gt; mousemove A -&gt; mouseout A -&gt; mouseleave A</p>
+<p>指针设备移入 A 元素后移入 B 元素后移出，其中 B 元素为 A 元素的子元素</p>
+<p>mouseover A -&gt; mouseenter A -&gt; mousemove A -&gt; mouseout A -&gt; mouseover B -&gt; mouseenter B -&gt; mousemove B -&gt; mouseout B -&gt; mouseleave B -&gt; mouseover A -&gt; mousemove A -&gt; mouseout A -&gt; mouseleave A</p>
+<p>指针设备移入 C 元素后移出，且 B 元素为 A 元素的子元素，C 元素为 B 元素的子元素，A 元素 B 元素 C 元素在空间上完全重叠</p>
+<p>mouseover C -&gt; mouseenter A -&gt; mouseenter B -&gt; mouseenter C -&gt; mousemove C -&gt; mouseout C -&gt; mouseleave  -&gt; mouseleave B -&gt; mouseleave A</p>
+<p>指针设备在元素上点击</p>
+<p>mousedown {-&gt; mousemove} -&gt; mouseup -&gt; click</p>
+<p>指针设备在元素上双击</p>
+<p>mousedown {-&gt; mousemove} -&gt; mouseup -&gt; click {-&gt; mousemove} -&gt; mousedown {-&gt; mousemove} -&gt; mouseup -&gt; click -&gt; dblclick</p>
+<h3 id="输入事件顺序"><a href="#输入事件顺序" class="headerlink" title="输入事件顺序"></a>输入事件顺序</h3><p>用户输入</p>
+<p>beforeinput -&gt; input</p>
+<h3 id="键盘事件顺序"><a href="#键盘事件顺序" class="headerlink" title="键盘事件顺序"></a>键盘事件顺序</h3><p>键盘按下按键</p>
+<p>keydown {-&gt; beforeinput} {-&gt; input} -&gt; keyup</p>
+<p>键盘连续按下按键</p>
+<p>keydown {-&gt; beforeinput} {-&gt; input} -&gt; keydown {-&gt; beforeinput} {-&gt; input} -&gt; … -&gt; keyup</p>
+<h3 id="组合输入顺序"><a href="#组合输入顺序" class="headerlink" title="组合输入顺序"></a>组合输入顺序</h3><p>组合输入</p>
+<p>compositionstart -&gt; compositionupdate -&gt; compositionend</p>
+<p>连续组合输入</p>
+<p>compositionstart -&gt; compositionupdate -&gt; compositionupdate -&gt; … -&gt; compositionend</p>
+<h3 id="键盘-组合输入顺序"><a href="#键盘-组合输入顺序" class="headerlink" title="键盘+组合输入顺序"></a>键盘+组合输入顺序</h3><p>keydown -&gt; compositionstart -&gt; compositionupdate -&gt; keyup -&gt; keydown -&gt; compositionstart -&gt; compositionupdate -&gt; keyup -&gt; … -&gt; keydown -&gt; compositionend -&gt; keyup</p>
+<h3 id="输入-组合输入顺序"><a href="#输入-组合输入顺序" class="headerlink" title="输入+组合输入顺序"></a>输入+组合输入顺序</h3><p>beforeinput -&gt; compositionupdate -&gt; input -&gt; compositionend</p>
+<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">UIEvent</span> <span class="keyword">extends</span> <span class="title class_">Event</span> &#123;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">detail</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">view</span>: <span class="title class_">Window</span> | <span class="literal">null</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">which</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="title function_">initUIEvent</span>(<span class="attr">typeArg</span>: <span class="built_in">string</span>, bubblesArg?: <span class="built_in">boolean</span>, cancelableArg?: <span class="built_in">boolean</span>, viewArg?: <span class="title class_">Window</span> | <span class="literal">null</span>, detailArg?: <span class="built_in">number</span>): <span class="built_in">void</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="keyword">var</span> <span class="title class_">UIEvent</span>: &#123;</span><br><span class="line">  <span class="attr">prototype</span>: <span class="title class_">UIEvent</span></span><br><span class="line">  <span class="title function_">new</span>(<span class="attr">type</span>: <span class="built_in">string</span>, eventInitDict?: <span class="title class_">UIEventInit</span>): <span class="title class_">UIEvent</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">UIEventInit</span> <span class="keyword">extends</span> <span class="title class_">EventInit</span> &#123;</span><br><span class="line">  detail?: <span class="built_in">number</span></span><br><span class="line">  view?: <span class="title class_">Window</span> | <span class="literal">null</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  which?: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">FocusEvent</span> <span class="keyword">extends</span> <span class="title class_">UIEvent</span> &#123;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">relatedTarget</span>: <span class="title class_">EventTarget</span> | <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="keyword">var</span> <span class="title class_">FocusEvent</span>: &#123;</span><br><span class="line">  <span class="attr">prototype</span>: <span class="title class_">FocusEvent</span></span><br><span class="line">  <span class="title function_">new</span>(<span class="attr">type</span>: <span class="built_in">string</span>, eventInitDict?: <span class="title class_">FocusEventInit</span>): <span class="title class_">FocusEvent</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">FocusEventInit</span> <span class="keyword">extends</span> <span class="title class_">UIEventInit</span> &#123;</span><br><span class="line">  relatedTarget?: <span class="title class_">EventTarget</span> | <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">MouseEvent</span> <span class="keyword">extends</span> <span class="title class_">UIEvent</span> &#123;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">altKey</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">button</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">buttons</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">clientX</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">clientY</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">ctrlKey</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">metaKey</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">movementX</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">movementY</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">offsetX</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">offsetY</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">pageX</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">pageY</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">relatedTarget</span>: <span class="title class_">EventTarget</span> | <span class="literal">null</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">screenX</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">screenY</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">shiftKey</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">x</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">y</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="title function_">getModifierState</span>(<span class="attr">keyArg</span>: <span class="built_in">string</span>): <span class="built_in">boolean</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="title function_">initMouseEvent</span>(<span class="attr">typeArg</span>: <span class="built_in">string</span>, <span class="attr">canBubbleArg</span>: <span class="built_in">boolean</span>, <span class="attr">cancelableArg</span>: <span class="built_in">boolean</span>, <span class="attr">viewArg</span>: <span class="title class_">Window</span>, <span class="attr">detailArg</span>: <span class="built_in">number</span>, <span class="attr">screenXArg</span>: <span class="built_in">number</span>, <span class="attr">screenYArg</span>: <span class="built_in">number</span>, <span class="attr">clientXArg</span>: <span class="built_in">number</span>, <span class="attr">clientYArg</span>: <span class="built_in">number</span>, <span class="attr">ctrlKeyArg</span>: <span class="built_in">boolean</span>, <span class="attr">altKeyArg</span>: <span class="built_in">boolean</span>, <span class="attr">shiftKeyArg</span>: <span class="built_in">boolean</span>, <span class="attr">metaKeyArg</span>: <span class="built_in">boolean</span>, <span class="attr">buttonArg</span>: <span class="built_in">number</span>, <span class="attr">relatedTargetArg</span>: <span class="title class_">EventTarget</span> | <span class="literal">null</span>): <span class="built_in">void</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="keyword">var</span> <span class="title class_">MouseEvent</span>: &#123;</span><br><span class="line">  <span class="attr">prototype</span>: <span class="title class_">MouseEvent</span></span><br><span class="line">  <span class="title function_">new</span>(<span class="attr">type</span>: <span class="built_in">string</span>, eventInitDict?: <span class="title class_">MouseEventInit</span>): <span class="title class_">MouseEvent</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">MouseEventInit</span> <span class="keyword">extends</span> <span class="title class_">EventModifierInit</span> &#123;</span><br><span class="line">  button?: <span class="built_in">number</span></span><br><span class="line">  buttons?: <span class="built_in">number</span></span><br><span class="line">  clientX?: <span class="built_in">number</span></span><br><span class="line">  clientY?: <span class="built_in">number</span></span><br><span class="line">  movementX?: <span class="built_in">number</span></span><br><span class="line">  movementY?: <span class="built_in">number</span></span><br><span class="line">  relatedTarget?: <span class="title class_">EventTarget</span> | <span class="literal">null</span></span><br><span class="line">  screenX?: <span class="built_in">number</span></span><br><span class="line">  screenY?: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">EventModifierInit</span> <span class="keyword">extends</span> <span class="title class_">UIEventInit</span> &#123;</span><br><span class="line">  altKey?: <span class="built_in">boolean</span></span><br><span class="line">  ctrlKey?: <span class="built_in">boolean</span></span><br><span class="line">  metaKey?: <span class="built_in">boolean</span></span><br><span class="line">  modifierAltGraph?: <span class="built_in">boolean</span></span><br><span class="line">  modifierCapsLock?: <span class="built_in">boolean</span></span><br><span class="line">  modifierFn?: <span class="built_in">boolean</span></span><br><span class="line">  modifierFnLock?: <span class="built_in">boolean</span></span><br><span class="line">  modifierHyper?: <span class="built_in">boolean</span></span><br><span class="line">  modifierNumLock?: <span class="built_in">boolean</span></span><br><span class="line">  modifierScrollLock?: <span class="built_in">boolean</span></span><br><span class="line">  modifierSuper?: <span class="built_in">boolean</span></span><br><span class="line">  modifierSymbol?: <span class="built_in">boolean</span></span><br><span class="line">  modifierSymbolLock?: <span class="built_in">boolean</span></span><br><span class="line">  shiftKey?: <span class="built_in">boolean</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">WheelEvent</span> <span class="keyword">extends</span> <span class="title class_">MouseEvent</span> &#123;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">deltaMode</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">deltaX</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">deltaY</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">deltaZ</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_DELTA_PIXEL</span>: <span class="number">0x00</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_DELTA_LINE</span>: <span class="number">0x01</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_DELTA_PAGE</span>: <span class="number">0x02</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="keyword">var</span> <span class="title class_">WheelEvent</span>: &#123;</span><br><span class="line">  <span class="attr">prototype</span>: <span class="title class_">WheelEvent</span></span><br><span class="line">  <span class="title function_">new</span>(<span class="attr">type</span>: <span class="built_in">string</span>, eventInitDict?: <span class="title class_">WheelEventInit</span>): <span class="title class_">WheelEvent</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_DELTA_PIXEL</span>: <span class="number">0x00</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_DELTA_LINE</span>: <span class="number">0x01</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_DELTA_PAGE</span>: <span class="number">0x02</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">WheelEventInit</span> <span class="keyword">extends</span> <span class="title class_">MouseEventInit</span> &#123;</span><br><span class="line">  deltaMode?: <span class="built_in">number</span></span><br><span class="line">  deltaX?: <span class="built_in">number</span></span><br><span class="line">  deltaY?: <span class="built_in">number</span></span><br><span class="line">  deltaZ?: <span class="built_in">number</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InputEvent</span> <span class="keyword">extends</span> <span class="title class_">UIEvent</span> &#123;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">data</span>: <span class="built_in">string</span> | <span class="literal">null</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">dataTransfer</span>: <span class="title class_">DataTransfer</span> | <span class="literal">null</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">inputType</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">isComposing</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="title function_">getTargetRanges</span>(): <span class="title class_">StaticRange</span>[]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="keyword">var</span> <span class="title class_">InputEvent</span>: &#123;</span><br><span class="line">  <span class="attr">prototype</span>: <span class="title class_">InputEvent</span></span><br><span class="line">  <span class="title function_">new</span>(<span class="attr">type</span>: <span class="built_in">string</span>, eventInitDict?: <span class="title class_">InputEventInit</span>): <span class="title class_">InputEvent</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InputEventInit</span> <span class="keyword">extends</span> <span class="title class_">UIEventInit</span> &#123;</span><br><span class="line">  data?: <span class="built_in">string</span> | <span class="literal">null</span></span><br><span class="line">  dataTransfer?: <span class="title class_">DataTransfer</span> | <span class="literal">null</span></span><br><span class="line">  inputType?: <span class="built_in">string</span></span><br><span class="line">  isComposing?: <span class="built_in">boolean</span></span><br><span class="line">  targetRanges?: <span class="title class_">StaticRange</span>[]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">KeyboardEvent</span> <span class="keyword">extends</span> <span class="title class_">UIEvent</span> &#123;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">altKey</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">charCode</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">code</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">ctrlKey</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">isComposing</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">key</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">keyCode</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">location</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">metaKey</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">repeat</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">shiftKey</span>: <span class="built_in">boolean</span></span><br><span class="line">  <span class="title function_">getModifierState</span>(<span class="attr">keyArg</span>: <span class="built_in">string</span>): <span class="built_in">boolean</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="title function_">initKeyboardEvent</span>(<span class="attr">typeArg</span>: <span class="built_in">string</span>, bubblesArg?: <span class="built_in">boolean</span>, cancelableArg?: <span class="built_in">boolean</span>, viewArg?: <span class="title class_">Window</span> | <span class="literal">null</span>, keyArg?: <span class="built_in">string</span>, locationArg?: <span class="built_in">number</span>, ctrlKey?: <span class="built_in">boolean</span>, altKey?: <span class="built_in">boolean</span>, shiftKey?: <span class="built_in">boolean</span>, metaKey?: <span class="built_in">boolean</span>): <span class="built_in">void</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_KEY_LOCATION_STANDARD</span>: <span class="number">0x00</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_KEY_LOCATION_LEFT</span>: <span class="number">0x01</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_KEY_LOCATION_RIGHT</span>: <span class="number">0x02</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_KEY_LOCATION_NUMPAD</span>: <span class="number">0x03</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="keyword">var</span> <span class="title class_">KeyboardEvent</span>: &#123;</span><br><span class="line">  <span class="attr">prototype</span>: <span class="title class_">KeyboardEvent</span></span><br><span class="line">  <span class="title function_">new</span>(<span class="attr">type</span>: <span class="built_in">string</span>, eventInitDict?: <span class="title class_">KeyboardEventInit</span>): <span class="title class_">KeyboardEvent</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_KEY_LOCATION_STANDARD</span>: <span class="number">0x00</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_KEY_LOCATION_LEFT</span>: <span class="number">0x01</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_KEY_LOCATION_RIGHT</span>: <span class="number">0x02</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">DOM_KEY_LOCATION_NUMPAD</span>: <span class="number">0x03</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">KeyboardEventInit</span> <span class="keyword">extends</span> <span class="title class_">EventModifierInit</span> &#123;</span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  charCode?: <span class="built_in">number</span></span><br><span class="line">  code?: <span class="built_in">string</span></span><br><span class="line">  isComposing?: <span class="built_in">boolean</span></span><br><span class="line">  key?: <span class="built_in">string</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  keyCode?: <span class="built_in">number</span></span><br><span class="line">  location?: <span class="built_in">number</span></span><br><span class="line">  repeat?: <span class="built_in">boolean</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">CompositionEvent</span> <span class="keyword">extends</span> <span class="title class_">UIEvent</span> &#123;</span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">data</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="title function_">initCompositionEvent</span>(<span class="attr">typeArg</span>: <span class="built_in">string</span>, bubblesArg?: <span class="built_in">boolean</span>, cancelableArg?: <span class="built_in">boolean</span>, viewArg?: <span class="title class_">WindowProxy</span> | <span class="literal">null</span>, dataArg?: <span class="built_in">string</span>): <span class="built_in">void</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">declare</span> <span class="keyword">var</span> <span class="title class_">CompositionEvent</span>: &#123;</span><br><span class="line">  <span class="attr">prototype</span>: <span class="title class_">CompositionEvent</span></span><br><span class="line">  <span class="title function_">new</span>(<span class="attr">type</span>: <span class="built_in">string</span>, eventInitDict?: <span class="title class_">CompositionEventInit</span>): <span class="title class_">CompositionEvent</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">CompositionEventInit</span> <span class="keyword">extends</span> <span class="title class_">UIEventInit</span> &#123;</span><br><span class="line">  data?: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">MutationEvent</span> <span class="keyword">extends</span> <span class="title class_">Event</span> &#123;</span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">attrChange</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">attrName</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">newValue</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">prevValue</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">relatedNode</span>: <span class="title class_">Node</span> | <span class="literal">null</span></span><br><span class="line">  <span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line">  <span class="title function_">initMutationEvent</span>(<span class="attr">typeArg</span>: <span class="built_in">string</span>, bubblesArg?: <span class="built_in">boolean</span>, cancelableArg?: <span class="built_in">boolean</span>, relatedNodeArg?: <span class="title class_">Node</span> | <span class="literal">null</span>, prevValueArg?: <span class="built_in">string</span>, newValueArg?: <span class="built_in">string</span>, attrNameArg?: <span class="built_in">string</span>, attrChangeArg?: <span class="built_in">number</span>): <span class="built_in">void</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">MODIFICATION</span>: <span class="number">1</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">ADDITION</span>: <span class="number">2</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">REMOVAL</span>: <span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** <span class="doctag">@deprecated</span> */</span></span><br><span class="line"><span class="keyword">declare</span> <span class="keyword">var</span> <span class="title class_">MutationEvent</span>: &#123;</span><br><span class="line">  <span class="attr">prototype</span>: <span class="title class_">MutationEvent</span></span><br><span class="line">  <span class="title function_">new</span>(): <span class="title class_">MutationEvent</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">MODIFICATION</span>: <span class="number">1</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">ADDITION</span>: <span class="number">2</span></span><br><span class="line">  <span class="keyword">readonly</span> <span class="attr">REMOVAL</span>: <span class="number">3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/UI_Events">https://developer.mozilla.org/en-US/docs/Web/API/UI_Events</a></li>
+<li><a target="_blank" rel="noopener" href="https://w3c.github.io/uievents/">https://w3c.github.io/uievents/</a></li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>UI Events</p><p><a href="https://skyclouds2001.github.io/2023/11/15/UI-Events/">https://skyclouds2001.github.io/2023/11/15/UI-Events/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><a href="https://skyclouds2001.github.io"><p>skyclouds2001</p></a></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2023-11-15</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-11-15</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="License" href="https://mit-license.org/"><i class="fab fa-creative-commons"></i></a></p></div></div></div></div></div><div class="recommend-area"><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 相关文章</span><br><span>  1.<a class="is-size-6" href="/2023/11/29/Popover-API/" target="_blank">Popover API</a><br></span><span>  2.<a class="is-size-6" href="/2023/11/25/Device-Memory-API/" target="_blank">Device Memory API</a><br></span><span>  3.<a class="is-size-6" href="/2023/11/23/History-API/" target="_blank">History API</a><br></span><span>  4.<a class="is-size-6" href="/2023/11/23/Location-API/" target="_blank">Location API</a><br></span><span>  5.<a class="is-size-6" href="/2023/11/21/Navigation-API/" target="_blank">Navigation API</a><br></span><span>  6.<a class="is-size-6" href="/2023/11/20/Pointer-Events/" target="_blank">Pointer Events</a><br></span><span>  7.<a class="is-size-6" href="/2023/11/20/Touch-Events/" target="_blank">Touch Events</a><br></span><span>  8.<a class="is-size-6" href="/2023/11/19/Web-App-Launch-Handler-API/" target="_blank">Web App Launch Handler API</a><br></span></div><div class="recommend-post"><span class="is-size-6 has-text-grey has-mr-7"># 推荐文章</span><br><span>  1.<a class="is-size-6" href="/2023/10/02/Badging-API/" target="_blank">Badging API</a><br></span><span>  2.<a class="is-size-6" href="/2023/11/16/Barcode-Detection-API/" target="_blank">Barcode Detection API</a><br></span><span>  3.<a class="is-size-6" href="/2023/09/13/Background-Fetch-API/" target="_blank">Background Fetch API</a><br></span><span>  4.<a class="is-size-6" href="/2023/11/04/Beacon-API/" target="_blank">Beacon API</a><br></span><span>  5.<a class="is-size-6" href="/2023/11/02/Broadcast-Channel-API/" target="_blank">Broadcast Channel API</a><br></span><span>  6.<a class="is-size-6" href="/2023/11/02/Clipboard-API/" target="_blank">Clipboard API</a><br></span></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><div class="social-share"></div><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/images/alipay.jpg" alt="支付宝"></span></a><a class="button donate" href="https://www.patreon.com/user?u=105708204" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/images/wechat.png" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/11/15/User-Activation-API/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">User Activation API</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/11/14/Drag-and-Drop-API/"><span class="level-item">Drag and Drop API</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card widget"><div class="g-ads-x"><div class="card-content"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6540459960525651" data-ad-slot="3012941103"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div class="card"><div class="card-content"><div class="title is-5">评论</div><div id="comment-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.6.0/dist/gitalk.css"><script> $.getScript('/js/gitalk.min.js', function () { 
+            var gitalk = new Gitalk({
+            language:'zh-CN',
+            id: '42bbbadceef2ca43b27bbf04ad6d091b',
+            repo: 'skyclouds2001',
+            owner: 'skyclouds2001',
+            clientID: '5ff192d081aaca9c87bc',
+            clientSecret: 'c42e1169d791a5b73eafe6fc8023efdbd3eb38ff',
+            admin: ["skyclouds2001"],
+            createIssueManually: true,
+            distractionFreeMode: false,
+            perPage: 10,
+            pagerDirection: 'last',
+            proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+            
+            enableHotKey: true,
+            isLocked: false
+        })
+        gitalk.render('comment-container')});</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="is-flex is-mobile" href="#事件类型"><span class="mr-2">1</span><span>事件类型</span></a></li><li><a class="is-flex is-mobile" href="#事件列表"><span class="mr-2">2</span><span>事件列表</span></a></li><li><a class="is-flex is-mobile" href="#事件顺序"><span class="mr-2">3</span><span>事件顺序</span></a><ul class="menu-list"><li><a class="is-flex is-mobile" href="#聚焦事件顺序"><span class="mr-2">3.1</span><span>聚焦事件顺序</span></a></li><li><a class="is-flex is-mobile" href="#鼠标事件顺序"><span class="mr-2">3.2</span><span>鼠标事件顺序</span></a></li><li><a class="is-flex is-mobile" href="#输入事件顺序"><span class="mr-2">3.3</span><span>输入事件顺序</span></a></li><li><a class="is-flex is-mobile" href="#键盘事件顺序"><span class="mr-2">3.4</span><span>键盘事件顺序</span></a></li><li><a class="is-flex is-mobile" href="#组合输入顺序"><span class="mr-2">3.5</span><span>组合输入顺序</span></a></li><li><a class="is-flex is-mobile" href="#键盘-组合输入顺序"><span class="mr-2">3.6</span><span>键盘+组合输入顺序</span></a></li><li><a class="is-flex is-mobile" href="#输入-组合输入顺序"><span class="mr-2">3.7</span><span>输入+组合输入顺序</span></a></li></ul></li><li><a class="is-flex is-mobile" href="#类型"><span class="mr-2">4</span><span>类型</span></a></li><li><a class="is-flex is-mobile" href="#链接"><span class="mr-2">5</span><span>链接</span></a></li></ul></div></div><style>.menu-list > li > a.is-active + .menu-list { display: block; }.menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://avatars.githubusercontent.com/u/95597335" alt="skyclouds2001"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">skyclouds2001</p><p class="is-size-6 is-block">总有奋不顾身的相信，总要坚韧恒久的勇气</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">95</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">14</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/skyclouds2001" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/skyclouds2001"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="mailto:skyclouds2001@163.com"><i class="fa fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Blog" href="https://skyclouds2001.github.io/"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div><div><hr><p id="hitokoto">:D 一言句子获取中...</p><script type="text/javascript" defer>function getYiyan(){
+                                $.getJSON("https://v1.hitokoto.cn/", function (data) {
+                                if(data){
+                                    $('#hitokoto').html("");
+                                    $('#hitokoto').append("<strong style='color: #3273dc;'>"+data.hitokoto+"</strong>"+
+                                    "<p>"+"来源《"+data.from+"》</p><p>提供者-"+data.creator+"</p>");
+                                }});}
+                                $(function (){getYiyan();$('#hitokoto').click(function(){getYiyan();})});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Icarus</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li><li><a class="level is-mobile" href="https://github.com/removeif/hexo-theme-amazing" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Amazing</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新评论</h3><span class="body_hot_comment">加载中，最新评论有1分钟缓存...</span></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-02T04:35:25.000Z">2023-12-02</time></p><p class="title"><a href="/2023/12/02/Permissions-Policy/">Permissions Policy</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/HTTP/">HTTP</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-29T04:14:52.000Z">2023-11-29</time></p><p class="title"><a href="/2023/11/29/Popover-API/">Popover API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-25T15:35:19.000Z">2023-11-25</time></p><p class="title"><a href="/2023/11/25/Device-Memory-API/">Device Memory API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-23T07:15:19.000Z">2023-11-23</time></p><p class="title"><a href="/2023/11/23/History-API/">History API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-11-23T03:22:33.000Z">2023-11-23</time></p><p class="title"><a href="/2023/11/23/Location-API/">Location API</a></p><p class="categories"><a href="/categories/Frontend/">Frontend</a> / <a href="/categories/Frontend/Web-API/">Web API</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/Backend/"><span class="level-start"><span class="level-item">Backend</span></span><span class="level-end"><span class="level-item tag">1</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Backend/FrameWork/"><span class="level-start"><span class="level-item">FrameWork</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/"><span class="level-start"><span class="level-item">Frontend</span></span><span class="level-end"><span class="level-item tag">85</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/Frontend/CSS/"><span class="level-start"><span class="level-item">CSS</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/FrameWork/"><span class="level-start"><span class="level-item">FrameWork</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/HTML/"><span class="level-start"><span class="level-item">HTML</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/HTTP/"><span class="level-start"><span class="level-item">HTTP</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Library/"><span class="level-start"><span class="level-item">Library</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Frontend/Other/"><span class="level-start"><span class="level-item">Other</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li></ul></li><a class="level is-mobile is-marginless" href="/categories/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2023/12/"><span class="level-start"><span class="level-item">十二月 2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/11/"><span class="level-start"><span class="level-item">十一月 2023</span></span><span class="level-end"><span class="level-item tag">29</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/10/"><span class="level-start"><span class="level-item">十月 2023</span></span><span class="level-end"><span class="level-item tag">21</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/09/"><span class="level-start"><span class="level-item">九月 2023</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2023/08/"><span class="level-start"><span class="level-item">八月 2023</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><a class="level is-mobile is-marginless" href="/archives/"><span class="level-start"><span class="level-item">查看全部&gt;&gt;</span></span></a></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Frontend/"><span class="tag">Frontend</span><span class="tag is-grey-lightest">85</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Web-API/"><span class="tag">Web API</span><span class="tag is-grey-lightest">63</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Other/"><span class="tag">Other</span><span class="tag is-grey-lightest">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Interview/"><span class="tag">Interview</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Tool/"><span class="tag">Tool</span><span class="tag is-grey-lightest">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FrameWork/"><span class="tag">FrameWork</span><span class="tag is-grey-lightest">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Backend/"><span class="tag">Backend</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTTP/"><span class="tag">HTTP</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Library/"><span class="tag">Library</span><span class="tag is-grey-lightest">1</span></a></div></div></div></div></div><div class="card widget"><div class="g-ads-x"><div class="card-content"><div class="menu"><h3 class="menu-label">广告</h3></div><br><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true" data-ad-client="ca-pub-6540459960525651" data-ad-slot="3012941103"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">widget.followit</h3><form action="https://api.follow.it/subscription-form/VUJhY1Y3Q05Ha3pvS3RzZDYrcWlRc1JTNGZQTEx5QXh4Z1llTmRtbHFDcy85allmd3hzWHkxcTc4dUFyNEhmQTkxQlZpL2JXdVQyeFVkY1pGaWNJY0ZLM0h4eGtyc0NnNlB3N2FvRnBxN1F1YVBLMkxmVHMweFlnZm1tWUorUXJ8UFBRMzljRXAyT3Nkd2NwK1VIei9RajZieHppdUVudEYzOGpIazh0bnBVZz0=/8" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://avatars.githubusercontent.com/u/95597335" alt="skyclouds2001&#039;s Blog" height="28"></a><p class="size-small"><span>&copy; 2023 skyclouds2001</span>  Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a> &amp; <a href="https://github.com/removeif/hexo-theme-amazing" target="_blank">Amazing</a> <br><span>© <a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备88888888号-8</a><br></span><span>© 版权说明：[本网站所有内容均收集于互联网或自己创作,<br />&nbsp;&nbsp;&nbsp;&nbsp;方便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank">留言</a>，立即处理]<br /></span><span><span id="statistic-times">loading...</span><script>function createTime(time) {
+            var n = new Date(time);
+            now.setTime(now.getTime() + 250),
+                days = (now - n) / 1e3 / 60 / 60 / 24,
+                dnum = Math.floor(days),
+                hours = (now - n) / 1e3 / 60 / 60 - 24 * dnum,
+                hnum = Math.floor(hours),
+            1 == String(hnum).length && (hnum = "0" + hnum),
+                minutes = (now - n) / 1e3 / 60 - 1440 * dnum - 60 * hnum,
+                mnum = Math.floor(minutes),
+            1 == String(mnum).length && (mnum = "0" + mnum),
+                seconds = (now - n) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
+                snum = Math.round(seconds),
+            1 == String(snum).length && (snum = "0" + snum),
+                document.getElementById("statistic-times").innerHTML = "❤️本站自 <strong>"+time.split(" ")[0].replace(/\//g,".")+"</strong> 已运行 <strong>" + dnum + "</strong> 天 <strong>" + hnum + "</strong> 小时 <strong>" + mnum + "</strong> 分 <strong>" + snum + "</strong> 秒！❤️";
+        }var now = new Date();setInterval("createTime('2022/06/20 00:00:00')", 250,"");</script><br></span><div class="size-small"><span>❤️感谢 <strong><span id="busuanzi_value_site_uv">99+</span></strong> 小伙伴的 <strong><span id="busuanzi_value_site_pv">99+</span></strong> 次光临！❤️</span></div></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="License" href="https://mit-license.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="GitHub" href="https://github.com/skyclouds2001/skyclouds2001.github.io/"><i class="fab fa-github"></i></a></p></div><div class="sideMusic"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><meting-js style="width: auto;height: 2000px;" server="netease" type="playlist" id="4368985" theme="#2980b9" loop="all" autoplay="false" order="list" storageName="aplayer-setting" lrctype="0" list-max-height="400px" fixed="true"></meting-js></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="/js/animation.js"></script><!--!--><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><script>$.getScript('/js/comment-issue-data.js',function(){loadIssueData('5ff192d081aaca9c87bc','c42e1169d791a5b73eafe6fc8023efdbd3eb38ff','skyclouds2001','skyclouds2001',false);})</script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.js"></script><script type="text/javascript">var pjax = new Pjax({
+            elements: "a",//代表点击链接就更新
+            selectors: [  //代表要更新的节点
+                ".section",
+                "title"
+            ],
+            cache: true,
+            cacheBust:false
+        })
+
+        function loadBusuanzi(){
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js", function () {});
+        }
+
+        function loadMathJax() { //加载mathjax
+            $.getScript("//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML", function () {
+                MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\(', '\)']] } });
+                var math = document.getElementsByClassName("entry-content")[0];
+                MathJax.Hub.Queue(["Typeset", MathJax.Hub, math]);
+            });
+        };
+
+        // 开始 PJAX 执行的函数
+        document.addEventListener('pjax:send', function () {
+        });
+        
+        // PJAX 完成之后执行的函数，可以和上面的重载放在一起
+        document.addEventListener('pjax:complete', function () {
+            $(".section").css({opacity:1});
+            if(true){
+                $.getScript('/js/comment-issue-data.js',function(){loadIssueData('5ff192d081aaca9c87bc','c42e1169d791a5b73eafe6fc8023efdbd3eb38ff','skyclouds2001','skyclouds2001',false);});
+            }
+            if(false){
+                loadMathJax();
+            }
+            loadMainJs(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings);
+            loadBackTop();
+            loadBusuanzi();
+            if(typeof loadBanner == 'function'){
+                loadBanner();
+            }
+        });</script></body></html>
