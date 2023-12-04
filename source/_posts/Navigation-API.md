@@ -38,18 +38,6 @@ function getNavigateEntries() {
 
 `Navigation` 接口的 `currentEntry` 只读属性返回一个 `NavigationHistoryEntry`，返回当前的导航历史记录
 
-`Navigation` 接口的 `transition` 只读属性返回一个 `NavigationTransition` 或 `null`，返回当前进行中的导航
-
-```js
-async function handleTransition() {
-  if (navigation.transition != null) {
-    showLoadingSpinner();
-    await navigation.transition.finished;
-    hideLoadingSpinner();
-  }
-}
-```
-
 ## 导航历史记录操作
 
 `Navigation` 接口的 `navigate()` 方法用于导航至指定 URL，并更新导航历史记录
@@ -161,7 +149,13 @@ function initBackToHomeButton() {
 
 `Navigation` 接口的 `currententrychange` 事件在当前导航记录内容变化时触发，返回一个 `NavigationCurrentEntryChangeEvent` 事件
 
-可能原因包括，相同文档内导航 `forward()` `back()` `traverseTo()`；替换当前记录 `navigate()` 方法并设置 `history` 参数为 `replace`；更新当前记录数据 `updateCurrentEntry()`
+可能原因包括，相同文档内导航 `forward()` `back()` `traverseTo()`；替换当前记录 `navigate()` 方法并设置 `history` 参数为 `replace`；更新当前记录数据 `updateCurrentEntry()` 等等
+
+> `NavigationCurrentEntryChangeEvent` 事件继承自 `Event` 事件，反映了 `currententrychange` 事件触发时返回的事件实例
+> 
+> `NavigationCurrentEntryChangeEvent` 事件的 `from` 只读属性返回一个 `NavigationHistoryEntry`，代表来源的导航历史记录
+> 
+> `NavigationCurrentEntryChangeEvent` 事件的 `navigationType` 只读属性返回一个 `string`，值为 `push` （至新纪录） `replace` （替换当前记录） `reload` （重新加载当前记录） `traverse` （至已有记录） 之一；若因为调用 `Navigation` 接口的 `updateCurrentEntry()` 方法导致的，返回 `null`
 
 ```js
 window.navigation.addEventListener("currententrychange", () => {
@@ -175,6 +169,34 @@ window.navigation.addEventListener("currententrychange", () => {
 ```
 
 `Navigation` 接口的 `navigate` 事件在任一导航类型事件发生时触发，返回一个 `NavigateEvent` 事件
+
+> `NavigateEvent` 事件继承自 `Event` 事件，反映了 `navigate` 事件触发时返回的事件实例
+> 
+> `NavigateEvent` 事件的 `destination` 只读属性返回一个 `NavigationDestination` 实例，反映导航的目标
+> 
+> > `NavigationDestination` 接口类似于 `NavigationHistoryEntry` 接口，除其不支持 `dispose` 事件外类似
+> 
+> `NavigateEvent` 事件的 `navigationType` 只读属性返回一个 `string`，值为 `push`（至新纪录） `replace`（替换当前记录） `reload`（重新加载当前记录） `traverse`（至已有记录）之一，代表导航的类型
+> 
+> `NavigateEvent` 事件的 `canIntercept` 只读属性返回一个 `boolean`，表示导航是否可被拦截并重写 URL（通常跨域导航无法被拦截）
+>
+> `NavigateEvent` 事件的 `userInitiated` 只读属性返回一个 `boolean`，表示导航是否因用户行为而发生的
+>
+> `NavigateEvent` 事件的 `hashChange` 只读属性返回一个 `boolean`，表示导航是否是一个片段导航，即仅 URL 的 hash 部分发生改变
+>
+> `NavigateEvent` 事件的 `signal` 只读属性返回一个 `AbortSignal`，其会在导航取消时终止（一个使用场合是传递给导航内的 fetch 函数以安全地取消请求）
+>
+> `NavigateEvent` 事件的 `formData` 只读属性返回一个 `FormData`，若导航因为提交表单发生；否则返回 `null`
+>
+> `NavigateEvent` 事件的 `downloadRequest` 只读属性返回一个 `string`，代表请求下载的文件名，若请求因为点击 download 的链接导致；否则返回 `null`
+>
+> `NavigateEvent` 事件的 `info` 只读属性返回在导航操作中传递的 `info` 参数；若为传递则返回 `undefined`
+>
+> `NavigateEvent` 事件的 `hasUAVisualTransition` 只读属性返回一个 `boolean`，表示用户代理是否进行了可视化的导航过渡进程
+>
+> `NavigateEvent` 事件的 `intercept()` 方法允许拦截导航并控制导航的行为
+>
+> `NavigateEvent` 事件的 `scroll()` 方法允许主动触发导航滚动行为
 
 `Navigation` 接口的 `navigateerror` 事件在导航操作失败时触发，返回一个 `Event` 事件
 
@@ -212,6 +234,61 @@ window.navigation.addEventListener("navigateerror", (event) => {
 
 `NavigationHistoryEntry` 接口的 `dispose` 事件在当前导航历史记录被移除时触发，返回一个 `Event` 事件
 
+## 导航历史记录进程
+
+`NavigationTransition` 接口代表正在进行中的导航（即尚未触发 `navigatesuccess` 或 `navigateerror` 事件的导航），通过 `Navigation` 接口的 `transition` 属性访问
+
+`NavigationTransition` 接口的 `navigationType` 只读属性返回一个 `string`，值为 `push`（至新纪录） `replace`（替换当前记录） `reload`（重新加载当前记录） `traverse`（至已有记录）之一，代表导航的类型
+
+`NavigationTransition` 接口的 `from` 只读属性返回一个 `NavigationHistoryEntry`，代表来源的导航历史记录
+
+`NavigationTransition` 接口的 `finished` 只读属性返回一个 Promise，在 `navigatesuccess` 或 `navigateerror` 事件触发同时兑现或拒绝
+
+```js
+async function handleTransition() {
+  if (navigation.transition != null) {
+    showLoadingSpinner();
+    await navigation.transition.finished;
+    hideLoadingSpinner();
+  }
+}
+```
+
+## 导航历史记录拦截
+
+`NavigateEvent` 事件的 `intercept()` 方法允许拦截导航并控制导航的行为
+
+方法允许接收一个配置项：
+
+选项 `handler` 指定拦截器的处理回调方法，回调方法允许返回一个 Promise
+
+选项 `focusReset` 指定导航的聚焦行为，值可以为 `after-transition`（默认值）或 `manual`
+
+选项 `scroll` 指定导航的滚动行为，值可以为 `after-transition`（默认值）或 `manual`
+
+```js
+window.navigation.addEventListener("navigate", (event) => {
+  if (shouldNotIntercept(navigateEvent)) {
+    return;
+  }
+  const url = new URL(event.destination.url);
+
+  if (url.pathname.startsWith("/articles/")) {
+    event.intercept({
+      async handler() {
+        const articleContent = await getArticleContent(url.pathname);
+        renderArticlePage(articleContent);
+
+        event.scroll();
+
+        const secondaryContent = await getSecondaryContent(url.pathname);
+        addSecondaryContent(secondaryContent);
+      },
+    });
+  }
+});
+```
+
 ## 类型
 
 ```ts
@@ -237,8 +314,8 @@ interface Navigation extends EventTarget {
 
   oncurrententrychange: ((this: Navigation, ev: NavigationCurrentEntryChangeEvent) => any) | null
   onnavigate: ((this: Navigation, ev: NavigateEvent) => any) | null
-  onnavigateerror: ((this: Navigation, ev: NavigateEvent) => any) | null
-  onnavigatesuccess: ((this: Navigation, ev: NavigateEvent) => any) | null
+  onnavigateerror: ((this: Navigation, ev: Event) => any) | null
+  onnavigatesuccess: ((this: Navigation, ev: Event) => any) | null
 }
 
 declare var Navigation: {
@@ -273,6 +350,13 @@ enum NavigationHistoryBehavior {
   "replace",
 }
 
+enum NavigationType {
+ "push",
+ "replace",
+ "reload",
+ "traverse",
+}
+
 interface NavigationHistoryEntry extends EventTarget {
   readonly url: string | null
   readonly key: string
@@ -287,6 +371,97 @@ interface NavigationHistoryEntry extends EventTarget {
 
 declare var NavigationHistoryEntry: {
   prototype: NavigationHistoryEntry
+}
+
+interface NavigationTransition {
+  readonly navigationType: NavigationType
+  readonly from: NavigationHistoryEntry
+  readonly finished: Promise<undefined>
+}
+
+declare var NavigationTransition: {
+  prototype: NavigationTransition
+}
+
+interface NavigationCurrentEntryChangeEvent extends Event {
+  readonly navigationType: NavigationType | null
+  readonly from: NavigationHistoryEntry
+}
+
+declare var NavigationCurrentEntryChangeEvent: {
+  new(DOMString type, NavigationCurrentEntryChangeEventInit eventInitDict): NavigationCurrentEntryChangeEvent
+  prototype: NavigationCurrentEntryChangeEvent
+}
+
+interface NavigationCurrentEntryChangeEventInit extends EventInit {
+  navigationType?: NavigationType
+  from: NavigationHistoryEntry
+}
+
+interface NavigateEvent extends Event {
+  readonly navigationType: NavigationType
+  readonly destination: NavigationDestination
+  readonly canIntercept: boolean
+  readonly userInitiated: boolean
+  readonly hashChange: boolean
+  readonly signal: AbortSignal
+  readonly formData?: FormData
+  readonly downloadRequest?: string
+  readonly info: any
+  readonly hasUAVisualTransition: boolean
+
+  intercept(options?: NavigationInterceptOptions): void
+  scroll(): void
+}
+
+declare var NavigateEvent: {
+  new(type: string, eventInitDict: NavigateEventInit): NavigateEvent
+  prototype: NavigateEvent
+}
+
+interface NavigateEventInit extends EventInit {
+  navigationType?: NavigationType
+  destination: NavigationDestination
+  canIntercept?: boolean
+  userInitiated?: boolean
+  hashChange?: boolean
+  signal: AbortSignal
+  formData?: FormData
+  downloadRequest?: string
+  info: any
+  hasUAVisualTransition?: boolean
+}
+
+interface NavigationInterceptOptions {
+  handler: NavigationInterceptHandler
+  focusReset: NavigationFocusReset
+  scroll: NavigationScrollBehavior
+}
+
+enum NavigationFocusReset {
+  "after-transition",
+  "manual",
+}
+
+enum NavigationScrollBehavior {
+  "after-transition",
+  "manual",
+}
+
+type NavigationInterceptHandler = () => Promise<undefined>
+
+interface NavigationDestination {
+  readonly url: string
+  readonly key: string
+  readonly id: string
+  readonly index: number
+  readonly sameDocument: boolean
+
+  getState(): any
+}
+
+declare var NavigationDestination: {
+  prototype: NavigationDestination
 }
 ```
 
