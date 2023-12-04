@@ -157,13 +157,60 @@ function initBackToHomeButton() {
 }
 ```
 
-## 示例
+## 导航历史记录跳转监听
 
-<div id="navigation" role="article">
-  <style></style>
+`Navigation` 接口的 `currententrychange` 事件在当前导航记录内容变化时触发，返回一个 `NavigationCurrentEntryChangeEvent` 事件
 
-  <script type="module"></script>
-</div>
+可能原因包括，相同文档内导航 `forward()` `back()` `traverseTo()`；替换当前记录 `navigate()` 方法并设置 `history` 参数为 `replace`；更新当前记录数据 `updateCurrentEntry()`
+
+```js
+window.navigation.addEventListener("currententrychange", () => {
+  const data = window.navigation.currentEntry.getState()
+  // to do something with the data
+
+  window.navigation.currentEntry.addEventListener("dispose", () => {
+    // do something when disposing
+  })
+})
+```
+
+`Navigation` 接口的 `navigate` 事件在任一导航类型事件发生时触发，返回一个 `NavigateEvent` 事件
+
+`Navigation` 接口的 `navigateerror` 事件在导航操作失败时触发，返回一个 `Event` 事件
+
+`Navigation` 接口的 `navigatesuccess` 事件在导航操作成功完成时触发，返回一个 `Event` 事件
+
+此时刻 `intercept()` 方法中传递的所有 Promise 均完成且 `NavigationTransition.finished` 同样完成
+
+```js
+window.navigation.addEventListener("navigatesuccess", () => {
+  loadingIndicator.hidden = true
+})
+
+window.navigation.addEventListener("navigateerror", (event) => {
+  loadingIndicator.hidden = true
+
+  showMessage(`Failed to load page: ${event.message}`)
+})
+```
+
+## 导航历史记录信息
+
+`NavigationHistoryEntry` 接口表示单条导航历史记录
+
+`NavigationHistoryEntry` 接口的 `id` 只读属性返回一个 `string`，代表当前导航历史记录的 id，该值是一个唯一的由用户代理生成的值
+
+`NavigationHistoryEntry` 接口的 `index` 只读属性返回一个 `number`，代表当前导航历史记录在导航历史记录列表中的下标，若不在时返回 `-1`
+
+`NavigationHistoryEntry` 接口的 `key` 只读属性返回一个 `string`，代表当前导航历史记录在导航历史记录列表中的位置的 key，该值是一个唯一的由用户代理生成的值，可以用于 `Navigation` 接口的 `traverseTo()` 方法
+
+`NavigationHistoryEntry` 接口的 `sameDocument` 只读属性返回一个 `boolean`，代表当前的当前导航历史记录对应的 document 对象是否与 document 对象相同
+
+`NavigationHistoryEntry` 接口的 `url` 只读属性返回一个 `string`，代表当前导航历史记录的绝对 URL，若受 Referer Policy 限制可能返回 `null`
+
+`NavigationHistoryEntry` 接口的 `getState()` 方法返回与当前导航历史记录绑定的 state 数据的拷贝，若不存在则返回 `undefined`
+
+`NavigationHistoryEntry` 接口的 `dispose` 事件在当前导航历史记录被移除时触发，返回一个 `Event` 事件
 
 ## 类型
 
@@ -195,7 +242,6 @@ interface Navigation extends EventTarget {
 }
 
 declare var Navigation: {
-  new (): Navigation
   prototype: Navigation
 }
 
@@ -225,6 +271,22 @@ enum NavigationHistoryBehavior {
   "auto",
   "push",
   "replace",
+}
+
+interface NavigationHistoryEntry extends EventTarget {
+  readonly url: string | null
+  readonly key: string
+  readonly id: string
+  readonly index: number
+  readonly sameDocument: boolean
+
+  getState(): any
+
+  ondispose: ((this: NavigationHistoryEntry, ev: Event) => any) | null
+}
+
+declare var NavigationHistoryEntry: {
+  prototype: NavigationHistoryEntry
 }
 ```
 
