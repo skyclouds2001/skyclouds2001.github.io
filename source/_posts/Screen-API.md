@@ -37,6 +37,10 @@ Screen API 主要支持获取当前设备屏幕的一些信息
 ## 类型
 
 ```ts
+interface Window {
+  readonly screen: Screen
+}
+
 interface Screen {
   readonly availHeight: number
   readonly availWidth: number
