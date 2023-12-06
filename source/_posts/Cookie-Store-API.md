@@ -236,7 +236,6 @@ self.addEventListener('cookiechange', (e) => {
       </tr>
     </thead>
     <tbody></tbody>
-
   </table>
 
   <form>
