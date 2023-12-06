@@ -1,5 +1,6 @@
 ---
 title: Permissions Policy
+date: 2023-12-02 12:35:25
 tags:
   - Frontend
   - HTTP
@@ -13,7 +14,6 @@ recommend: 1
 uniqueId: '2023-12-02 04:35:25/Permissions Policy.html'
 keywords:
 mathJax: false
-date: 2023-12-02 12:35:25
 ---
 
 Permissions Policy 允许开发者定义在网页中控制功能的可用性，从而增加应用的安全性和隐私性
@@ -146,3 +146,4 @@ Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com
 ## 链接
 
 * <https://w3c.github.io/webappsec-permissions-policy/>
+* <https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy>
