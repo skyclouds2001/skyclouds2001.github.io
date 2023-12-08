@@ -110,7 +110,15 @@ figcaption {
 
   <button>View Transition</button>
 
-  <style></style>
+  <style>
+    #view-transition div {
+      view-transition-name: example;
+    }
+
+    ::view-transition-new(*), ::view-transition-old(*) {
+        animation-duration: 1s;
+    }
+  </style>
 
   <script type="module">
     const box = document.querySelector('#view-transition div');
