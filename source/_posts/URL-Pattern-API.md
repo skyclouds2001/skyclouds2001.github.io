@@ -62,21 +62,21 @@ new URLPattern({
 
 ## 匹配器参数
 
-`URLPattern` 接口的 `hash` 属性返回一个 string，代表 URL 的片段标识符匹配参数
+`URLPattern` 接口的 `hash` 只读属性返回一个 string，代表 URL 的片段标识符匹配参数
 
-`URLPattern` 接口的 `hostname` 属性返回一个 string，代表 URL 的主机名匹配参数
+`URLPattern` 接口的 `hostname` 只读属性返回一个 string，代表 URL 的主机名匹配参数
 
-`URLPattern` 接口的 `password` 属性返回一个 string，代表 URL 的密码匹配参数
+`URLPattern` 接口的 `password` 只读属性返回一个 string，代表 URL 的密码匹配参数
 
-`URLPattern` 接口的 `pathname` 属性返回一个 string，代表 URL 的路径匹配参数
+`URLPattern` 接口的 `pathname` 只读属性返回一个 string，代表 URL 的路径匹配参数
 
-`URLPattern` 接口的 `port` 属性返回一个 string，代表 URL 的端口匹配参数
+`URLPattern` 接口的 `port` 只读属性返回一个 string，代表 URL 的端口匹配参数
 
-`URLPattern` 接口的 `protocol` 属性返回一个 string，代表 URL 的协议匹配参数
+`URLPattern` 接口的 `protocol` 只读属性返回一个 string，代表 URL 的协议匹配参数
 
-`URLPattern` 接口的 `search` 属性返回一个 string，代表 URL 的搜索参数匹配参数
+`URLPattern` 接口的 `search` 只读属性返回一个 string，代表 URL 的搜索参数匹配参数
 
-`URLPattern` 接口的 `username` 属性返回一个 string，代表 URL 的用户匹配参数
+`URLPattern` 接口的 `username` 只读属性返回一个 string，代表 URL 的用户匹配参数
 
 ## 使用匹配器
 
