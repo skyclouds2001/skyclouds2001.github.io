@@ -6,7 +6,7 @@
   <link href="https://skyclouds2001.github.io/atom.xml" rel="self"/>
   
   <link href="https://skyclouds2001.github.io/"/>
-  <updated>2023-12-03T12:45:11.885Z</updated>
+  <updated>2023-12-09T19:53:20.144Z</updated>
   <id>https://skyclouds2001.github.io/</id>
   
   <author>
@@ -17,11 +17,221 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>URL Pattern API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/09/URL-Pattern-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/09/URL-Pattern-API/</id>
+    <published>2023-12-09T15:31:54.000Z</published>
+    <updated>2023-12-09T19:53:20.144Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;URL Pattern API 允许创建 URL 规则匹配器，用于匹配 URL 或 URL 相关组件&lt;/p&gt;
+&lt;h2 id=&quot;创建匹配器&quot;&gt;&lt;a href=&quot;#创建匹配器&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>URL API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/08/URL-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/08/URL-API/</id>
+    <published>2023-12-08T14:51:04.000Z</published>
+    <updated>2023-12-08T16:35:55.147Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;URL API 用于表示一个互联网资源的定位标识（URL 即 Uniform Resource Locator）&lt;/p&gt;
+&lt;h2 id=&quot;创建-URL&quot;&gt;&lt;a href=&quot;#创建-URL&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Speculation Rules API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/08/Speculation-Rules-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/08/Speculation-Rules-API/</id>
+    <published>2023-12-08T04:35:20.000Z</published>
+    <updated>2023-12-08T10:09:08.053Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Speculation Rules API 设计以用于支持改善导航的性能，通过允许指定一系列规则以实现对未来文档资源的预加载&lt;/p&gt;
+&lt;p&gt;它主要用于增强和改进 &lt;code&gt;&amp;lt;link</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>View Transitions API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/06/View-Transitions-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/06/View-Transitions-API/</id>
+    <published>2023-12-06T10:32:09.000Z</published>
+    <updated>2023-12-08T04:38:02.758Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;View Transitions API 提供了创建视图过渡的功能&lt;/p&gt;
+&lt;p&gt;目前该 API 仅支持在单 Document 中的视图过渡，尚未支持跨 Document</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Content Security Policy</title>
+    <link href="https://skyclouds2001.github.io/2023/12/05/Content-Security-Policy/"/>
+    <id>https://skyclouds2001.github.io/2023/12/05/Content-Security-Policy/</id>
+    <published>2023-12-05T14:12:38.000Z</published>
+    <updated>2023-12-06T13:29:36.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Content Security Policy 简称 CSP，可用于应对跨站脚本攻击（XSS 攻击）及数据包嗅探攻击&lt;/p&gt;
+&lt;p&gt;在不指定 Content Security Policy</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="HTTP" scheme="https://skyclouds2001.github.io/categories/Frontend/HTTP/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="HTTP" scheme="https://skyclouds2001.github.io/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Visual Viewport API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/05/Visual-Viewport-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/05/Visual-Viewport-API/</id>
+    <published>2023-12-05T08:32:10.000Z</published>
+    <updated>2023-12-05T12:58:46.454Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Visual Viewport API 提供了查询和监测屏幕可视区域的功能&lt;/p&gt;
+&lt;p&gt;该 API 通过 &lt;code&gt;Window&lt;/code&gt; 接口的</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Screen API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/04/Screen-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/04/Screen-API/</id>
+    <published>2023-12-04T04:38:41.000Z</published>
+    <updated>2023-12-04T06:43:44.739Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Screen API 主要支持获取当前设备屏幕的一些信息&lt;/p&gt;
+&lt;p&gt;该 API 通过 &lt;code&gt;Window&lt;/code&gt; 接口的 &lt;code&gt;screen&lt;/code&gt; 属性暴露的</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Permissions Policy</title>
     <link href="https://skyclouds2001.github.io/2023/12/02/Permissions-Policy/"/>
     <id>https://skyclouds2001.github.io/2023/12/02/Permissions-Policy/</id>
     <published>2023-12-02T04:35:25.000Z</published>
-    <updated>2023-12-03T12:45:11.885Z</updated>
+    <updated>2023-12-06T07:41:34.600Z</updated>
     
     
       
@@ -172,7 +382,7 @@
     <link href="https://skyclouds2001.github.io/2023/11/21/Navigation-API/"/>
     <id>https://skyclouds2001.github.io/2023/11/21/Navigation-API/</id>
     <published>2023-11-21T11:41:20.000Z</published>
-    <updated>2023-11-23T13:40:57.648Z</updated>
+    <updated>2023-12-04T15:09:11.680Z</updated>
     
     
       
@@ -564,7 +774,7 @@
     <link href="https://skyclouds2001.github.io/2023/11/09/Cookie-Store-API/"/>
     <id>https://skyclouds2001.github.io/2023/11/09/Cookie-Store-API/</id>
     <published>2023-11-09T15:09:33.000Z</published>
-    <updated>2023-11-30T15:11:58.263Z</updated>
+    <updated>2023-12-06T11:25:13.705Z</updated>
     
     
       
@@ -805,7 +1015,7 @@
     <link href="https://skyclouds2001.github.io/2023/11/04/Window-Management-API/"/>
     <id>https://skyclouds2001.github.io/2023/11/04/Window-Management-API/</id>
     <published>2023-11-03T18:39:55.000Z</published>
-    <updated>2023-11-11T09:28:56.305Z</updated>
+    <updated>2023-12-04T04:43:47.384Z</updated>
     
     
       
