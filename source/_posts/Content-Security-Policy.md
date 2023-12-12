@@ -38,50 +38,50 @@ Content-Security-Policy: <policy>
 
 ## Content Security Policy 指令
 
-|      Directive name       |                  Directive description                  |
-|:-------------------------:|:-------------------------------------------------------:|
-|        default-src        |                 作为其他 fetch 相关指令的来源的后备值                  |
-|         child-src         |                限制 Worker 脚本资源和内嵌浏览上下文来源                 |
-|        worker-src         |                    限制 Worker 脚本资源来源                     |
-|         frame-src         |                       限制内嵌浏览上下文来源                       |
-|        script-src         |            限制 JavaScript 脚本和 WebAssembly 来源             |
-|      script-src-elem      |             限制 JavaScript 的 `<script>` 标签来源             |
-|      script-src-attr      |               限制 JavaScript 脚本在行内事件回调方法来源               |
-|         style-src         |                         限制样式表来源                         |
-|      style-src-elem       |    限制样式表在 `<style>` 标签和 `<link rel="stylesheet">` 来源    |
-|      style-src-attr       |                      限制样式表在内联样式中来源                      |
-|       manifest-src        |                   限制应用 manifest 文件来源                    |
-|          img-src          |                  限制 image 和 favicon 来源                  |
-|         media-src         |        限制 `<audio>` `<video>` `<track>` 的媒体资源来源         |
-|        object-src         |              限制 `<object>` `<embed>` 的资源来源              |
-|         font-src          |                 限制 @font-face 加载的字体资源来源                 |
-|        connect-src        |                       限制脚本加载的资源来源                       |
-|         base-uri          |                    限制 `<base>` 标签的内容                    |
-|          sandbox          |         设置沙箱策略（类似 `<iframe>` 标签的 `sandbox` 属性）          |
-|        form-action        |                     限制表单提交后允许的提交目标                      |
-|      frame-ancestors      | 限制允许内嵌 `<frame>` `<iframe>` `<object>` `<embed>` 的浏览上下文 |
-|         report-to         |                 允许在违反 CSP 事件发生时向指定源发送报告                 |
-| require-trusted-types-for |              强制使用 Trusted Types 应对 XSS 攻击               |
-|       trusted-types       |                指定 Trusted Types 的允许指令列表                 |
-| upgrade-insecure-requests |                    强制将不安全链接升级为安全链接对待                    |
+|       Directive name        |                  Directive description                  |
+|:---------------------------:|:-------------------------------------------------------:|
+|        `default-src`        |                 作为其他 fetch 相关指令的来源的后备值                  |
+|         `child-src`         |                限制 Worker 脚本资源和内嵌浏览上下文来源                 |
+|        `worker-src`         |                    限制 Worker 脚本资源来源                     |
+|         `frame-src`         |                       限制内嵌浏览上下文来源                       |
+|        `script-src`         |            限制 JavaScript 脚本和 WebAssembly 来源             |
+|      `script-src-elem`      |             限制 JavaScript 的 `<script>` 标签来源             |
+|      `script-src-attr`      |               限制 JavaScript 脚本在行内事件回调方法来源               |
+|         `style-src`         |                         限制样式表来源                         |
+|      `style-src-elem`       |    限制样式表在 `<style>` 标签和 `<link rel="stylesheet">` 来源    |
+|      `style-src-attr`       |                      限制样式表在内联样式中来源                      |
+|       `manifest-src`        |                   限制应用 manifest 文件来源                    |
+|          `img-src`          |                  限制 image 和 favicon 来源                  |
+|         `media-src`         |        限制 `<audio>` `<video>` `<track>` 的媒体资源来源         |
+|        `object-src`         |              限制 `<object>` `<embed>` 的资源来源              |
+|         `font-src`          |                 限制 @font-face 加载的字体资源来源                 |
+|        `connect-src`        |                       限制脚本加载的资源来源                       |
+|         `base-uri`          |                    限制 `<base>` 标签的内容                    |
+|          `sandbox`          |         设置沙箱策略（类似 `<iframe>` 标签的 `sandbox` 属性）          |
+|        `form-action`        |                     限制表单提交后允许的提交目标                      |
+|      `frame-ancestors`      | 限制允许内嵌 `<frame>` `<iframe>` `<object>` `<embed>` 的浏览上下文 |
+|         `report-to`         |                 允许在违反 CSP 事件发生时向指定源发送报告                 |
+| `require-trusted-types-for` |              强制使用 Trusted Types 应对 XSS 攻击               |
+|       `trusted-types`       |                指定 Trusted Types 的允许指令列表                 |
+| `upgrade-insecure-requests` |                    强制将不安全链接升级为安全链接对待                    |
 
 ## Content Security Policy 值
 
-|           Value name            |      Value description      |
-|:-------------------------------:|:---------------------------:|
-|              none               |           不允许任何资源           |
-|              self               |          允许当前源的资源           |
-|         strict-dynamic          |    限制当前资源的规则应同时适用于其加载的资源    |
-|          report-sample          |        要求在报告中包含样例代码         |
-|    inline-speculation-rules     | 允许使用 speculation rules 脚本规则 |
-|           unsafe-eval           |     允许使用 eval 等动态执行代码方法     |
-|        wasm-unsafe-eval         |   允许使用加载执行 WebAssembly 模块   |
-|          unsafe-hashes          |       允许使用特定的内联事件处理方法       |
-|          unsafe-inline          |          允许使用内联资源           |
-|      nonce-<base64-value>       |      允许 nonce 属性生成的资源       |
-| <hash-algorithm>-<base64-value> |      允许指定哈希算法生成的标识符的资源      |
-|          <host-source>          |          允许给定的域的资源          |
-|         <scheme-source>         |          允许给定协议的资源          |
+|            Value name             |               Value description               |
+|:---------------------------------:|:---------------------------------------------:|
+|              `none`               |                   不允许任何源的资源                   |
+|              `self`               |                   允许当前源的资源                    |
+|         `strict-dynamic`          |             限制当前资源的规则应同时适用于其加载的资源             |
+|          `report-sample`          |                 要求在报告中包含样例代码                  |
+|    `inline-speculation-rules`     |          允许使用 speculation rules 脚本规则          |
+|           `unsafe-eval`           |              允许使用 eval 等动态执行代码方法              |
+|        `wasm-unsafe-eval`         | 允许使用加载执行 WebAssembly 模块（避免直接指定 `unsafe-eval`） |
+|          `unsafe-hashes`          |                允许使用特定的内联事件处理方法                |
+|          `unsafe-inline`          |                   允许使用内联资源                    |
+|      `nonce-<base64-value>`       |            允许 nonce 属性指定的标识符限制的资源             |
+| `<hash-algorithm>-<base64-value>` |   允许指定哈希算法（sha256 sha384 sha512）生成的标识符限制的资源   |
+|          `<host-source>`          |                   允许给定的域的资源                   |
+|         `<scheme-source>`         |                   允许给定协议的资源                   |
 
 ## Content Security Policy 示例
 
