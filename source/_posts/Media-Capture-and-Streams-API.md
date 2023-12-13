@@ -30,6 +30,18 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 
 默认调用该方法仅会返回系统默认媒体设备，返回具体设备受到 `microphone` 与 `camera` 权限 API 的限制
 
+<div style="width: 500px; height: 200px; overflow: auto;">
+    <ul id="devices"></ul>
+    <script type="module">
+        let html = '';
+        const devices = await navigator.mediaDevices.enumerateDevices();
+        for (const device of devices) {
+            html += '<li>' + device.label + '</li>';
+        }
+        document.getElementById('devices').innerHTML = html;
+    </script>
+</div>
+
 ## 监听本地媒体设备变化
 
 当本地媒体设备列表改变时（如新的媒体设备连接到系统，或已有媒体设备从系统中移除），`MediaDevices` 接口上的 `devicechange` 事件会被触发，方法返回一个 `Event` 事件
@@ -50,9 +62,9 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 
 `MediaDeviceInfo` 接口的 `toJSON()` 方法是一个序列化方法，对该媒体设备信息序列化后返回一个普通对象
 
-`InputDeviceInfo` 接口的 `getCapabilities()` 方法描述原始音频或视频轨道的信息，返回一个 MediaTrackCapabilities 结构的对象；若未授予相应的权限，空对象将被返回
+`InputDeviceInfo` 接口的 `getCapabilities()` 方法描述原始音频或视频轨道的信息，返回一个 `MediaTrackCapabilities` 结构的对象；若未授予相应的权限，空对象将被返回
 
-> MediaTrackCapabilities 结构如下：
+> `MediaTrackCapabilities` 结构如下：
 >
 > `width` 参数表示视频轨道的宽度
 >
@@ -84,10 +96,163 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 >
 > `groupId` 参数表示轨道相关的 `groupId` 属性
 
+## 检测用户代理支持参数
+
+调用 `MediaDevices` 接口的 `getSupportedConstraints()` 方法获取用户代理支持识别的参数列表，返回一个 `MediaTrackSupportedConstraints` 结构的对象，对象的键名为所有受支持的参数列表，键值为 `true`
+
+> `MediaTrackSupportedConstraints` 结构如下：
+>
+> 包含 `MediaTrackCapabilities` 结构中各参数
+
+<div style="width: 500px; height: 200px; overflow: auto;">
+    <ul id="constraints"></ul>
+    <script type="module">
+        let html = '';
+        for (const constant in navigator.mediaDevices.getSupportedConstraints()) {
+            html += '<li><code>' + constant + '</code></li>';
+        }
+        document.getElementById('constraints').innerHTML = html;
+    </script>
+</div>
+
+## 获取本地媒体设备输入流
+
+调用 `MediaDevices` 接口的 `getUserMedia()` 方法从本地媒体设备获取输入流
+
+也可以使用该方法来请求本地媒体设备的权限，包括麦克风 `microphone` 与摄像头 `camera`
+
+方法接收一个 `MediaStreamConstraints` 结构的对象
+
+方法返回一个兑现包含 `MediaStream` 实例的 `Promise`
+
+若未传入参数或传入对象参数包含任一 `audio` 参数或 `video` 参数，或传入对象参数包含不允许的参数，抛出 `TypeError`
+
+若文档未处于完全激活状态，抛出 `InvalidStateError`
+
+若请求媒体资源类型在当前浏览上下文中被阻止（如受权限策略限制），或被权限 API 拒绝，抛出 `NotAllowedError`
+
+若无法获取满足条件的媒体轨道，抛出 `NotFoundError`
+
+若不存在符合约束条件的候选设备，抛出 `OverconstrainedError`
+
+若因为操作系统/程序/网页锁定设备导致无法从设备读取流信息，抛出 `NotReadableError`
+
+若因为其他原因无法从设备读取流信息，抛出 `AbortError`
+
+> `MediaStreamConstraints` 结构如下：
+>
+> `audio` 参数表示音频轨道相关信息，可以为一个布尔值（指定是否必须包含该轨道）或一个 `MediaTrackConstraints` 结构的对象
+>
+> `video` 参数表示视频轨道相关信息，可以为一个布尔值（指定是否必须包含该轨道）或一个 `MediaTrackConstraints` 结构的对象
+
+> `MediaTrackConstraints` 结构如下：
+>
+> 继承自 `MediaTrackConstraintSet` 结构
+>
+> advanced 参数表示一个 `MediaTrackConstraintSet` 结构的对象的数组
+
+> `MediaTrackConstraints` 结构如下：
+>
+> 包含 `MediaTrackCapabilities` 结构中各参数
+
 ## 类型
 
 ```ts
+interface MediaDevices extends EventTarget {
+  enumerateDevices(): Promise<MediaDeviceInfo[]>
+  getSupportedConstraints(): MediaTrackSupportedConstraints
+  getUserMedia(constraints?: MediaStreamConstraints): Promise<MediaStream>
+  ondevicechange: ((this: MediaDevices, ev: Event) => any) | null
+}
 
+declare var MediaDevices: {
+  prototype: MediaDevices
+}
+
+interface MediaDeviceInfo {
+  readonly deviceId: string
+  readonly groupId: string
+  readonly kind: MediaDeviceKind
+  readonly label: string
+  toJSON(): any
+}
+
+declare var MediaDeviceInfo: {
+  prototype: MediaDeviceInfo
+  new(): MediaDeviceInfo
+}
+
+interface InputDeviceInfo extends MediaDeviceInfo {
+  getCapabilities(): MediaTrackCapabilities
+}
+
+declare var InputDeviceInfo: {
+  prototype: InputDeviceInfo
+}
+
+type MediaDeviceKind = 'audioinput' | 'audiooutput' | 'videoinput'
+
+interface MediaTrackCapabilities {
+  aspectRatio?: DoubleRange
+  autoGainControl?: boolean[]
+  channelCount?: ULongRange
+  deviceId?: string
+  displaySurface?: string
+  echoCancellation?: boolean[]
+  facingMode?: string[]
+  frameRate?: DoubleRange
+  groupId?: string
+  height?: ULongRange
+  noiseSuppression?: boolean[]
+  sampleRate?: ULongRange
+  sampleSize?: ULongRange
+  width?: ULongRange
+}
+
+interface MediaTrackSupportedConstraints {
+  aspectRatio?: boolean
+  autoGainControl?: boolean
+  channelCount?: boolean
+  deviceId?: boolean
+  displaySurface?: boolean
+  echoCancellation?: boolean
+  facingMode?: boolean
+  frameRate?: boolean
+  groupId?: boolean
+  height?: boolean
+  noiseSuppression?: boolean
+  sampleRate?: boolean
+  sampleSize?: boolean
+  width?: boolean
+}
+
+interface MediaStreamConstraints {
+  audio?: boolean | MediaTrackConstraints
+  peerIdentity?: string
+  preferCurrentTab?: boolean
+  video?: boolean | MediaTrackConstraints
+}
+
+interface MediaTrackConstraintSet {
+  aspectRatio?: ConstrainDouble
+  autoGainControl?: ConstrainBoolean
+  channelCount?: ConstrainULong
+  deviceId?: ConstrainDOMString
+  displaySurface?: ConstrainDOMString
+  echoCancellation?: ConstrainBoolean
+  facingMode?: ConstrainDOMString
+  frameRate?: ConstrainDouble
+  groupId?: ConstrainDOMString
+  height?: ConstrainULong
+  noiseSuppression?: ConstrainBoolean
+  sampleRate?: ConstrainULong
+  sampleSize?: ConstrainULong
+  width?: ConstrainULong
+}
+
+interface MediaTrackConstraints extends MediaTrackConstraintSet {
+  advanced?: MediaTrackConstraintSet[]
+}
 ```
 
 ## 链接
