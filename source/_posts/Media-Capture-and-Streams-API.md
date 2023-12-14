@@ -151,9 +151,21 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 >
 > advanced 参数表示一个 `MediaTrackConstraintSet` 结构的对象的数组
 
-> `MediaTrackConstraints` 结构如下：
+> `MediaTrackConstraintSet` 结构如下：
 >
 > 包含 `MediaTrackCapabilities` 结构中各参数
+
+## 权限策略
+
+该 API 调用受到 `microphone` 权限策略或 `camera` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
+
+默认值均是 `self`，即允许在当前源的浏览上下文使用该 API
+
+## 权限 API
+
+该 API 调用需要用户授予 `microphone` 权限或 `camera` 权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
+
+`camera` 权限的描述符的额外参数 `panTiltZoom`，值 `true` 比值 `false` 具有更高的优先级
 
 ## 类型
 
