@@ -30,7 +30,7 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 
 默认调用该方法仅会返回系统默认媒体设备，返回具体设备受到 `microphone` 与 `camera` 权限 API 的限制
 
-<div style="width: 500px; height: 200px; overflow: auto;">
+<div style="width: 500px; height: 200px; overflow: auto; backdrop-filter: invert(25%); display: flex">
     <ul id="devices"></ul>
     <script type="module">
         let html = '';
@@ -104,7 +104,7 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 >
 > 包含 `MediaTrackCapabilities` 结构中各参数
 
-<div style="width: 500px; height: 200px; overflow: auto;">
+<div style="width: 500px; height: 200px; overflow: auto; backdrop-filter: invert(25%); display: flex;">
     <ul id="constraints"></ul>
     <script type="module">
         let html = '';
@@ -154,6 +154,22 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 > `MediaTrackConstraintSet` 结构如下：
 >
 > 包含 `MediaTrackCapabilities` 结构中各参数
+
+<div style="width: 740px; height: 360px; overflow: auto; backdrop-filter: invert(25%); display: flex;">
+    <video id="video" width="640" height="360" style="width: 640px; height: 360px;"></video>
+    <button id="button">加载</button>
+    <script type="module">
+        const video = document.getElementById('video');
+        const button = document.getElementById('button');
+        button.addEventListener('click', async () => {
+          video.srcObject = await navigator.mediaDevices.getUserMedia({
+            audio: true,
+            video: true,
+          });
+            video.play();
+        })
+    </script>
+</div>
 
 ## 权限策略
 
