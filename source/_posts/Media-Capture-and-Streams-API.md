@@ -155,6 +155,10 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 >
 > 包含 `MediaTrackCapabilities` 结构中各参数
 
+> `OverconstrainedError` 异常继承自 `DOMException`，常用于表示所需的功能集无法满足当前 `MediaStreamTrack`
+>
+> 其只读属性 `constraint` 返回一个字符串，表示未满足的约束
+
 <div style="width: 740px; height: 360px; overflow: auto; backdrop-filter: invert(25%); display: flex;">
     <video id="video" width="640" height="360" style="width: 640px; height: 360px;"></video>
     <button id="button">加载</button>
@@ -281,6 +285,15 @@ interface MediaTrackConstraintSet {
 interface MediaTrackConstraints extends MediaTrackConstraintSet {
   advanced?: MediaTrackConstraintSet[]
 }
+
+interface OverconstrainedError extends DOMException {
+  readonly constraint: string
+}
+
+declare var OverconstrainedError: {
+  prototype: OverconstrainedError
+  new(constraint: string, message?: string): OverconstrainedError
+};
 ```
 
 ## 链接
