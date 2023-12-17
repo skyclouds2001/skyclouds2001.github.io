@@ -119,7 +119,7 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 
 调用 `MediaDevices` 接口的 `getUserMedia()` 方法从本地媒体设备获取输入流
 
-也可以使用该方法来请求本地媒体设备的权限，包括麦克风 `microphone` 与摄像头 `camera`
+也可以使用该方法来请求本地媒体设备的权限，包括麦克风 `microphone` 权限与摄像头 `camera` 权限
 
 方法接收一个 `MediaStreamConstraints` 结构的对象
 
@@ -149,7 +149,7 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 >
 > 继承自 `MediaTrackConstraintSet` 结构
 >
-> advanced 参数表示一个 `MediaTrackConstraintSet` 结构的对象的数组
+> `advanced` 参数表示一个 `MediaTrackConstraintSet` 结构的对象的数组
 
 > `MediaTrackConstraintSet` 结构如下：
 >
@@ -170,10 +170,114 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
             audio: true,
             video: true,
           });
-            video.play();
+          video.play();
         })
     </script>
 </div>
+
+## 媒体流
+
+MediaStream 接口表示一个媒体流，它可包含多个媒体轨道（音频轨道与视频轨道），它支持对其包含的媒体轨道的枚举、获取、增加及删除，以及对自身的创建和克隆等
+
+### 创建媒体流
+
+可以通过 `MediaDevices.getUserMedia()` `MediaDevices.getDisplayMedia()` `HTMLCanvasElement.captureStream()` `HTMLMediaElement.captureStream()` 等方法创建对应的媒体流
+
+亦可以调用 `MediaStream()` 构造方法创建新媒体流
+
+构造方法可以不传任何参数，创建一个空的媒体流
+
+构造方法可以传一个 `MediaStream` 实例参数，创建的媒体流会与传入参数的媒体流共享使用所有媒体轨道
+
+构造方法可以传一个 `MediaStreamTrack` 数组参数，创建的媒体流会使用所有传入的媒体轨道
+
+### 媒体流信息
+
+`MediaStream` 接口的 `id` 只读属性返回媒体流的一个唯一的 32 位标识符 UUID
+
+`MediaStream` 接口的 `active` 只读属性标识媒体流当前是否处于活跃状态
+
+媒体流是否处于活跃状态，取决于其包含的所有媒体轨道是否结束（`readyState` 属性是否被置为 `ended`）
+
+### 克隆媒体流
+
+`MediaStream` 接口的 `clone()` 方法克隆当前媒体流，同时会克隆其包含的所有媒体轨道，返回的新媒体流具有与原媒体流不同的 ID
+
+### 增加媒体轨道
+
+`MediaStream` 接口的 `addtrack()` 方法向媒体流中增加给定媒体轨道，需要传入一个 `MediaStreamTrack` 实例参数；若给定媒体轨道已在媒体流中，调用该方法不会产生效果
+
+`MediaStream` 接口的 `addtrack` 事件在媒体流中增加媒体轨道时触发，返回一个 `MediaStreamTrackEvent` 事件
+
+### 移除媒体轨道
+
+`MediaStream` 接口的 `removetrack()` 方法向媒体流中移除给定媒体轨道，需要传入一个 `MediaStreamTrack` 实例参数；若给定媒体轨道未在媒体流中，调用该方法不会产生效果
+
+`MediaStream` 接口的 `removetrack` 事件在媒体流中移除媒体轨道时触发，返回一个 `MediaStreamTrackEvent` 事件
+
+### 媒体轨道改变事件
+
+`MediaStreamTrackEvent` 事件表示媒体流的改变
+
+其 `track` 只读属性表示产生该变化的媒体轨道，返回一个 `MediaStreamTrack` 实例
+
+### 获取媒体轨道
+
+`MediaStream` 接口的 `getTrackById()` 方法获取媒体流中给定 ID 的媒体轨道，若存在则返回一个 `MediaStreamTrack` 实例，反之 `null` 被返回
+
+`MediaStream` 接口的 `getAudioTracks()` 方法获取媒体流中所有音频轨道，返回一个 `MediaStreamTrack` 数组
+
+`MediaStream` 接口的 `getVideoTracks()` 方法获取媒体流中所有视频轨道，返回一个 `MediaStreamTrack` 数组
+
+`MediaStream` 接口的 `getTracks()` 方法获取媒体流中所有媒体轨道，返回一个 `MediaStreamTrack` 数组
+
+## 媒体轨道
+
+`MediaStreamTrack` 接口表示表示一个媒体轨道，它支持对自身的克隆和暂停及获取或设置自身的配置等
+
+### 媒体轨道信息
+
+`MediaStreamTrack` 接口的 `id` 只读属性返回媒体轨道的一个唯一的 32 位标识符 UUID
+
+`MediaStreamTrack` 接口的 `kind` 只读属性返回媒体轨道的类型，值为 `audio` 代表音频轨道，值为 `video` 代表视频轨道
+
+`MediaStreamTrack` 接口的 `label` 只读属性返回媒体轨道的标签，值由用户代理生成
+
+### 媒体轨道使用状态
+
+`MediaStreamTrack` 接口的 `muted` 只读属性指示媒体轨道当前是否支持提供媒体数据
+
+`MediaStreamTrack` 接口的 `mute` 事件在媒体轨道的源无法提供媒体数据时触发，返回一个 `Event` 事件
+
+`MediaStreamTrack` 接口的 `unmute` 事件在媒体轨道的源再次能够提供媒体数据时触发，返回一个 `Event` 事件
+
+`MediaStreamTrack` 接口的 `enabled` 属性读取或设置媒体轨道是否允许提供媒体数据；对音频轨道而言，样本值被置为 0；对视频轨道而言，像素值均为黑色
+
+### 媒体轨道运行状态
+
+`MediaStreamTrack` 接口的 `readyState` 只读属性返回当前媒体轨道的状态，值 `live` 指示媒体轨道正常运行，值 `ended` 指示媒体轨道已终止提供数据
+
+`MediaStreamTrack` 接口的 `stop()` 方法终止当前媒体轨道，并且 `readyState` 属性值会置为 `ended`，但 `ended` 事件不会被触发
+
+`MediaStreamTrack` 接口的 `ended` 事件在媒体轨道对应资源终止提供媒体数据时触发
+
+### 克隆媒体轨道
+
+`MediaStreamTrack` 接口的 `clone()` 方法克隆当前媒体轨道，返回的新媒体轨道具有与原媒体轨道不同的 ID
+
+### 媒体轨道参数
+
+`MediaStreamTrack` 接口的 `getConstraints()` 方法读取媒体轨道的约束属性，返回一个 `MediaTrackConstraints` 结构的对象
+
+`MediaStreamTrack` 接口的 `applyConstraints()` 方法向媒体轨道应用约束属性，需要传递一个 `MediaTrackConstraints` 结构的对象参数，返回一个 `Promise`
+
+`MediaStreamTrack` 接口的 `getCapabilities()` 方法读取媒体轨道的允许受约束属性值，返回一个 `MediaTrackCapabilities` 结构的对象
+
+`MediaStreamTrack` 接口的 `getSettings()` 方法读取媒体轨道的受约束属性（包含由操作系统指定的默认值），返回一个 `MediaTrackSettings` 结构的对象
+
+> `MediaTrackSettings` 结构如下：
+>
+> 包含 `MediaTrackCapabilities` 结构中各参数
 
 ## 权限策略
 
@@ -220,6 +324,73 @@ interface InputDeviceInfo extends MediaDeviceInfo {
 
 declare var InputDeviceInfo: {
   prototype: InputDeviceInfo
+  new(): InputDeviceInfo
+}
+
+interface OverconstrainedError extends DOMException {
+  readonly constraint: string
+}
+
+declare var OverconstrainedError: {
+  prototype: OverconstrainedError
+  new(constraint: string, message?: string): OverconstrainedError
+}
+
+interface MediaStream extends EventTarget {
+  readonly active: boolean
+  readonly id: string
+  addTrack(track: MediaStreamTrack): void
+  clone(): MediaStream
+  getAudioTracks(): MediaStreamTrack[]
+  getTrackById(trackId: string): MediaStreamTrack | null
+  getTracks(): MediaStreamTrack[]
+  getVideoTracks(): MediaStreamTrack[]
+  removeTrack(track: MediaStreamTrack): void
+  onaddtrack: ((this: MediaStream, ev: MediaStreamTrackEvent) => any) | null
+  onremovetrack: ((this: MediaStream, ev: MediaStreamTrackEvent) => any) | null
+}
+
+declare var MediaStream: {
+  prototype: MediaStream
+  new(): MediaStream
+  new(stream: MediaStream): MediaStream
+  new(tracks: MediaStreamTrack[]): MediaStream
+}
+
+interface MediaStreamTrack extends EventTarget {
+  contentHint: string
+  enabled: boolean
+  readonly id: string
+  readonly kind: string
+  readonly label: string
+  readonly muted: boolean
+  readonly readyState: MediaStreamTrackState
+  applyConstraints(constraints?: MediaTrackConstraints): Promise<void>
+  clone(): MediaStreamTrack
+  getCapabilities(): MediaTrackCapabilities
+  getConstraints(): MediaTrackConstraints
+  getSettings(): MediaTrackSettings
+  stop(): void
+  onended: ((this: MediaStreamTrack, ev: Event) => any) | null
+  onmute: ((this: MediaStreamTrack, ev: Event) => any) | null
+  onunmute: ((this: MediaStreamTrack, ev: Event) => any) | null
+}
+
+declare var MediaStreamTrack: {
+  prototype: MediaStreamTrack
+}
+
+interface MediaStreamTrackEvent extends Event {
+  readonly track: MediaStreamTrack
+}
+
+declare var MediaStreamTrackEvent: {
+  prototype: MediaStreamTrackEvent
+  new(type: string, eventInitDict: MediaStreamTrackEventInit): MediaStreamTrackEvent
+}
+
+interface MediaStreamTrackEventInit extends EventInit {
+  track: MediaStreamTrack
 }
 
 type MediaDeviceKind = 'audioinput' | 'audiooutput' | 'videoinput'
@@ -286,14 +457,22 @@ interface MediaTrackConstraints extends MediaTrackConstraintSet {
   advanced?: MediaTrackConstraintSet[]
 }
 
-interface OverconstrainedError extends DOMException {
-  readonly constraint: string
+interface MediaTrackSettings {
+  aspectRatio?: number
+  autoGainControl?: boolean
+  channelCount?: number
+  deviceId?: string
+  displaySurface?: string
+  echoCancellation?: boolean
+  facingMode?: string
+  frameRate?: number
+  groupId?: string
+  height?: number
+  noiseSuppression?: boolean
+  sampleRate?: number
+  sampleSize?: number
+  width?: number
 }
-
-declare var OverconstrainedError: {
-  prototype: OverconstrainedError
-  new(constraint: string, message?: string): OverconstrainedError
-};
 ```
 
 ## 链接
