@@ -1,5 +1,5 @@
 ---
-title: 2
+title: Web Locks API
 date: 2023-12-17 02:48:59
 tags:
   - Frontend
