@@ -6,7 +6,7 @@
   <link href="https://skyclouds2001.github.io/atom.xml" rel="self"/>
   
   <link href="https://skyclouds2001.github.io/"/>
-  <updated>2023-12-09T19:53:20.144Z</updated>
+  <updated>2023-12-18T03:22:32.619Z</updated>
   <id>https://skyclouds2001.github.io/</id>
   
   <author>
@@ -17,11 +17,189 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Save Data API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/18/Save-Data-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/18/Save-Data-API/</id>
+    <published>2023-12-18T03:11:13.000Z</published>
+    <updated>2023-12-18T03:22:32.619Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Save Data API 向网站提供用户是否倾向于节省流量使用的功能&lt;/p&gt;
+&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Screen Capture API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/18/Screen-Capture-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/18/Screen-Capture-API/</id>
+    <published>2023-12-18T03:06:56.000Z</published>
+    <updated>2023-12-18T06:40:03.410Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Screen Capture API 允许网站捕获屏幕共享媒体流，实现共享屏幕功能&lt;/p&gt;
+&lt;h2 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web Locks API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/17/Web-Locks-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/17/Web-Locks-API/</id>
+    <published>2023-12-16T18:48:59.000Z</published>
+    <updated>2023-12-17T07:14:39.587Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Web Locks API 允许网页中的脚本异步地使用锁以控制任务的重复执行&lt;/p&gt;
+&lt;p&gt;该 API 可通过 &lt;code&gt;Navigator&lt;/code&gt; 接口的</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Media Capture from DOM Elements API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/16/Media-Capture-from-DOM-Elements-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/16/Media-Capture-from-DOM-Elements-API/</id>
+    <published>2023-12-16T09:35:07.000Z</published>
+    <updated>2023-12-16T11:51:00.963Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Media Capture from DOM Elements API 允许从 DOM 元素中捕获媒体流，包括 &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Media Session API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/15/Media-Session-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/15/Media-Session-API/</id>
+    <published>2023-12-15T13:28:18.000Z</published>
+    <updated>2023-12-15T18:51:52.115Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Media Session API 允许开发者显示自定义的媒体元信息，自定义可用媒体平台控件及访问平台媒体密钥；用户代理可能会将这些信息提供给设备，便于设备媒体信息 UI</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Media Capture and Streams API</title>
+    <link href="https://skyclouds2001.github.io/2023/12/11/Media-Capture-and-Streams-API/"/>
+    <id>https://skyclouds2001.github.io/2023/12/11/Media-Capture-and-Streams-API/</id>
+    <published>2023-12-11T15:11:06.000Z</published>
+    <updated>2023-12-18T06:48:14.965Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Media Capture and Streams API 用于处理视频音频流，以及枚举本地媒体设备，它与 WebRTC API 息息相关&lt;/p&gt;
+&lt;h2 id=&quot;枚举本地媒体设备&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
     <title>URL Pattern API</title>
     <link href="https://skyclouds2001.github.io/2023/12/09/URL-Pattern-API/"/>
     <id>https://skyclouds2001.github.io/2023/12/09/URL-Pattern-API/</id>
     <published>2023-12-09T15:31:54.000Z</published>
-    <updated>2023-12-09T19:53:20.144Z</updated>
+    <updated>2023-12-11T14:27:45.101Z</updated>
     
     
       
@@ -141,7 +319,7 @@
     <link href="https://skyclouds2001.github.io/2023/12/05/Content-Security-Policy/"/>
     <id>https://skyclouds2001.github.io/2023/12/05/Content-Security-Policy/</id>
     <published>2023-12-05T14:12:38.000Z</published>
-    <updated>2023-12-06T13:29:36.768Z</updated>
+    <updated>2023-12-12T13:58:38.255Z</updated>
     
     
       
@@ -1345,7 +1523,7 @@
     <link href="https://skyclouds2001.github.io/2023/10/26/Network-Information-API/"/>
     <id>https://skyclouds2001.github.io/2023/10/26/Network-Information-API/</id>
     <published>2023-10-26T04:08:55.000Z</published>
-    <updated>2023-11-10T13:15:19.841Z</updated>
+    <updated>2023-12-18T03:13:23.286Z</updated>
     
     
       
