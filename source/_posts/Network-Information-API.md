@@ -32,15 +32,12 @@ Network Information API 允许获取网络信息和监听网络信息更改，�
 
 `NetworkInformation` 接口的 `rtt` 属性表示当前的 RTT 参数
 
-`NetworkInformation` 接口的 `saveData` 属性表示当前的用户是否倾向于节省流量使用
-
 ```js
 const type = navigator.connection.type
 const effectiveType = navigator.connection.effectiveType
 const downlink = navigator.connection.downlink
 const downlinkMax = navigator.connection.downlinkMax
 const rtt = navigator.connection.rtt
-const saveData = navigator.connection.saveData
 ```
 
 ## 监听网络信息
