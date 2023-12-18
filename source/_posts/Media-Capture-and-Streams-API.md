@@ -64,45 +64,13 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 
 `InputDeviceInfo` 接口的 `getCapabilities()` 方法描述原始音频或视频轨道的信息，返回一个 `MediaTrackCapabilities` 结构的对象；若未授予相应的权限，空对象将被返回
 
-> `MediaTrackCapabilities` 结构如下：
->
-> `width` 参数表示视频轨道的宽度
->
-> `height` 参数表示视频轨道的高度
->
-> `aspectRatio` 参数表示视频轨道的宽高比
->
-> `frameRate` 参数表示视频轨道的帧速
->
-> `facingMode` 参数表示视频轨道的摄像头朝向参数
->
-> `resizeMode` 参数表示视频轨道的可裁剪模式
->
-> `sampleRate` 参数表示音频轨道的采样率
->
-> `sampleSize` 参数表示音频轨道的样本大小
->
-> `echoCancellation` 参数表示音频轨道的是否可进行回声消除
->
-> `autoGainControl` 参数表示音频轨道的是否可进行自动增益控制
->
-> `noiseSuppression` 参数表示音频轨道的是否可进行噪声抑制
->
-> `latency` 参数表示音频轨道的延迟时间
->
-> `channelCount` 参数表示音频轨道的通道数
->
-> `deviceId` 参数表示轨道相关的 `deviceId` 属性
->
-> `groupId` 参数表示轨道相关的 `groupId` 属性
+> `MediaTrackCapabilities` 结构参见如下*媒体参数*章节
 
 ## 检测用户代理支持参数
 
 调用 `MediaDevices` 接口的 `getSupportedConstraints()` 方法获取用户代理支持识别的参数列表，返回一个 `MediaTrackSupportedConstraints` 结构的对象，对象的键名为所有受支持的参数列表，键值为 `true`
 
-> `MediaTrackSupportedConstraints` 结构如下：
->
-> 包含 `MediaTrackCapabilities` 结构中各参数
+> `MediaTrackSupportedConstraints` 结构参见如下*媒体参数*章节
 
 <div style="width: 500px; height: 200px; overflow: auto; backdrop-filter: invert(25%); display: flex;">
     <ul id="constraints"></ul>
@@ -145,19 +113,15 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 >
 > `video` 参数表示视频轨道相关信息，可以为一个布尔值（指定是否必须包含该轨道）或一个 `MediaTrackConstraints` 结构的对象
 
-> `MediaTrackConstraints` 结构如下：
+> `MediaTrackConstraints` 结构继承自 `MediaTrackConstraintSet` 结构
 >
-> 继承自 `MediaTrackConstraintSet` 结构
->
-> `advanced` 参数表示一个 `MediaTrackConstraintSet` 结构的对象的数组
+> 其 `advanced` 参数表示一个 `MediaTrackConstraintSet` 结构的对象的数组
 
-> `MediaTrackConstraintSet` 结构如下：
->
-> 包含 `MediaTrackCapabilities` 结构中各参数
+> `MediaTrackConstraintSet` 结构参见如下*媒体参数*章节
 
 > `OverconstrainedError` 异常继承自 `DOMException`，常用于表示所需的功能集无法满足当前 `MediaStreamTrack`
 >
-> 其只读属性 `constraint` 返回一个字符串，表示未满足的约束
+> 其 `constraint` 只读属性返回一个字符串，表示未满足的约束
 
 <div style="width: 740px; height: 360px; overflow: auto; backdrop-filter: invert(25%); display: flex;">
     <video id="video" width="640" height="360" style="width: 640px; height: 360px;"></video>
@@ -174,6 +138,26 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
         })
     </script>
 </div>
+
+## 媒体参数
+
+* `width` 参数表示视频轨道的宽度
+* `height` 参数表示视频轨道的高度
+* `aspectRatio` 参数表示视频轨道的宽高比
+* `frameRate` 参数表示视频轨道的帧速
+* `facingMode` 参数表示视频轨道的摄像头朝向参数
+* `resizeMode` 参数表示视频轨道的可裁剪模式
+* `sampleRate` 参数表示音频轨道的采样率
+* `sampleSize` 参数表示音频轨道的样本大小
+* `echoCancellation` 参数表示音频轨道的是否可进行回声消除
+* `autoGainControl` 参数表示音频轨道的是否可进行自动增益控制
+* `noiseSuppression` 参数表示音频轨道的是否可进行噪声抑制
+* `latency` 参数表示音频轨道的延迟时间
+* `channelCount` 参数表示音频轨道的通道数
+* `deviceId` 参数表示轨道相关的 `deviceId` 属性
+* `groupId` 参数表示轨道相关的 `groupId` 属性
+
+这些参数可被 `MediaTrackSupportedConstraints` 结构、`MediaTrackConstraintSet` 结构、`MediaTrackSettings` 结构与 `MediaTrackCapabilities`（仅包含 `displaySurface` `logicalSurface` 与 `cursor` 参数）结构使用
 
 ## 媒体流
 
@@ -275,9 +259,7 @@ MediaStream 接口表示一个媒体流，它可包含多个媒体轨道（音�
 
 `MediaStreamTrack` 接口的 `getSettings()` 方法读取媒体轨道的受约束属性（包含由操作系统指定的默认值），返回一个 `MediaTrackSettings` 结构的对象
 
-> `MediaTrackSettings` 结构如下：
->
-> 包含 `MediaTrackCapabilities` 结构中各参数
+> `MediaTrackSettings` 结构参见如上*媒体参数*章节
 
 ## 权限策略
 
