@@ -65,6 +65,24 @@ Screen Capture API 允许网站捕获屏幕共享媒体流，实现共享屏幕�
 
 这些参数被拓展至 `MediaTrackSupportedConstraints` 结构、`MediaTrackConstraintSet` 结构、`MediaTrackSettings` 结构与 `MediaTrackCapabilities`（仅包含 `displaySurface` `logicalSurface` 与 `cursor` 参数）结构，在屏幕共享媒体流中可用
 
+## 示例
+
+<div id="screen-capture" style="width: 740px; height: 360px; overflow: auto; backdrop-filter: invert(25%); display: flex;">
+    <video width="640" height="360" style="width: 640px; height: 360px;"></video>
+    <button>加载</button>
+    <script type="module">
+        const video = document.querySelector('#screen-capture video');
+        const button = document.querySelector('#screen-capture button');
+        button.addEventListener('click', async () => {
+          video.srcObject = await navigator.mediaDevices.getDisplayMedia({
+            audio: true,
+            video: true,
+          });
+          video.play();
+        })
+    </script>
+</div>
+
 ## 权限策略
 
 该 API 调用受到 `display-capture` 权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
