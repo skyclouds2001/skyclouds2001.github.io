@@ -63,7 +63,14 @@ Screen Capture API 允许网站捕获屏幕共享媒体流，实现共享屏幕�
 * `restrictOwnAudio` 参数，控制是否尝试从移除由当前文档产生的音频，返回一个布尔值
 * `suppressLocalAudioPlayback` 参数，控制是否将捕获的本地音频转发到本地扬声器设备，返回一个布尔值
 
-这些参数被拓展至 `MediaTrackSupportedConstraints` 结构、`MediaTrackConstraintSet` 结构（从而拓展至 `MediaTrackConstraint` 结构）、`MediaTrackSettings` 结构与 `MediaTrackCapabilities`（仅包含 `displaySurface` `logicalSurface` 与 `cursor` 参数）结构，在屏幕共享媒体流中可用
+这些参数被拓展至以下一些结构：
+
+- `MediaTrackSupportedConstraints` 结构
+- `MediaTrackConstraintSet` 结构（从而拓展至 `MediaTrackConstraint` 结构）
+- `MediaTrackSettings` 结构
+- `MediaTrackCapabilities`（不含 `restrictOwnAudio` 与 `suppressLocalAudioPlayback` 参数）结构
+
+这些参数在屏幕共享的媒体流中可用
 
 ## 示例
 
