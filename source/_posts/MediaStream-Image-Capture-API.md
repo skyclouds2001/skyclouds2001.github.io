@@ -80,6 +80,39 @@ MediaStream Image Capture API 用于管理和配置从照相设备中拍照或�
 
 两方法在因为其他未知原因无法完成操作，抛出 `OperationError` 异常
 
+## 相关参数
+
+* `whiteBalanceMode` 参数，表示白平衡模式，值为 `auto` `manual` `single-shot` `continuous` 之一
+* `exposureMode` 参数，表示曝光模式，值为 `auto` `manual` `single-shot` `continuous` 之一
+* `focusMode` 参数，表示对焦模式，值为 `auto` `manual` `single-shot` `continuous` 之一
+* `pointsOfInterest` 参数，表示兴趣点/测光中心（通过自动对焦、自动曝光、自动白平衡调整），值为一个 `Point2D` 数组
+
+* `exposureCompensation` 参数，表示曝光补偿，值为一个数值
+* `exposureTime` 参数，表示曝光时间，值为一个数值
+* `colorTemperature` 参数，表示色温，值为一个数值
+* `iso` 参数，表示 ISO 感光度，值为一个数值
+
+* `brightness` 参数，表示亮度，值为一个数值
+* `contrast` 参数，表示对比度，值为一个数值
+* `saturation` 参数，表示饱和度，值为一个数值
+* `sharpness` 参数，表示清晰度，值为一个数值
+
+* `focusDistance` 参数，表示焦距，值为一个数值
+* `pan` 参数，表示平移，值为一个数值
+* `tilt` 参数，表示倾斜，值为一个数值
+* `zoom` 参数，表示变焦比例，值为一个数值
+
+* `torch` 参数，表示补光模式，值为一个布尔值
+
+这些参数被拓展至以下一些结构：
+
+- `MediaTrackSupportedConstraints` 结构
+- `MediaTrackConstraintSet` 结构（从而拓展至 `MediaTrackConstraint` 结构）
+- `MediaTrackSettings` 结构
+- `MediaTrackCapabilities`（不含 `pointsOfInterest` 参数）结构
+
+这些参数在图片捕获的媒体流中可用
+
 ## 类型
 
 ```ts
@@ -119,8 +152,100 @@ interface MediaSettingsRange {
 }
 
 type RedEyeReduction = "never" | "always" | "controllable"
-
 type FillLightMode = "auto" | "off" | "flash"
+
+interface MediaTrackSupportedConstraints {
+  whiteBalanceMode?: boolean
+  exposureMode?: boolean
+  focusMode?: boolean
+  pointsOfInterest?: boolean
+  exposureCompensation?: boolean
+  exposureTime?: boolean
+  colorTemperature?: boolean
+  iso?: boolean
+  brightness?: boolean
+  contrast?: boolean
+  saturation?: boolean
+  sharpness?: boolean
+  focusDistance?: boolean
+  pan?: boolean
+  tilt?: boolean
+  zoom?: boolean
+  torch?: boolean
+}
+
+interface MediaTrackCapabilities {
+  whiteBalanceMode?: string[]
+  exposureMode?: string[]
+  focusMode?: string[]
+  exposureCompensation?: MediaSettingsRange
+  exposureTime?: MediaSettingsRange
+  colorTemperature?: MediaSettingsRange
+  iso?: MediaSettingsRange
+  brightness?: MediaSettingsRange
+  contrast?: MediaSettingsRange
+  saturation?: MediaSettingsRange
+  sharpness?: MediaSettingsRange
+  focusDistance?: MediaSettingsRange
+  pan?: MediaSettingsRange
+  tilt?: MediaSettingsRange
+  zoom?: MediaSettingsRange
+  torch?: boolean[]
+}
+
+interface MediaTrackConstraintSet {
+  whiteBalanceMode?: ConstrainDOMString
+  exposureMode?: ConstrainDOMString
+  focusMode?: ConstrainDOMString
+  pointsOfInterest?: ConstrainPoint2D
+  exposureCompensation?: ConstrainDouble
+  exposureTime?: ConstrainDouble
+  colorTemperature?: ConstrainDouble
+  iso?: ConstrainDouble
+  brightness?: ConstrainDouble
+  contrast?: ConstrainDouble
+  saturation?: ConstrainDouble
+  sharpness?: ConstrainDouble
+  focusDistance?: ConstrainDouble
+  pan?: ConstrainDouble | boolean
+  tilt?: ConstrainDouble | boolean
+  zoom?: ConstrainDouble | boolean
+  torch?: ConstrainBoolean
+}
+
+interface MediaTrackSettings {
+  whiteBalanceMode?: string
+  exposureMode?: string
+  focusMode?: string
+  pointsOfInterest?: Point2D[]
+  exposureCompensation?: number
+  exposureTime?: number
+  colorTemperature?: number
+  iso?: number
+  brightness?: number
+  contrast?: number
+  saturation?: number
+  sharpness?: number
+  focusDistance?: number
+  pan?: number
+  tilt?: number
+  zoom?: number
+  torch?: boolean
+}
+
+interface ConstrainPoint2DParameters {
+  exact: Point2D[]
+  ideal: Point2D[]
+}
+
+type ConstrainPoint2D = Point2D[] | ConstrainPoint2DParameters
+
+type MeteringMode = "none" | "manual" | "single-shot" | "continuous"
+
+interface Point2D {
+  x?: number
+  y?: number
+}
 ```
 
 ## 链接
