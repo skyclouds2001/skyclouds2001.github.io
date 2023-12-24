@@ -63,7 +63,7 @@ Screen Capture API 允许网站捕获屏幕共享媒体流，实现共享屏幕�
 * `restrictOwnAudio` 参数，控制是否尝试从移除由当前文档产生的音频，返回一个布尔值
 * `suppressLocalAudioPlayback` 参数，控制是否将捕获的本地音频转发到本地扬声器设备，返回一个布尔值
 
-这些参数被拓展至 `MediaTrackSupportedConstraints` 结构、`MediaTrackConstraintSet` 结构、`MediaTrackSettings` 结构与 `MediaTrackCapabilities`（仅包含 `displaySurface` `logicalSurface` 与 `cursor` 参数）结构，在屏幕共享媒体流中可用
+这些参数被拓展至 `MediaTrackSupportedConstraints` 结构、`MediaTrackConstraintSet` 结构（从而拓展至 `MediaTrackConstraint` 结构）、`MediaTrackSettings` 结构与 `MediaTrackCapabilities`（仅包含 `displaySurface` `logicalSurface` 与 `cursor` 参数）结构，在屏幕共享媒体流中可用
 
 ## 示例
 
@@ -96,13 +96,63 @@ Screen Capture API 允许网站捕获屏幕共享媒体流，实现共享屏幕�
 ## 类型
 
 ```ts
-interface MediaDevices extends EventTarget {
+interface MediaDevices {
   getDisplayMedia(options?: DisplayMediaStreamOptions): Promise<MediaStream>
 }
 
 interface DisplayMediaStreamOptions {
   audio?: boolean | MediaTrackConstraints
   video?: boolean | MediaTrackConstraints
+  controller: CaptureController
+  selfBrowserSurface: SelfCapturePreferenceEnum
+  systemAudio: SystemAudioPreferenceEnum
+  surfaceSwitching: SurfaceSwitchingPreferenceEnum
+  monitorTypeSurfaces: MonitorTypeSurfacesEnum
+}
+
+interface CaptureController extends EventTarget {
+  setFocusBehavior(focusBehavior: CaptureStartFocusBehavior): void
+}
+
+declare var CaptureController: {
+  prototype: CaptureController
+  new(): CaptureController
+}
+
+type CaptureStartFocusBehavior = 'focus-capturing-application' | 'focus-captured-surface' | 'no-focus-change'
+type SelfCapturePreferenceEnum = 'include' | 'exclude'
+type SystemAudioPreferenceEnum = 'include' | 'exclude'
+type SurfaceSwitchingPreferenceEnum = 'include' | 'exclude'
+type MonitorTypeSurfacesEnum = 'include' | 'exclude'
+
+interface MediaTrackSupportedConstraints {
+  displaySurface?: boolean
+  logicalSurface?: boolean
+  cursor?: boolean
+  restrictOwnAudio?: boolean
+  suppressLocalAudioPlayback?: boolean
+}
+
+interface MediaTrackConstraintSet {
+  displaySurface?: ConstrainDOMString
+  logicalSurface?: ConstrainBoolean
+  cursor?: ConstrainDOMString
+  restrictOwnAudio?: ConstrainBoolean
+  suppressLocalAudioPlayback?: ConstrainBoolean
+}
+
+interface MediaTrackSettings {
+  displaySurface?: string
+  logicalSurface?: boolean
+  cursor?: string
+  restrictOwnAudio?: boolean
+  suppressLocalAudioPlayback?: boolean
+}
+
+interface MediaTrackCapabilities {
+  displaySurface?: string
+  logicalSurface?: boolean
+  cursor?: string[]
 }
 ```
 
