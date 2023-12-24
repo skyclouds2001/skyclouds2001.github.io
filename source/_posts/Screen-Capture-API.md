@@ -66,7 +66,7 @@ Screen Capture API 允许网站捕获屏幕共享媒体流，实现共享屏幕�
 这些参数被拓展至以下一些结构：
 
 - `MediaTrackSupportedConstraints` 结构
-- `MediaTrackConstraintSet` 结构（从而拓展至 `MediaTrackConstraint` 结构）
+- `MediaTrackConstraintSet` 结构（从而拓展至 `MediaTrackConstraints` 结构）
 - `MediaTrackSettings` 结构
 - `MediaTrackCapabilities`（不含 `restrictOwnAudio` 与 `suppressLocalAudioPlayback` 参数）结构
 

@@ -157,7 +157,23 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 * `deviceId` 参数表示轨道相关的 `deviceId` 属性
 * `groupId` 参数表示轨道相关的 `groupId` 属性
 
-这些参数可被 `MediaTrackSupportedConstraints` 结构、`MediaTrackConstraintSet` 结构、`MediaTrackSettings` 结构与 `MediaTrackCapabilities`（仅包含 `displaySurface` `logicalSurface` 与 `cursor` 参数）结构使用
+这些参数可被如下一些结构使用：
+
+- `MediaTrackSupportedConstraints` 结构
+  - `MediaDevices.getSupportedConstraints()` 方法
+- `MediaTrackConstraintSet` 结构 
+- `MediaTrackConstraints` 结构（继承 `MediaTrackConstraintSet` 结构）
+  -  `MediaDevices.getDisplayMedia()` 方法
+  -  `MediaDevices.getUserMedia()` 方法
+  - `MediaStreamTrack.getConstraints()` 方法
+  - `MediaStreamTrack.applyConstraints()` 方法
+- `MediaTrackSettings` 结构
+  - `MediaStreamTrack.getSettings()` 方法
+- `MediaTrackCapabilities` 结构
+  - `MediaStreamTrack.getCapabilities()` 方法
+  - `InputDeviceInfo.getCapabilities()` 方法
+
+并且这些结构通过 Screen Capture API 和 MediaStream Image Capture API 被拓展
 
 ## 媒体流
 

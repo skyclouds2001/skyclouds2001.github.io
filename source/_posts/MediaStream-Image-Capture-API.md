@@ -107,7 +107,7 @@ MediaStream Image Capture API 用于管理和配置从照相设备中拍照或�
 这些参数被拓展至以下一些结构：
 
 - `MediaTrackSupportedConstraints` 结构
-- `MediaTrackConstraintSet` 结构（从而拓展至 `MediaTrackConstraint` 结构）
+- `MediaTrackConstraintSet` 结构（从而拓展至 `MediaTrackConstraints` 结构）
 - `MediaTrackSettings` 结构
 - `MediaTrackCapabilities`（不含 `pointsOfInterest` 参数）结构
 
