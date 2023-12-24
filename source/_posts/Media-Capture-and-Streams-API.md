@@ -159,17 +159,17 @@ Media Capture and Streams API 用于处理视频音频流，以及枚举本地�
 
 这些参数可被如下一些结构使用：
 
-- `MediaTrackSupportedConstraints` 结构
+- `MediaTrackSupportedConstraints` 结构，表示受到用户代理支持的约束参数
   - `MediaDevices.getSupportedConstraints()` 方法
-- `MediaTrackConstraintSet` 结构 
-- `MediaTrackConstraints` 结构（继承 `MediaTrackConstraintSet` 结构）
+- `MediaTrackConstraintSet` 结构
+- `MediaTrackConstraints` 结构（继承 `MediaTrackConstraintSet` 结构），表示开发者配置的约束参数范围
   -  `MediaDevices.getDisplayMedia()` 方法
   -  `MediaDevices.getUserMedia()` 方法
   - `MediaStreamTrack.getConstraints()` 方法
   - `MediaStreamTrack.applyConstraints()` 方法
-- `MediaTrackSettings` 结构
+- `MediaTrackSettings` 结构，表示用户代理实际使用的约束参数
   - `MediaStreamTrack.getSettings()` 方法
-- `MediaTrackCapabilities` 结构
+- `MediaTrackCapabilities` 结构，表示用户代理支持的约束参数范围
   - `MediaStreamTrack.getCapabilities()` 方法
   - `InputDeviceInfo.getCapabilities()` 方法
 
