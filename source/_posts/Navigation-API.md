@@ -152,9 +152,9 @@ function initBackToHomeButton() {
 可能原因包括，相同文档内导航 `forward()` `back()` `traverseTo()`；替换当前记录 `navigate()` 方法并设置 `history` 参数为 `replace`；更新当前记录数据 `updateCurrentEntry()` 等等
 
 > `NavigationCurrentEntryChangeEvent` 事件继承自 `Event` 事件，反映了 `currententrychange` 事件触发时返回的事件实例
-> 
+>
 > `NavigationCurrentEntryChangeEvent` 事件的 `from` 只读属性返回一个 `NavigationHistoryEntry`，代表来源的导航历史记录
-> 
+>
 > `NavigationCurrentEntryChangeEvent` 事件的 `navigationType` 只读属性返回一个 `string`，值为 `push` （至新纪录） `replace` （替换当前记录） `reload` （重新加载当前记录） `traverse` （至已有记录） 之一；若因为调用 `Navigation` 接口的 `updateCurrentEntry()` 方法导致的，返回 `null`
 
 ```js
@@ -171,13 +171,13 @@ window.navigation.addEventListener("currententrychange", () => {
 `Navigation` 接口的 `navigate` 事件在任一导航类型事件发生时触发，返回一个 `NavigateEvent` 事件
 
 > `NavigateEvent` 事件继承自 `Event` 事件，反映了 `navigate` 事件触发时返回的事件实例
-> 
+>
 > `NavigateEvent` 事件的 `destination` 只读属性返回一个 `NavigationDestination` 实例，反映导航的目标
-> 
+>
 > > `NavigationDestination` 接口类似于 `NavigationHistoryEntry` 接口，除其不支持 `dispose` 事件外类似
-> 
+>
 > `NavigateEvent` 事件的 `navigationType` 只读属性返回一个 `string`，值为 `push`（至新纪录） `replace`（替换当前记录） `reload`（重新加载当前记录） `traverse`（至已有记录）之一，代表导航的类型
-> 
+>
 > `NavigateEvent` 事件的 `canIntercept` 只读属性返回一个 `boolean`，表示导航是否可被拦截并重写 URL（通常跨域导航无法被拦截）
 >
 > `NavigateEvent` 事件的 `userInitiated` 只读属性返回一个 `boolean`，表示导航是否因用户行为而发生的
@@ -389,7 +389,7 @@ interface NavigationCurrentEntryChangeEvent extends Event {
 }
 
 declare var NavigationCurrentEntryChangeEvent: {
-  new(DOMString type, NavigationCurrentEntryChangeEventInit eventInitDict): NavigationCurrentEntryChangeEvent
+  new(type: string, eventInitDict: NavigationCurrentEntryChangeEventInit): NavigationCurrentEntryChangeEvent
   prototype: NavigationCurrentEntryChangeEvent
 }
 
