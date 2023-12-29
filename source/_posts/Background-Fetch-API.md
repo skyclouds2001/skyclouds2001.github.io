@@ -16,13 +16,13 @@ uniqueId: '2023-09-13 15:43:44/Background Fetch API.html'
 mathJax: false
 ---
 
-后台获取 API 提供了一种管理可能需要大量时间的下载的方法，例如电影、音频文件和软件等。
+Background Fetch API 提供了一种管理可能需要大量时间的下载的方法，例如电影、音频文件和软件等。
 
 其提供了一种让浏览器在后台执行某些获取的方法。然后，浏览器以用户可见的方式执行提取，向用户显示进度并为他们提供取消下载的方法。下载完成后，浏览器就会在 ServiceWorker 触发相关事件，此时应用程序可以根据需要对响应执行某些操作。
 
 如果用户在离线状态下启动进程，后台获取 API 将启用。一旦网络连接，该过程就会开始。如果网络离线，该过程将暂停，直到用户再次上线。
 
-后台获取 API 通过 `BackgroundFetchManager` 接口提供，并基于 `ServiceWorkerRegistration` 接口的 `backgroundFetch` 属性向开发者暴露。
+该 API 通过 `BackgroundFetchManager` 接口提供，并基于 `ServiceWorkerRegistration` 接口的 `backgroundFetch` 属性向开发者暴露。
 
 ## 发起 Background Fetch
 

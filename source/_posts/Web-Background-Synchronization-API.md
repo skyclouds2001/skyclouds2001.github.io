@@ -16,9 +16,9 @@ uniqueId: '2023-09-12 08:45:37/Web Background Synchronization API.html'
 mathJax: false
 ---
 
-消息同步 API 用于同步创建任务，直至用户获取到稳定的网络连接时才开始按序执行。
+Web Background Synchronization API 用于同步创建任务，直至用户获取到稳定的网络连接时才开始按序执行。
 
-消息同步 API 可以有很多应用场景：
+该 API 可以有很多应用场景：
 
 * 离线数据同步
 * 数据备份

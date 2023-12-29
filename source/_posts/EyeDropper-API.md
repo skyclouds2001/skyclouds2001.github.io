@@ -16,7 +16,7 @@ uniqueId: '2023-10-27 14:49:36/EyeDropper API.html'
 mathJax: false
 ---
 
-EyeDropper API 提供了 eyedropper 工具，允许用户选择屏幕上的某个特定位置的颜色
+EyeDropper API 提供了吸管工具，允许用户选择屏幕上的某个特定位置的颜色
 
 该 API 仅在严格上下文环境下允许使用
 

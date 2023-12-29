@@ -16,13 +16,13 @@ uniqueId: '2023-09-14 23:42:48/Web Periodic Background Synchronization API.html'
 mathJax: false
 ---
 
-后台周期同步 API 提供了一种注册在网络状态允许下周期性执行任务的方法，这些任务被称为周期后台同步请求。
+Web Periodic Background Synchronization API 提供了一种注册在网络状态允许下周期性执行任务的方法，这些任务被称为周期后台同步请求。
 
 API 用途包括在设备连接到网络时获取最新内容，或允许对应用程序进行后台更新。
 
 调用 API 时需设置最小时间间隔，但是用户代理通常还会考虑网络连接情况或者之前网站的用户参与程度来决定触发任务的周期。
 
-后台获取 API 通过 `PeriodicSyncManager` 接口提供，并基于 `ServiceWorkerRegistration` 接口的 `periodicSync` 属性向开发者暴露。
+该 API 通过 `PeriodicSyncManager` 接口提供，并基于 `ServiceWorkerRegistration` 接口的 `periodicSync` 属性向开发者暴露。
 
 ## 注册周期后台同步任务
 

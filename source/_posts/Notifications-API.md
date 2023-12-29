@@ -16,6 +16,8 @@ uniqueId: '2023-09-10 21:26:07/Notifications API.html'
 mathJax: false
 ---
 
+Notifications API 用于在网页端使用系统通知功能
+
 ## 创建通知
 
 `ServiceWorkerRegistration` 接口的 `showNotification()` 方法用于在对应的 Service Worker 上创建一条（系统）通知，该通知的相关操作会在对应的 Service Worker 全局上下文上触发相应的事件。
