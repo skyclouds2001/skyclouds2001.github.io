@@ -1779,10 +1779,10 @@ hexo-cli@^4.0.0, hexo-cli@^4.3.0:
     resolve "^1.20.0"
     tildify "^2.0.0"
 
-hexo-component-inferno@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/hexo-component-inferno/-/hexo-component-inferno-2.0.3.tgz#45b5dfd2f667e5b349d658e3349b9d0033cd97a3"
-  integrity sha512-9yBs2wacCIjwpYBKwOzRH7hFFGEfzb2c27u3Al/XbCPePrS3MP2TTYBjRC2E03nQe341wf/6SMUzzgLeHoQVsQ==
+hexo-component-inferno@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/hexo-component-inferno/-/hexo-component-inferno-2.0.4.tgz#456ccff0102975c48d5b7d3b31f5d75e8778418f"
+  integrity sha512-omxq1ev2HqzjtEKQ933Rb7cv2Xm4gvpT9XTBm5AJOvo0AnnpXkWcADFPVaIBq9caNUY2DMZxGfE1N2rWpOsIxQ==
   dependencies:
     ajv "^8.8.2"
     hexo "^6.0.0"
