@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "bulma-stylus": "0.8.0",
-    "hexo": "^5.0.2",
+    "hexo": "^7.1.0",
     "hexo-blog-encrypt": "^3.0.13",
     "hexo-component-inferno": "^2.0.3",
     "hexo-deployer-git": "^4.0.0",
