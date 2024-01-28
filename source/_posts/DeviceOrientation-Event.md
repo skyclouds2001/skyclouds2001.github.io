@@ -60,6 +60,20 @@ window.addEventListener('deviceorientationabsolute', (e) => {
 
 `DeviceOrientationEvent` 接口的 `gamma` 属性返回一个范围在 `-90` 至 `90` 之间的 `number`，表明设备绕 y 轴旋转的角度
 
+## 权限策略
+
+该 API 调用受到 `accelerometer` `gyroscope` `magnetometer` 等权限策略的控制，可以通过 `Permissions-Policy` 响应头指定，或通过 `<iframe>` 标签的 `allow` 属性指定
+
+默认值均是 `self`，即允许允许在顶层浏览上下文及其同源的嵌入浏览上下文中使用
+
+`deviceorientation` 事件与 `devicemotion` 事件需要 `accelerometer` `gyroscope` 权限策略，而 `deviceorientationabsolute` 事件需要 `accelerometer` `gyroscope` `magnetometer` 权限策略
+
+## 权限 API
+
+该 API 调用时需要用户授予 `accelerometer` `gyroscope` `magnetometer` 等权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
+
+`deviceorientation` 事件与 `devicemotion` 事件需要授予 `accelerometer` `gyroscope` 权限，而 `deviceorientationabsolute` 事件需要授予 `accelerometer` `gyroscope` `magnetometer` 权限
+
 ## 类型
 
 ```ts
