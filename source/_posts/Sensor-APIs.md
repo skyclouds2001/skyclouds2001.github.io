@@ -118,36 +118,133 @@ Sensor APIs 提供了一系列的传感器 API， 用以提供网页访问应用
 
 默认值均是 `self`，即允许允许在顶层浏览上下文及其同源的嵌入浏览上下文中使用
 
-| 传感器 | 权限策略 |
-| :---: | :---: |
-| `Accelerometer` | `accelerometer` |
-| `LinearAccelerationSensor` | `accelerometer` |
-| `GravitySensor` | `accelerometer` |
-| `RelativeOrientationSensor` | `accelerometer` `gyroscope` |
+|             传感器             |                    权限策略                    |
+|:---------------------------:|:------------------------------------------:|
+|       `Accelerometer`       |              `accelerometer`               |
+| `LinearAccelerationSensor`  |              `accelerometer`               |
+|       `GravitySensor`       |              `accelerometer`               |
+| `RelativeOrientationSensor` |        `accelerometer` `gyroscope`         |
 | `AbsoluteOrientationSensor` | `accelerometer` `gyroscope` `magnetometer` |
-| `AmbientLightSensor` | `ambient-light-sensor` |
-| `Gyroscope` | `gyroscope` |
-| `Magnetometer` | `magnetometer` |
+|    `AmbientLightSensor`     |           `ambient-light-sensor`           |
+|         `Gyroscope`         |                `gyroscope`                 |
+|       `Magnetometer`        |               `magnetometer`               |
 
 ## 权限 API
 
 该组 API 调用时需要用户授予 `accelerometer` `gyroscope` `magnetometer` `ambient-light-sensor` 等权限，可以调用 `Permission.query()` 方法检查用户是否已授予了该权限
 
-| 传感器 | 权限 |
-| :---: | :---: |
-| `Accelerometer` | `accelerometer` |
-| `LinearAccelerationSensor` | `accelerometer` |
-| `GravitySensor` | `accelerometer` |
-| `RelativeOrientationSensor` | `accelerometer` `gyroscope` |
+|             传感器             |                     权限                     |
+|:---------------------------:|:------------------------------------------:|
+|       `Accelerometer`       |              `accelerometer`               |
+| `LinearAccelerationSensor`  |              `accelerometer`               |
+|       `GravitySensor`       |              `accelerometer`               |
+| `RelativeOrientationSensor` |        `accelerometer` `gyroscope`         |
 | `AbsoluteOrientationSensor` | `accelerometer` `gyroscope` `magnetometer` |
-| `AmbientLightSensor` | `ambient-light-sensor` |
-| `Gyroscope` | `gyroscope` |
-| `Magnetometer` | `magnetometer` |
+|    `AmbientLightSensor`     |           `ambient-light-sensor`           |
+|         `Gyroscope`         |                `gyroscope`                 |
+|       `Magnetometer`        |               `magnetometer`               |
 
 ## 类型
 
 ```ts
+interface Sensor extends EventTarget {
+  readonly activated: boolean
+  readonly hasReading: boolean
+  readonly timestamp?: DOMHighResTimeStamp
 
+  start(): void
+  stop(): void
+
+  onreading: ((this: Sensor, ev: Event) => any) | null
+  onactivate: ((this: Sensor, ev: Event) => any) | null
+  onerror: ((this: Sensor, ev: SensorErrorEvent) => any) | null
+}
+
+interface SensorOptions {
+  frequency: number
+}
+
+interface SensorErrorEvent extends Event {
+  constructor(type: string, errorEventInitDict: SensorErrorEventInit)
+  readonly error: DOMException
+}
+
+interface SensorErrorEventInit extends EventInit {
+  error: DOMException
+}
+
+interface Accelerometer extends Sensor {
+  constructor(options?: AccelerometerSensorOptions)
+  readonly x?: number
+  readonly y?: number
+  readonly z?: number
+}
+
+enum AccelerometerLocalCoordinateSystem { "device", "screen" }
+
+interface AccelerometerSensorOptions extends SensorOptions {
+  referenceFrame?: AccelerometerLocalCoordinateSystem
+}
+
+interface LinearAccelerationSensor extends Accelerometer {
+  constructor(options?: AccelerometerSensorOptions)
+}
+
+interface GravitySensor extends Accelerometer {
+  constructor(options?: AccelerometerSensorOptions)
+}
+
+type RotationMatrixType = Float32Array | Float64Array | DOMMatrix
+
+interface OrientationSensor extends Sensor {
+  readonly quaternion?: ReadonlyArray<number>
+  populateMatrix(targetMatrix: RotationMatrixType): void
+}
+
+enum OrientationSensorLocalCoordinateSystem { "device", "screen" }
+
+interface OrientationSensorOptions extends SensorOptions {
+  referenceFrame?: OrientationSensorLocalCoordinateSystem
+}
+
+interface AbsoluteOrientationSensor extends OrientationSensor {
+  constructor(sensorOptions?: OrientationSensorOptions)
+}
+
+interface RelativeOrientationSensor extends OrientationSensor {
+  constructor(sensorOptions?: OrientationSensorOptions)
+}
+
+interface AmbientLightSensor extends Sensor {
+  constructor(options?: SensorOptions)
+  readonly illuminance?: number
+}
+
+interface Gyroscope extends Sensor {
+  constructor(sensorOptions?: GyroscopeSensorOptions)
+  readonly x?: number
+  readonly y?: number
+  readonly z?: number
+}
+
+enum GyroscopeLocalCoordinateSystem { "device", "screen" }
+
+interface GyroscopeSensorOptions extends SensorOptions {
+  referenceFrame?: GyroscopeLocalCoordinateSystem
+}
+
+interface Magnetometer : Sensor {
+  constructor(sensorOptions?: MagnetometerSensorOptions)
+  readonly x?: number
+  readonly y?: number
+  readonly z?: number
+}
+
+enum MagnetometerLocalCoordinateSystem { "device", "screen" }
+
+interface MagnetometerSensorOptions extends SensorOptions {
+  referenceFrame?: MagnetometerLocalCoordinateSystem
+}
 ```
 
 ## 链接
