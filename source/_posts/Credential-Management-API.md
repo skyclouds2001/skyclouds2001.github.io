@@ -40,6 +40,8 @@ Credential Management API 允许网站存储和检索密码、公钥与联合凭
 
 方法返回一个 `Promise`，其兑现一个 `Credential` 实例，或 `null`（若无法创建凭证）
 
+相关示例见下具体凭证类型章节
+
 ### 存储凭证
 
 调用 `CredentialsContainer` 接口的 `store()` 方法存储凭证
@@ -47,6 +49,8 @@ Credential Management API 允许网站存储和检索密码、公钥与联合凭
 方法需要传入一个 `Credential` 接口或其子接口的实例，代表需要保存的凭证
 
 方法返回一个 `Promise`
+
+示例如下所示
 
 ```js
 try {
@@ -75,6 +79,8 @@ try {
 
 此外，可以向配置项中传入 `password` `federated` `publicKey` `otp` `identity` 中多个选项，以仅读取对应的具体类型的凭证，具体选项细节见下及 Web Authentication API、WebOTP API、Federated Credential Management API 等内容
 
+相关示例见下具体凭证类型章节
+
 ### 阻止自动登录
 
 调用 `CredentialsContainer` 接口的 `preventSilentAccess()` 方法用于未来访问时阻止自动登录功能
@@ -83,10 +89,67 @@ try {
 
 此方法可以在用户退出网站时调用，以避免用户登录信息在下次访问时不会自动传递
 
+## 通用凭证
+
+`Credential` 抽象接口表示通用凭证，其子接口表示各种具体类型的凭证
+
+`Credential` 接口的 `id` 只读属性返回一个字符串，表示凭证的标识符
+
+`Credential` 接口的 `type` 只读属性返回一个字符串，表示凭证的具体类型
+
+> 子接口与类型的映射如下：
+>
+> | 子接口 | `type` 属性值 |
+> | :---: | :---: |
+> | `PasswordCredential` | `password` |
+> | `FederatedCredential` | `federated` |
+> | `PublicKeyCredential` | `public-key` |
+> | `OTPCredential` | `otp` |
+> | `IdentityCredential` | `identity` |
+
 ## 类型
 
 ```ts
+interface Navigator {
+  readonly credentials: CredentialsContainer
+}
 
+interface CredentialsContainer {
+  get(options?: CredentialRequestOptions): Promise<Credential | null>
+  store(credential: Credential): Promise<undefined>
+  create(options?: CredentialCreationOptions): Promise<Credential | null>
+  preventSilentAccess(): Promise<undefined>
+}
+
+interface CredentialUserData {
+  readonly name: string
+  readonly iconURL: string
+}
+
+enum CredentialMediationRequirement {
+  "silent",
+  "optional",
+  "conditional",
+  "required",
+}
+
+interface CredentialRequestOptions {
+  mediation?: CredentialMediationRequirement
+  signal?: AbortSignal
+}
+
+interface CredentialCreationOptions {
+  signal?: AbortSignal
+}
+
+interface CredentialData {
+  id: string
+}
+
+interface Credential {
+  readonly id: string
+  readonly type: string
+}
 ```
 
 ## 链接
