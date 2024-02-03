@@ -99,13 +99,86 @@ try {
 
 > 子接口与类型的映射如下：
 >
-> | 子接口 | `type` 属性值 |
-> | :---: | :---: |
-> | `PasswordCredential` | `password` |
-> | `FederatedCredential` | `federated` |
+> |          子接口          |  `type` 属性值  |
+> |:---------------------:|:------------:|
+> | `PasswordCredential`  |  `password`  |
+> | `FederatedCredential` | `federated`  |
 > | `PublicKeyCredential` | `public-key` |
-> | `OTPCredential` | `otp` |
-> | `IdentityCredential` | `identity` |
+> |    `OTPCredential`    |    `otp`     |
+> | `IdentityCredential`  |  `identity`  |
+
+## 密码凭证
+
+`PasswordCredential` 接口表示密码凭证
+
+### 凭证信息
+
+`PasswordCredential` 接口的 `iconURL` 只读属性返回一个字符串，表示凭证的图标的 URL
+
+`PasswordCredential` 接口的 `name` 只读属性返回一个字符串，表示凭证的名称
+
+`PasswordCredential` 接口的 `password` 只读属性返回一个字符串，表示凭证所包含的密码
+
+### 创建密码凭证
+
+可以调用 `PasswordCredential()` 构造函数创建密码凭证
+
+可以向构造函数传入一个 `HTMLFormElement` 实例参数（至少需要包含 `id` 和 `password` 字段，可以包含一个 `csrf_token` 字段）
+
+```html
+<form id="form">
+  <label for="id">Username:</label>
+  <input type="text" name="id" autocomplete="username" />
+  <label for="password">Password:</label>
+  <input type="password" name="password" autocomplete="current-password" />
+  <input type="hidden" name="csrf_token" value="*****" />
+</form>
+```
+
+```js
+const form = document.getElementById("form");
+const credential = new PasswordCredential(form);
+```
+
+也可以直接向构造函数传入一个配置项参数
+
+```js
+const data = {
+  id: "xxxxxx",
+  password: "xxxxxx",
+  origin: "www.example.com",
+};
+const credential = new PasswordCredential(data);
+```
+
+亦可以通过 `CredentialsContainer` 接口的 `create()` 方法创建凭证
+
+需要在配置项中传入 `password` 选项，其为一个对象，对象结构同传入 `PasswordCredential()` 构造函数的配置项结构
+
+```js
+navigator.credentials
+  .create({
+    password: {
+      id: "xxxxxx",
+      password: "xxxxxx",
+      origin: "www.example.com",
+    }
+  })
+```
+
+### 读取密码凭证
+
+通过 `CredentialsContainer` 接口的 `get()` 方法读取凭证，从而可用于凭证验证
+
+需要在配置项中传入 `password` 选项，其接收一个布尔值，默认为 `false`
+
+```js
+navigator.credentials.get({
+  password: true,
+})
+```
+
+## 联合凭证
 
 ## 类型
 
@@ -149,6 +222,56 @@ interface CredentialData {
 interface Credential {
   readonly id: string
   readonly type: string
+}
+
+interface PasswordCredential extends Credential, CredentialUserData {
+  constructor(form: HTMLFormElement): PasswordCredential
+  constructor(data: PasswordCredentialData): PasswordCredential
+  readonly password: string
+}
+
+interface CredentialRequestOptions {
+  password?: boolean
+}
+
+interface PasswordCredentialData extends CredentialData {
+  name?: string
+  iconURL?: string
+  origin: string
+  password: string
+}
+
+type PasswordCredentialInit = PasswordCredentialData | HTMLFormElement
+
+interface CredentialCreationOptions {
+  password?: PasswordCredentialInit
+}
+
+interface FederatedCredential extends Credential, CredentialUserData {
+  constructor(data: FederatedCredentialInit): FederatedCredential
+  readonly provider: string
+  readonly protocol?: string
+}
+
+interface FederatedCredentialRequestOptions {
+  providers: string[]
+  protocols: string[]
+}
+
+interface CredentialRequestOptions {
+  federated?: FederatedCredentialRequestOptions
+}
+
+interface FederatedCredentialInit extends CredentialData {
+  name?: string
+  iconURL?: string
+  origin: string
+  provider: string
+  protocol?: string
+}
+
+interface CredentialCreationOptions {
+  federated?: FederatedCredentialInit
 }
 ```
 
