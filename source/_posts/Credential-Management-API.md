@@ -79,6 +79,8 @@ try {
 
 此外，可以向配置项中传入 `password` `federated` `publicKey` `otp` `identity` 中多个选项，以仅读取对应的具体类型的凭证，具体选项细节见下及 Web Authentication API、WebOTP API、Federated Credential Management API 等内容
 
+方法返回一个 `Promise`，其兑现一个 `Credential` 实例，或 `null`（若无法读取凭证）
+
 相关示例见下具体凭证类型章节
 
 ### 阻止自动登录
@@ -111,7 +113,7 @@ try {
 
 `PasswordCredential` 接口表示密码凭证
 
-### 凭证信息
+### 密码凭证信息
 
 `PasswordCredential` 接口的 `iconURL` 只读属性返回一个字符串，表示凭证的图标的 URL
 
@@ -123,7 +125,9 @@ try {
 
 可以调用 `PasswordCredential()` 构造函数创建密码凭证
 
-可以向构造函数传入一个 `HTMLFormElement` 实例参数（至少需要包含 `id` 和 `password` 字段，可以包含一个 `csrf_token` 字段）
+可以向构造函数传入一个 `HTMLFormElement` 实例参数
+
+表单至少需要包含 `id` 和 `password` 字段，可以包含一个 `csrf_token` 以及 `name` 和 `iconURL` 字段
 
 ```html
 <form id="form">
@@ -140,7 +144,7 @@ const form = document.getElementById("form");
 const credential = new PasswordCredential(form);
 ```
 
-也可以直接向构造函数传入一个配置项参数
+也可以直接向构造函数传入一个配置项参数，至少需要包含 `id`、`password` 和 `origin` 字段，可选传入 `name` 和 `iconURL` 字段
 
 ```js
 const data = {
@@ -151,7 +155,7 @@ const data = {
 const credential = new PasswordCredential(data);
 ```
 
-亦可以通过 `CredentialsContainer` 接口的 `create()` 方法创建凭证
+亦可以通过 `CredentialsContainer` 接口的 `create()` 方法创建密码凭证
 
 需要在配置项中传入 `password` 选项，其为一个对象，对象结构同传入 `PasswordCredential()` 构造函数的配置项结构
 
@@ -168,7 +172,7 @@ navigator.credentials
 
 ### 读取密码凭证
 
-通过 `CredentialsContainer` 接口的 `get()` 方法读取凭证，从而可用于凭证验证
+通过 `CredentialsContainer` 接口的 `get()` 方法读取密码凭证
 
 需要在配置项中传入 `password` 选项，其接收一个布尔值，默认为 `false`
 
@@ -179,6 +183,62 @@ navigator.credentials.get({
 ```
 
 ## 联合凭证
+
+`FederatedCredential` 接口表示联合凭证
+
+### 联合凭证信息
+
+`FederatedCredential` 接口的 `iconURL` 只读属性返回一个字符串，表示凭证的图标的 URL
+
+`FederatedCredential` 接口的 `name` 只读属性返回一个字符串，表示凭证的名称
+
+`FederatedCredential` 接口的 `provider` 只读属性返回一个字符串，表示凭证的联合身份提供者的 URL
+
+`FederatedCredential` 接口的 `protocol` 只读属性返回一个字符串，表示凭证的联合身份协议
+
+### 创建联合凭证
+
+可以调用 `FederatedCredential()` 构造函数创建联合凭证
+
+需要传入一个配置项参数，至少需要包含 `id`、`provider` 和 `origin` 字段，可选传入 `name`、`iconURL` 和 `protocol` 字段
+
+```js
+const data = {
+  id: "xxxxxx",
+  provider: "https://account.google.com",
+  origin: "www.example.com",
+};
+const credential = new FederatedCredential(data);
+```
+
+亦可以通过 `CredentialsContainer` 接口的 `create()` 方法创建联合凭证
+
+需要在配置项中传入 `federated` 选项，其为一个对象，对象结构同传入 `FederatedCredential()` 构造函数的配置项结构
+
+```js
+navigator.credentials
+  .create({
+    federated: {
+      id: "xxxxxx",
+      provider: "https://account.google.com",
+      origin: "www.example.com",
+    }
+  })
+```
+
+### 读取联合凭证
+
+通过 `CredentialsContainer` 接口的 `get()` 方法读取联合凭证
+
+需要在配置项中传入 `federated` 选项，其接收一个配置项，需要传入 `providers` 参数与可选的 `protocols` 参数，两参数均接收一个字符串数组
+
+```js
+navigator.credentials.get({
+  federated: {
+    providers: ["https://account.google.com"],
+  },
+})
+```
 
 ## 类型
 
@@ -254,8 +314,8 @@ interface FederatedCredential extends Credential, CredentialUserData {
 }
 
 interface FederatedCredentialRequestOptions {
-  providers: string[]
-  protocols: string[]
+  providers?: string[]
+  protocols?: string[]
 }
 
 interface CredentialRequestOptions {
