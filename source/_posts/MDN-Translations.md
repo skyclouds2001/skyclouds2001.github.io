@@ -16,10 +16,10 @@ mathJax: false
 
 | API | 开始时间 | 结束时间 | 最近复核时间 |
 | :---: | :---: | :---: | :---: |
-| Local Font Access API | 2023/11/30 | 2023/12/10 | - |
-| Barcode Detection API | 2023/12/13 | 2023/12/20 | - |
-| Web Locks API | 2023/12/19 | 2024/01/09 | - |
-| Badging API | 2024/01/10 | 2024/01/31 | - |
-| Notifications API | 2024/01/31 | 2024/02/14 | - |
-| Battery Status API | 2024/02/08 | - | - |
+| Local Font Access API | 2023/11/30 | 2023/12/10 | 2024/03/31 |
+| Barcode Detection API | 2023/12/13 | 2023/12/20 | 2024/03/31 |
+| Web Locks API | 2023/12/19 | 2024/01/09 | 2024/03/31 |
+| Badging API | 2024/01/10 | 2024/01/31 | 2024/03/31 |
+| Notifications API | 2024/01/31 | 2024/02/14 | 2024/03/31 |
+| Battery Status API | 2024/02/08 | 2024/03/31 | 2024/03/31 |
 | Network Information API | 2024/03/30 | - | - |
