@@ -6,7 +6,7 @@
   <link href="https://skyclouds2001.github.io/atom.xml" rel="self"/>
   
   <link href="https://skyclouds2001.github.io/"/>
-  <updated>2023-12-31T21:07:43.577Z</updated>
+  <updated>2024-04-20T07:09:26.197Z</updated>
   <id>https://skyclouds2001.github.io/</id>
   
   <author>
@@ -15,6 +15,214 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MDN Translations</title>
+    <link href="https://skyclouds2001.github.io/2024/03/31/MDN-Translations/"/>
+    <id>https://skyclouds2001.github.io/2024/03/31/MDN-Translations/</id>
+    <published>2024-03-30T16:50:55.000Z</published>
+    <updated>2024-04-20T07:09:26.197Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;API&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;开始时间&lt;/th&gt;
+&lt;th</summary>
+        
+      
+    
+    
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/categories/Other/"/>
+    
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WebOTP API</title>
+    <link href="https://skyclouds2001.github.io/2024/02/06/WebOTP-API/"/>
+    <id>https://skyclouds2001.github.io/2024/02/06/WebOTP-API/</id>
+    <published>2024-02-05T17:16:11.000Z</published>
+    <updated>2024-02-05T19:15:51.402Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;WebOTP API 是对 Credential Management API 的扩展，允许开发者请求用户访问短信验证码，以便方便地完成表单等填写&lt;/p&gt;
+&lt;h2 id=&quot;使用&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Credential Management API</title>
+    <link href="https://skyclouds2001.github.io/2024/01/30/Credential-Management-API/"/>
+    <id>https://skyclouds2001.github.io/2024/01/30/Credential-Management-API/</id>
+    <published>2024-01-30T10:10:22.000Z</published>
+    <updated>2024-02-03T12:49:26.163Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Credential Management API 允许网站存储和检索密码、公钥与联合凭证&lt;/p&gt;
+&lt;p&gt;用户无需显式登录即可直接登录、查看登录站点的联合账户及恢复会话&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sensor APIs</title>
+    <link href="https://skyclouds2001.github.io/2024/01/28/Sensor-APIs/"/>
+    <id>https://skyclouds2001.github.io/2024/01/28/Sensor-APIs/</id>
+    <published>2024-01-27T18:11:33.000Z</published>
+    <updated>2024-01-30T09:47:30.173Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Sensor APIs 提供了一系列的传感器 API， 用以提供网页访问应用传感器的权限&lt;/p&gt;
+&lt;h2 id=&quot;通用传感器&quot;&gt;&lt;a href=&quot;#通用传感器&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Remote Playback API</title>
+    <link href="https://skyclouds2001.github.io/2024/01/18/Remote-Playback-API/"/>
+    <id>https://skyclouds2001.github.io/2024/01/18/Remote-Playback-API/</id>
+    <published>2024-01-18T13:37:47.000Z</published>
+    <updated>2024-01-20T14:29:55.289Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Remote Playback API 允许管理与当前媒体资源连接的远程媒体设备&lt;/p&gt;
+&lt;h2 id=&quot;使用远程媒体设备控制&quot;&gt;&lt;a href=&quot;#使用远程媒体设备控制&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Channel Messaging API</title>
+    <link href="https://skyclouds2001.github.io/2024/01/15/Channel-Messaging-API/"/>
+    <id>https://skyclouds2001.github.io/2024/01/15/Channel-Messaging-API/</id>
+    <published>2024-01-15T14:10:53.000Z</published>
+    <updated>2024-01-15T15:27:25.986Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Channel Messaging API 支持在多个浏览上下文中执行的脚本之间传递消息&lt;/p&gt;
+&lt;p&gt;其核心为 &lt;code&gt;MessageChannel&lt;/code&gt; 接口与</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/categories/Frontend/Web-API/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Web API" scheme="https://skyclouds2001.github.io/tags/Web-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器原理</title>
+    <link href="https://skyclouds2001.github.io/2024/01/14/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86/"/>
+    <id>https://skyclouds2001.github.io/2024/01/14/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%8E%9F%E7%90%86/</id>
+    <published>2024-01-14T08:01:07.000Z</published>
+    <updated>2024-01-14T09:12:57.884Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;浏览器进程&quot;&gt;&lt;a href=&quot;#浏览器进程&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/categories/Frontend/Other/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/tags/Other/"/>
+    
+  </entry>
   
   <entry>
     <title>Autoplay Policy Detection API</title>
@@ -650,7 +858,7 @@
     <link href="https://skyclouds2001.github.io/2023/12/02/Permissions-Policy/"/>
     <id>https://skyclouds2001.github.io/2023/12/02/Permissions-Policy/</id>
     <published>2023-12-02T04:35:25.000Z</published>
-    <updated>2023-12-06T07:41:34.600Z</updated>
+    <updated>2024-01-30T09:45:20.955Z</updated>
     
     
       
@@ -1133,7 +1341,7 @@
     <link href="https://skyclouds2001.github.io/2023/11/13/DeviceOrientation-Event/"/>
     <id>https://skyclouds2001.github.io/2023/11/13/DeviceOrientation-Event/</id>
     <published>2023-11-13T06:35:50.000Z</published>
-    <updated>2023-11-13T08:25:57.914Z</updated>
+    <updated>2024-01-28T05:26:41.627Z</updated>
     
     
       
