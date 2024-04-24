@@ -24,6 +24,6 @@ mathJax: false
 |     Battery Status API      | 2024/02/08 | 2024/03/31 | 2024/03/31 |
 |   Network Information API   | 2024/03/30 | 2024/04/04 | 2024/04/04 |
 | User-Agent Client Hints API | 2024/04/03 | 2024/04/15 | 2024/04/15 |
-|         Vibrate API         | 2024/04/17 |     -      |     -      |
-|        Web Share API        | 2024/04/18 |     -      |     -      |
+|         Vibrate API         | 2024/04/17 | 2024/04/23 | 2024/04/23 |
+|        Web Share API        | 2024/04/18 | 2024/04/22 | 2024/04/22 |
 |       Permissions API       | 2024/04/20 |     -      |     -      |
