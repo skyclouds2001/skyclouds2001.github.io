@@ -26,5 +26,6 @@ mathJax: false
 | User-Agent Client Hints API | 2024/04/03 | 2024/04/15 | 2024/04/15 |
 |         Vibrate API         | 2024/04/17 | 2024/04/23 | 2024/04/23 |
 |        Web Share API        | 2024/04/18 | 2024/04/22 | 2024/04/22 |
-|       Permissions API       | 2024/04/20 |     -      |     -      |
+|       Permissions API       | 2024/04/20 | 2024/05/07 | 2024/05/07 |
 |       File System API       | 2024/05/02 |     -      |     -      |
+|          File API           |     -      |     -      |     -      |
