@@ -28,4 +28,4 @@ mathJax: false
 |        Web Share API        | 2024/04/18 | 2024/04/22 | 2024/04/22 |
 |       Permissions API       | 2024/04/20 | 2024/05/07 | 2024/05/07 |
 |       File System API       | 2024/05/02 |     -      |     -      |
-|          File API           |     -      |     -      |     -      |
+|          File API           | 2024/05/09 |     -      |     -      |
