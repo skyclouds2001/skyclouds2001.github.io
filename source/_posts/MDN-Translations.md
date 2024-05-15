@@ -27,7 +27,7 @@ mathJax: false
 |         Vibrate API         | 2024/04/17 | 2024/04/23 | 2024/04/23 |
 |        Web Share API        | 2024/04/18 | 2024/04/22 | 2024/04/22 |
 |       Permissions API       | 2024/04/20 | 2024/05/07 | 2024/05/07 |
-|       File System API       | 2024/05/02 |     -      |     -      |
+|       File System API       | 2024/05/02 | 2024/05/15 | 2024/05/15 |
 |          File API           | 2024/05/09 |     -      |     -      |
 |    Broadcast Channel API    |     -      |     -      |     -      |
 |    Channel Messaging API    |     -      |     -      |     -      |
