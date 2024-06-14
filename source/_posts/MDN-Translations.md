@@ -29,5 +29,5 @@ mathJax: false
 |       Permissions API       | 2024/04/20 | 2024/05/07 | 2024/05/07 |
 |       File System API       | 2024/05/02 | 2024/05/15 | 2024/05/15 |
 |          File API           | 2024/05/09 | 2024/06/06 | 2024/06/06 |
-|    Broadcast Channel API    |     -      |     -      |     -      |
+|    Broadcast Channel API    | 2024/06/12 |     -      |     -      |
 |    Channel Messaging API    |     -      |     -      |     -      |
