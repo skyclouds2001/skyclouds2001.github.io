@@ -2,7 +2,7 @@
   "name": "skyclouds2001-blog",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "yarn@1.22.22",
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
