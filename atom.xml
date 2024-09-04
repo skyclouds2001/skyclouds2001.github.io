@@ -6,7 +6,7 @@
   <link href="https://skyclouds2001.github.io/atom.xml" rel="self"/>
   
   <link href="https://skyclouds2001.github.io/"/>
-  <updated>2024-04-20T07:09:26.197Z</updated>
+  <updated>2024-04-28T07:22:01.250Z</updated>
   <id>https://skyclouds2001.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在 Git 中使用 GPG 密钥</title>
+    <link href="https://skyclouds2001.github.io/2024/04/28/Using-GPG-in-Git/"/>
+    <id>https://skyclouds2001.github.io/2024/04/28/Using-GPG-in-Git/</id>
+    <published>2024-04-28T06:37:49.000Z</published>
+    <updated>2024-04-28T07:22:01.250Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;生成及查看-GPG-密钥&quot;&gt;&lt;a href=&quot;#生成及查看-GPG-密钥&quot; class=&quot;headerlink&quot; title=&quot;生成及查看 GPG 密钥&quot;&gt;&lt;/a&gt;生成及查看 GPG</summary>
+        
+      
+    
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/categories/Frontend/"/>
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/categories/Frontend/Other/"/>
+    
+    
+    <category term="Frontend" scheme="https://skyclouds2001.github.io/tags/Frontend/"/>
+    
+    <category term="Other" scheme="https://skyclouds2001.github.io/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MDN Translations</title>
     <link href="https://skyclouds2001.github.io/2024/03/31/MDN-Translations/"/>
     <id>https://skyclouds2001.github.io/2024/03/31/MDN-Translations/</id>
     <published>2024-03-30T16:50:55.000Z</published>
-    <updated>2024-04-20T07:09:26.197Z</updated>
+    <updated>2024-06-14T07:38:45.208Z</updated>
     
     
       
