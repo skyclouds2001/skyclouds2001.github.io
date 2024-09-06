@@ -1,7 +1,7 @@
 ---
 thumbnail: https://avatars.githubusercontent.com/u/95597335
 date: 2023-11-02 08:24:49
-comments: true
+comments: false
 ---
 
 #### 个人简介
@@ -17,7 +17,7 @@ comments: true
 ---
 
 <div class="time-axis-main">
-	<ul class="time-axis"></ul>
+ <ul class="time-axis"></ul>
 </div>
 <script src="/js/about-me.js"></script>
 <br>
