@@ -4,23 +4,30 @@ date: 2023-11-02 08:24:49
 comments: true
 ---
 
-<div class = "text-center"><h1>碎碎念</h1></div><div class = "text-tips">
+<div class = "text-center">
+  <h1>碎碎念</h1>
+</div>
 
-tips：github登录后按时间正序查看、可点赞加❤️、本插件[地址](https://github.com/removeif/gitalk)..<span id="busuanzi_container_page_pv">「<span id="busuanzi_value_page_pv">+99</span>次查看」</span></div>
-<div id="comment-container1"><div class="text-tips">碎碎念加载中，请稍等...</div></div>
-<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/gitalk/1.6.0/gitalk.css"/>
+<div class = "text-tips">
+  tips：github登录后按时间正序查看、可点赞加❤️、本插件[地址](https://github.com/gitalk/gitalk)...
+  <span id="busuanzi_container_page_pv">「<span id="busuanzi_value_page_pv">+99</span>次查看」</span>
+</div>
+
+<div id="self-talking-container">
+  <div class="text-tips">碎碎念加载中，请稍等...</div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <script>
-    $.getScript("/js/gitalk_self.min.js", function () {
-        var gitalk = new Gitalk({
-            clientID: '46a9f3481b46ea0129d8',
-            clientSecret: '79c7c9cb847e141757d7864453bcbf89f0655b24',
-            id: '666666',
-            repo: 'issue_database',
-            owner: 'removeif',
-            admin: "removeif",
-            createIssueManually: true,
-            distractionFreeMode: false
-        });
-        gitalk.render('comment-container1');
+    const gitalk = new Gitalk({
+        clientID: 'Ov23liEGgjyZrvQkTEpO',
+        clientSecret: 'fc9a4c7257cd54eeb0c75c49376f3b4a9b4938ce',
+        repo: 'skyclouds2001',
+        owner: 'skyclouds2001',
+        admin: ['skyclouds2001'],
+        id: location.pathname,
+        createIssueManually: true,
     });
+    gitalk.render('self-talking-container');
 </script>
