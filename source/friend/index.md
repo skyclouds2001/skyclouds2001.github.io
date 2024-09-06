@@ -1,5 +1,5 @@
 ---
-thumbnail: https://avatars.githubusercontent.com/u/95597335
+thumbnail: https://skyclouds2001.github.io/images/avatar.jpg
 date: 2023-11-02 08:24:49
 comments: false
 ---
@@ -19,7 +19,7 @@ comments: false
 - 会定期清理很久很久不更新的、不符合要求的友链，不再另行通知。
 - 本站不存储友链图片，如果友链图片换了无法更新。图片裂了的会替换成默认图，需要更换的请留言告知。
 - 本站友链信息如下，申请友链前请先添加本站信息：
-    网站图标：<https://avatars.githubusercontent.com/u/95597335>
+    网站图标：<https://skyclouds2001.github.io/images/avatar.jpg>
     网站名称：skyclouds2001's Blog
     网站地址：<https://skyclouds2001.github.io/>
     网站简介：前端开发、全栈开发、技术分享

@@ -1,5 +1,5 @@
 ---
-thumbnail: https://avatars.githubusercontent.com/u/95597335
+thumbnail: https://skyclouds2001.github.io/images/avatar.jpg
 date: 2023-11-02 08:24:49
 comments: false
 ---

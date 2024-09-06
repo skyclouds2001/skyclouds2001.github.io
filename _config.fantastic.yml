@@ -5,12 +5,12 @@ version: 5.0.1
 variant: default
 
 # Path or URL to the website's logo
-logo: https://avatars.githubusercontent.com/u/95597335
+logo: https://skyclouds2001.github.io/images/avatar.jpg
 
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: https://avatars.githubusercontent.com/u/95597335
+    favicon: https://skyclouds2001.github.io/images/avatar.jpg
 
     # Web Manifest Data
     manifest:
@@ -32,7 +32,7 @@ head:
         icons:
             -
                 # The path to the image file
-                src: https://avatars.githubusercontent.com/u/95597335
+                src: https://skyclouds2001.github.io/images/avatar.jpg
                 # A string containing space-separated image dimensions
                 sizes: 460x460
                 # A hint as to the media type of the image (optional)
@@ -52,7 +52,7 @@ head:
         url: https://skyclouds2001.github.io/
         # Page cover (og:image) (optional)
         # You should leave this blank for most of the time
-        image: https://avatars.githubusercontent.com/u/95597335
+        image: https://skyclouds2001.github.io/images/avatar.jpg
         # Site name (og:site_name) (optional)
         # You should leave this blank for most of the time
         site_name: skyclouds2001's blog
@@ -92,7 +92,7 @@ head:
         author: skyclouds2001
         # Page images (optional)
         # You should leave this blank for most of the time
-        image: https://avatars.githubusercontent.com/u/95597335
+        image: https://skyclouds2001.github.io/images/avatar.jpg
 
     # Additional HTML meta tags in an array
     meta:
@@ -247,7 +247,7 @@ widgets:
         # Author's current location
         location: China
         # URL or path to the avatar image
-        avatar: https://avatars.githubusercontent.com/u/95597335
+        avatar: https://skyclouds2001.github.io/images/avatar.jpg
         # Whether show the rounded avatar image
         avatar_rounded: true
         # Email address for the Gravatar
