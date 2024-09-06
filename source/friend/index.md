@@ -1,7 +1,7 @@
 ---
 thumbnail: https://avatars.githubusercontent.com/u/95597335
 date: 2023-11-02 08:24:49
-comments: true
+comments: false
 ---
 
 <div class="friend-title-item">
