@@ -21,11 +21,11 @@ comments: false
   </div>
 </div>
 
-<link rel="stylesheet" href="/css/meplayer.min.css" />
-<script type="text/javascript" defer src="/js/meplayer.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/meplayer@0/dist/meplayer.min.css" />
+<script type="text/javascript" defer src="https://cdn.jsdelivr.net/npm/meplayer@0/dist/meplayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dplayer@1/dist/DPlayer.min.js"></script>
 <script type="text/javascript" defer src="/js/music.js"></script>
-<link rel="stylesheet" href="/css/DPlayer.min.css" />
-<script src="/js/DPlayer.min.js"></script>
+
 
 <br />
 <p style="text-align: center">
