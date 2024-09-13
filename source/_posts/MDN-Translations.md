@@ -30,4 +30,4 @@ mathJax: false
 |       File System API       | 2024/05/02 | 2024/05/15 | 2024/09/06 |
 |          File API           | 2024/05/09 | 2024/06/06 | 2024/09/06 |
 |    Broadcast Channel API    | 2024/06/12 |     -      |     -      |
-|    Channel Messaging API    | 2024/09/09 |     -      |     -      |
+|    Channel Messaging API    | 2024/09/13 |     -      |     -      |
