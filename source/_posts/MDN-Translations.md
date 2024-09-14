@@ -31,3 +31,4 @@ mathJax: false
 |          File API           | 2024/05/09 | 2024/06/06 | 2024/09/06 |
 |    Broadcast Channel API    | 2024/06/12 |     -      |     -      |
 |    Channel Messaging API    | 2024/09/13 |     -      |     -      |
+|    Picture-in-Picture API   | 2024/09/14 |     -      |     -      |
