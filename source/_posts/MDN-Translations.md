@@ -20,8 +20,8 @@ mathJax: false
 |    Barcode Detection API    | 2023/12/13 | 2023/12/20 | 2024/03/31 |
 |        Web Locks API        | 2023/12/19 | 2024/01/09 | 2024/03/31 |
 |         Badging API         | 2024/01/10 | 2024/01/31 | 2024/03/31 |
-|      Notifications API      | 2024/01/31 | 2024/02/14 | 2024/03/31 |
-|     Battery Status API      | 2024/02/08 | 2024/03/31 | 2024/03/31 |
+|      Notifications API      | 2024/01/31 | 2024/02/14 | 2024/09/16 |
+|     Battery Status API      | 2024/02/08 | 2024/03/31 | 2024/09/16 |
 |   Network Information API   | 2024/03/30 | 2024/04/04 | 2024/09/14 |
 | User-Agent Client Hints API | 2024/04/03 | 2024/04/15 | 2024/09/14 |
 |         Vibrate API         | 2024/04/17 | 2024/04/23 | 2024/04/23 |
