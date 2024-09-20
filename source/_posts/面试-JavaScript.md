@@ -16,9 +16,9 @@ mathJax: false
 
 ## 宏任务与微任务
 
-宏任务（普通脚本，setTimeout，setInterval，I/O，UI 渲染）
+宏任务（普通脚本，`setTimeout()`，`setInterval()`，I/O，UI 渲染）
 
-微任务（Promise，MutationObserver）
+微任务（`Promise`，`MutationObserver`）
 
 特殊任务 `process.nextTick()` 当前 event loop tick 将结束时且下一个 event loop tick 将开始时执行
 
@@ -29,11 +29,11 @@ mathJax: false
 - 同步任务
 - 发出异步请求
 - 规划定时器生效的时间
-- 执行process.nextTick()的回调
+- 执行 `process.nextTick()` 的回调
 
-- timers - 处理setTimeout()和setInterval()的回调函数
-- I/O callbacks - 剩余的回调函数（setTimeout、setInterval、setImmediate及关闭请求回调函数之外）
+- timers - 处理 `setTimeout()` 和 `setInterval()` 的回调函数
+- I/O callbacks - 剩余的回调函数（`setTimeout()`、`setInterval()`、`setImmediate()` 及关闭请求回调函数之外）
 - idle, prepare - 内部使用
 - poll - 轮询时间，等待还未返回的 I/O 事件
-- check - 执行setImmediate()的回调
+- check - 执行 `setImmediate()` 的回调
 - close callbacks - 关闭请求的回调

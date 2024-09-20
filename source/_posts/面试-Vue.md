@@ -56,7 +56,7 @@ mathJax: false
 
 ## `nextTick()` 理解
 
-作为 Vue 内部的异步队列的调用方法同时提供给开发者使用，核心是利用了如 `Promise`、`MutationObserver`、`setImmediate`、`setTimeout` 等原生 JavaScript 方法来模拟对应的微/宏任务的实现，本质是对 JavaScript 执行原理 EventLoop 的一种应用
+作为 Vue 内部的异步队列的调用方法同时提供给开发者使用，核心是利用了如 `Promise`、`MutationObserver`、`setImmediate()`、`setTimeout()` 等原生 JavaScript 方法来模拟对应的微/宏任务的实现，本质是对 JavaScript 执行原理 EventLoop 的一种应用
 
 通常在数据变化后执行的某个操作需要使用随数据变化而变化的 DOM 结构的时候或需在 `created` 生命周期内修改 DOM 结构时使用
 
