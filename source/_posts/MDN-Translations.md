@@ -29,7 +29,7 @@ mathJax: false
 |         Permissions API         | 2024/04/20 | 2024/05/07 | 2024/09/09 |
 |         File System API         | 2024/05/02 | 2024/05/15 | 2024/09/06 |
 |            File API             | 2024/05/09 | 2024/06/06 | 2024/09/06 |
-|      Broadcast Channel API      | 2024/06/12 |     -      |     -      |
+|      Broadcast Channel API      | 2024/06/12 | 2024/09/18 | 2024/09/18 |
 |      Channel Messaging API      | 2024/09/13 | 2024/09/17 | 2024/09/17 |
 |      Picture-in-Picture API     | 2024/09/14 |     -      |     -      |
 | Document Picture-in-Picture API | 2024/09/17 |     -      |     -      |
