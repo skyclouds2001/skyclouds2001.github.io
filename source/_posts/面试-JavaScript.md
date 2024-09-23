@@ -37,3 +37,60 @@ mathJax: false
 - poll - 轮询时间，等待还未返回的 I/O 事件
 - check - 执行 `setImmediate()` 的回调
 - close callbacks - 关闭请求的回调
+
+## 继承模式
+
+- 原型链继承
+
+  ```js
+    SubType.prototype = new SuperType()
+    SubType.prototype.constructor = SubType
+  ```
+
+- 构造函数继承
+
+  ```js
+    SuperType.call(this, superProp)
+  ```
+
+- 组合式继承
+
+  ```js
+    function SuperType(superProp){
+      this.superProp = superProp
+    }
+    SuperType.prototype.printSuperProp = function(){
+      console.log(this.superProp)
+    }
+
+    function SubType(superProp, subProp){
+      SuperType.call(this, superProp)
+      this.subProp = subProp
+    }
+    SubType.prototype = new SuperType()
+    SubType.prototype.constructor = SubType
+    SubType.prototype.printSubProp = function(){
+      console.log(this.subProp)
+    }
+  ```
+
+- 寄生组合式继承
+
+  ```js
+    function SuperType(superProp){
+      this.superProp = superProp
+    }
+    SuperType.prototype.printSuperProp = function(){
+      console.log(this.superProp)
+    }
+
+    function SubType(superProp, subProp){
+      SuperType.call(this, superProp)
+      this.subProp = subProp
+    }
+    SubType.prototype = Object.create(SuperType.prototype)
+    SubType.prototype.constructor = SubType
+    SubType.prototype.printSubProp = function(){
+      console.log(this.subProp)
+    }
+  ```
