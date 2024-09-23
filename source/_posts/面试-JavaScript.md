@@ -5,11 +5,11 @@ tags:
   - Interview
 categories:
   - Interview
-thumbnail:
-cover:
+thumbnail: 
+cover: 
 toc: true
 recommend: 1
-keywords:
+keywords: 
 uniqueId: '2023-09-26 16:18:54/面试-JavaScript.html'
 mathJax: false
 ---
@@ -53,7 +53,7 @@ mathJax: false
     SuperType.call(this, superProp)
   ```
 
-- 组合继承
+- 组合式继承
 
   ```js
     function SuperType(superProp){
@@ -74,7 +74,7 @@ mathJax: false
     }
   ```
 
-- 寄生组合继承
+- 寄生组合式继承
 
   ```js
     function SuperType(superProp){
