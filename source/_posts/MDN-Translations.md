@@ -33,3 +33,4 @@ mathJax: false
 |      Channel Messaging API      | 2024/09/13 | 2024/09/17 | 2024/09/17 |
 |      Picture-in-Picture API     | 2024/09/14 |     -      |     -      |
 | Document Picture-in-Picture API | 2024/09/17 |     -      |     -      |
+|         Fullscreen API          | 2024/09/23 |     -      |     -      |
