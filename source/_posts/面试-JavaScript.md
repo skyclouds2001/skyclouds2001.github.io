@@ -5,11 +5,11 @@ tags:
   - Interview
 categories:
   - Interview
-thumbnail: 
-cover: 
+thumbnail:
+cover:
 toc: true
 recommend: 1
-keywords: 
+keywords:
 uniqueId: '2023-09-26 16:18:54/面试-JavaScript.html'
 mathJax: false
 ---
@@ -94,3 +94,11 @@ mathJax: false
       console.log(this.subProp)
     }
   ```
+
+## Object 三种冻结方式
+
+- `Object.preventExtensions()` | `Object.isExtensible()` | 阻止添加属性，原型不可更改
+
+- `Object.seal()` | `Object.isSealed()` | 阻止添加属性，阻止移除属性，阻止配置属性（configurable 为 false），原型不可更改
+
+- `Object.freeze()` | `Object.isFrozen()` | 阻止添加属性，阻止移除属性，阻止修改属性值，阻止配置属性（writable、configurable 为 false），原型不可更改
