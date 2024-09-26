@@ -31,6 +31,9 @@ mathJax: false
 |            File API             | 2024/05/09 | 2024/06/06 | 2024/09/06 |
 |      Broadcast Channel API      | 2024/06/12 | 2024/09/18 | 2024/09/18 |
 |      Channel Messaging API      | 2024/09/13 | 2024/09/17 | 2024/09/17 |
-|      Picture-in-Picture API     | 2024/09/14 |     -      |     -      |
-| Document Picture-in-Picture API | 2024/09/17 |     -      |     -      |
-|         Fullscreen API          | 2024/09/23 |     -      |     -      |
+|      Picture-in-Picture API     | 2024/09/14 |     --     |     --     |
+| Document Picture-in-Picture API | 2024/09/17 |     --     |     --     |
+|         Fullscreen API          | 2024/09/23 |     --     |     --     |
+|        Pointer Lock API         | 2024/09/26 |     --     |     --     |
+|          Keyboard API           |     --     |     --     |     --     |
+|       VirtualKeyboard API       |     --     |     --     |     --     |
