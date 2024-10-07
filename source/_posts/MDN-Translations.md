@@ -34,6 +34,6 @@ mathJax: false
 |      Picture-in-Picture API     | 2024/09/14 | 2024/09/27 | 2024/09/27 |
 | Document Picture-in-Picture API | 2024/09/17 |     --     |     --     |
 |         Fullscreen API          | 2024/09/23 | 2024/09/27 | 2024/09/27 |
-|        Pointer Lock API         | 2024/09/26 |     --     |     --     |
+|        Pointer Lock API         | 2024/09/26 | 2024/10/04 | 2024/10/04 |
 |          Keyboard API           | 2024/09/29 |     --     |     --     |
 |       VirtualKeyboard API       | 2024/09/29 |     --     |     --     |
