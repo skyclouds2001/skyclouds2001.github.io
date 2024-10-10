@@ -32,7 +32,7 @@ mathJax: false
 |      Broadcast Channel API      | 2024/06/12 | 2024/09/18 | 2024/09/18 |
 |      Channel Messaging API      | 2024/09/13 | 2024/09/17 | 2024/09/17 |
 |      Picture-in-Picture API     | 2024/09/14 | 2024/09/27 | 2024/09/27 |
-| Document Picture-in-Picture API | 2024/09/17 |     --     |     --     |
+| Document Picture-in-Picture API | 2024/09/17 | 2024/10/10 | 2024/10/10 |
 |         Fullscreen API          | 2024/09/23 | 2024/09/27 | 2024/09/27 |
 |        Pointer Lock API         | 2024/09/26 | 2024/10/04 | 2024/10/04 |
 |          Keyboard API           | 2024/09/29 |     --     |     --     |
