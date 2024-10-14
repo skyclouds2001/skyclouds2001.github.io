@@ -14,6 +14,11 @@ uniqueId: '2024-10-01 18:58:52/OpenSources.html'
 mathJax: false
 ---
 
+* [vite-template-sky](https://github.com/skyclouds2001/vite-template-sky)
+* [vite-vue-template-sky](https://github.com/skyclouds2001/vite-vue-template-sky)
+* [vite-react-template-sky](https://github.com/skyclouds2001/vite-react-template-sky)
+* [springboot-template-sky](https://github.com/skyclouds2001/springboot-template-sky)
+* [rollup-template-sky](https://github.com/skyclouds2001/rollup-template-sky)
 * [mdn/content](https://github.com/mdn/content)
   * fix links, see <https://jc-verse.github.io/mdn-graph/warnings>
   * add missing documentations, see <https://openwebdocs.github.io/web-docs-backlog/all/>
