@@ -433,9 +433,9 @@ interface NavigateEventInit extends EventInit {
 }
 
 interface NavigationInterceptOptions {
-  handler: NavigationInterceptHandler
-  focusReset: NavigationFocusReset
-  scroll: NavigationScrollBehavior
+  handler?: NavigationInterceptHandler
+  focusReset?: NavigationFocusReset
+  scroll?: NavigationScrollBehavior
 }
 
 enum NavigationFocusReset {
