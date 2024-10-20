@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>console</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #root {
+      margin: 25px;
+      padding: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #input, #output {
+      display: block;
+      width: 500px;
+      height: 250px;
+      margin: 0 auto;
+      padding: 25px;
+      border: 1px solid #ccc;
+      overflow: hidden auto;
+      word-break: break-word;
+      word-wrap: break-word;
+      text-wrap: wrap;
+      resize: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <textarea id="input"></textarea>
+    <textarea id="output" readonly></textarea>
+  </div>
+  <script defer>
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+
+    input.addEventListener('input', () => {
+      let result = ''
+      try {
+        result = eval(input.value)
+      } catch (error) {
+        if (error instanceof Error) {
+          result = error.message
+        } else {
+          result = error
+        }
+      }
+      output.value = String(result)
+    })
+  </script>
+</body>
+
+</html>
