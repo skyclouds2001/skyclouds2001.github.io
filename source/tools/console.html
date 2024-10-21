@@ -35,7 +35,16 @@
       resize: none;
     }
   </style>
-  <script defer>
+</head>
+
+<body>
+  <div id="root">
+    <div>input code here</div>
+    <textarea id="input"></textarea>
+    <div>output result here</div>
+    <textarea id="output" readonly></textarea>
+  </div>
+  <script type="module">
     const input = document.getElementById('input');
     const output = document.getElementById('output');
 
@@ -53,15 +62,6 @@
       output.value = String(result)
     })
   </script>
-</head>
-
-<body>
-  <div id="root">
-    <div>input code here</div>
-    <textarea id="input"></textarea>
-    <div>output result here</div>
-    <textarea id="output" readonly></textarea>
-  </div>
 </body>
 
 </html>
