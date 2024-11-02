@@ -26,6 +26,7 @@ mathJax: false
   * sync translation content, see {% post_link MDN-Translations %}
 * [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)
   * add `impl_url` for features
+  * sync [node.js](https://nodejs.org/zh-cn) data
   * add `spec_url` for SVG attributes, see <https://github.com/mdn/browser-compat-data/issues/24162>
 * [mdn/data](https://github.com/mdn/data)
   * add zh-CN translations for l10n
