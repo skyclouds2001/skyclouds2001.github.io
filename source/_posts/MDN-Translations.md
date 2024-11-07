@@ -37,4 +37,4 @@ mathJax: false
 |        Pointer Lock API         | 2024/09/26 | 2024/10/04 | 2024/10/04 |
 |          Keyboard API           | 2024/09/29 | 2024/11/02 | 2024/11/02 |
 |       VirtualKeyboard API       | 2024/09/29 | 2024/11/07 | 2024/11/07 |
-|         Navigation API          |     --     |     --     |     --     |
+|         Navigation API          | 2024/11/08 |     --     |     --     |
