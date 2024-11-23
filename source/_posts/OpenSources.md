@@ -20,12 +20,15 @@ mathJax: false
   * [rollup-template-sky](https://github.com/skyclouds2001/rollup-template-sky)
   * [springboot-template-sky](https://github.com/skyclouds2001/springboot-template-sky)
 * [mdn/content](https://github.com/mdn/content)
-  * fix links, see <https://jc-verse.github.io/mdn-graph/warnings>
+  * fix mdn content bugs, see <https://jc-verse.github.io/mdn-graph/warnings>
   * add missing documentations, see <https://openwebdocs.github.io/web-docs-backlog/>
 * [mdn/translated-content](https://github.com/mdn/translated-content)
-  * sync translation content, see {% post_link MDN-Translations %}
+  * add translation for mdn content, see {% post_link MDN-Translations %}
+  * periodically sync mdn translated content
 * [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)
-  * add `impl_url` for features
+  * add `impl_url` for unimplemented features
+  * remove `impl_url` for implemented features
   * sync [node.js](https://nodejs.org/zh-cn) data
 * [mdn/data](https://github.com/mdn/data)
+  * periodically sync css features data
   * add zh-CN translations for l10n
