@@ -24,12 +24,11 @@ mathJax: false
   * add missing documentations, see <https://openwebdocs.github.io/web-docs-backlog/>
 * [mdn/translated-content](https://github.com/mdn/translated-content)
   * add translation for mdn content, see {% post_link MDN-Translations %}
-  * periodically sync translated mdn translation content
+  * sync translated mdn translation content
 * [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)
   * add `impl_url` for unimplemented features
-  * remove `impl_url` for implemented features
-  * sync [node.js](https://nodejs.org/zh-cn) data
+  * sync [node.js](https://nodejs.org/) data
 * [mdn/data](https://github.com/mdn/data)
-  * periodically sync css features data
+  *sync css features data
   * write lint to fix css data issues
   * add zh-CN translation for l10n data
