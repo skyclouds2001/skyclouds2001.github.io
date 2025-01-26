@@ -25,10 +25,11 @@ mathJax: false
 * [mdn/translated-content](https://github.com/mdn/translated-content)
   * add translation for mdn content, see {% post_link MDN-Translations %}
   * sync translated mdn translation content
+  * write lint to check mdn translation content status
 * [mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)
   * add `impl_url` for unimplemented features
   * sync [node.js](https://nodejs.org/) data
 * [mdn/data](https://github.com/mdn/data)
-  *sync css features data
+  * sync css features data
   * write lint to fix css data issues
   * add zh-CN translation for l10n data
