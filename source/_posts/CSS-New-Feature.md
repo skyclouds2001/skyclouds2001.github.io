@@ -40,7 +40,7 @@ mathJax: false
 - `text-underline-offset` percentage value support
 - `<text-edge>`
 
-see [Safari release note](https://developer.apple.com/documentation/safari-release-notes/safari-18_2-release-notes)
+see [Safari 18.2 Release Notes](https://developer.apple.com/documentation/safari-release-notes/safari-18_2-release-notes)
 
 ## Safari 18.0 (2024/09/16)
 
@@ -58,3 +58,5 @@ see [Safari release note](https://developer.apple.com/documentation/safari-relea
 - `rgb()` `rgba()` update
 - `hwb()` update
 - `<color>` update
+
+see [Safari 18.2 Release Notes](https://developer.apple.com/documentation/safari-release-notes/safari-18-release-notes)
