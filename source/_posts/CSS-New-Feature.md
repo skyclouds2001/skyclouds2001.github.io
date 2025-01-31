@@ -42,6 +42,20 @@ mathJax: false
 
 see [Safari 18.2 Release Notes](https://developer.apple.com/documentation/safari-release-notes/safari-18_2-release-notes)
 
+## Firefox 132 (2024/10/29)
+
+- `text-emphasis-position: auto`
+- nested declaration rule
+- `-moz-user-modify` removal
+
+see [Firefox 132 for developers](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/132)
+
+## Firefox 131 (2024/10/01)
+
+- `position-area` renamed from `inset-area`
+
+see [Firefox 131 for developers](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/131)
+
 ## Safari 18.0 (2024/09/16)
 
 - `content-visibility`
@@ -60,3 +74,9 @@ see [Safari 18.2 Release Notes](https://developer.apple.com/documentation/safari
 - `<color>` update
 
 see [Safari 18.2 Release Notes](https://developer.apple.com/documentation/safari-release-notes/safari-18-release-notes)
+
+## Firefox 130 (2024/09/03)
+
+- `hyphens` Czech and Slovak support
+
+see [Firefox 130 for developers](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/130)
