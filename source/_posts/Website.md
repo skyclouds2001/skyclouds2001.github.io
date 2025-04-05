@@ -20,6 +20,8 @@ mathJax: false
 * [Web GitHub VSCode](https://vscode.dev/)
 * [Web Console](https://skyclouds2001.github.io/tools/console)
 * [Worker Playground](https://worker-playground.glitch.me/)
+* [ECMAScript 6 compatibility table](https://compat-table.github.io/compat-table/es6/)
+* [Node.js ES2015/ES6, ES2016 and ES2017 support](https://node.green/)
 
 ## Survey
 
