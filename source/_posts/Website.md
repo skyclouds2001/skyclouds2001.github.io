@@ -14,13 +14,17 @@ uniqueId: '2026-11-06 23:06:39/Website.html'
 mathJax: false
 ---
 
-## Tools
+## Dev Tools
 
 * [Web VSCode](https://vscode.dev/)
 * [Web Console](https://skyclouds2001.github.io/tools/console)
 * [Worker Playground](https://mdn.github.io/dom-examples/web-workers/worker-playground/)
 * [ECMAScript 6 compatibility table](https://compat-table.github.io/compat-table/es6/)
 * [Node.js ES2015/ES6, ES2016 and ES2017 support](https://node.green/)
+
+## Useful Tools
+
+* [Sherlock](https://sherlockproject.xyz/): Hunt down social media accounts by username
 
 ## Survey
 
