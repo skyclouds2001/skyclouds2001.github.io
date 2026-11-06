@@ -24,7 +24,7 @@ mathJax: false
 
 ## Useful Tools
 
-* [Sherlock](https://sherlockproject.xyz/): Hunt down social media accounts by username
+* [Sherlock](https://sherlockproject.xyz/): hunt down social media accounts by username
 
 ## Survey
 
