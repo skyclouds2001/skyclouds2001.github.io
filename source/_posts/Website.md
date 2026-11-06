@@ -10,14 +10,13 @@ cover:
 toc: true
 recommend: 1
 keywords:
-uniqueId: '2024-10-22 22:45:40/Website.html'
+uniqueId: '2026-11-06 23:06:39/Website.html'
 mathJax: false
 ---
 
 ## Tools
 
 * [Web VSCode](https://vscode.dev/)
-* [Web GitHub VSCode](https://vscode.dev/)
 * [Web Console](https://skyclouds2001.github.io/tools/console)
 * [Worker Playground](https://mdn.github.io/dom-examples/web-workers/worker-playground/)
 * [ECMAScript 6 compatibility table](https://compat-table.github.io/compat-table/es6/)
