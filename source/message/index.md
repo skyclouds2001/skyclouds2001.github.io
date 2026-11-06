@@ -1,8 +1,10 @@
 ---
 thumbnail: https://skyclouds2001.github.io/images/avatar.jpg
-date: 2023-11-02 08:24:49
+date: 2026-11-06 21:55:15
 comments: false
 ---
+
+**要做系统的变量，让存在具有意义**
 
 **哪怕浪潮汹涌，始终跌跌撞撞，却总在拼尽全力游向心的方向**
 
