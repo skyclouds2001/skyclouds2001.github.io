@@ -63,3 +63,23 @@ mathJax: false
 ### pnpm 更新
 
 执行命令 `corepack prepare pnpm@latest`
+
+## Git
+
+### Git 版本检测
+
+执行命令 `git --version`
+
+### Git 更新
+
+执行命令 `git update-git-for-windows`
+
+## GitHub CLI
+
+### GitHub CLI 版本检测
+
+执行命令 `gh --version`
+
+### GitHub CLI 更新
+
+官网手动下载安装包更新
