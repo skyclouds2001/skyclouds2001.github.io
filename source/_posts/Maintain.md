@@ -113,3 +113,33 @@ Tomcat 安装目录 bin 文件夹执行命令 `version.bat`
 ### Nginx 更新
 
 官网手动下载安装包更新
+
+## Dart
+
+### Dart 版本检测
+
+执行命令 `dart --version`
+
+### Dart 更新
+
+透过 Flutter 更新
+
+## Flutter
+
+### Flutter 版本检测
+
+执行命令 `flutter --version`
+
+### Flutter 更新
+
+执行命令 `flutter upgrade`
+
+## PHP
+
+### PHP 版本检测
+
+执行命令 `php -v`
+
+### PHP 更新
+
+官网手动下载安装包更新
