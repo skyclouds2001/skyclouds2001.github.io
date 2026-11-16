@@ -83,3 +83,33 @@ mathJax: false
 ### GitHub CLI 更新
 
 官网手动下载安装包更新
+
+## Go
+
+### Go 版本检测
+
+执行命令 `go version`
+
+### Go 更新
+
+官网手动下载安装包更新
+
+## Tomcat
+
+### Tomcat 版本检测
+
+Tomcat 安装目录 bin 文件夹执行命令 `version.bat`
+
+### Tomcat 更新
+
+官网手动下载安装包更新
+
+## Nginx
+
+### Nginx 版本检测
+
+执行命令 `nginx -v`
+
+### Nginx 更新
+
+官网手动下载安装包更新
