@@ -173,3 +173,35 @@ Tomcat 安装目录 bin 文件夹执行命令 `version.bat`
 ### Cargo 更新
 
 执行命令 `rustup update`
+
+## Docker
+
+### Docker 版本检测
+
+执行命令 `docker version`
+
+### Docker 更新
+
+Docker Desktop 手动执行更新
+
+官网手动下载安装包更新
+
+## Maven
+
+### Maven 版本检测
+
+执行命令 `mvn -v`
+
+### Maven 更新
+
+官网手动下载安装包更新
+
+## Gradle
+
+### Gradle 版本检测
+
+执行命令 `gradle -v`
+
+### Gradle 更新
+
+官网手动下载安装包更新
