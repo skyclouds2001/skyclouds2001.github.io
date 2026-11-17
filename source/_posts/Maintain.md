@@ -143,3 +143,33 @@ Tomcat 安装目录 bin 文件夹执行命令 `version.bat`
 ### PHP 更新
 
 官网手动下载安装包更新
+
+## Rust
+
+### Rust 版本检测
+
+执行命令 `rustc --version`
+
+### Rust 更新
+
+执行命令 `rustup update`
+
+## rustup
+
+### rustup 版本检测
+
+执行命令 `rustup --version`
+
+### rustup 更新
+
+执行命令 `rustup self update`
+
+## Cargo
+
+### Cargo 版本检测
+
+执行命令 `cargo --version`
+
+### Cargo 更新
+
+执行命令 `rustup update`
